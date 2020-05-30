@@ -10,7 +10,7 @@ mat_khau varchar(30) not null
 create table danh_muc(
 ma_dm int AUTO_INCREMENT primary key,
 ten text not null,
-ma_dm_cha int -- tr?ng: lv 1, c?p d? truy v?n theo cha: t?n t?i tru?c dó
+ma_dm_cha int -- tr?ng: lv 1, c?p d? truy v?n theo cha: t?n t?i tru?c dÃ³
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1;
 
 create table bai_viet(
@@ -108,7 +108,7 @@ create table diem_chuan(
 ma_dc int AUTO_INCREMENT primary key,
 ma_nganh int,
 nam date,
-diem float, -- c?p nh?t trong th?ng kê
+diem float, -- c?p nh?t trong th?ng kÃª
 chi_tieu int,
 foreign key(ma_nganh) references nganh_dao_tao(ma_nganh)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1;
@@ -158,5 +158,7 @@ foreign key(ma_truong) references truong(ma_truong)
 create table mon(
 ma_mon int AUTO_INCREMENT primary key,
 ten text,
-diem float
+diem float,
+ma_lop int,
+foreign key(ma_lop) references lop(ma_lop)
 )ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1;
