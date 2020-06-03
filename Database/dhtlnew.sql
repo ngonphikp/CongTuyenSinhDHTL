@@ -113,7 +113,7 @@ CREATE TABLE nganh_dao_tao (
     FOREIGN KEY (ma_csdt)
         REFERENCES co_so_dao_tao (ma_csdt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
-
+-- select ma_nganh, ten_nganh, chuong_trinh_dao_tao, ghi_chu, gioi_thieu, ten from nganh_dao_tao ndt inner join co_so_dao_tao csdt on ndt.ma_csdt = csdt.ma_csdt;
 CREATE TABLE diem_chuan (
     ma_dc INT AUTO_INCREMENT PRIMARY KEY,
     ma_nganh INT,
