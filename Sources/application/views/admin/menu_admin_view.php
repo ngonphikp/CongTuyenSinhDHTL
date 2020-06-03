@@ -88,8 +88,8 @@
         </div>
         <div id="me-admin-bv" class="panel-collapse collapse">
             <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Bài Viết</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Bài Viết</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/add_bv"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Bài Viết</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/get_list_bv"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Bài Viết</a></li>
             </ul>
         </div>
     </div>
