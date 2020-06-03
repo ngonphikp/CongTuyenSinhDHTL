@@ -8,14 +8,14 @@ CREATE TABLE admin (
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE danh_muc (
-    ma_dm INT AUTO_INCREMENT PRIMARY KEY,
+    ma_dm VARCHAR(10) PRIMARY KEY,
     ten TEXT NOT NULL,
-    ma_dm_cha INT
-)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
+    ma_dm_cha VARCHAR(10)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE bai_viet (
     ma_bv INT AUTO_INCREMENT PRIMARY KEY,
-    ma_dm INT,
+    ma_dm VARCHAR(10),
     tieu_de TEXT,
     noi_dung_tom_tat LONGTEXT,
     link_anh_bia LONGTEXT,
@@ -1483,3 +1483,25 @@ INSERT INTO dgcdd (id_dd, id_tk, binh_luan_dd, thoi_gian) VALUES
 (38, 8, 'muốn đi bà xã đi một lần', '2018-12-20 13:36:00'),
 (39, 6, 'có sao không', '2018-09-10 06:30:21'),
 (40, 8, 'một tạo hóa  tuyệt vời của tự nhiên', '2018-10-03 13:14:32');
+
+
+-- Test Danh mục 
+-- CREATE TABLE danh_muc (
+--     ma_dm VARCHAR(10) PRIMARY KEY,
+--     ten TEXT NOT NULL,
+--     ma_dm_cha VARCHAR(10)
+-- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
+INSERT INTO danh_muc VALUES ('1', 'Danh mục 1', null);
+INSERT INTO danh_muc VALUES ('2', 'Danh mục 2', null);
+INSERT INTO danh_muc VALUES ('3', 'Danh mục 3', null);
+
+INSERT INTO danh_muc VALUES ('1.1', 'Danh mục 1.1', '1');
+INSERT INTO danh_muc VALUES ('1.2', 'Danh mục 1.2', '1');
+INSERT INTO danh_muc VALUES ('1.3', 'Danh mục 1.3', '1');
+
+INSERT INTO danh_muc VALUES ('2.1', 'Danh mục 2.1', '2');
+INSERT INTO danh_muc VALUES ('2.2', 'Danh mục 2.2', '2');
+
+INSERT INTO danh_muc VALUES ('3.1', 'Danh mục 3.1', '3');
+INSERT INTO danh_muc VALUES ('3.2', 'Danh mục 3.2', '3');
+select * from danh_muc;

@@ -479,4 +479,18 @@ class Admin extends CI_Controller{
         $this->load->view("admin/get_list_cn_admin_view", $data);
     }
 
+    // Danh mục - DHTL
+    public function get_danh_muc(){
+        // Lấy bảng
+        $this->load->model("Mdm");
+        $data['listDanhMuc']= $this->Mdm->getListAll();
+
+        // Lấy số lượng
+        $data['countDanhMuc'] = $this->Mdm->countAll();
+
+        // 
+
+        var_dump($data);
+    }
+
 }
