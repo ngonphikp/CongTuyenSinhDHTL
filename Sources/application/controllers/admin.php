@@ -520,16 +520,51 @@ class Admin extends CI_Controller{
         $this->load->view("admin/get_list_cn_admin_view", $data);
     }
 
-    // Danh mục - DHTL
+    // Danh mục Bài viết Chi tiết bài viết - DHTL
     public function get_danh_muc(){
-        // Lấy bảng
+        // Lấy bảng danh mục
         $this->load->model("Mdm");
         $data['listDanhMuc']= $this->Mdm->getListAll();
 
-        // Lấy số lượng
+        // Lấy số lượng danh mục
         $data['countDanhMuc'] = $this->Mdm->countAll();
 
-        // 
+        // Lấy bảng bài viết
+        $this->load->model("Mbv");
+        $data['listBaiViet']= $this->Mbv->getListAll();
+
+        // Lấy số lượng bài viết
+        $data['countBaiViet'] = $this->Mbv->countAll();
+
+        // Lấy bảng chi tiết bài viết
+        $this->load->model("Mctbv");
+        $data['listCTBaiViet']= $this->Mctbv->getListAll();
+
+        // Lấy số lượng bài viết
+        $data['countCTBaiViet'] = $this->Mctbv->countAll();
+
+        // Lấy bảng chi tiết bài viết by ma_bv
+        $this->load->model("Mctbv");
+        $data['listCTBaiVietBYMaBV']= $this->Mctbv->getListByMaBV('3');
+
+        var_dump($data);
+        // foreach($data['listCTBaiVietBYMaBV'] as $value){            
+        //     var_dump($value);
+        //     echo "<br><br>";
+        // }
+    }
+
+    // Bài Viết
+    public function get_list_bv(){
+        $this->load->model("Mbv");
+        $config['total_rows'] = $this->Mbv->countAll();
+        $config['base_url'] = base_url()."index.php/admin/get_list_bv";
+        $config['per_page'] = 5;
+
+        $start=$this->uri->segment(3);
+        $this->load->library('pagination', $config);
+        $data['listBV']= $this->Mbv->getList($start, $config['per_page']);
+        $this->load->view("admin/get_list_bv_admin_view", $data);
 
         var_dump($data);
     }

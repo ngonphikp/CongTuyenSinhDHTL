@@ -1491,7 +1491,7 @@ INSERT INTO dgcdd (id_dd, id_tk, binh_luan_dd, thoi_gian) VALUES
 (40, 8, 'một tạo hóa  tuyệt vời của tự nhiên', '2018-10-03 13:14:32');
 
 
--- Test Danh mục 
+-- ===========================Test Danh mục Bài viết Chi tiết bài viết==========================
 -- CREATE TABLE danh_muc (
 --     ma_dm VARCHAR(10) PRIMARY KEY,
 --     ten TEXT NOT NULL,
@@ -1510,4 +1510,42 @@ INSERT INTO danh_muc VALUES ('2.2', 'Danh mục 2.2', '2');
 
 INSERT INTO danh_muc VALUES ('3.1', 'Danh mục 3.1', '3');
 INSERT INTO danh_muc VALUES ('3.2', 'Danh mục 3.2', '3');
+
 select * from danh_muc;
+
+-- CREATE TABLE bai_viet (
+--     ma_bv INT AUTO_INCREMENT PRIMARY KEY,
+--     ma_dm VARCHAR(10),
+--     tieu_de TEXT,
+--     noi_dung_tom_tat LONGTEXT,
+--     link_anh_bia LONGTEXT,
+--     FOREIGN KEY (ma_dm)
+--         REFERENCES danh_muc (ma_dm)
+-- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
+
+INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('1.1', 'Tieu De 1', 'Noi Dung Tom Tat', 'Link anh bia 1');
+INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('1.1', 'Tieu De 2', 'Noi Dung Tom Tat', 'Link anh bia 2');
+INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('1.2', 'Tieu De 3', 'Noi Dung Tom Tat', 'Link anh bia 3');
+
+INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('2.1', 'Tieu De 4', 'Noi Dung Tom Tat', 'Link anh bia 4');
+INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('3.2', 'Tieu De 5', 'Noi Dung Tom Tat', 'Link anh bia 5');
+
+-- CREATE TABLE chi_tiet_bai_viet (
+--     ma_ctbv INT AUTO_INCREMENT PRIMARY KEY,
+--     ma_bv INT,
+--     noi_dung_chi_tiet LONGTEXT,
+--     link_anh LONGTEXT,
+--     FOREIGN KEY (ma_bv)
+--         REFERENCES bai_viet (ma_bv)
+-- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
+
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('1', 'Noi Dung Chi Tiet 1', 'Link anh 1');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('1', 'Noi Dung Chi Tiet 2', 'Link anh 2');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('2', 'Noi Dung Chi Tiet 1', 'Link anh 3');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('3', 'Noi Dung Chi Tiet 1', 'Link anh 4');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('4', 'Noi Dung Chi Tiet 1', 'Link anh 5');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('4', null, 'Link anh 6');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('4', 'Noi Dung Chi Tiet 3', null);
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('5', 'Noi Dung Chi Tiet 1', 'Link anh 8');
+
+select * from chi_tiet_bai_viet where ma_bv = '1';
