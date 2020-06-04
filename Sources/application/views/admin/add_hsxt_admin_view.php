@@ -26,37 +26,27 @@
                 
                 <tr>
                     <td><p>Tỉnh Thành Phố</p></td>
-                    <td><select id="sel" name="loai" class="form-control">
-                    <option value="">-- Select --</option>
+                    <td>
+                    
+                    <select id="sel" name="tinhthanhpho" class="form-control">
+                    <option value="">Chọn tỉnh thành phố</option>
                             
                         </select>
+                        <!-- <select id="sel">
+        <option value="">Chọn tỉnh thành phố</option> -->
+                        <!-- </select> -->
                     </td>
                 </tr>
                 <tr>
                     <td><p>Quận Huyện</p></td>
-                    <td><select name="loai" class="form-control">
-                            <option value="Trong Nước">Trong Nước</option>
-                            <option value="Ngoài Nước">Ngoài Nước</option>
+                    <td><select id="sel2" name="quanhuyen" class="form-control">
+                    <option value="">Chọn quận huyện</option>
                         </select>
                     </td>
                 </tr>
-                <tr>
-                    <td><p>Phường Thị Xã</p></td>
-                    <td><select name="loai" class="form-control">
-                            <option value="Trong Nước">Trong Nước</option>
-                            <option value="Ngoài Nước">Ngoài Nước</option>
-                        </select>
-                    </td>
-                </tr>
+                
             </table>
-        <div class="form-row form-group">
-            <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label">Tỉnh Thành Phố </label></div>
-            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="tinhthanhpho"></div>
-        </div>
-        <div class="form-row form-group">
-            <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label">Quận Huyện</label></div>
-            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="quanhuyen"></div>
-        </div>
+        
         <div class="form-row form-group">
             <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label">Phường Thị Xã</label></div>
             <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="phuongthixa"></div>

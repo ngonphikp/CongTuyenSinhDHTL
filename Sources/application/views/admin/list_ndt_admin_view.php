@@ -46,7 +46,7 @@
                         <td><?php echo $row['chuong_trinh_dao_tao_ndt'];?></td>
                         <td><?php echo $row['ghi_chu_ndt'];?></td>
                         <td><?php echo $row['gioi_thieu_ndt'];?></td>
-                        <td><?php echo $row['ten_ndt'];?></td>
+                        <td><?php echo $row['ten_csdt'];?></td>
                     </tr>
                 <?php
                 }
