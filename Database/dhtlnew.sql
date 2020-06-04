@@ -9,16 +9,16 @@ CREATE TABLE admin (
 
 CREATE TABLE danh_muc (
     ma_dm VARCHAR(10) PRIMARY KEY,
-    ten TEXT NOT NULL,
+    ten_dm TEXT NOT NULL,
     ma_dm_cha VARCHAR(10)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE bai_viet (
     ma_bv INT AUTO_INCREMENT PRIMARY KEY,
     ma_dm VARCHAR(10),
-    tieu_de TEXT,
-    noi_dung_tom_tat LONGTEXT,
-    link_anh_bia LONGTEXT,
+    tieu_de_bv TEXT,
+    noi_dung_tom_tat_bv LONGTEXT,
+    link_anh_bia_bv LONGTEXT,
     FOREIGN KEY (ma_dm)
         REFERENCES danh_muc (ma_dm)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
@@ -26,20 +26,20 @@ CREATE TABLE bai_viet (
 CREATE TABLE chi_tiet_bai_viet (
     ma_ctbv INT AUTO_INCREMENT PRIMARY KEY,
     ma_bv INT,
-    noi_dung_chi_tiet LONGTEXT,
-    link_anh LONGTEXT,
+    noi_dung_chi_tiet_ctbv LONGTEXT,
+    link_anh_ctbv LONGTEXT,
     FOREIGN KEY (ma_bv)
         REFERENCES bai_viet (ma_bv)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE tinh_thanh_pho (
     ma_ttp VARCHAR(10) PRIMARY KEY,
-    ten TEXT
+    ten_ttp TEXT
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE quan_huyen (
     ma_qh VARCHAR(10) PRIMARY KEY,
-    ten TEXT,
+    ten_qh TEXT,
     ma_ttp VARCHAR(5),
     FOREIGN KEY (ma_ttp)
         REFERENCES tinh_thanh_pho (ma_ttp)
@@ -47,7 +47,7 @@ CREATE TABLE quan_huyen (
 
 CREATE TABLE phuong_thi_xa (
     ma_ptx VARCHAR(10) PRIMARY KEY,
-    ten TEXT,
+    ten_ptx TEXT,
     ma_qh VARCHAR(10),
     FOREIGN KEY (ma_qh)
         REFERENCES quan_huyen (ma_qh)
@@ -55,27 +55,27 @@ CREATE TABLE phuong_thi_xa (
 
 CREATE TABLE thi_sinh (
     ma_ts INT AUTO_INCREMENT PRIMARY KEY,
-    ho_ten TEXT,
-    gioi_tinh TEXT,
-    ngay_sinh DATE,
-    dia_chi VARCHAR(10),
-    so_cmnd_cccd VARCHAR(20),
-    sdt VARCHAR(20),
-    email VARCHAR(50),
-    link_anh_cmnd VARCHAR(50),
-    link_anh_chan_dung VARCHAR(50),
-    dan_toc TEXT,
-    ton_giao TEXT,
-    ngay_dang_ki DATE,
-    FOREIGN KEY (dia_chi)
+    ho_ten_ts TEXT,
+    gioi_tinh_ts TEXT,
+    ngay_sinh_ts DATE,
+    dia_chi_ts VARCHAR(10),
+    so_cmnd_cccd_ts VARCHAR(20),
+    sdt_ts VARCHAR(20),
+    email_ts VARCHAR(50),
+    link_anh_cmnd_ts VARCHAR(50),
+    link_anh_chan_dung_ts VARCHAR(50),
+    dan_toc_ts TEXT,
+    ton_giao_ts TEXT,
+    ngay_dang_ki_ts DATE,
+    FOREIGN KEY (dia_chi_ts)
         REFERENCES phuong_thi_xa (ma_ptx)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE truong (
     ma_truong VARCHAR(10) PRIMARY KEY,
-    ten TEXT,
-    dia_chi VARCHAR(10),
-    FOREIGN KEY (dia_chi)
+    ten_truong TEXT,
+    dia_chi_truong VARCHAR(10),
+    FOREIGN KEY (dia_chi_truong)
         REFERENCES quan_huyen (ma_qh)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
@@ -89,27 +89,27 @@ CREATE TABLE ho_so_xet_tuyen (
 CREATE TABLE trang_thai_ho_son (
     ma_tths INT AUTO_INCREMENT PRIMARY KEY,
     ma_hsxt INT,
-    kieu TEXT,
-    ngay DATE,
+    kieu_tths TEXT,
+    ngay_tths DATE,
     FOREIGN KEY (ma_hsxt)
         REFERENCES ho_so_xet_tuyen (ma_hsxt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE co_so_dao_tao (
     ma_csdt INT AUTO_INCREMENT PRIMARY KEY,
-    ten TEXT,
-    dia_chi VARCHAR(10),
-    FOREIGN KEY (dia_chi)
+    ten_csdt TEXT,
+    dia_chi_csdt VARCHAR(10),
+    FOREIGN KEY (dia_chi_csdt)
         REFERENCES phuong_thi_xa (ma_ptx)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE nganh_dao_tao (
     ma_nganh INT AUTO_INCREMENT PRIMARY KEY,
     ma_csdt INT,
-    ten_nganh TEXT NOT NULL,
-    chuong_trinh_dao_tao TEXT,
-    ghi_chu TEXT,
-    gioi_thieu TEXT,
+    ten_ndt TEXT NOT NULL,
+    chuong_trinh_dao_tao_ndt TEXT,
+    ghi_chu_ndt TEXT,
+    gioi_thieu_ndt TEXT,
     FOREIGN KEY (ma_csdt)
         REFERENCES co_so_dao_tao (ma_csdt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
@@ -117,9 +117,9 @@ CREATE TABLE nganh_dao_tao (
 CREATE TABLE diem_chuan (
     ma_dc INT AUTO_INCREMENT PRIMARY KEY,
     ma_nganh INT,
-    nam DATE,
-    diem FLOAT,
-    chi_tieu INT,
+    nam_dc DATE,
+    diem_dc FLOAT,
+    chi_tieu_dc INT,
     FOREIGN KEY (ma_nganh)
         REFERENCES nganh_dao_tao (ma_nganh)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
@@ -157,8 +157,8 @@ CREATE TABLE nguyen_vong (
 CREATE TABLE hoc_ba (
     ma_hb INT AUTO_INCREMENT PRIMARY KEY,
     ma_ts INT,
-    xep_loai TEXT,
-    link_anh VARCHAR(50),
+    xep_loai_hb TEXT,
+    link_anh_hb VARCHAR(50),
     FOREIGN KEY (ma_ts)
         REFERENCES thi_sinh (ma_ts)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
@@ -167,7 +167,7 @@ CREATE TABLE lop (
     ma_lop INT AUTO_INCREMENT PRIMARY KEY,
     ma_hb INT,
     ma_truong VARCHAR(5),
-    cap_do INT,
+    cap_do_lop INT,
     FOREIGN KEY (ma_hb)
         REFERENCES hoc_ba (ma_hb),
     FOREIGN KEY (ma_truong)
@@ -176,8 +176,8 @@ CREATE TABLE lop (
 
 CREATE TABLE mon (
     ma_mon INT AUTO_INCREMENT PRIMARY KEY,
-    ten TEXT,
-    diem FLOAT,
+    ten_mon TEXT,
+    diem_mon FLOAT,
     ma_lop INT,
     FOREIGN KEY (ma_lop)
         REFERENCES lop (ma_lop)
@@ -1488,7 +1488,7 @@ INSERT INTO dgcdd (id_dd, id_tk, binh_luan_dd, thoi_gian) VALUES
 -- ===========================Test Danh mục Bài viết Chi tiết bài viết==========================
 -- CREATE TABLE danh_muc (
 --     ma_dm VARCHAR(10) PRIMARY KEY,
---     ten TEXT NOT NULL,
+--     ten_dm TEXT NOT NULL,
 --     ma_dm_cha VARCHAR(10)
 -- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 INSERT INTO danh_muc VALUES ('1', 'Danh mục 1', null);
@@ -1505,41 +1505,45 @@ INSERT INTO danh_muc VALUES ('2.2', 'Danh mục 2.2', '2');
 INSERT INTO danh_muc VALUES ('3.1', 'Danh mục 3.1', '3');
 INSERT INTO danh_muc VALUES ('3.2', 'Danh mục 3.2', '3');
 
-select * from danh_muc;
-
 -- CREATE TABLE bai_viet (
 --     ma_bv INT AUTO_INCREMENT PRIMARY KEY,
 --     ma_dm VARCHAR(10),
---     tieu_de TEXT,
---     noi_dung_tom_tat LONGTEXT,
---     link_anh_bia LONGTEXT,
+--     tieu_de_bv TEXT,
+--     noi_dung_tom_tat_bv LONGTEXT,
+--     link_anh_bia_bv LONGTEXT,
 --     FOREIGN KEY (ma_dm)
 --         REFERENCES danh_muc (ma_dm)
 -- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
-INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('1.1', 'Tieu De 1', 'Noi Dung Tom Tat', 'Link anh bia 1');
-INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('1.1', 'Tieu De 2', 'Noi Dung Tom Tat', 'Link anh bia 2');
-INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('1.2', 'Tieu De 3', 'Noi Dung Tom Tat', 'Link anh bia 3');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Tieu De 1', 'Noi Dung Tom Tat', 'Link anh bia 1');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Tieu De 2', 'Noi Dung Tom Tat', 'Link anh bia 2');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Tieu De 3', 'Noi Dung Tom Tat', 'Link anh bia 3');
 
-INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('2.1', 'Tieu De 4', 'Noi Dung Tom Tat', 'Link anh bia 4');
-INSERT INTO bai_viet (ma_dm, tieu_de, noi_dung_tom_tat, link_anh_bia) VALUES ('3.2', 'Tieu De 5', 'Noi Dung Tom Tat', 'Link anh bia 5');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('2.1', 'Tieu De 4', 'Noi Dung Tom Tat', 'Link anh bia 4');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('3.2', 'Tieu De 5', 'Noi Dung Tom Tat', 'Link anh bia 5');
+
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.3', 'Tieu De 6', 'Noi Dung Tom Tat', 'Link anh bia 6');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.3', 'Tieu De 7', 'Noi Dung Tom Tat', 'Link anh bia 7');
 
 -- CREATE TABLE chi_tiet_bai_viet (
 --     ma_ctbv INT AUTO_INCREMENT PRIMARY KEY,
 --     ma_bv INT,
---     noi_dung_chi_tiet LONGTEXT,
---     link_anh LONGTEXT,
+--     noi_dung_chi_tiet_ctbv LONGTEXT,
+--     link_anh_ctbv LONGTEXT,
 --     FOREIGN KEY (ma_bv)
 --         REFERENCES bai_viet (ma_bv)
 -- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
-INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('1', 'Noi Dung Chi Tiet 1', 'Link anh 1');
-INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('1', 'Noi Dung Chi Tiet 2', 'Link anh 2');
-INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('2', 'Noi Dung Chi Tiet 1', 'Link anh 3');
-INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('3', 'Noi Dung Chi Tiet 1', 'Link anh 4');
-INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('4', 'Noi Dung Chi Tiet 1', 'Link anh 5');
-INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('4', null, 'Link anh 6');
-INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('4', 'Noi Dung Chi Tiet 3', null);
-INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet, link_anh) VALUES ('5', 'Noi Dung Chi Tiet 1', 'Link anh 8');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('1', 'Noi Dung Chi Tiet 1', 'Link anh 1');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('1', 'Noi Dung Chi Tiet 2', 'Link anh 2');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('2', 'Noi Dung Chi Tiet 1', 'Link anh 3');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('3', 'Noi Dung Chi Tiet 1', 'Link anh 4');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('4', 'Noi Dung Chi Tiet 1', 'Link anh 5');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('4', null, 'Link anh 6');
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('4', 'Noi Dung Chi Tiet 3', null);
+INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('5', 'Noi Dung Chi Tiet 1', 'Link anh 8');
 
-select * from chi_tiet_bai_viet where ma_bv = '1';
+-- select * from chi_tiet_bai_viet where ma_bv = '1';
+-- delete from chi_tiet_bai_viet where ma_bv = '1';
+-- select * from bai_viet bv inner join danh_muc dm on bv.ma_dm = dm.ma_dm limit 0, 3;
+-- select * from danh_muc;

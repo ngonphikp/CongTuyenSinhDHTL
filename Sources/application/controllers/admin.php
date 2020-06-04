@@ -20,8 +20,8 @@ class Admin extends CI_Controller{
         $this->load->model("Mdv");
         $data['countDV'] = $this->Mdv->countAll();
 
-        $this->load->model("Mndt");
-        $data['countDV'] = $this->Mndt->countAll();
+        //$this->load->model("Mndt");
+        //$data['countDV'] = $this->Mndt->countAll();
 
         $this->load->view('admin/home_admin_view', $data);
         //$this->load->view('admin/admin_view', $data);
@@ -522,8 +522,51 @@ class Admin extends CI_Controller{
         $this->load->library('pagination', $config);
         $data['listBV']= $this->Mbv->getList($start, $config['per_page']);
         $this->load->view("admin/get_list_bv_admin_view", $data);
+    }
 
-        var_dump($data);
+    public function delete_bv($ma_bv){
+        $this->load->model("Mctbv");
+        $this->Mctbv->deleteByMaBV($ma_bv);
+
+        $this->load->model("Mbv");
+        $this->Mbv->deleteByMaBV($ma_bv);
+        echo "<script>alert('Xóa Thành Công !!!')</script>";
+        
+        redirect(base_url() . "/admin/get_list_bv");
+    }
+
+    public function add_bv(){
+        $this->load->view("admin/s_add_bv_admin_view");
+    }
+
+    public function pro_add_bv(){
+        //Kiểm tra bằng form validation
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('td', 'Tiêu Đề', 'required');
+        $this->form_validation->set_rules('nd', 'Nội Dung', 'required');
+        if($this->form_validation->run() == FALSE){
+            echo "<script>alert('Lỗi Nhập !!!')</script>";
+            $this->add_bv();
+        }
+        else {
+            $config['upload_path']          = './assets/img/cn/';
+            $config['allowed_types']        = 'gif|jpg|jpeg|png';
+            $this->load->library('upload', $config);
+            if ( ! $this->upload->do_upload('link'))
+            {
+                echo "<script>alert('Lỗi Upload File !!!')</script>";
+                $this->add_bv();
+            }
+            else {
+                $this->load->model("Mcn");
+                $td = isset($_POST['td']) ? $_POST['td'] : "";
+                $nd = isset($_POST['nd']) ? $_POST['nd'] : "";
+                $link = $this->upload->data('file_name');
+                $this->Mcn->add($td, $nd, $link);
+                echo "<script>alert('Thêm Thành Công !!!')</script>";
+                $this->get_list_bv();
+            }
+        }
     }
 
     // Ngành đào tạo - DHTL
