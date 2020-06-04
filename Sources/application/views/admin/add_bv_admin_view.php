@@ -6,17 +6,21 @@
         <div class="form">
             <table class="table">
                 <tr>
+                    <td><P>Danh Mục</p></td>
+                    <td><textarea name="dm" class="form-control" id="" cols="30" rows="1"></textarea></td>
+                </tr>
+                <tr>
                     <td><P>Tiêu đề</p></td>
                     <td><textarea name="td" class="form-control" id="" cols="30" rows="1"></textarea></td>
                 </tr>
                 <tr>
                     <td><P>Nội dung Tóm Tắt</p></td>
-                    <td><textarea name="nd" class="form-control" id="" cols="30" rows="10"></textarea></td>
+                    <td><textarea name="ndtt" class="form-control" id="" cols="30" rows="10"></textarea></td>
                 </tr>
                 <tr>
                     <td><P>Ảnh Bìa</p></td>
                     <td><input type="file" name="link" class="form-control"></td>
-                </tr>
+                </tr>                
             </table>
         </div>
         <div class="col-md-3 form-group pull-right">
