@@ -63,7 +63,7 @@
         <div id="me-admin-ndt" class="panel-collapse collapse">
             <ul>
                 <li><a href="<?php echo base_url();?>index.php/admin/add_ndt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Ngành Đào Tạo</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Ngành Đào Tạo</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/get_list_ndt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Ngành Đào Tạo</a></li>
             </ul>
         </div>
     </div>
