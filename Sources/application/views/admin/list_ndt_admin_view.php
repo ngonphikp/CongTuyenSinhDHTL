@@ -37,16 +37,16 @@
                 
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_ndt/<?php echo $row['ma_nganh'];?>"><em class="fa fa-pencil"></em></a>
+                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_ndt/<?php echo $row['ma_ndt'];?>"><em class="fa fa-pencil"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_ndt/<?php echo $row['ma_nganh'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_ndt/<?php echo $row['ma_ndt'];?>"><em class="fa fa-trash"></em></a>
                         </td>
-                        <td><?php echo $row['ma_nganh'];?></td>
-                        <td><?php echo $row['ten_nganh'];?></td>
-                        <td><?php echo $row['chuong_trinh_dao_tao'];?></td>
-                        <td><?php echo $row['ghi_chu'];?></td>
-                        <td><?php echo $row['gioi_thieu'];?></td>
-                        <td><?php echo $row['ten'];?></td>
+                        <td><?php echo $row['ma_ndt'];?></td>
+                        <td><?php echo $row['ten_ndt'];?></td>
+                        <td><?php echo $row['chuong_trinh_dao_tao_ndt'];?></td>
+                        <td><?php echo $row['ghi_chu_ndt'];?></td>
+                        <td><?php echo $row['gioi_thieu_ndt'];?></td>
+                        <td><?php echo $row['ten_ndt'];?></td>
                     </tr>
                 <?php
                 }
