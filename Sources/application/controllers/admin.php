@@ -532,7 +532,7 @@ class Admin extends CI_Controller{
         $this->Mbv->deleteByMaBV($ma_bv);
         echo "<script>alert('Xóa Thành Công !!!')</script>";
         
-        redirect(base_url() . "/admin/get_list_bv");
+        redirect(base_url() . "admin/get_list_bv");
     }
 
     public function add_bv(){
@@ -543,28 +543,31 @@ class Admin extends CI_Controller{
         //Kiểm tra bằng form validation
         $this->load->library('form_validation');
         $this->form_validation->set_rules('td', 'Tiêu Đề', 'required');
-        $this->form_validation->set_rules('nd', 'Nội Dung', 'required');
+        $this->form_validation->set_rules('ndtt', 'Nội Dung Tóm Tắt', 'required');
+        $this->form_validation->set_rules('dm', 'Danh Mục', 'required');
         if($this->form_validation->run() == FALSE){
             echo "<script>alert('Lỗi Nhập !!!')</script>";
-            $this->add_bv();
+            redirect(base_url() . "admin/add_bv");
         }
         else {
-            $config['upload_path']          = './assets/img/cn/';
+            $config['upload_path']          = './assets/img/bv/';
             $config['allowed_types']        = 'gif|jpg|jpeg|png';
             $this->load->library('upload', $config);
             if ( ! $this->upload->do_upload('link'))
             {
                 echo "<script>alert('Lỗi Upload File !!!')</script>";
-                $this->add_bv();
+                redirect(base_url() . "admin/add_bv");
             }
             else {
-                $this->load->model("Mcn");
+                //var_dump($_POST);
+                $this->load->model("Mbv");
+                $dm = isset($_POST['dm']) ? $_POST['dm'] : "";
                 $td = isset($_POST['td']) ? $_POST['td'] : "";
-                $nd = isset($_POST['nd']) ? $_POST['nd'] : "";
+                $ndtt = isset($_POST['ndtt']) ? $_POST['ndtt'] : "";                
                 $link = $this->upload->data('file_name');
-                $this->Mcn->add($td, $nd, $link);
+                $this->Mbv->add($dm, $td, $ndtt, $link);
                 echo "<script>alert('Thêm Thành Công !!!')</script>";
-                $this->get_list_bv();
+                redirect(base_url() . "/admin/get_list_bv");
             }
         }
     }
