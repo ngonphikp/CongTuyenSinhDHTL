@@ -139,21 +139,21 @@ CREATE TABLE to_hop_mon (
 
 CREATE TABLE to_hop_mon_xet_tuyen (
     ma_thm VARCHAR(5),
-    ma_nganh INT,
-    FOREIGN KEY (ma_nganh)
-        REFERENCES nganh_dao_tao (ma_nganh),
+    ma_ndt INT,
+    FOREIGN KEY (ma_ndt)
+        REFERENCES nganh_dao_tao (ma_ndt),
     FOREIGN KEY (ma_thm)
         REFERENCES to_hop_mon (ma_thm),
-    PRIMARY KEY (ma_thm , ma_nganh)
+    PRIMARY KEY (ma_thm , ma_ndt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE nguyen_vong (
     ma_thm VARCHAR(5),
     ma_hsxt INT,
-    ma_nganh INT,
+    ma_ndt INT,
     PRIMARY KEY (ma_thm , ma_hsxt),
-    FOREIGN KEY (ma_nganh)
-        REFERENCES nganh_dao_tao (ma_nganh),
+    FOREIGN KEY (ma_ndt)
+        REFERENCES nganh_dao_tao (ma_ndt),
     FOREIGN KEY (ma_hsxt)
         REFERENCES ho_so_xet_tuyen (ma_hsxt),
     FOREIGN KEY (ma_thm)
