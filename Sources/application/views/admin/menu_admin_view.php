@@ -75,8 +75,8 @@
         </div>
         <div id="me-admin-hsxt" class="panel-collapse collapse">
             <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Hồ Sơ Xét Tuyển</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Hồ Sơ Xét Tuyển</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/add_hsxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Hồ Sơ Xét Tuyển</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/get_list_hsxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Hồ Sơ Xét Tuyển</a></li>
             </ul>
         </div>
     </div>

@@ -44,6 +44,46 @@ class Admin extends CI_Controller{
         $this->load->view("admin/s_add_user_admin_view");
     }
 
+    public function add_hsxt(){
+        $this->load->view("admin/s_add_hsxt_admin_view");
+    }
+
+    public function pro_add_hsxt(){
+        //Kiểm tra bằng form validation
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('tk', 'Tên Đăng Nhập', 'required');
+        $this->form_validation->set_rules('gt', 'Giới Tính', 'required');
+        $this->form_validation->set_rules('ns', 'Ngày Sinh', 'required');
+        $this->form_validation->set_rules('tinhthanhpho', 'Tỉnh thành pho', 'required');
+        $this->form_validation->set_rules('quanhuyen', 'Quận Huyện', 'required');
+        $this->form_validation->set_rules('phuongthixa', 'Phường Thị Xã', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('sdt', 'Số Điện Thoại', 'numeric');
+        if($this->form_validation->run() == FALSE){
+            echo "<script>alert('Lỗi Nhập !!!')</script>";
+            $this->add_hsxt();
+        }
+        else{
+            try{
+                $tk = isset($_POST['tk']) ? $_POST['tk'] : "";
+                $gt = isset($_POST['gt']) ? $_POST['gt'] : "Nam";
+                $ns = isset($_POST['ns']) ? $_POST['ns'] : "";
+                $tinhthanhpho = isset($_POST['tinhthanhpho']) ? $_POST['tinhthanhpho'] : "";
+                $quanhuyen = isset($_POST['quanhuyen']) ? $_POST['quanhuyen'] : "";
+                $phuongthixa = isset($_POST['phuongthixa']) ? $_POST['phuongthixa'] : "";
+                $email = isset($_POST['email']) ? $_POST['email'] : "";
+                $sdt = isset($_POST['sdt']) ? $_POST['sdt'] : "";
+                $this->load->model("Muser");
+                $this->Muser->add($tk, $mk, $ht, $gt, $email, $ns, $dc, $sdt);
+                echo "<script>alert('Thêm Thành Công !!!')</script>";
+                $this->get_list_user();
+            }
+            catch(Exception $e){
+                echo "<script>alert('Tài Khoản Đã Tồn Tại !!!')</script>";
+                $this->add_user();
+            }
+        }
+    }
     public function pro_add_user(){
         //Kiểm tra bằng form validation
         $this->load->library('form_validation');
