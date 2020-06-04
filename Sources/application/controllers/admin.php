@@ -44,6 +44,46 @@ class Admin extends CI_Controller{
         $this->load->view("admin/s_add_user_admin_view");
     }
 
+    public function add_hsxt(){
+        $this->load->view("admin/s_add_hsxt_admin_view");
+    }
+
+    public function pro_add_hsxt(){
+        //Kiểm tra bằng form validation
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('tk', 'Tên Đăng Nhập', 'required');
+        $this->form_validation->set_rules('gt', 'Giới Tính', 'required');
+        $this->form_validation->set_rules('ns', 'Ngày Sinh', 'required');
+        $this->form_validation->set_rules('tinhthanhpho', 'Tỉnh thành pho', 'required');
+        $this->form_validation->set_rules('quanhuyen', 'Quận Huyện', 'required');
+        $this->form_validation->set_rules('phuongthixa', 'Phường Thị Xã', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('sdt', 'Số Điện Thoại', 'numeric');
+        if($this->form_validation->run() == FALSE){
+            echo "<script>alert('Lỗi Nhập !!!')</script>";
+            $this->add_hsxt();
+        }
+        else{
+            try{
+                $tk = isset($_POST['tk']) ? $_POST['tk'] : "";
+                $gt = isset($_POST['gt']) ? $_POST['gt'] : "Nam";
+                $ns = isset($_POST['ns']) ? $_POST['ns'] : "";
+                $tinhthanhpho = isset($_POST['tinhthanhpho']) ? $_POST['tinhthanhpho'] : "";
+                $quanhuyen = isset($_POST['quanhuyen']) ? $_POST['quanhuyen'] : "";
+                $phuongthixa = isset($_POST['phuongthixa']) ? $_POST['phuongthixa'] : "";
+                $email = isset($_POST['email']) ? $_POST['email'] : "";
+                $sdt = isset($_POST['sdt']) ? $_POST['sdt'] : "";
+                $this->load->model("Muser");
+                $this->Muser->add($tk, $mk, $ht, $gt, $email, $ns, $dc, $sdt);
+                echo "<script>alert('Thêm Thành Công !!!')</script>";
+                $this->get_list_user();
+            }
+            catch(Exception $e){
+                echo "<script>alert('Tài Khoản Đã Tồn Tại !!!')</script>";
+                $this->add_user();
+            }
+        }
+    }
     public function pro_add_user(){
         //Kiểm tra bằng form validation
         $this->load->library('form_validation');
@@ -83,6 +123,7 @@ class Admin extends CI_Controller{
         $data['user'] = $this->Muser->getById($id);
         $this->load->view("admin/s_edit_user_admin_view", $data);
     }
+    
 
     public function pro_edit_user($id){
         //Kiểm tra bằng form validation
@@ -116,6 +157,8 @@ class Admin extends CI_Controller{
         echo "<script>alert('Xóa Thành Công !!!')</script>";
         $this->get_list_user();
     }
+
+    
 
     public function get_list_user_s(){
         if (isset($_POST['search'])){
@@ -580,111 +623,107 @@ class Admin extends CI_Controller{
         $config['per_page'] = 5;
         $start=$this->uri->segment(3);
         $this->load->library('pagination', $config);
-        $data['listndt']= $this->Mndt->getList($start, $config['per_page']);
+        $data['listNdt']= $this->Mndt->getList($start, $config['per_page']);
         $this->load->view("admin/get_list_ndt_admin_view", $data);
+
+        
     }
 
     public function add_ndt(){
-        $this->load->view("admin/s_add_dd_admin_view");
-        //$this->load->view("admin/s_add_ndt_admin_view");
+        //$this->load->view("admin/s_add_dd_admin_view");
+        $this->load->view("admin/s_add_ndt_admin_view");
     }
+
+    
 
     public function pro_add_ndt(){
         //Kiểm tra bằng form validation
         $this->load->library('form_validation');
-        // $this->form_validation->set_rules('ten', 'Tên', 'required');
-        // $this->form_validation->set_rules('td', 'Tiêu đề', 'required');
-        // $this->form_validation->set_rules('nd', 'Nội dung', 'required');
-        // if($this->form_validation->run() == FALSE){
-        //     echo "<script>alert('Lỗi Nhập !!!')</script>";
-        //     $this->add_dd();
-        // }
-        // else{
-        //     $config['upload_path']          = './assets/img/dd/';
-        //     $config['allowed_types']        = 'gif|jpg|jpeg|png';
-        //     $this->load->library('upload', $config);
-        //     if ( ! $this->upload->do_upload('link'))
-        //     {
-        //         echo "<script>alert('Lỗi Upload File !!!')</script>";
-        //         $this->add_dd();
-        //     }
-        //     else
-        //     {
-        //         $ten = isset($_POST['ten']) ? $_POST['ten'] : "";
-        //         $td = isset($_POST['td']) ? $_POST['td'] : "";
-        //         $nd = isset($_POST['nd']) ? $_POST['nd'] : "";
-        //         $link = $this->upload->data('file_name');
-        //         $loai = isset($_POST['loai']) ? $_POST['loai'] : "";
-        //         $this->load->model("Mdd");
-        //         $this->Mdd->add($ten, $link, $td, $nd, $loai);
-        //         echo "<script>alert('Thêm Thành Công !!!')</script>";
-        //         $this->get_list_dd();
-        //     }
-        // }
-    }
+        $this->form_validation->set_rules('tennganh', 'Tên ngành', 'required');
+        $this->form_validation->set_rules('chuongtrinhdaotao', 'Chương trình đào tạo', 'required');
+        $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
+        $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
+        $this->form_validation->set_rules('coso', 'Lựa chọn cơ sở', 'required');
+        if($this->form_validation->run() == FALSE){
+            echo "<script>alert('Lỗi Nhập !!!')</script>";
+            $this->add_ndt();
+        }
+     
+        else {
+            $tennganh = isset($_POST['tennganh']) ? $_POST['tennganh'] : "";
+            $chuongtrinhdaotao = isset($_POST['chuongtrinhdaotao']) ? $_POST['chuongtrinhdaotao'] : "";
+            $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
+            $gioithieu = isset($_POST['gioithieu']) ? $_POST['gioithieu'] : "";
+            //$link = $this->upload->data('file_name');
+            $coso = isset($_POST['coso']) ? $_POST['coso'] : "";
+            $this->load->model("Mndt");
+            $this->Mndt->add($tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
+            echo "<script>alert('Thêm Thành Công !!!')</script>";
+            $this->get_list_ndt();
+        }
+                
+            
+        }
 
-    // public function edit_dd($id){
-    //     $this->load->model("Mdd");
-    //     $data['dd'] = $this->Mdd->getById($id);
-    //     $this->load->view("admin/s_edit_dd_admin_view", $data);
-    // }
+        public function get_list_ndt_s(){
+            if (isset($_POST['search'])){
+                $s = $_POST['search'];
+                $this->session->set_userdata('search', $s);
+            }else{
+                $s=$this->session->userdata('search');
+            }
+            $s = trim(htmlspecialchars(addslashes($s)));
+            $this->load->model("Mndt");
+            $config['total_rows'] = $this->Mndt->countAllS($s);
+            $config['base_url'] = base_url()."index.php/admin/get_list_ndt_s";
+            $config['per_page'] = 5;
+    
+            $start=$this->uri->segment(3);
+            $this->load->library('pagination', $config);
+            $data['listNdt']= $this->Mndt->getListS($start, $config['per_page'], $s);
+            $this->load->view("admin/get_list_ndt_admin_view", $data);
+        }
 
-    // public function pro_edit_dd($id){
-    //     //Kiểm tra bằng form validation
-    //     $this->load->library('form_validation');
-    //     $this->form_validation->set_rules('ten', 'Tên', 'required');
-    //     $this->form_validation->set_rules('td', 'Tiêu đề', 'required');
-    //     $this->form_validation->set_rules('nd', 'Nội dung', 'required');
-    //     if($this->form_validation->run() == FALSE){
-    //         echo "<script>alert('Lỗi Nhập !!!')</script>";
-    //         $this->edit_dd($id);
-    //     }
-    //     else{
-    //         $config['upload_path']          = './assets/img/dd/';
-    //         $config['allowed_types']        = 'gif|jpg|jpeg|png';
-    //         $this->load->library('upload', $config);
-    //         if ( ! $this->upload->do_upload('link'))
-    //         {
-    //             echo "<script>alert('Lỗi Upload File !!!')</script>";
-    //             $this->edit_dd($id);
-    //         }
-    //         else {
-    //             $ten = isset($_POST['ten']) ? $_POST['ten'] : "";
-    //             $td = isset($_POST['td']) ? $_POST['td'] : "";
-    //             $nd = isset($_POST['nd']) ? $_POST['nd'] : "";
-    //             $link = $this->upload->data('file_name');
-    //             $loai = isset($_POST['loai']) ? $_POST['loai'] : "";
-    //             $this->load->model("Mdd");
-    //             $this->Mdd->edit($id, $ten, $link, $td, $nd, $loai);
-    //             echo "<script>alert('Sửa Thành Công !!!')</script>";
-    //             $this->edit_dd($id);
-    //         }
-    //     }
-    // }
+        public function edit_ndt($id){
+            $this->load->model("Mndt");
+            $data['ndt'] = $this->Mndt->getById($id);
+            $this->load->view("admin/s_edit_ndt_admin_view", $data);
+        }
+        
+        public function delete_ndt($id){
+            $this->load->model("Mndt");
+            $this->Mndt->deleteById($id);
+            echo "<script>alert('Xóa Thành Công !!!')</script>";
+            $this->get_list_ndt();
+        }
 
-    // public function delete_dd($id){
-    //     $this->load->model("Mdd");
-    //     $this->Mdd->deleteById($id);
-    //     echo "<script>alert('Xóa Thành Công !!!')</script>";
-    //     $this->get_list_dd();
-    // }
-
-    // public function get_list_dd_s(){
-    //     if (isset($_POST['search'])){
-    //         $s = $_POST['search'];
-    //         $this->session->set_userdata('search', $s);
-    //     }else{
-    //         $s=$this->session->userdata('search');
-    //     }
-    //     $s = trim(htmlspecialchars(addslashes($s)));
-    //     $this->load->model("Mdd");
-    //     $config['total_rows'] = $this->Mdd->countAllS($s);
-    //     $config['base_url'] = base_url()."index.php/admin/get_list_dd_s";
-    //     $config['per_page'] = 5;
-
-    //     $start=$this->uri->segment(3);
-    //     $this->load->library('pagination', $config);
-    //     $data['listdd']= $this->Mdd->getListS($start, $config['per_page'],$s);
-    //     $this->load->view("admin/get_list_dd_admin_view", $data);
-    // }
+        public function pro_edit_ndt($id){
+            //Kiểm tra bằng form validation
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('tennganh', 'Tên ngành', 'required');
+            $this->form_validation->set_rules('chuongtrinhdaotao', 'Chương trình đào tạo', 'required');
+            $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
+            $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
+            $this->form_validation->set_rules('coso', 'Lựa chọn cơ sở', 'required');
+            if($this->form_validation->run() == FALSE){
+                echo "<script>alert('Lỗi Nhập !!!')</script>";
+                $this->edit_ndt($id);
+            }
+            else{
+                
+                $tennganh = isset($_POST['tennganh']) ? $_POST['tennganh'] : "";
+                $chuongtrinhdaotao = isset($_POST['chuongtrinhdaotao']) ? $_POST['chuongtrinhdaotao'] : "";
+                $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
+                $gioithieu = isset($_POST['gioithieu']) ? $_POST['gioithieu'] : "";
+                //$link = $this->upload->data('file_name');
+                $coso = isset($_POST['coso']) ? $_POST['coso'] : "";
+                $this->load->model("Mndt");
+                    $this->Mndt->edit($id,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
+                    echo "<script>alert('Sửa Thành Công !!!')</script>";
+                    $this->edit_ndt($id);
+                    
+                }
+            
+        }
+    
 }
