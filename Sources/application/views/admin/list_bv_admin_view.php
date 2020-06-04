@@ -24,23 +24,25 @@
                     <th>Mã</th>
                     <th>Tiêu Đề</th>
                     <th>Nội Dung Tóm Tắt</th>
-                    <th>Link Ảnh Bìa</th>                    
+                    <th>Link Ảnh Bìa</th>   
+                    <th>Danh Mục</th>                 
                 </tr>
                 </thead>
                 <tbody>
                 <?php foreach ($listBV as $row){?>
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url() . 'index.php/admin/edit_cn/' . $row['id_cn'];?>"><em class="fa fa-pencil"></em></a>
+                            <a class="btn btn-default" href="<?php echo base_url() . 'index.php/admin/edit_cn/' . $row['ma_bv'];?>"><em class="fa fa-pencil"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_cn/" . $row['id_cn'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_bv/" . $row['ma_bv'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['ma_bv'];?></td>
-                        <td><?php echo $row['tieu_de'];?></td>
+                        <td><?php echo $row['tieu_de_bv'];?></td>
                         <td><?php
-                            echo substr($row['noi_dung_tom_tat'],0,70) . "  ...";
+                            echo substr($row['noi_dung_tom_tat_bv'],0,70) . "  ...";
                             ?></td>
-                        <td><?php echo $row['link_anh_bia'];?></td>
+                        <td><?php echo $row['link_anh_bia_bv'];?></td>
+                        <td><?php echo $row['ten_dm'];?></td>
                     </tr>
                     <?php
                 }
