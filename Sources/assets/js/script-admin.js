@@ -9,7 +9,6 @@ $(document).ready(function () {
                     if (index=='provinces')
                     {
                         
-                       
                         for(i in value){
                             //console.log(value[i].name);    
                             $('#sel').append('<option value="' + value[i].code + '">' + value[i].code + '</option>');
