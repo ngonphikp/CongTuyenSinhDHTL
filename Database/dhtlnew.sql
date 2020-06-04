@@ -113,13 +113,6 @@ CREATE TABLE nganh_dao_tao (
     FOREIGN KEY (ma_csdt)
         REFERENCES co_so_dao_tao (ma_csdt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
-use dhtl;
-insert into tinh_thanh_pho(ma_ttp,ten) values('1','Hà Nội');
-insert into quan_huyen(ma_qh,ten,ma_ttp) values('1','Đống Đa','1');
-insert into phuong_thi_xa(ma_ptx,ten,ma_qh) values('1','Tây Sơn','1');
-insert into co_so_dao_tao(ma_csdt,ten,dia_chi) values('1','Cơ sở 1','1');
-insert into nganh_dao_tao(ten_nganh, chuong_trinh_dao_tao, ghi_chu, gioi_thieu,ma_csdt) values('1','1','1','1','1');
--- select ma_nganh, ten_nganh, chuong_trinh_dao_tao, ghi_chu, gioi_thieu, ten from nganh_dao_tao ndt inner join co_so_dao_tao csdt on ndt.ma_csdt = csdt.ma_csdt;
 CREATE TABLE diem_chuan (
     ma_dc INT AUTO_INCREMENT PRIMARY KEY,
     ma_nganh INT,
