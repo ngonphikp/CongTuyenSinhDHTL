@@ -104,7 +104,7 @@ CREATE TABLE co_so_dao_tao (
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE nganh_dao_tao (
-    ma_nganh INT AUTO_INCREMENT PRIMARY KEY,
+    ma_ndt INT AUTO_INCREMENT PRIMARY KEY,
     ma_csdt INT,
     ten_ndt TEXT NOT NULL,
     chuong_trinh_dao_tao_ndt TEXT,
@@ -113,14 +113,21 @@ CREATE TABLE nganh_dao_tao (
     FOREIGN KEY (ma_csdt)
         REFERENCES co_so_dao_tao (ma_csdt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
+use dhtl;
+insert into tinh_thanh_pho(ma_ttp,ten_ttp) values('1','Hà Nội');
+insert into quan_huyen(ma_qh,ten_qh,ma_ttp) values('1','Đống Đa','1');
+insert into phuong_thi_xa(ma_ptx,ten_ptx,ma_qh) values('1','Tây Sơn','1');
+insert into co_so_dao_tao(ma_csdt,ten_csdt,dia_chi_csdt) values('1','Cơ sở 1','1');
+insert into nganh_dao_tao(ten_ndt, chuong_trinh_dao_tao_ndt, ghi_chu_ndt, gioi_thieu_ndt,ma_csdt) values('1','1','1','1','1');
+-- select * from nganh_dao_tao ndt inner join co_so_dao_tao csdt on ndt.ma_csdt = csdt.ma_csdt;
 CREATE TABLE diem_chuan (
     ma_dc INT AUTO_INCREMENT PRIMARY KEY,
-    ma_nganh INT,
+    ma_ndt INT,
     nam_dc DATE,
     diem_dc FLOAT,
     chi_tieu_dc INT,
-    FOREIGN KEY (ma_nganh)
-        REFERENCES nganh_dao_tao (ma_nganh)
+    FOREIGN KEY (ma_ndt)
+        REFERENCES nganh_dao_tao (ma_ndt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE to_hop_mon (
