@@ -21,7 +21,7 @@ include_once "head_admin_view.php";
                 </div>
                 <!-- Nội dung Thay đổi -->
                 <div class="col-md-8 col-lg-9 me-admin-content">
-                    <?php include "edit_cn_admin_view.php"; ?>
+                    <?php include "edit_bv_admin_view.php"; ?>
                 </div>
             </div>
         </div>

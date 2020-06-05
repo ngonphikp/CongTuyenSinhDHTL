@@ -579,7 +579,9 @@ class Admin extends CI_Controller{
     }
 
     public function add_bv(){
-        $this->load->view("admin/s_add_bv_admin_view");
+        $this->load->model("Mdm");
+        $data['listDanhMuc']= $this->Mdm->getListAll();
+        $this->load->view("admin/s_add_bv_admin_view", $data);
     }
 
     public function pro_add_bv(){
@@ -611,6 +613,52 @@ class Admin extends CI_Controller{
                 $this->Mbv->add($dm, $td, $ndtt, $link);
                 echo "<script>alert('Thêm Thành Công !!!')</script>";
                 redirect(base_url() . "/admin/get_list_bv");
+            }
+        }
+    }
+
+    public function edit_bv($ma_bv){
+        $this->load->model("Mbv");
+        $data['bv'] = $this->Mbv->getByMaBV($ma_bv);
+
+        $this->load->model("Mdm");
+        $data['listDanhMuc']= $this->Mdm->getListAll();
+
+        //var_dump($data);
+        $this->load->view("admin/s_edit_bv_admin_view", $data);
+    }
+
+    public function pro_edit_bv($ma_bv){
+        //Kiểm tra bằng form validation
+
+        //var_dump($_POST);
+
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('td', 'Tiêu Đề', 'required');
+        $this->form_validation->set_rules('ndtt', 'Nội Dung Tóm Tắt', 'required');
+        $this->form_validation->set_rules('dm', 'Danh Mục', 'required');
+        if($this->form_validation->run() == FALSE){
+            echo "<script>alert('Lỗi Nhập !!!')</script>";
+            $this->edit_bv($ma_bv);
+        }
+        else {
+            $config['upload_path']          = './assets/img/bv/';
+            $config['allowed_types']        = 'gif|jpg|jpeg|png';
+            $this->load->library('upload', $config);
+            if ( ! $this->upload->do_upload('link'))
+            {
+                echo "<script>alert('Lỗi Upload File !!!')</script>";
+                $this->edit_bv($ma_bv);
+            }
+            else {
+                $this->load->model("Mbv");
+                $td = isset($_POST['td']) ? $_POST['td'] : "";
+                $ndtt = isset($_POST['ndtt']) ? $_POST['ndtt'] : "";
+                $dm = isset($_POST['dm']) ? $_POST['dm'] : "";
+                $link = $this->upload->data('file_name');
+                $this->Mbv->edit($ma_bv, $td, $ndtt, $link, $dm);
+                echo "<script>alert('Sửa Thành Công !!!')</script>";
+                $this->edit_bv($ma_bv);
             }
         }
     }
