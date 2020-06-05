@@ -27,5 +27,14 @@ class Mbv extends CI_Model{
     public function add($dm, $td, $ndtt, $link){
         $this->db->query("INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('$dm', '$td', '$ndtt', '$link');");
     }
+
+    public function getByMaBV($ma_bv){
+        $query=$this->db->query("select * from bai_viet where ma_bv = $ma_bv");
+        return $query->row_array();
+    }
+
+    public function edit($ma_bv, $td, $ndtt, $link, $dm){
+        $this->db->query("update bai_viet set tieu_de_bv = '$td', noi_dung_tom_tat_bv = '$ndtt', link_anh_bia_bv = '$link', ma_dm = '$dm' where ma_bv = $ma_bv;");
+    }
 }
 ?>
