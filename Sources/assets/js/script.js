@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 
     // Home
-    $('.carousel').owlCarousel({
+    $('.D_carousel').owlCarousel({
         loop:true,
         nav:true,
         navText:[

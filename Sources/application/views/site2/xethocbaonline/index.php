@@ -95,8 +95,27 @@
                 
                 <div class="row">
                     <div class="col-sm-12">
-                        <h5 class="float-right">Tìm kiếm</h5>
-                        <hr>
+                        <div class="col-sm-7"></div>
+                        <div class="col-sm-5 float-right">
+                            <p>
+                                <strong>Tìm kiếm</strong>
+                            </p>
+                            <hr>
+                            <form action="" method="POST" role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Số CMND">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="Mã số thí sinh">
+                                    <button type="submit" class="btn">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                                
+                            </form>
+                            
+                        </div>
+                        
                     </div>
                 </div>
             </div>
