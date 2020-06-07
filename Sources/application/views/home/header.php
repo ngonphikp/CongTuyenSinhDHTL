@@ -4,7 +4,7 @@
             <div class="nav__left">
                 <ul class="nav__left--list">
                     <li class="nav__left--item">
-                        <a href="<?php echo base_url();?>home/index">
+                        <a href="<?php echo base_url();?>home/index2">
                              <i class="fas fa-home"></i>
                              Trang chủ
                         </a>
@@ -27,7 +27,7 @@
                 <div class="nav__mid--search">
                     <form class="form-inline" id="search_form" action="/action_page.php">
                         <div class="search">
-                                <input type="text" name="" id="search" placeholder="Tìm sản phẩm ...">
+                                <input type="text" name="" id="search" placeholder="Tìm kiếm...">
                                 <button type="button">
                                     <i class="fas fa-search"></i>
                                 </button>
@@ -58,8 +58,8 @@
         <div class="header__wrapp">
             <div class="header__left">
                 <div id="logo">
-                    <a href="<?php echo base_url();?>home/index"> 
-                        <img src="<?php echo base_url();?>asset/image/logo/Logo-Thuy_Loi.png" alt="">
+                    <a href="<?php echo base_url();?>home/index2"> 
+                        <img src="<?php echo base_url();?>assets/img/logo/Logo-Thuy_Loi.png" alt="">
                     </a>
                 </div>
                 <div class="name-school">

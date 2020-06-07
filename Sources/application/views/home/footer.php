@@ -77,7 +77,7 @@
             <div class="modal__login--left">
                 <h2>Đăng nhập</h2>
                 <p>Welcome Admin mời bạn Đăng nhập</p>
-                <img src="<?php echo base_url();?>asset/image/img/graphic-map.png" alt="">
+                <img src="<?php echo base_url();?>assets/img/img_dhtl/graphic-map.png" alt="">
             </div>
             <div class="modal__login--right">
                 <form class="form-horizontal " id="form_login" action="/action_page.php">
