@@ -18,18 +18,18 @@ class Home extends CI_Controller{
 	}
 
     public function index(){
-        $this->load->model("Mdd");
-        $this->load->model("Mcn");
-        $this->load->model("Mdv");
-        $data['listddtntop2'] = $this->Mdd->getListTNRad(0,2);
-        $data['listddnntop2'] = $this->Mdd->getListNNRad(0,2);
-        $data['listddbxhtop2'] = $this->Mdd->getListBXH(0,2);
-        $data['listddtop2'] = $this->Mdd->getListM(0,2);
-        $data['listcntop3'] = $this->Mcn->getListRad(0,3);
-        $data['listdvpttop2'] = $this->Mdv->getListPTRad(0,2);
-        $data['listdvkstop2'] = $this->Mdv->getListKSRad(0,2);
-        $data['listdvbxhtop6'] = $this->Mdv->getListBXH(0,6);
-        $this->load->view('site/home_site_view', $data);
+        // $this->load->model("Mdd");
+        // $this->load->model("Mcn");
+        // $this->load->model("Mdv");
+        // $data['listddtntop2'] = $this->Mdd->getListTNRad(0,2);
+        // $data['listddnntop2'] = $this->Mdd->getListNNRad(0,2);
+        // $data['listddbxhtop2'] = $this->Mdd->getListBXH(0,2);
+        // $data['listddtop2'] = $this->Mdd->getListM(0,2);
+        // $data['listcntop3'] = $this->Mcn->getListRad(0,3);
+        // $data['listdvpttop2'] = $this->Mdv->getListPTRad(0,2);
+        // $data['listdvkstop2'] = $this->Mdv->getListKSRad(0,2);
+        // $data['listdvbxhtop6'] = $this->Mdv->getListBXH(0,6);
+        $this->load->view('site/home_site_view');
     }
 
     public function checkLogin(){
@@ -63,17 +63,17 @@ class Home extends CI_Controller{
         redirect(base_url());
     }
 
-    public function about(){
-        $this->load->view("site/s_about_site_view");
-    }
+    // public function about(){
+    //     $this->load->view("site/s_about_site_view");
+    // }
 
-    public function contact(){
-        $this->load->view("site/s_contact_site_view");
-    }
+    // public function contact(){
+    //     $this->load->view("site/s_contact_site_view");
+    // }
 
-    public function blog(){
-        $this->load->view("site/s_blog_site_view");
-    }
+    // public function blog(){
+    //     $this->load->view("site/s_blog_site_view");
+    // }
 
     public function ttcn($id){
         $this->load->model("Muser");
@@ -148,15 +148,15 @@ class Home extends CI_Controller{
     public function get_list_search(){
         $s = isset($_POST['s_search']) ? $_POST['s_search'] : "";
         $s = trim(htmlspecialchars(addslashes($s)));
-        $this->load->model("Mdd");
-        $this->load->model("Mcn");
-        $this->load->model("Mdv");
-        $data['listdds'] = $this->Mdd->getListS(0, 1000, $s);
-        $data['listdvs'] = $this->Mdv->getListS(0, 1000, $s);
-        $data['listcns'] = $this->Mcn->getListS(0, 1000, $s);
-        $data['countdd'] = $this->Mdd->countAllS($s);
-        $data['countdv'] = $this->Mdv->countAllS($s);
-        $data['countcn'] = $this->Mcn->countAllS($s);
+        // $this->load->model("Mdd");
+        // $this->load->model("Mcn");
+        // $this->load->model("Mdv");
+        // $data['listdds'] = $this->Mdd->getListS(0, 1000, $s);
+        // $data['listdvs'] = $this->Mdv->getListS(0, 1000, $s);
+        // $data['listcns'] = $this->Mcn->getListS(0, 1000, $s);
+        // $data['countdd'] = $this->Mdd->countAllS($s);
+        // $data['countdv'] = $this->Mdv->countAllS($s);
+        // $data['countcn'] = $this->Mcn->countAllS($s);
         $this->load->view("site/s_search_site_view", $data);
     }
 
