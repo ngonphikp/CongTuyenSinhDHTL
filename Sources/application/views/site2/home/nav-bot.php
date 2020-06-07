@@ -2,40 +2,40 @@
     <div class="container">
         <ul class="nav__bottom--menu">
             <li class="nav__menu--item">
-                <a href="<?php echo base_url();?>thongtinxettuyen/index">
+                <a href="<?php echo base_url();?>home/ttxt">
                     <img style="width:50px;height:50px;" src="<?php echo base_url();?>assets/img/img_dhtl/nganhtuyensinh.png" alt=""><br>
                 </a>
-                <a href="<?php echo base_url();?>thongtinxettuyen/index">THÔNG TIN XÉT TUYỂN</a>
+                <a href="<?php echo base_url();?>home/ttxt">THÔNG TIN XÉT TUYỂN</a>
             </li>
             <li class="nav__menu--item">
-                <a href="<?php echo base_url();?>thongbaoxettuyen/index">
+                <a href="<?php echo base_url();?>home/tbxt">
                     <img style="width:50px;height:50px;" src="<?php echo base_url();?>assets/img/img_dhtl/tintuc.png" alt=""><br>
                 </a>         
-                 <a href="<?php echo base_url();?>thongbaoxettuyen/index">THÔNG BÁO XÉT TUYỂN</a>
+                 <a href="<?php echo base_url();?>home/tbxt">THÔNG BÁO XÉT TUYỂN</a>
             </li>
             <li class="nav__menu--item">
-                <a href="<?php echo base_url();?>thongtinnganhxettuyen/index">
+                <a href="<?php echo base_url();?>home/ttnxt">
                     <img style="width:50px;height:50px;" src="<?php echo base_url();?>assets/img/img_dhtl/nganhts.png" alt=""><br>
                 </a>          
-                <a href="<?php echo base_url();?>thongtinnganhxettuyen/index">THÔNG TIN NGÀNH XÉT TUYỂN</a>
+                <a href="<?php echo base_url();?>home/ttnxt">THÔNG TIN NGÀNH XÉT TUYỂN</a>
             </li>
             <li class="nav__menu--item">
-                <a href="<?php echo base_url();?>xethocbaonline/index">
+                <a href="<?php echo base_url();?>home/xhb">
                 <i class="fas fa-book-open" style="font-size:50px;"></i>
                 </a>        
-                <a href="<?php echo base_url();?>xethocbaonline/index">XÉT HỌC BẠ TRỰC TUYẾN</a>
+                <a href="<?php echo base_url();?>home/xhb">XÉT HỌC BẠ TRỰC TUYẾN</a>
             </li>
             <li class="nav__menu--item">
-                <a href="<?php echo base_url();?>tuvantuyensinh/index">
+                <a href="<?php echo base_url();?>home/tvts">
                     <img style="width:50px;height:50px;" src="<?php echo base_url();?>assets/img/img_dhtl/tuvan.png" alt=""><br>
                 </a>        
-                <a href="<?php echo base_url();?>tuvantuyensinh/index">TƯ VẤN TUYỂN SINH</a>
+                <a href="<?php echo base_url();?>home/tvts">TƯ VẤN TUYỂN SINH</a>
             </li>
             <li class="nav__menu--item">
-                <a href="<?php echo base_url();?>lienhe/index">
+                <a href="<?php echo base_url();?>home/lienhe">
                     <img style="width:50px;height:50px;" src="<?php echo base_url();?>assets/img/img_dhtl/lienhe.png" alt=""><br>
                 </a>         
-                <a href="<?php echo base_url();?>lienhe/index">LIÊN HỆ</a>
+                <a href="<?php echo base_url();?>home/lienhe">LIÊN HỆ</a>
             </li>
         </ul>
     </div>

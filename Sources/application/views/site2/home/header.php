@@ -4,19 +4,19 @@
             <div class="nav__left">
                 <ul class="nav__left--list">
                     <li class="nav__left--item">
-                        <a href="<?php echo base_url();?>home/index2">
+                        <a href="<?php echo base_url();?>">
                              <i class="fas fa-home"></i>
                              Trang chủ
                         </a>
                     </li>
                     <li class="nav__left--item">
-                        <a href="<?php echo base_url();?>lienhe/index">
+                        <a href="<?php echo base_url();?>home/lienhe">
                             <i class="fas fa-phone-alt"></i>
                             Liên hệ
                         </a>
                     </li>
                     <li class="nav__left--item">
-                        <a href="<?php echo base_url();?>tuvantuyensinh/index">
+                        <a href="<?php echo base_url();?>home/tvts">
                             <i class="fas fa-users"></i>
                             Tư vấn
                         </a>
@@ -58,7 +58,7 @@
         <div class="header__wrapp">
             <div class="header__left">
                 <div id="logo">
-                    <a href="<?php echo base_url();?>home/index2"> 
+                    <a href="<?php echo base_url();?>"> 
                         <img src="<?php echo base_url();?>assets/img/logo/Logo-Thuy_Loi.png" alt="">
                     </a>
                 </div>
