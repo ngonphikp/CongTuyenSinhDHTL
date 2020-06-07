@@ -23,5 +23,10 @@ class Mdm extends CI_Model{
     public function add($ma, $ten, $ma_cha){
         $this->db->query("INSERT INTO danh_muc VALUES ('$ma', '$ten', '$ma_cha');");
     }
+
+    public function getByMaDM($ma_dm){
+        $query=$this->db->query("select * from danh_muc where ma_dm = $ma_dm");
+        return $query->row_array();
+    }
 }
 ?>

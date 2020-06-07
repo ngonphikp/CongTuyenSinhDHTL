@@ -583,6 +583,15 @@ class Admin extends CI_Controller{
         }
     }
 
+    public function edit_dm($ma_dm){
+        $this->load->model("Mdm");
+        $data['dm'] = $this->Mdm->getByMaDM($ma_dm);
+
+        //var_dump($data);
+
+        $this->load->view("admin/s_edit_dm_admin_view", $data);
+    }
+
     // Bài Viết
     public function get_list_bv(){
         $this->load->model("Mbv");

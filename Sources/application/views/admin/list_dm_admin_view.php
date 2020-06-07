@@ -16,7 +16,7 @@
                         if ($dm["ma_dm_cha"] == $ma_cha){?>
                             <ul>
                                 <li>
-                                    <a href="#"><?php echo $dm["ma_dm"] . ": " . $dm["ten_dm"];?></a>
+                                    <a href="<?php echo base_url();?>index.php/admin/edit_dm/<?php echo $dm['ma_dm'];?>"><?php echo $dm["ma_dm"] . ": " . $dm["ten_dm"];?></a>
                                     <?php CreateListChild($listDm, $dm["ma_dm"]); ?>                                                                        
                                 </li>
                             </ul>
