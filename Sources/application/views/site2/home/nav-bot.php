@@ -20,10 +20,10 @@
                 <a href="<?php echo base_url();?>thongtinnganhxettuyen/index">THÔNG TIN NGÀNH XÉT TUYỂN</a>
             </li>
             <li class="nav__menu--item">
-                <a href="<?php echo base_url();?>xethocba/index">
+                <a href="<?php echo base_url();?>xethocbaonline/index">
                 <i class="fas fa-book-open" style="font-size:50px;"></i>
                 </a>        
-                <a href="<?php echo base_url();?>xethocba/index">XÉT HỌC BẠ TRỰC TUYẾN</a>
+                <a href="<?php echo base_url();?>xethocbaonline/index">XÉT HỌC BẠ TRỰC TUYẾN</a>
             </li>
             <li class="nav__menu--item">
                 <a href="<?php echo base_url();?>tuvantuyensinh/index">

@@ -11,17 +11,17 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/styles.css">
-    <title>Liên hệ</title>
+    <title>Thông tin xét tuyển</title>
 </head>
 <body>
     <div id="wrapper">
         <?php 
-            include( APPPATH.'views/home/header.php');
-            include( APPPATH.'views/home/nav-bot.php');
-            include( APPPATH.'views/lienhe/main.php');
-            include( APPPATH.'views/home/footer.php');
+           include( APPPATH.'views/site2/home/header.php');
+           include( APPPATH.'views/site2/home/nav-bot.php');
+           include( APPPATH.'views/site2/thongtinxettuyen/main.php');
+           include( APPPATH.'views/site2/home/footer.php');
         ?>
-
+    
     </div>
     <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
     <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
