@@ -25,8 +25,8 @@
                     <td><textarea name="ndtt" class="form-control" id="" cols="30" rows="5"><?php echo $bv['noi_dung_tom_tat_bv'];?></textarea></td>
                 </tr>
                 <tr>
-                    <td><P>Ảnh Bìa</p></td>
-                    <td><input type="file" name="link" class="form-control"></td>
+                    <td><p>Ảnh Bìa: <a href="<?php echo base_url() . 'assets/img/bv/'. $bv['link_anh_bia_bv']; ?>" class="btn btn-primary" target="_blank">Xem Ảnh</a></p></td>
+                    <td><p>Chọn Ảnh Mới<input type="file" name="link" class="form-control"></p></td>
                 </tr>                
             </table>
         </div>

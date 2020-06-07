@@ -2,17 +2,17 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a data-toggle="collapse" href="#me-admin-tv"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Thành Viên</a>
+                <a data-toggle="collapse" href="#me-admin-tv"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Tài Khoản</a>
             </h4>
         </div>
         <div id="me-admin-tv" class="panel-collapse collapse">
             <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Thành Viên</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Thành Viên</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/add_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Tài Khoản</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/get_list_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Tài Khoản</a></li>
             </ul>
         </div>
     </div>
-    <div class="panel panel-default">
+    <!-- <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#me-admin-dl"><i class="fa fa-table" aria-hidden="true"></i>   Quản lý Địa Điểm</a>
@@ -50,10 +50,23 @@
                 <li><a href="<?php echo base_url();?>index.php/admin/get_list_cn"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Cẩm Nang</a></li>
             </ul>
         </div>
-    </div>
+    </div> -->
 
 
     <!-- DHTL -->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" href="#me-admin-cs"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Cơ Sở</a>
+            </h4>
+        </div>
+        <div id="me-admin-cs" class="panel-collapse collapse">
+            <ul>
+                <li><a href="<?php echo base_url();?>index.php/admin/add_cs"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Cơ Sở</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/get_list_cs"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Cơ Sở</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
@@ -78,6 +91,13 @@
                 <li><a href="<?php echo base_url();?>index.php/admin/add_hsxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Hồ Sơ Xét Tuyển</a></li>
                 <li><a href="<?php echo base_url();?>index.php/admin/get_list_hsxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Hồ Sơ Xét Tuyển</a></li>
             </ul>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a href="<?php echo base_url();?>index.php/admin/get_list_dm"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Danh Mục</a>
+            </h4>
         </div>
     </div>
     <div class="panel panel-default">
