@@ -46,30 +46,17 @@
                         <div class="row">
                             <div class="col-md-9">
                                 <div class="form-group">
+                                    <label for="">Họ, chữ đệm và tên của thí sinh</label>
                                     <input type="text" class="form-control" id="" placeholder="Họ, chữ đệm và tên của thí sinh">
-                                </div>
-                                <div class="text-details">
-                                    <div class="text-messages">
-                                        <p>Họ, chữ đệm và tên của thí sinh không được để trống</p>
-                                    </div>
-                                    <div class="text-count">
-                                        0 / 255
-                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group">
-                                    
                                     <select name="" id="input" class="form-control" required="required">
                                         <option value="">Giới tính</option>
                                         <option value="">Nam</option>
                                         <option value="">Nữ</option>
                                     </select>
-                                </div>
-                                <div class="text-details">
-                                    <div class="text-messages">
-                                        <p>Giới tính không được để trống</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>
