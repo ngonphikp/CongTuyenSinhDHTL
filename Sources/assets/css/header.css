@@ -139,6 +139,14 @@ a{text-decoration: none!important;}
     right: 5px;
     opacity: 1;
 }
+#slider .owl-prev:focus{
+    border: none!important;
+    outline: none!important;
+}
+#slider .owl-next:focus{
+    border: none!important;
+    outline: none!important;
+}
 #slider i{
     font-size: 1.5em;
     color: #fff;

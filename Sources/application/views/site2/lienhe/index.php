@@ -4,8 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
@@ -13,15 +11,15 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/styles.css">
-    <title>Tư vấn tuyển sinh</title>
+    <title>Liên hệ</title>
 </head>
 <body>
     <div id="wrapper">
         <?php 
-            include( APPPATH.'views/home/header.php');
-            include( APPPATH.'views/home/nav-bot.php');
-            include( APPPATH.'views/tuvantuyensinh/main.php');
-            include( APPPATH.'views/home/footer.php');
+            include( APPPATH.'views/site2/home/header.php');
+            include( APPPATH.'views/site2/home/nav-bot.php');
+            include( APPPATH.'views/site2/lienhe/main.php');
+            include( APPPATH.'views/site2/home/footer.php');
         ?>
 
     </div>

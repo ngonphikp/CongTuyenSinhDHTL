@@ -16,12 +16,11 @@
 <body>
     <div id="wrapper">
         <?php 
-           include( APPPATH.'views/home/header.php');
-           include( APPPATH.'views/home/nav-bot.php');
-           include( APPPATH.'views/thongtinnganhxettuyen/main.php');
-           include( APPPATH.'views/home/footer.php');
+           include( APPPATH.'views/site2/home/header.php');
+           include( APPPATH.'views/site2/home/nav-bot.php');
+           include( APPPATH.'views/site2/thongbaoxettuyen/main.php');
+           include( APPPATH.'views/site2/home/footer.php');
         ?>
-    
     </div>
     <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
     <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
