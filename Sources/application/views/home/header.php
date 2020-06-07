@@ -27,7 +27,7 @@
                 <div class="nav__mid--search">
                     <form class="form-inline" id="search_form" action="/action_page.php">
                         <div class="search">
-                                <input type="text" name="" id="search" placeholder="Tìm sản phẩm ...">
+                                <input type="text" name="" id="search" placeholder="Tìm kiếm...">
                                 <button type="button">
                                     <i class="fas fa-search"></i>
                                 </button>
