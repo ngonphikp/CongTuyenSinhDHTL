@@ -151,7 +151,7 @@
 
                 <!-- PHÂN__TRANG -->
                 <div class="list-page">
-                    <ul class="pagination">
+                    <ul class="pagination justify-content-center">
                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
                         <li class="page-item"><a class="page-link" href="#">2</a></li>
@@ -169,7 +169,7 @@
                     <div id="block-xet-hoc-ba" class="block block-1">
                         <p>
                             <a href="">
-                                <img src="<?php echo base_url();?>asset/image/img/hb.gif" alt="">
+                                <img src="<?php echo base_url();?>assets/img/img_dhtl/hb.gif" alt="">
                             </a>
                         </p>
                     </div>

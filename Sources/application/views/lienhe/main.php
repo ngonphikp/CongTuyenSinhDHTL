@@ -6,7 +6,7 @@
                     <!-- Bắt đầu main liên cmn hệ ok -->
                     <section id="content" role="main" class="clearfix" style="margin-top: 47px;">
                         <div id="breadcrumbs">
-                            <nav class="breadcrumb"><a href="">Trang chủ</a> » Liên hệ</nav>
+                            <nav class="breadcrumb"><a href="<?php echo base_url();?>home/index2">Trang chủ</a> » Liên hệ</nav>
                         </div>
                         <div id="content-wrap">
                             <div class="region region-content">

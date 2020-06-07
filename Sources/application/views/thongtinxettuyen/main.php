@@ -4,7 +4,7 @@
             <div id="main__left">
                 <div class="main__left--news">
                     <h1 class="title__news title-heading">
-                        <p><a href="<?php echo base_url();?>home/index"> Trang chủ </a>>> THÔNG TIN TUYỂN SINH</p>
+                        <p><a href="<?php echo base_url();?>home/index2"> Trang chủ </a>>> THÔNG TIN TUYỂN SINH</p>
                     </h1>
                     <div class="content-wrap">
                         <h1 class="page-title">
@@ -1203,7 +1203,7 @@
                             </a>
                         </p>
                     </div>
-                    <!-- <div id="block-hoi-dap" class="block block-hoi-dap">
+                    <div id="block-hoi-dap" class="block block-hoi-dap" style="display:none">
                         <h2 class="block__title">Tư vấn tuyển sinh</h2>
                         <div class="content">
                             <ul class="menu-news">
@@ -1225,12 +1225,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="block-video" class="block block-video">
+                    <div id="block-video" class="block block-video" style="display:none">
                         <div class="content">
                             <iframe src="https://www.youtube.com/embed/_BkPGggLKpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                             </iframe>
                         </div>
-                    </div> -->
+                    </div>
                     <div id="block-tin-tuyen-sinh" class="block block-menu">
                         <h2 class="block__title">Thí sinh cần lưu ý</h2>
                         <div class="content">
