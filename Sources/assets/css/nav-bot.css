@@ -13,7 +13,7 @@
 .nav__bottom--menu .nav__menu--item a{
     display: block;
     color: #fff;
-    font-size: 1em;
+    font-size: .8em;
     font-weight: 700;
 }
 .nav__bottom--menu .nav__menu--item:hover{
