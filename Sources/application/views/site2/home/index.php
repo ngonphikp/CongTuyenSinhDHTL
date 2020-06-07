@@ -11,16 +11,19 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/trelyco-login-vertical-horizontal.css">
+    <link rel="stylesheet" href="assets/css/trelyco-login-vertical-horizontal1.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/styles.css">
     <title>Document</title>
 </head>
 <body>
         <?php 
            include("header.php");
-           include("slider.php");
-           include("nav-bot.php");
-           include("main.php");     
-           include("footer.php");
+           include("login_site_view.php");
+           include("slider.php");           
+           include("nav-bot.php");           
+           include("main.php");                  
+           include("footer.php");         
         ?>
     
     </div>

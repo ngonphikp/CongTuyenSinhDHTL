@@ -27,7 +27,6 @@ $(document).ready(function () {
         $(".hide-update").toggle();
     });
 
-
     // Home
     $('.carousel').owlCarousel({
         loop:true,
