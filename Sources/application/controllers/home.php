@@ -12,6 +12,11 @@ class Home extends CI_Controller{
         parent::__construct();
     }
 
+    public function index2()
+	{
+        $this->load->view('home/index');
+	}
+
     public function index(){
         $this->load->model("Mdd");
         $this->load->model("Mcn");

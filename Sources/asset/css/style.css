@@ -1,0 +1,58 @@
+@import url("header.css");
+@import url("nav-bot.css");
+@import url("main.css");
+@import url("common.css");
+@import url("footer.css");
+
+/* ************PHÂN TRANG************ */
+.list-page{
+    text-align: center;
+}
+
+/* *************END****************** */
+
+#modal__login{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    display: none;
+}
+.modal__login-wrap{
+    position: relative;
+    top: 15%;
+    width: 600px;
+    background: rgb(248, 248, 248);
+    margin: 0 auto;
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    color: rgb(36, 36, 36);
+}
+.modal__login--left{
+    width: 40%;
+    background: rgb(255, 255, 255);
+    padding: 20px 0;
+}
+.modal__login--right{
+    width: 60%;
+    background: rgb(255, 255, 255);
+    border-radius: 0px 6px 6px 0px;
+    margin: 20px;
+}
+.modal__login--right #form_login{
+    padding: 20px;
+}
+.modal__login-wrap .btn-close{
+    position: absolute;
+    top: -11px;
+    right: -10px;
+    border-radius: 50%;
+    border-width: 0px;
+    width: 30px;
+    height: 30px;
+}
