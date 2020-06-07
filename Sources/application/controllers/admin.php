@@ -583,6 +583,39 @@ class Admin extends CI_Controller{
         }
     }
 
+    public function edit_dm($ma_dm){
+        $this->load->model("Mdm");
+        $data['dm'] = $this->Mdm->getByMaDM($ma_dm);
+
+        $data['dmC'] = $this->Mdm->getByMaDMCha($data["dm"]["ma_dm"]);
+        //var_dump($data);
+
+        $this->load->view("admin/s_edit_dm_admin_view", $data);
+    }
+
+    public function pro_edit_dm($ma_dm){
+        //Kiểm tra bằng form validation
+
+        //var_dump($_POST);
+
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('ten', 'Tên', 'required');
+        $this->form_validation->set_rules('ma_cha', 'Mã Cha', 'required');
+        // $this->form_validation->set_rules('dm', 'Danh Mục', 'required');
+        if($this->form_validation->run() == FALSE){
+            echo "<script>alert('Lỗi Nhập !!!')</script>";
+            $this->edit_dm($ma_dm);
+        }
+        else {
+            $this->load->model("Mdm");
+            $ten = isset($_POST['ten']) ? $_POST['ten'] : "";
+            $ma_cha = isset($_POST['ma_cha']) ? $_POST['ma_cha'] : "";
+            $this->Mdm->edit($ma_dm, $ten, $ma_cha);
+            echo "<script>alert('Sửa Thành Công !!!')</script>";
+            $this->edit_dm($ma_dm);
+        }
+    }
+
     // Bài Viết
     public function get_list_bv(){
         $this->load->model("Mbv");
