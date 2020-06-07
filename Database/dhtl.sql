@@ -13,7 +13,7 @@ CREATE TABLE tinh_thanh_pho (
     ma_ttp VARCHAR(10) PRIMARY KEY,
     ten_ttp TEXT
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
-
+-- select * from co_so_dao_tao csdt inner join phuong_thi_xa ptx on csdt.dia_chi_csdt = ptx.ma_ptx inner join quan_huyen qh on ptx.ma_qh = qh.ma_qh inner join tinh_thanh_pho ttp on qh.ma_ttp = ttp.ma_ttp;
 CREATE TABLE quan_huyen (
     ma_qh VARCHAR(10) PRIMARY KEY,
     ten_qh TEXT,
@@ -114,6 +114,8 @@ CREATE TABLE co_so_dao_tao (
     ma_csdt INT AUTO_INCREMENT PRIMARY KEY,
     ten_csdt TEXT,
     dia_chi_csdt VARCHAR(10),
+    dia_chi_xa_phuong VARCHAR(50),
+    dia_chi_thon_ban_duong_pho VARCHAR(50),
     FOREIGN KEY (dia_chi_csdt)
         REFERENCES phuong_thi_xa (ma_ptx)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
@@ -838,6 +840,6 @@ INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VAL
 -- insert into tinh_thanh_pho(ma_ttp,ten_ttp) values('1','Hà Nội');
 -- insert into quan_huyen(ma_qh,ten_qh,ma_ttp) values('1','Đống Đa','1');
 -- 
--- insert into co_so_dao_tao(ma_csdt,ten_csdt,dia_chi_csdt) values('1','Cơ sở 1','1');
+insert into co_so_dao_tao values('1','Cơ sở 1','1','Tây Sơn','175');
 -- insert into nganh_dao_tao(ten_ndt, chuong_trinh_dao_tao_ndt, ghi_chu_ndt, gioi_thieu_ndt,ma_csdt) values('1','1','1','1','1');
 -- select * from nganh_dao_tao ndt inner join co_so_dao_tao csdt on ndt.ma_csdt = csdt.ma_csdt;

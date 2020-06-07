@@ -22,6 +22,7 @@ $(document).ready(function () {
                         for(i in value){
                             //console.log(value[i].name);    
                             $('#sel').append('<option value="' + value[i].code + '">' + value[i].code + " "+ value[i].name + '</option>');
+                            $('#seltinhthanhphocsdt').append('<option value="' + value[i].code + '">' + value[i].code + " "+ value[i].name + '</option>');
                         }
                     }
                 });
@@ -59,59 +60,38 @@ $(document).ready(function () {
                     });
                 
           
-        });
+            });
 
-
-    //     $('#sel2').change(function () {
-    //         $("#sel3").val([])
-             
-    //         var x=sel2.value;
-    //         $.getJSON(newbase_url, function(data)
-    //         {
-    //             var code=[]
-    //          $.each(data, function (index, value) {
-    //             if (index=='highSchools')
-    //             {
-    //                 for(i in value){
-    //                     if (value[i].provinceCode==x)
-    //                     {
+        $('#seltinhthanhphocsdt').change(function () {
+            $("#selquanhuyencsdt").val([])
+            var x=selquanhuyencsdt.value;
+            $.getJSON(newbase_url, function(data)
+            {
+                var code=[]
+             $.each(data, function (index, value) {
+                if (index=='highSchools')
+                {
+                    for(i in value){
+                        if (value[i].provinceCode==x)
+                        {
                             
-    //                         code.push(value[i].districtName);
-    //                         //$('#sel3').append('<option value="' + index + '">' + value[i].districtName + '</option>');
-    //                     }
-    //                 }
+                            code.push(value[i].districtName);
+                            //$('#sel3').append('<option value="' + index + '">' + value[i].districtName + '</option>');
+                        }
+                    }
                     
-    //             }
-    //             });
+                }
+                });
                
-    //             var uniqueNames = [];
-    //             $.each(code, function(i, el){
-    //             if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
-    //             });
-    //             for (i in uniqueNames)
-    //                 $('#sel2').append('<option value="' + "a" + '">' + uniqueNames[i] + '</option>');
-    //             });
+                var uniqueNames = [];
+                $.each(code, function(i, el){
+                if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+                });
+                for (i in uniqueNames)
+                    $('#selquanhuyencsdt').append('<option value="' + "a" + '">' + uniqueNames[i] + '</option>');
+                });
             
       
-    // });
-
-
-
-
-
-        
-        // $.getJSON(newbase_url, function(data)
-        //      {
-        //          $.each(data, function (index, value) {
-        //             if (index=='highSchools')
-        //             {
-        //                 for(i in value){
-        //                     //console.log(value[i].name);    
-        //                     $('#tentruong').append('<option value="' + value[i].code + '">' + value[i].code+" "+value[i].name+" "+value[i].address + '</option>');
-        //                 }
-        //             }
-        //         });
-                
-        //     });
+        });
       
 });

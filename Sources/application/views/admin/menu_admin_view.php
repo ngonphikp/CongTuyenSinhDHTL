@@ -57,13 +57,13 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-                <a data-toggle="collapse" href="#me-admin-cs"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Cơ Sở</a>
+                <a data-toggle="collapse" href="#me-admin-cs"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Cơ Sở Đào Tạo</a>
             </h4>
         </div>
         <div id="me-admin-cs" class="panel-collapse collapse">
             <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_cs"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Cơ Sở</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_cs"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Cơ Sở</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/add_csdt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Cơ Sở</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/get_list_csdt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Cơ Sở</a></li>
             </ul>
         </div>
     </div>

@@ -13,12 +13,12 @@ class Admin extends CI_Controller{
     public function index(){
         $this->load->model("Muser");
         $data['countUser'] = $this->Muser->countAll();
-        $this->load->model("Mdd");
-        $data['countDD'] = $this->Mdd->countAll();
-        $this->load->model("Mcn");
-        $data['countCN'] = $this->Mcn->countAll();
-        $this->load->model("Mdv");
-        $data['countDV'] = $this->Mdv->countAll();
+        // $this->load->model("Mdd");
+        // $data['countDD'] = $this->Mdd->countAll();
+        // $this->load->model("Mcn");
+        // $data['countCN'] = $this->Mcn->countAll();
+        // $this->load->model("Mdv");
+        // $data['countDV'] = $this->Mdv->countAll();
 
         //$this->load->model("Mndt");
         //$data['countDV'] = $this->Mndt->countAll();
@@ -47,6 +47,7 @@ class Admin extends CI_Controller{
     public function add_hsxt(){
         $this->load->view("admin/s_add_hsxt_admin_view");
     }
+    
 
     public function pro_add_hsxt(){
         //Kiểm tra bằng form validation
@@ -79,8 +80,8 @@ class Admin extends CI_Controller{
                 $this->get_list_user();
             }
             catch(Exception $e){
-                echo "<script>alert('Tài Khoản Đã Tồn Tại !!!')</script>";
-                $this->add_user();
+                echo "<script>alert('Hồ Sơ Đã Tồn Tại !!!')</script>";
+                $this->add_hsxt();
             }
         }
     }
@@ -759,11 +760,17 @@ class Admin extends CI_Controller{
             $data['listNdt']= $this->Mndt->getListS($start, $config['per_page'], $s);
             $this->load->view("admin/get_list_ndt_admin_view", $data);
         }
-
+        
         public function edit_ndt($id){
             $this->load->model("Mndt");
             $data['ndt'] = $this->Mndt->getById($id);
             $this->load->view("admin/s_edit_ndt_admin_view", $data);
+        }
+        
+        public function edit_csdt($id){
+            $this->load->model("Mcsdt");
+            $data['csdt'] = $this->Mcsdt->getById($id);
+            $this->load->view("admin/s_edit_csdt_admin_view", $data);
         }
         
         public function delete_ndt($id){
@@ -772,7 +779,36 @@ class Admin extends CI_Controller{
             echo "<script>alert('Xóa Thành Công !!!')</script>";
             $this->get_list_ndt();
         }
-
+        
+        
+        public function pro_edit_csdt($id){
+            //Kiểm tra bằng form validation
+            $this->load->library('form_validation');
+            // $this->form_validation->set_rules('tennganh', 'Tên ngành', 'required');
+            // $this->form_validation->set_rules('chuongtrinhdaotao', 'Chương trình đào tạo', 'required');
+            // $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
+            // $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
+            // $this->form_validation->set_rules('coso', 'Lựa chọn cơ sở', 'required');
+            // if($this->form_validation->run() == FALSE){
+            //     echo "<script>alert('Lỗi Nhập !!!')</script>";
+            //     $this->edit_csdt($id);
+            // }
+           // else{
+                
+                $tencsdt = isset($_POST['tencsdt']) ? $_POST['tencsdt'] : "";
+                $tinhthanhphocsdt = isset($_POST['tinhthanhphocsdt']) ? $_POST['tinhthanhphocsdt'] : "";
+                // $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
+                // $gioithieu = isset($_POST['gioithieu']) ? $_POST['gioithieu'] : "";
+                //$link = $this->upload->data('file_name');
+                //$coso = isset($_POST['coso']) ? $_POST['coso'] : "";
+                $this->load->model("Mcsdt");
+                    //$this->Mcsdt->edit($id,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
+                    echo "<script>alert('Sửa Thành Công !!!')</script>";
+                    $this->edit_csdt($id);
+                    
+            //    }
+            
+        }
         public function pro_edit_ndt($id){
             //Kiểm tra bằng form validation
             $this->load->library('form_validation');
@@ -800,6 +836,62 @@ class Admin extends CI_Controller{
                     
                 }
             
+        }
+
+        public function add_csdt(){
+            $this->load->view("admin/s_add_csdt_admin_view");
+        }
+    
+        public function get_list_csdt(){
+            $this->load->model("Mcsdt");
+            $config['total_rows'] = $this->Mcsdt->countAll();
+            $config['base_url'] = base_url()."index.php/admin/get_list_csdt";
+            $config['per_page'] = 5;
+    
+            $start=$this->uri->segment(3);
+            $this->load->library('pagination', $config);
+            $data['listCsdt']= $this->Mcsdt->getList($start, $config['per_page']);
+            $this->load->view("admin/get_list_csdt_admin_view", $data);
+        }
+        public function get_list_hsxt(){
+            $this->load->model("Mhsxt");
+            $config['total_rows'] = $this->Mhsxt->countAll();
+            $config['base_url'] = base_url()."index.php/admin/get_list_hsxt";
+            $config['per_page'] = 5;
+    
+            $start=$this->uri->segment(3);
+            $this->load->library('pagination', $config);
+            $data['listHsxt']= $this->Mhsxt->getList($start, $config['per_page']);
+            $this->load->view("admin/get_list_hsxt_admin_view", $data);
+        }
+        public function pro_add_csdt(){
+            //Kiểm tra bằng form validation
+            $this->load->library('form_validation');
+            $this->form_validation->set_rules('tencsdt', 'Tên cơ sở đào tạo', 'required');
+            $this->form_validation->set_rules('tinhthanhphocsdt', 'Tỉnh thành phố', 'required');
+            $this->form_validation->set_rules('quanhuyencsdt', 'Quận huyện', 'required');
+            $this->form_validation->set_rules('phuongthixacsdt', 'Phường thị xã', 'required');
+            
+            if($this->form_validation->run() == FALSE){
+                echo "<script>alert('Lỗi Nhập !!!')</script>";
+                $this->add_csdt();
+            }
+            else{
+                try{
+                    $tencsdt = isset($_POST['tencsdt']) ? $_POST['tencsdt'] : "";
+                    $tinhthanhphocsdt = isset($_POST['tinhthanhphocsdt']) ? $_POST['tinhthanhphocsdt'] : "";
+                    $quanhuyencsdt = isset($_POST['quanhuyencsdt']) ? $_POST['quanhuyencsdt'] : "";
+                    $phuongthixacsdt = isset($_POST['phuongthixacsdt']) ? $_POST['phuongthixacsdt'] : "";
+                    $this->load->model("Mcsdt");
+                    $this->Muser->add($tencsdt, $tinhthanhphocsdt, $quanhuyencsdt, $phuongthixacsdt);
+                    echo "<script>alert('Thêm Thành Công !!!')</script>";
+                    $this->get_list_csdt();
+                }
+                catch(Exception $e){
+                    echo "<script>alert('Cơ sỏ đã tồn tại !!!')</script>";
+                    $this->add_csdt();
+                }
+            }
         }
     
 }

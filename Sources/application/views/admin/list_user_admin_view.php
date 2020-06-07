@@ -45,12 +45,12 @@
                         <td><?php echo $row['ten_dang_nhap'];?></td>
                         <td><?php echo $row['mat_khau'];?></td>
                         <td><?php echo $row['cap_do'];?></td>
-                        <td><?php echo $row['ho_ten'];?></td>
-                        <td><?php echo $row['email'];?></td>
-                        <td><?php echo $row['ngay_sinh']?></td>
-                        <td><?php echo $row['gioi_tinh'];?></td>
-                        <td><?php echo $row['dia_chi'];?></td>
-                        <td><?php echo $row['sdt'];?></td>
+                        <td><?php echo $row['ho_ten_tk'];?></td>
+                        <td><?php echo $row['email_tk'];?></td>
+                        <td><?php echo $row['ngay_sinh_tk']?></td>
+                        <td><?php echo $row['gioi_tinh_tk'];?></td>
+                        <td><?php echo $row['dia_chi_tk'];?></td>
+                        <td><?php echo $row['sdt_tk'];?></td>
                     </tr>
                 <?php
                 }
