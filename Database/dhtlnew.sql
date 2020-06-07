@@ -1505,6 +1505,12 @@ INSERT INTO danh_muc VALUES ('1.1', 'Danh mục 1.1', '1');
 INSERT INTO danh_muc VALUES ('1.2', 'Danh mục 1.2', '1');
 INSERT INTO danh_muc VALUES ('1.3', 'Danh mục 1.3', '1');
 
+INSERT INTO danh_muc VALUES ('1.1.1', 'Danh mục 1.1.1', '1.1');
+INSERT INTO danh_muc VALUES ('1.1.1.1', 'Danh mục 1.1.1.1', '1.1.1');
+INSERT INTO danh_muc VALUES ('1.1.2', 'Danh mục 1.1.2', '1.1');
+
+INSERT INTO danh_muc VALUES ('2.2.1', 'Danh mục 2.2.1', '2.2');
+
 INSERT INTO danh_muc VALUES ('2.1', 'Danh mục 2.1', '2');
 INSERT INTO danh_muc VALUES ('2.2', 'Danh mục 2.2', '2');
 

@@ -13,5 +13,15 @@ class Mdm extends CI_Model{
         $query=$this->db->query("select * from danh_muc;");
         return $query->result_array();
     }
+
+    public function getList($start, $size){
+        $start = isset($start)? $start : 0;
+        $query=$this->db->query("select * from danh_muc limit $start, $size;");
+        return $query->result_array();
+    }
+
+    public function add($ma, $ten, $ma_cha){
+        $this->db->query("INSERT INTO danh_muc VALUES ('$ma', '$ten', '$ma_cha');");
+    }
 }
 ?>

@@ -554,6 +554,34 @@ class Admin extends CI_Controller{
         // }
     }
 
+    // Danh Mục
+    public function get_list_dm(){
+        $this->load->model("Mdm");
+        $data['listDm']= $this->Mdm->getListAll();
+        //var_dump($data);
+        $this->load->view("admin/get_list_dm_admin_view", $data);
+    }
+
+    public function pro_add_dm(){
+        var_dump($_POST);
+        //Kiểm tra bằng form validation        
+        $this->load->library('form_validation');
+        $this->form_validation->set_rules('ma', 'Mã', 'required');
+        $this->form_validation->set_rules('ten', 'Tên', 'required');
+        if($this->form_validation->run() == FALSE){
+            echo "<script>alert('Lỗi Nhập !!!')</script>";
+            redirect(base_url() . "admin/get_list_dm");
+        }
+        else {
+            $this->load->model("Mdm");
+            $ma = isset($_POST['ma']) ? $_POST['ma'] : "";
+            $ten = isset($_POST['ten']) ? $_POST['ten'] : "";
+            $this->Mdm->add($ma, $ten, null);
+            echo "<script>alert('Thêm Thành Công !!!')</script>";
+            redirect(base_url() . "admin/get_list_dm");
+        }
+    }
+
     // Bài Viết
     public function get_list_bv(){
         $this->load->model("Mbv");
