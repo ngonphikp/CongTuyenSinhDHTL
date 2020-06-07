@@ -67,7 +67,6 @@ CREATE TABLE chi_tiet_bai_viet (
         REFERENCES bai_viet (ma_bv)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
-
 CREATE TABLE thi_sinh (
     ma_ts INT AUTO_INCREMENT PRIMARY KEY,
     ho_ten_ts TEXT,
@@ -201,19 +200,9 @@ CREATE TABLE mon (
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 insert into tai_khoan(ten_dang_nhap, mat_khau, cap_do) values('admin', '123456', 2);
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach1', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach2', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach3', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach4', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach5', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach6', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach7', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach8', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach9', '123456');
-insert into tai_khoan(ten_dang_nhap, mat_khau) values('khach10', '123456');
-
-
-
+insert into tai_khoan(ten_dang_nhap, mat_khau) values('admin1', '123456');
+insert into tai_khoan(ten_dang_nhap, mat_khau) values('admin2', '123456');
+insert into tai_khoan(ten_dang_nhap, mat_khau) values('admin3', '123456');
 
 INSERT INTO tinh_thanh_pho VALUES ('51', 'An Giang');
 INSERT INTO tinh_thanh_pho VALUES ('52', 'Bà Rịa-Vũng Tàu');
@@ -428,18 +417,10 @@ INSERT INTO quan_huyen VALUES ('3001', 'Quận Nam Từ Liêm', '01');
 
 insert into phuong_thi_xa(ma_ptx,ten_ptx,ma_qh) values('1','Tây Sơn','0401');
 
-
 insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(1,'Nguyễn Xuân Phi','admin@gmail.com','1998-02-13','Nam','1','0123456789');
 insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(2,'Nguyễn Thị A','a@gmail.com','1998-10-2','Nữ','1','0923456719');
 insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(3,'Nguyễn Văn JK','b@gmail.com','1997-02-26','Nam','1','0163456729');
 insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(4,'Nguyễn Văn GH','c@gmail.com','1998-02-18','Nam','1','0963453589');
-insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(5,'Nguyễn Thị AX','d@gmail.com','1998-03-06','Nữ','1','0123396789');
-insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(6,'Nguyễn Văn O','e@gmail.com','1995-12-03','Nam','1','0823456709');
-insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(7,'Nguyễn Thị LK','f@gmail.com','1998-02-01','Nữ','1','0166456789');
-insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(8,'Nguyễn Thị UJ','g@gmail.com','1996-03-01','Nữ','1','0123234789');
-insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(9,'Nguyễn Văn OP','h@gmail.com','1993-04-24','Nam','1','01234556339');
-insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(10,'Nguyễn Thị ER','i@gmail.com','1998-11-22','Nữ','1','0963456789');
-insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values(11,'Nguyễn Văn QW','k@gmail.com','1994-08-11','Nam','1','0973456779');
 
 INSERT INTO truong VALUES ('1299', 'Bán công Phan Bội Châu', '0113');
 INSERT INTO truong VALUES ('3914', 'Bổ Túc Văn Hóa Tỉnh', '0148');
@@ -791,6 +772,9 @@ INSERT INTO danh_muc VALUES ('2.2', 'Danh mục 2.2', '2');
 
 INSERT INTO danh_muc VALUES ('3.1', 'Danh mục 3.1', '3');
 INSERT INTO danh_muc VALUES ('3.2', 'Danh mục 3.2', '3');
+
+-- select * from danh_muc where ma_dm = '1.1';
+-- select * from danh_muc where ma_dm_cha = '1.1';
 
 -- CREATE TABLE bai_viet (
 --     ma_bv INT AUTO_INCREMENT PRIMARY KEY,

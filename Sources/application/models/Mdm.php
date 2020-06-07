@@ -25,8 +25,17 @@ class Mdm extends CI_Model{
     }
 
     public function getByMaDM($ma_dm){
-        $query=$this->db->query("select * from danh_muc where ma_dm = $ma_dm");
+        $query=$this->db->query("select * from danh_muc where ma_dm = '$ma_dm'");
         return $query->row_array();
+    }
+
+    public function getByMaDMCha($ma_dm_cha){
+        $query=$this->db->query("select * from danh_muc where ma_dm_cha = '$ma_dm_cha'");
+        return $query->result_array();
+    }
+
+    public function edit($ma_dm, $ten, $ma_cha){
+        $this->db->query("update danh_muc set ten_dm = '$ten', ma_dm_cha = '$ma_cha' where ma_dm = '$ma_dm';");
     }
 }
 ?>
