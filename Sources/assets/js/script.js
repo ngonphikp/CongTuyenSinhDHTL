@@ -5,7 +5,6 @@ $(document).ready(function () {
     });
 
     //Ẩn form login khi load
-    $(".me-form-login").hide();
     //Click nút đăng nhập trên nav
     $(".btnDangNhap").click(function () {
         console.log("click");
