@@ -8,6 +8,7 @@ $(document).ready(function () {
     $(".me-form-login").hide();
     //Click nút đăng nhập trên nav
     $(".btnDangNhap").click(function () {
+        console.log("click");
         $(".me-form-login").toggle();
     });
     
