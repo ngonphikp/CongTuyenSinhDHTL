@@ -34,10 +34,12 @@ Footer{
 }
 /*Form Đăng Nhập*/
 .me-form-login{
-    position: relative;
+    position: fixed;
     z-index: 10;
-    display: flex;
+    display: none;
     justify-content: center;
+    top: 10%;
+    left: 38%;
 }
 .me-form-login .login-card{
     position: fixed;
