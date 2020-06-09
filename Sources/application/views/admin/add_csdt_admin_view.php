@@ -40,7 +40,7 @@
                 </tr>
                 <tr>
                     <td><P>Thôn/bản/đường phố:</p></td>
-                    <td><textarea name="phuongthixacsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
+                    <td><textarea name="thonbanduongphocsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
                 </tr>
             </table>
                 
