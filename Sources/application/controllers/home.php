@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: FUJITSU
- * Date: 12/6/2018
- * Time: 11:08 AM
- */
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 class Home extends CI_Controller{
@@ -50,15 +44,15 @@ class Home extends CI_Controller{
             $this->session->set_userdata("CheckLogin", true);
             $data['infLogin'] = $this->Muser->infLogin($tk, $mk);
             $this->session->set_userdata($data['infLogin']);
-            if ($this->session->userdata("cap_do") == 1){
-                //Nếu Là Khách
-                echo "<script>alert('Đăng Nhập Thành Công !!!');</script>";
-                $this->index();
-            }else {
-                //Nếu Là Admin (hoặc NV)
-                redirect(base_url() . "index.php/admin");
-            }
-
+            // if ($this->session->userdata("cap_do") == 1){
+            //     //Nếu Là Khách
+            //     echo "<script>alert('Đăng Nhập Thành Công !!!');</script>";
+            //     $this->index();
+            // }else {
+            //     //Nếu Là Admin (hoặc NV)
+            //     redirect(base_url() . "index.php/admin");
+            // }
+            redirect(base_url() . "index.php/admin");
         }
         else{
             //Đăng Nhập Thất Bại
@@ -75,7 +69,7 @@ class Home extends CI_Controller{
     public function ttcn($id){
         $this->load->model("Muser");
         $data['user'] = $this->Muser->getById($id);
-        $this->load->view('site/s_ttcn_site_view', $data);
+        $this->load->view('admin/s_ttcn_admin_view', $data);
     }
 
     public function pro_ttcn($id){

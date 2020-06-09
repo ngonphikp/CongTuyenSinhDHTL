@@ -132,3 +132,29 @@ header .me-nav #navcol-1 .btn{
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+/*Form TTCN*/
+.me-TTCN {
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.me-TTCN form.custom-form{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.me-TTCN img{
+    width: 100%;
+}
+.me-TTCN label{
+    padding: 0 10px;
+}
+.me-TTCN .row,.me-TTCN .col-sm-4,.me-TTCN .col-sm-6,.me-TTCN .col-md-6,.me-TTCN .col-lg-4,.me-TTCN .col-lg-8{
+    padding: 0;
+    margin: 0;
+}
+.me-TTCN #me-setting-ttcn{
+    border-radius: 30px;
+    position: absolute; /*lớp cha * relative */
+    right: 0;
+}
