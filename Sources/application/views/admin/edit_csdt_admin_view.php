@@ -35,15 +35,21 @@
                 </tr>
                 <tr>
                     <td><P>Thôn/bản/đường phố:</p></td>
-                    <td><textarea name="phuongthixacsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
+                    <td><textarea name="thonbanduongphocsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
                 </tr>
                 <!-- <tr>
                     <td><p>Lựa chọn cơ sở</p></td>
 
                     <td><select name="coso" class="form-control">
                             <option value="1" selected>Cơ sở 1</option>
-                            <option value="2" <?php if ($csdt['ma_csdt'] === "2") echo "selected"?>>Cơ sở 2</option>
-                            <option value="3" <?php if ($csdt['ma_csdt'] === "3") echo "selected"?>>Cơ sở 3</option>
+                            <option value="2" 
+                            
+                            <?php if ($csdt['ma_csdt'] === "2") echo "selected"?>
+                            >Cơ sở 2</option>
+                            <option value="3" 
+                            
+                            
+                            <?php if ($csdt['ma_csdt'] === "3") echo "selected"?>>Cơ sở 3</option>
                         </select>
                     </td>
                    

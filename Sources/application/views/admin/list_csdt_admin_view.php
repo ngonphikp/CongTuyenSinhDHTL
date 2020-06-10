@@ -43,8 +43,8 @@
                         </td>
                         <td><?php echo $row['ma_csdt'];?></td>
                         <td><?php echo $row['ten_csdt'];?></td>
-                        <td><?php echo $row['ten_ttp'];?></td>
-                        <td><?php echo $row['ten_qh'];?></td>
+                        <td><?php echo $row['dia_chi_tinh_thanh_pho'];?></td>
+                        <td><?php echo $row['dia_chi_quan_huyen'];?></td>
                         <td><?php echo $row['dia_chi_xa_phuong'];?></td>
                         <td><?php echo $row['dia_chi_thon_ban_duong_pho'];?></td>
                         
