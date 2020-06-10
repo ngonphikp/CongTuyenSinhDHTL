@@ -12,7 +12,7 @@
                             <?php
                         }
                         ?>
-                        <option value="Danh Mục Khác">Danh Mục Khác</option>
+                        <!-- <option value="Danh Mục Khác">Danh Mục Khác</option> -->
                         </select>
                     </td>
                 </tr>

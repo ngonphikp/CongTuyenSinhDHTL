@@ -40,7 +40,8 @@
                 </tr> 
             </table>            
         </div>        
-        <div class="col-md-3 form-group pull-right">        
+        <div class="col-md-3 form-group pull-right">  
+            <input type="buton" name="delete" value="Xóa" class="btn btn-warning btn-block">      
             <input type="submit" name="ok" value="Lưu" class="btn btn-primary btn-block">
         </div>
     </form>

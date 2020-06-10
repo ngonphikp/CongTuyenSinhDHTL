@@ -508,6 +508,7 @@ class Admin extends CI_Controller{
         echo "<script>alert('Xóa Thành Công !!!')</script>";
         $this->get_list_csdt();
     }
+
     public function get_list_cn_s(){
         if (isset($_POST['search'])){
             $s = $_POST['search'];
@@ -692,6 +693,9 @@ class Admin extends CI_Controller{
         $this->load->model("Mdm");
         $data['listDanhMuc']= $this->Mdm->getListAll();
 
+        $this->load->model("Mctbv");
+        $data['listCtbv']= $this->Mctbv->getListByMaBV($data["bv"]["ma_bv"]);
+
         //var_dump($data);
         $this->load->view("admin/s_edit_bv_admin_view", $data);
     }
@@ -729,6 +733,25 @@ class Admin extends CI_Controller{
                 $this->edit_bv($ma_bv);
             }
         }
+    }
+
+    public function get_list_bv_s(){
+        if (isset($_POST['search'])){
+            $s = $_POST['search'];
+            $this->session->set_userdata('search', $s);
+        }else{
+            $s=$this->session->userdata('search');
+        }
+        $s = trim(htmlspecialchars(addslashes($s)));
+        $this->load->model("Mbv");
+        $config['total_rows'] = $this->Mbv->countAllS($s);
+        $config['base_url'] = base_url()."index.php/admin/get_list_bv_s";
+        $config['per_page'] = 5;
+
+        $start=$this->uri->segment(3);
+        $this->load->library('pagination', $config);
+        $data['listBV']= $this->Mbv->getListS($start, $config['per_page'], $s);
+        $this->load->view("admin/get_list_bv_admin_view", $data);
     }
 
     // Ngành đào tạo - DHTL

@@ -25,9 +25,37 @@
                     <td><textarea name="ndtt" class="form-control" id="" cols="30" rows="5"><?php echo $bv['noi_dung_tom_tat_bv'];?></textarea></td>
                 </tr>
                 <tr>
-                    <td><p>Ảnh Bìa: <a href="<?php echo base_url() . 'assets/img/bv/'. $bv['link_anh_bia_bv']; ?>" class="btn btn-primary" target="_blank">Xem Ảnh</a></p></td>
-                    <td><p>Chọn Ảnh Mới<input type="file" name="link" class="form-control"></p></td>
-                </tr>                
+                    <td><p>Ảnh Bìa: </p></td>
+                    <td>
+                        <a href="<?php echo base_url() . 'assets/img/bv/'. $bv['link_anh_bia_bv']; ?>" class="btn btn-primary" target="_blank">Xem Ảnh</a>
+                        <p>Chọn Ảnh Mới<input type="file" name="link" class="form-control"></p>
+                    </td>
+                </tr> 
+
+                <?php
+                    foreach($listCtbv as $row){?>
+
+                        <!-- Form CTBV + Trừ -->
+                        <!-- Ảnh + Nội dung chi tiết -->
+                        <tr>
+                            <td><input type="button" value="-">
+                                <p>Nội dung chi tiết</p>
+                                <textarea name="ndct" class="form-control" id="" cols="30" rows="3"><?php echo $row['noi_dung_chi_tiet_ctbv'];?></textarea>
+                            </td>
+                            <td>
+                                <a href="<?php echo base_url() . 'assets/img/ctbv/'. $row['link_anh_ctbv']; ?>" class="btn btn-primary" target="_blank">Xem Ảnh</a>
+                                <P>Ảnh chi tiết<input type="file" name="linkct" class="form-control"></p>
+                            </td>
+                        </tr>
+
+                    <?php
+                    }
+                ?>                
+                <!-- Cộng -->
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="+"></td>
+                </tr>               
             </table>
         </div>
         <div class="col-md-3 form-group pull-right">
