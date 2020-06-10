@@ -10,10 +10,18 @@ $(document).ready(function () {
     });  
 
     $('#seltinhthanhphocsdt').change(function () {
-                $("#selquanhuyencsdt").val([]);
+                //console.log("afdasdfa");
+                //$("#selquanhuyencsdt").val([]);
+                //$("#selquanhuyencsdt").val();
+                var select = document.getElementById("selquanhuyencsdt");
+                var length = select.options.length;
+                for (i = length-1; i >= 0; i--) {
+                select.options[i] = null;
+                }
+                //document.getElementById("selquanhuyencsdt").empty();
                 var districtBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/District.json';
                 var seltinhthanhphocsdtValue=seltinhthanhphocsdt.value;
-                console.log(seltinhthanhphocsdtValue);
+                //console.log(seltinhthanhphocsdtValue);
                 $.getJSON(districtBase_url, function(data)
                 {
                     var code=[];
