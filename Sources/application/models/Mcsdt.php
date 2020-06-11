@@ -47,6 +47,11 @@ class Mcsdt extends CI_Model{
     //     on ndt.ma_csdt = csdt.ma_csdt where ndt.ten_ndt like '%$s%' OR ndt.ma_ndt like '%$s%';");
     //     return $query->num_rows();
     // }
+
+    public function getListAll(){
+        $query=$this->db->query("select * from co_so_dao_tao;");
+        return $query->result_array();
+    }
     
 }
 ?>

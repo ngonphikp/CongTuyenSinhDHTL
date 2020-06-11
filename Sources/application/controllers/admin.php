@@ -747,7 +747,10 @@ class Admin extends CI_Controller{
 
     public function add_ndt(){
         //$this->load->view("admin/s_add_dd_admin_view");
-        $this->load->view("admin/s_add_ndt_admin_view");
+        $this->load->model("Mcsdt");
+            $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
+            $this->load->view("admin/s_add_ndt_admin_view", $data);
+        
     }
 
     

@@ -26,12 +26,16 @@
                     <td><P>Giới thiệu</p></td>
                     <td><textarea name="gioithieu" class="form-control" id="" cols="30" rows="1"></textarea></td>
                 </tr>
-                <tr>
-                    <td><p>Lựa chọn cơ sở</p></td>
+                
+
+                <tr><td><p>Lựa chọn cơ sở</p></td>
                     <td><select name="coso" class="form-control">
-                            <option value="1">Cơ sở 1</option>
-                            <option value="2">Cơ sở 2</option>
-                            <option value="3">Cơ sở 3</option>
+                        <?php foreach ($listCoSoDaoTao as $row){?>                            
+                            <option value="<?php echo $row["ma_csdt"]; ?>"><?php echo $row["ma_csdt"] . ": " . $row["ten_csdt"]; ?></option>
+                            <?php
+                        }
+                        ?>
+                        <option value="Cơ sở khác">Cơ sở khác</option>
                         </select>
                     </td>
                 </tr>
