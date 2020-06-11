@@ -8,8 +8,9 @@ $(document).ready(function () {
             $('#seltinhthanhphocsdt').append('<option value="'+value.CityName+'">' + value.CityName + '</option>');
             $('#selNoiSinhAddHsxt').append('<option value="'+value.CityName+'">' + value.CityName + '</option>');
             $('#selTinhThanhPhoLop10AddHsxt').append('<option value="'+value.CityName+'">' + value.CityName + '</option>');
-            
-        });      
+            $('#selTinhThanhPhoLop11AddHsxt').append('<option value="'+value.CityName+'">' + value.CityName + '</option>');
+            $('#selTinhThanhPhoLop12AddHsxt').append('<option value="'+value.CityName+'">' + value.CityName + '</option>');
+        }); 
     });  
 
     $('#seltinhthanhphocsdt').change(function () {
@@ -67,32 +68,165 @@ $(document).ready(function () {
         });     
     });
 
-    $('#selTinhThanhPhoAddHsxt').change(function () {
-        //console.log("afdasdfa");
-        //$("#selquanhuyencsdt").val([]);
-        //$("#selquanhuyencsdt").val();
-        var select = document.getElementById("selQuanHuyenAddHsxt");
+    $('#selTinhThanhPhoLop10AddHsxt').change(function () {
+        var select = document.getElementById("selQuanHuyenLop10AddHsxt");
         var length = select.options.length;
         for (i = length-1; i >= 0; i--) {
         select.options[i] = null;
         }
-        //document.getElementById("selquanhuyencsdt").empty();
+      
         var districtBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/District.json';
-        var selTinhThanhPhoAddHsxtValue=selTinhThanhPhoAddHsxt.value;
-        //console.log(seltinhthanhphocsdtValue);
+        var selTinhThanhPhoLop10AddHsxtValue=selTinhThanhPhoLop10AddHsxt.value;
+       
         $.getJSON(districtBase_url, function(data)
         {
             var code=[];
             $.each(data, function (index, value) {
-                if (value.CityName==selTinhThanhPhoAddHsxtValue) 
+                if (value.CityName==selTinhThanhPhoLop10AddHsxtValue) 
                 {
-                    //console.log(value.DistrictName);
-                    $('#selQuanHuyenAddHsxt').append('<option value="'+ value.DistrictName +'">' + value.DistrictName + '</option>');
+                    
+                    $('#selQuanHuyenLop10AddHsxt').append('<option value="'+ value.DistrictName +'">' + value.DistrictName + '</option>');
                     
                 }  
             });
         });     
     });
+
+    $('#selQuanHuyenLop10AddHsxt').change(function () {
+        
+        var select = document.getElementById("selTruongThptLop10AddHsxt");
+        var length = select.options.length;
+        for (i = length-1; i >= 0; i--) {
+        select.options[i] = null;
+        }
+        //document.getElementById("selquanhuyencsdt").empty();
+        var schoolBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/School.json';
+        var selQuanHuyenLop10AddHsxtValue=selQuanHuyenLop10AddHsxt.value;
+        //console.log(seltinhthanhphocsdtValue);
+        $.getJSON(schoolBase_url, function(data)
+        {
+            var code=[];
+            $.each(data, function (index, value) {
+                if (value.DistrictName==selQuanHuyenLop10AddHsxtValue) 
+                {
+                    //console.log(value.SchoolName);
+                    $('#selTruongThptLop10AddHsxt').append('<option value="'+value.SchoolName+'">' + value.SchoolName + '</option>');
+                    
+                }  
+            });
+        });     
+    });
+
+
+
+    $('#selTinhThanhPhoLop11AddHsxt').change(function () {
+        var select = document.getElementById("selQuanHuyenLop11AddHsxt");
+        var length = select.options.length;
+        for (i = length-1; i >= 0; i--) {
+        select.options[i] = null;
+        }
+        var districtBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/District.json';
+        var selTinhThanhPhoLop11AddHsxtValue=selTinhThanhPhoLop11AddHsxt.value;
+        
+        $.getJSON(districtBase_url, function(data)
+        {
+            var code=[];
+            $.each(data, function (index, value) {
+                if (value.CityName==selTinhThanhPhoLop11AddHsxtValue) 
+                {
+                   
+                    $('#selQuanHuyenLop11AddHsxt').append('<option value="'+ value.DistrictName +'">' + value.DistrictName + '</option>');
+                    
+                }  
+            });
+        });     
+    });
+
+    $('#selQuanHuyenLop11AddHsxt').change(function () {
+    
+        var select = document.getElementById("selTruongThptLop11AddHsxt");
+        var length = select.options.length;
+        for (i = length-1; i >= 0; i--) {
+        select.options[i] = null;
+        }
+       
+        var schoolBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/School.json';
+        var selQuanHuyenLop11AddHsxtValue =selQuanHuyenLop11AddHsxt.value;
+        
+        $.getJSON(schoolBase_url, function(data)
+        {
+            var code=[];
+            $.each(data, function (index, value) {
+                if (value.DistrictName==selQuanHuyenLop11AddHsxtValue) 
+                {
+                    
+                    $('#selTruongThptLop11AddHsxt').append('<option value="'+value.SchoolName+'">' + value.SchoolName + '</option>');
+                    
+                }  
+            });
+        });     
+    });
+
+
+
+    $('#selTinhThanhPhoLop12AddHsxt').change(function () {
+        var select = document.getElementById("selQuanHuyenLop12AddHsxt");
+        var length = select.options.length;
+        for (i = length-1; i >= 0; i--) {
+        select.options[i] = null;
+        }
+        var districtBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/District.json';
+        var selTinhThanhPhoLop12AddHsxtValue=selTinhThanhPhoLop12AddHsxt.value;
+        
+        $.getJSON(districtBase_url, function(data)
+        {
+            var code=[];
+            $.each(data, function (index, value) {
+                if (value.CityName==selTinhThanhPhoLop12AddHsxtValue) 
+                {
+                   
+                    $('#selQuanHuyenLop12AddHsxt').append('<option value="'+ value.DistrictName +'">' + value.DistrictName + '</option>');
+                    
+                }  
+            });
+        });     
+    });
+
+    $('#selQuanHuyenLop12AddHsxt').change(function () {
+    
+        var select = document.getElementById("selTruongThptLop12AddHsxt");
+        var length = select.options.length;
+        for (i = length-1; i >= 0; i--) {
+        select.options[i] = null;
+        }
+       
+        var schoolBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/School.json';
+        var selQuanHuyenLop12AddHsxtValue =selQuanHuyenLop12AddHsxt.value;
+        
+        $.getJSON(schoolBase_url, function(data)
+        {
+            var code=[];
+            $.each(data, function (index, value) {
+                if (value.DistrictName==selQuanHuyenLop12AddHsxtValue) 
+                {
+                    
+                    $('#selTruongThptLop12AddHsxt').append('<option value="'+value.SchoolName+'">' + value.SchoolName + '</option>');
+                    
+                }  
+            });
+        });     
+    });
+
+
+
+
+
+
+
+
+
+
+
 
     //add hsxt
     var enthicBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/enthic.json';
