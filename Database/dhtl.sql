@@ -119,9 +119,9 @@ CREATE TABLE co_so_dao_tao (
     -- FOREIGN KEY (dia_chi_csdt)
 --         REFERENCES quan_huyen (ma_qh)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
--- insert into co_so_dao_tao(ten_csdt, dia_chi_tinh_thanh_pho, dia_chi_quan_huyen, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('x','x','x' 'x', 'x');
+insert into co_so_dao_tao(ten_csdt, dia_chi_tinh_thanh_pho, dia_chi_quan_huyen, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('Cơ sở 1','Thành Phố Hà Nội','Quận Đống Đa' ,'Phường Trung Liệt', 'Số 175 Tây Sơn');
 CREATE TABLE nganh_dao_tao (
-    ma_ndt INT AUTO_INCREMENT PRIMARY KEY,
+    ma_ndt varchar(50) PRIMARY KEY,
     ma_csdt INT,
     ten_ndt TEXT NOT NULL,
     chuong_trinh_dao_tao_ndt TEXT,
@@ -130,10 +130,10 @@ CREATE TABLE nganh_dao_tao (
     FOREIGN KEY (ma_csdt)
         REFERENCES co_so_dao_tao (ma_csdt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
-
+insert into nganh_dao_tao(ma_ndt,ma_csdt, ten_ndt, chuong_trinh_dao_tao_ndt) values('TLA106','1','Công nghệ thông tin','Chương trình đào tạo bằng Tiếng Việt');
 CREATE TABLE diem_chuan (
     ma_dc INT AUTO_INCREMENT PRIMARY KEY,
-    ma_ndt INT,
+    ma_ndt varchar(50),
     nam_dc DATE,
     diem_dc FLOAT,
     chi_tieu_dc INT,
@@ -150,7 +150,7 @@ CREATE TABLE to_hop_mon (
 
 CREATE TABLE to_hop_mon_xet_tuyen (
     ma_thm VARCHAR(5),
-    ma_ndt INT,
+    ma_ndt VARCHAR(50),
     FOREIGN KEY (ma_ndt)
         REFERENCES nganh_dao_tao (ma_ndt),
     FOREIGN KEY (ma_thm)
@@ -161,7 +161,7 @@ CREATE TABLE to_hop_mon_xet_tuyen (
 CREATE TABLE nguyen_vong (
     ma_thm VARCHAR(5),
     ma_hsxt INT,
-    ma_ndt INT,
+    ma_ndt VARCHAR(50),
     PRIMARY KEY (ma_thm , ma_hsxt),
     FOREIGN KEY (ma_ndt)
         REFERENCES nganh_dao_tao (ma_ndt),

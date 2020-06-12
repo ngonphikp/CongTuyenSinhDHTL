@@ -5,6 +5,10 @@
     <?php echo form_open_multipart('/admin/pro_add_ndt'); ?>
         <div class="form">
             <table class="table">
+            <tr>
+                    <td><P>Mã ngành</p></td>
+                    <td><textarea name="manganh" class="form-control" id="" cols="30" rows="1"></textarea></td>
+                </tr>
                 <tr>
                     <td><P>Tên ngành</p></td>
                     <td><textarea name="tennganh" class="form-control" id="" cols="30" rows="1"></textarea></td>

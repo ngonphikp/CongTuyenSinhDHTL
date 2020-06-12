@@ -359,7 +359,8 @@ class Admin extends CI_Controller{
         $config['total_rows'] = $this->Mndt->countAll();
         $config['base_url'] = base_url()."index.php/admin/get_list_ndt";
         $config['per_page'] = 5;
-        $start=$this->uri->segment(3);
+        //$start=$this->uri->segment(3);
+        $start=0;
         $this->load->library('pagination', $config);
         $data['listNdt']= $this->Mndt->getList($start, $config['per_page']);
         $this->load->view("admin/get_list_ndt_admin_view", $data);
@@ -380,10 +381,11 @@ class Admin extends CI_Controller{
     public function pro_add_ndt(){
         //Kiểm tra bằng form validation
         $this->load->library('form_validation');
+        $this->form_validation->set_rules('manganh', 'Tên ngành', 'required');
         $this->form_validation->set_rules('tennganh', 'Tên ngành', 'required');
         $this->form_validation->set_rules('chuongtrinhdaotao', 'Chương trình đào tạo', 'required');
-        $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
-        $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
+        // $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
+        // $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
         $this->form_validation->set_rules('coso', 'Lựa chọn cơ sở', 'required');
         if($this->form_validation->run() == FALSE){
             echo "<script>alert('Lỗi Nhập !!!')</script>";
@@ -391,16 +393,24 @@ class Admin extends CI_Controller{
         }
      
         else {
-            $tennganh = isset($_POST['tennganh']) ? $_POST['tennganh'] : "";
-            $chuongtrinhdaotao = isset($_POST['chuongtrinhdaotao']) ? $_POST['chuongtrinhdaotao'] : "";
-            $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
-            $gioithieu = isset($_POST['gioithieu']) ? $_POST['gioithieu'] : "";
-            //$link = $this->upload->data('file_name');
-            $coso = isset($_POST['coso']) ? $_POST['coso'] : "";
-            $this->load->model("Mndt");
-            $this->Mndt->add($tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
-            echo "<script>alert('Thêm Thành Công !!!')</script>";
-            $this->get_list_ndt();
+            try {
+                $manganh = isset($_POST['manganh']) ? $_POST['manganh'] : "";
+                $tennganh = isset($_POST['tennganh']) ? $_POST['tennganh'] : "";
+                $chuongtrinhdaotao = isset($_POST['chuongtrinhdaotao']) ? $_POST['chuongtrinhdaotao'] : "";
+                $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
+                $gioithieu = isset($_POST['gioithieu']) ? $_POST['gioithieu'] : "";
+                //$link = $this->upload->data('file_name');
+                $coso = isset($_POST['coso']) ? $_POST['coso'] : "";
+                $this->load->model("Mndt");
+                $this->Mndt->add($manganh,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
+                echo "<script>alert('Thêm Thành Công !!!')</script>";
+                $this->get_list_ndt();
+            }
+            
+            catch(Exception $e){
+                echo "<script>alert('Tài Khoản Đã Tồn Tại !!!')</script>";
+                $this->add_ndt();
+            }
         }
                 
             
@@ -444,17 +454,18 @@ class Admin extends CI_Controller{
         public function pro_edit_ndt($id){
             //Kiểm tra bằng form validation
             $this->load->library('form_validation');
+            $this->form_validation->set_rules('manganh', 'Tên ngành', 'required');
             $this->form_validation->set_rules('tennganh', 'Tên ngành', 'required');
             $this->form_validation->set_rules('chuongtrinhdaotao', 'Chương trình đào tạo', 'required');
-            $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
-            $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
+            // $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
+            // $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
             $this->form_validation->set_rules('coso', 'Lựa chọn cơ sở', 'required');
             if($this->form_validation->run() == FALSE){
                 echo "<script>alert('Lỗi Nhập !!!')</script>";
                 $this->edit_ndt($id);
             }
             else{
-                
+                $manganh = isset($_POST['manganh']) ? $_POST['manganh'] : "";
                 $tennganh = isset($_POST['tennganh']) ? $_POST['tennganh'] : "";
                 $chuongtrinhdaotao = isset($_POST['chuongtrinhdaotao']) ? $_POST['chuongtrinhdaotao'] : "";
                 $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
@@ -462,7 +473,7 @@ class Admin extends CI_Controller{
                 //$link = $this->upload->data('file_name');
                 $coso = isset($_POST['coso']) ? $_POST['coso'] : "";
                 $this->load->model("Mndt");
-                    $this->Mndt->edit($id,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
+                    $this->Mndt->edit($id,$manganh,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
                     echo "<script>alert('Sửa Thành Công !!!')</script>";
                     $this->edit_ndt($id);
                     
