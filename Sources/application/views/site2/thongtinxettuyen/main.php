@@ -191,101 +191,102 @@
                             </table> -->
                             <p><strong>1.Xét tuyển tại cơ sở Hà Nội (Mã trường: TLA)</strong></p>
                             <p><strong>Các ngành đào tạo bằng Tiếng Anh</strong></p>
-                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 794px;" width="700">
-                                <thead>
-                                    <tr>
-                                        <th style="width:70px;height:78px;">
-                                            <br clear="all">
-                                                <p align="center"><strong>TT</strong></p>
-                                        </th>
-                                        <th style="width: 292px; height: 78px;">
-                                            <p align="center">
-                                                <strong>
-                                                    Tên ngành
-                                                </strong>
-                                            </p>
-                                        </th>
-                                        <th style="width: 130px; height: 30px;">
-                                            <p align="center"><strong>Mã ngành </strong></p>
-                                            <p align="center"><strong>(Mã xét tuyển)</strong></p>
-                                        </th>
-                                        <th style="width: 186px; height: 30px;">
-                                            <p align="center">
-                                                <strong>
-                                                    Tổ hợp<br>
-                                                    xét tuyển
-                                                </strong>
-                                            </p>
-                                        </th>
-                                        <th style="width: 100px; height: 30px;">
-                                            <p align="center">
-                                                <strong>Chỉ tiêu xét tuyển</strong>
-                                            </p>
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td style="width:57px;height:78px;">
-                                            <p align="center">1</p>
-                                        </td>
-                                        <td style="width: 292px; height: 78px;">
-                                            <p>Chương trình tiên tiến ngành Kỹ thuật xây dựng (Hợp tác với Đại học Arkansas, Hoa Kỳ, học bằng Tiếng Anh)<br>
-                                                Đào tạo các chuyên ngành: <br>
+                            <div class="D_table">
+                                <table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 794px;" width="700">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:70px;height:78px;">
+                                                <br clear="all">
+                                                    <p align="center"><strong>TT</strong></p>
+                                            </th>
+                                            <th style="width: 292px; height: 78px;">
+                                                <p align="center">
+                                                    <strong>
+                                                        Tên ngành
+                                                    </strong>
+                                                </p>
+                                            </th>
+                                            <th style="width: 130px; height: 30px;">
+                                                <p align="center"><strong>Mã ngành </strong></p>
+                                                <p align="center"><strong>(Mã xét tuyển)</strong></p>
+                                            </th>
+                                            <th style="width: 186px; height: 30px;">
+                                                <p align="center">
+                                                    <strong>
+                                                        Tổ hợp<br>
+                                                        xét tuyển
+                                                    </strong>
+                                                </p>
+                                            </th>
+                                            <th style="width: 100px; height: 30px;">
+                                                <p align="center">
+                                                    <strong>Chỉ tiêu xét tuyển</strong>
+                                                </p>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="width:57px;height:78px;">
+                                                <p align="center">1</p>
+                                            </td>
+                                            <td style="width: 292px; height: 78px;">
+                                                <p>Chương trình tiên tiến ngành Kỹ thuật xây dựng (Hợp tác với Đại học Arkansas, Hoa Kỳ, học bằng Tiếng Anh)<br>
+                                                    Đào tạo các chuyên ngành: <br>
 
-                                                - Xây dựng dân dụng và công nghiệp;<br>
-                                                - Công trình giao thông;<br>
-                                                - Công trình thủy;<br>
-                                                - Địa kỹ thuật;<br>
-                                                - Quản lý xây dựng;<br>
-                                                - Môi trường.
-                                            </p>
-                                        </td>
-                                        <td style="width: 86px; height: 78px;">
-                                            <p align="center">TLA201</p>
-                                        </td>
-                                        <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
-                                                A00, A01, D07, D01
-                                            </p>
-                                        </td>
-                                        <td style="width: 100px; height: 78px;">
-                                            <p align="center">90</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="width:57px;height:42px;">
-                                            <p align="center">2</p>
-                                        </td>
-                                        <td style="width: 292px; height: 42px;">
-                                            <p>Ngành Kế toán (chuyên ngành Kế toán tổng hợp)</p>
-                                        </td>
-                                        <td style="width: 86px; height: 42px;">
-                                            <p align="center">TLA202</p>
-                                        </td>
-                                        <td style="width: 118px; height: 42px;">
-                                            <p align="center">A00, A01, D01, D07</p>
-                                        </td>
-                                        <td style="width: 100px; height: 78px;">
-                                            <p align="center">60</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="4" style="width:57px;height:42px;">
-                                            <p align="center">
-                                               <strong>Tổng</strong>
-                                            </p>
-                                        </td>
-                                        
-                                        <td style="width: 100px; height: 78px;">
-                                            <p align="center">
-                                               <strong>120</strong>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            
+                                                    - Xây dựng dân dụng và công nghiệp;<br>
+                                                    - Công trình giao thông;<br>
+                                                    - Công trình thủy;<br>
+                                                    - Địa kỹ thuật;<br>
+                                                    - Quản lý xây dựng;<br>
+                                                    - Môi trường.
+                                                </p>
+                                            </td>
+                                            <td style="width: 86px; height: 78px;">
+                                                <p align="center">TLA201</p>
+                                            </td>
+                                            <td style="width: 118px; height: 78px;">
+                                                <p align="center">	
+                                                    A00, A01, D07, D01
+                                                </p>
+                                            </td>
+                                            <td style="width: 100px; height: 78px;">
+                                                <p align="center">90</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:57px;height:42px;">
+                                                <p align="center">2</p>
+                                            </td>
+                                            <td style="width: 292px; height: 42px;">
+                                                <p>Ngành Kế toán (chuyên ngành Kế toán tổng hợp)</p>
+                                            </td>
+                                            <td style="width: 86px; height: 42px;">
+                                                <p align="center">TLA202</p>
+                                            </td>
+                                            <td style="width: 118px; height: 42px;">
+                                                <p align="center">A00, A01, D01, D07</p>
+                                            </td>
+                                            <td style="width: 100px; height: 78px;">
+                                                <p align="center">60</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" style="width:57px;height:42px;">
+                                                <p align="center">
+                                                <strong>Tổng</strong>
+                                                </p>
+                                            </td>
+                                            
+                                            <td style="width: 100px; height: 78px;">
+                                                <p align="center">
+                                                <strong>120</strong>
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                             <p><strong>Các ngành đào tạo bằng Tiếng Việt</strong></p>
                             <table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 794px;" width="700">
                                 <thead>

@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/owlcarousel/owl.theme.default.min.css">
-    <link rel="stylesheet" href="assets/css/trelyco-login-vertical-horizontal.css">
-    <link rel="stylesheet" href="assets/css/trelyco-login-vertical-horizontal1.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/trelyco-login-vertical-horizontal.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/trelyco-login-vertical-horizontal1.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/Responsive.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/comon.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/styles.css">
     <title>Document</title>
@@ -49,6 +50,11 @@
                                 Tư vấn
                             </a>
                         </li>
+                        <!-- <li class="nav__left--item">
+                            <div class="search__menu-mb">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="nav__mid">
@@ -70,8 +76,8 @@
                         <div class="dropdown">
                         <a class="btn btn-light" style="color: black;"><i class="fa fa-user"></i><?php echo $this->session->userdata("ho_ten"); ?></a>
                             <div class="dropdown-content">
-                                <a href="<?php echo base_url() . "index.php/home/ttcn/" . $this->session->userdata("id_tk");?>"><i class="fa fa-cogs"></i>Setting</a>
-                                <a href="<?php echo base_url();?>index.php/home/logout"><i class="fa fa-power-off"></i>Logout</a>
+                                <a href="<?php echo base_url() . "index.php/home/ttcn/" . $this->session->userdata("id_tk");?>"><i class="fa fa-cogs"></i>Cài đặt</a>
+                                <a href="<?php echo base_url();?>index.php/home/logout"><i class="fa fa-power-off"></i>Đăng xuất</a>
                             </div>
                         </div>
                     <?php }
@@ -82,9 +88,28 @@
                         </div>
                     <?php } ?>
                 </p>
+                 <!-- Show menu moblie-->
+                 <div class="nav__menu">
+                    <i class="fas fa-bars menu-x" ></i>
+                </div>        
+                <!-- Show icon search moblie-->
+                <div class="search__menu-mb">
+                    <i class="fas fa-search"></i>
+                </div>
             </div>
         </div>
     </div>
+      <!-- Search Decive Moblie -->   
+      <div class="search-mb">
+            <div class="top_nav-mb">
+                <input type="text" placeholder="Tìm kiếm">
+                <span>
+                    <i class="fas fa-search"></i>
+                </span>
+            </div>
+        </div>
+        
+    <!-- Search Decive Moblie__END -->
     <div id="header">
         <div class="container">
             <div class="header__wrapp">

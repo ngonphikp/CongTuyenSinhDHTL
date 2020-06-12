@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="content">
-                    <h3 class="title-heading">
+                    <h3 class="title-hb">
                         <i class="fas fa-exclamation-circle"></i>
                         <p>THÔNG TIN THÍ SINH</p>
                     </h3>

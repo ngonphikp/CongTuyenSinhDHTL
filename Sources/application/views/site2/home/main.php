@@ -168,7 +168,7 @@
                 <div class="col-tuyensinh">
                     <div id="block-xet-hoc-ba" class="block block-1">
                         <p>
-                            <a href="">
+                            <a href="<?php echo base_url();?>home/xhb">
                                 <img src="<?php echo base_url();?>assets/img/img_dhtl/hb.gif" alt="">
                             </a>
                         </p>

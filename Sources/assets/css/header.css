@@ -53,6 +53,9 @@ a{text-decoration: none!important;}
     color: #fff;
     font-size: 1em;
 }
+#nav a:hover{
+    color: #D51C29;
+}
 .form_login{
     display: none;
     position: absolute;
@@ -171,7 +174,7 @@ a{text-decoration: none!important;}
 }
 .header__wrapp .header__left #logo{
     width: 150px;
-    height: 150px;
+    height: auto;
     padding: 10px;
 }
 .header__wrapp .header__left .name-school p:first-child{

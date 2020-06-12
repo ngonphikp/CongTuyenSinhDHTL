@@ -54,8 +54,8 @@
                         <div class="dropdown">
                         <a class="btn btn-light" style="color: black;"><i class="fa fa-user"></i><?php echo $this->session->userdata("ho_ten"); ?></a>
                             <div class="dropdown-content">
-                                <a href="<?php echo base_url() . "index.php/home/ttcn/" . $this->session->userdata("id_tk");?>"><i class="fa fa-cogs"></i>Setting</a>
-                                <a href="<?php echo base_url();?>index.php/home/logout"><i class="fa fa-power-off"></i>Logout</a>
+                                <a href="<?php echo base_url() . "index.php/home/ttcn/" . $this->session->userdata("id_tk");?>"><i class="fa fa-cogs"></i>Cài đặt</a>
+                                <a href="<?php echo base_url();?>index.php/home/logout"><i class="fa fa-power-off"></i>Đăng xuất</a>
                             </div>
                         </div>
                     <?php }

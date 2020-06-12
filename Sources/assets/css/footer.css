@@ -1,7 +1,8 @@
 /* ************FOOTER************* */
 #footer{
+    background: #003366;
     color: #fff;
-    background: #292929;
+    border-top: 5px solid #335c85;
     padding: 30px 0;
 }
 #footer .footer__wrapp{
@@ -16,6 +17,7 @@
 }
 #footer #footer__left .address-warpp .address{
     width: 50%;
+    font-weight: 700;
 }
 #footer__left .address-warpp .address h1{
     font-size: 15px;
@@ -26,6 +28,9 @@
 }
 #footer #footer__right .social-icons{
     display: flex;
+}
+#footer #footer__right .social-icons i{
+    color: #fff;
 }
 #footer__right .social-icons i{
     margin-left: 15px;
