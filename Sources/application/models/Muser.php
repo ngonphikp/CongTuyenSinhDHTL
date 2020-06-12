@@ -5,7 +5,7 @@ class Muser extends CI_Model{
     }
 
     public function countAll(){
-        $query=$this->db->query("select * from tai_khoan tk inner join thong_tin_tai_khoan tttk on tk.id_tk = tttk.id_tk where tk.cap_do <> 2;");
+        $query=$this->db->query("select * from tai_khoan tk inner join thong_tin_tai_khoan tttk on tk.id_tk = tttk.id_tk;");
         return $query->num_rows();
     }
 
@@ -16,22 +16,20 @@ class Muser extends CI_Model{
     }
 
     public function deleteById($id){
-        $this->db->query("delete from ctdgdv where id_tk = $id;");
-        $this->db->query("delete from ctdgdd where id_tk = $id;");
         $this->db->query("delete from thong_tin_tai_khoan where id_tk = $id;");
         $this->db->query("delete from tai_khoan where id_tk = $id;");
     }
 
-    public function add($tk, $mk, $ht, $gt, $email, $ns, $dc, $sdt){
+    public function add($tk, $mk, $ht, $gt, $email_tk, $ns, $dc, $sdt_tk){
         $this->db->query("insert into tai_khoan(ten_dang_nhap, mat_khau) values('$tk', '$mk');");
         $data=$this->db->query("select id_tk from tai_khoan where id_tk >= all (select id_tk from tai_khoan);")->row_array();
         $id=$data['id_tk'];
-        $this->db->query("insert into thong_tin_tai_khoan(id_tk,ho_ten,email,ngay_sinh,gioi_tinh,dia_chi,sdt) values($id,'$ht','$email','$ns','$gt','$dc',$sdt);");
+        $this->db->query("insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_tk,dia_chi_tk,sdt_tk) values($id,'$ht','$email_tk','$ns','$gt','$dc',$sdt_tk);");
     }
 
-    public function edit($id, $mk, $ht, $gt, $email, $ns, $dc, $sdt){
+    public function edit($id, $mk, $ht, $gt, $email_tk, $ns, $dc, $sdt_tk){
         $this->db->query("update tai_khoan set mat_khau = $mk where id_tk = '$id';");
-        $this->db->query("update thong_tin_tai_khoan set ho_ten = '$ht', email = '$email', ngay_sinh = '$ns', gioi_tinh = '$gt', dia_chi = '$dc', sdt = '$sdt' where id_tk = $id;");
+        $this->db->query("update thong_tin_tai_khoan set ho_ten_tk = '$ht', email_tk = '$email_tk', ngay_sinh_tk = '$ns', gioi_tinh_tk = '$gt', dia_chi_tk = '$dc', sdt_tk = '$sdt_tk' where id_tk = $id;");
     }
 
     public function getById($id){
@@ -46,13 +44,13 @@ class Muser extends CI_Model{
     }
 
     public function countAllS($s){
-        $query=$this->db->query("select * from tai_khoan tk inner join thong_tin_tai_khoan tttk on tk.id_tk = tttk.id_tk where tk.cap_do <> 2 and (tk.ten_dang_nhap like '%$s%' OR tttk.ho_ten like '%$s%' OR tttk.email like '%$s%' OR tttk.dia_chi like '%$s%');");
+        $query=$this->db->query("select * from tai_khoan tk inner join thong_tin_tai_khoan tttk on tk.id_tk = tttk.id_tk where tk.ten_dang_nhap like '%$s%' OR tttk.ho_ten_tk like '%$s%' OR tttk.email_tk like '%$s%' OR tttk.dia_chi_tk like '%$s%';");
         return $query->num_rows();
     }
 
     public function getListS($start, $size, $s){
         $start = isset($start)? $start : 0;
-        $query=$this->db->query("select * from tai_khoan tk inner join thong_tin_tai_khoan tttk on tk.id_tk = tttk.id_tk where tk.cap_do <> 2 and (tk.ten_dang_nhap like '%$s%' OR tttk.ho_ten like '%$s%' OR tttk.email like '%$s%' OR tttk.dia_chi like '%$s%') limit $start , $size");
+        $query=$this->db->query("select * from tai_khoan tk inner join thong_tin_tai_khoan tttk on tk.id_tk = tttk.id_tk where tk.ten_dang_nhap like '%$s%' OR tttk.ho_ten_tk like '%$s%' OR tttk.email_tk like '%$s%' OR tttk.dia_chi_tk like '%$s%' limit $start , $size");
         return $query->result_array();
     }
 

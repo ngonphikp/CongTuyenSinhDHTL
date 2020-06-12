@@ -8,31 +8,31 @@ class Home extends CI_Controller{
 
     public function index()
 	{
-        $this->load->view('site2/home/index');
+        $this->load->view('site/home/index');
     }
     
     public function lienhe(){
-        $this->load->view("site2/lienhe/index");
+        $this->load->view("site/lienhe/index");
     }
 
     public function tbxt(){
-        $this->load->view('site2/thongbaoxettuyen/index');
+        $this->load->view('site/thongbaoxettuyen/index');
     }
 
     public function ttnxt(){
-        $this->load->view('site2/thongtinnganhxettuyen/index');
+        $this->load->view('site/thongtinnganhxettuyen/index');
     }
 
     public function ttxt(){
-        $this->load->view('site2/thongtinxettuyen/index');
+        $this->load->view('site/thongtinxettuyen/index');
     }
 
     public function tvts(){
-        $this->load->view('site2/tuvantuyensinh/index');
+        $this->load->view('site/tuvantuyensinh/index');
     }
 
     public function xhb(){
-        $this->load->view('site2/xethocbaonline/index');
+        $this->load->view('site/xethocbaonline/index');
     }
 
     public function checkLogin(){
@@ -44,14 +44,6 @@ class Home extends CI_Controller{
             $this->session->set_userdata("CheckLogin", true);
             $data['infLogin'] = $this->Muser->infLogin($tk, $mk);
             $this->session->set_userdata($data['infLogin']);
-            // if ($this->session->userdata("cap_do") == 1){
-            //     //Nếu Là Khách
-            //     echo "<script>alert('Đăng Nhập Thành Công !!!');</script>";
-            //     $this->index();
-            // }else {
-            //     //Nếu Là Admin (hoặc NV)
-            //     redirect(base_url() . "index.php/admin");
-            // }
             redirect(base_url() . "index.php/admin");
         }
         else{

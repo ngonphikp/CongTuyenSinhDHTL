@@ -15,32 +15,32 @@
         </div>
         <div class="form-row form-group">
             <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Họ Tên</label></div>
-            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="ht" value="<?php echo $user['ho_ten'];?>"></div>
+            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="ht" value="<?php echo $user['ho_ten_tk'];?>"></div>
         </div>
         <div class="form-row form-group">
             <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Giới Tính</label></div>
             <div class="col-lg-4 col-md-4 label-column">
                 <div class="Sex">
                     <div class="form-check"><input class="form-check-input" type="radio" name="gt" value="Nam" checked><label class="form-check-label">Nam</label></div>
-                    <div class="form-check"><input class="form-check-input" type="radio" name="gt" value="Nữ" <?php if ($user['gioi_tinh'] === "Nữ")echo "checked";?>><label class="form-check-label">Nữ</label></div>
+                    <div class="form-check"><input class="form-check-input" type="radio" name="gt" value="Nữ" <?php if ($user['gioi_tinh_tk'] === "Nữ")echo "checked";?>><label class="form-check-label">Nữ</label></div>
                 </div>
             </div>
         </div>
         <div class="form-row form-group">
             <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Email</label></div>
-            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="email" value="<?php echo $user['email'];?>"></div>
+            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="email" value="<?php echo $user['email_tk'];?>"></div>
         </div>
         <div class="form-row form-group">
             <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Ngày Sinh</label></div>
-            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="date" name="ns" value="<?php echo $user['ngay_sinh']; ?>"></div>
+            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="date" name="ns" value="<?php echo $user['ngay_sinh_tk']; ?>"></div>
         </div>
         <div class="form-row form-group">
             <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Số Điện Thoại</label></div>
-            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="tel" name="sdt" value="<?php echo $user['sdt'];?>"></div>
+            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="tel" name="sdt" value="<?php echo $user['sdt_tk'];?>"></div>
         </div>
         <div class="form-row form-group">
             <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label" for="repeat-pawssword-input-field">Địa Chỉ</label></div>
-            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="dc" value="<?php echo $user['dia_chi'];?>"></div>
+            <div class="col-lg-7 col-md-7 label-column"><input class="form-control" type="text" name="dc" value="<?php echo $user['dia_chi_tk'];?>"></div>
         </div>
         <input class="btn btn-light submit-button" type="submit" value="Lưu">
     </form>
