@@ -4,7 +4,7 @@
     </div>
     <?php echo form_open_multipart('/admin/pro_add_bv'); ?>
         <div class="form">
-            <table class="table">
+            <table class="table" id = "form_add_bv">
                 <tr><td><p>Lựa chọn danh mục</p></td>
                     <td><select name="dm" class="form-control">
                         <?php foreach ($listDanhMuc as $row){?>                            
@@ -28,28 +28,13 @@
                     <td><P>Ảnh Bìa</p></td>
                     <td><input type="file" name="link" class="form-control"></td>
                 </tr>
-                
-                <!-- Form CTBV + Trừ -->
-                <!-- Ảnh + Nội dung chi tiết -->
-                <tr>
-                    <td><input type="button" value="-">
-                        <p>Nội dung chi tiết</p>
-                        <textarea name="ndct" class="form-control" id="" cols="30" rows="3"></textarea>
-                    </td>
-                    <td><P>Ảnh chi tiết</p>
-                        <input type="file" name="linkct" class="form-control"></td>
-                </tr>
-                
-                <!-- Cộng -->
-                <tr>
-                    <td></td>
-                    <td><input type="button" value="+"></td>
-                </tr>
-
+                <input id = "count_ctbv_form_bv" type="text" style = "display: none;" value = "0" name = "count">             
             </table>
+            <!-- Cộng -->
+           <input value="+" class="btn btn-primary" id = "add_ctbv_form_add_bv"></td>                    
         </div>
         <div class="col-md-3 form-group pull-right">
-            <input type="submit" name="ok" value="Thêm" class="btn btn-primary btn-block">
+            <input type="submit" name="ok" value="Thêm" class="btn btn-primary btn-block" id = "Save_add_form_bv">
         </div>
     </form>
     <?php echo validation_errors();?>

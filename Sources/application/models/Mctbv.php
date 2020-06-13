@@ -22,5 +22,9 @@ class Mctbv extends CI_Model{
     public function deleteByMaBV($ma_bv){
         $this->db->query("delete from chi_tiet_bai_viet where ma_bv = $ma_bv;");
     }
+
+    public function add($ma_bv, $ndct, $linkct){
+        $this->db->query("INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('$ma_bv', '$ndct', '$linkct');");
+    }
 }
 ?>

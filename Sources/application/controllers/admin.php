@@ -127,40 +127,6 @@ class Admin extends CI_Controller{
         $this->load->view("admin/get_list_user_admin_view", $data);
     }
 
-    // Danh mục Bài viết Chi tiết bài viết - DHTL
-    public function get_danh_muc(){
-        // Lấy bảng danh mục
-        $this->load->model("Mdm");
-        $data['listDanhMuc']= $this->Mdm->getListAll();
-
-        // Lấy số lượng danh mục
-        $data['countDanhMuc'] = $this->Mdm->countAll();
-
-        // Lấy bảng bài viết
-        $this->load->model("Mbv");
-        $data['listBaiViet']= $this->Mbv->getListAll();
-
-        // Lấy số lượng bài viết
-        $data['countBaiViet'] = $this->Mbv->countAll();
-
-        // Lấy bảng chi tiết bài viết
-        $this->load->model("Mctbv");
-        $data['listCTBaiViet']= $this->Mctbv->getListAll();
-
-        // Lấy số lượng bài viết
-        $data['countCTBaiViet'] = $this->Mctbv->countAll();
-
-        // Lấy bảng chi tiết bài viết by ma_bv
-        $this->load->model("Mctbv");
-        $data['listCTBaiVietBYMaBV']= $this->Mctbv->getListByMaBV('3');
-
-        var_dump($data);
-        // foreach($data['listCTBaiVietBYMaBV'] as $value){            
-        //     var_dump($value);
-        //     echo "<br><br>";
-        // }
-    }
-
     // Danh Mục
     public function get_list_dm(){
         $this->load->model("Mdm");
@@ -170,14 +136,14 @@ class Admin extends CI_Controller{
     }
 
     public function pro_add_dm(){
-        var_dump($_POST);
+        //var_dump($_POST);
         //Kiểm tra bằng form validation        
         $this->load->library('form_validation');
         $this->form_validation->set_rules('ma', 'Mã', 'required');
         $this->form_validation->set_rules('ten', 'Tên', 'required');
         if($this->form_validation->run() == FALSE){
             echo "<script>alert('Lỗi Nhập !!!')</script>";
-            redirect(base_url() . "admin/get_list_dm");
+            $this->get_list_dm();
         }
         else {
             $this->load->model("Mdm");
@@ -185,7 +151,7 @@ class Admin extends CI_Controller{
             $ten = isset($_POST['ten']) ? $_POST['ten'] : "";
             $this->Mdm->add($ma, $ten, null);
             echo "<script>alert('Thêm Thành Công !!!')</script>";
-            redirect(base_url() . "admin/get_list_dm");
+            $this->get_list_dm();
         }
     }
 
@@ -243,7 +209,7 @@ class Admin extends CI_Controller{
         $this->Mbv->deleteByMaBV($ma_bv);
         echo "<script>alert('Xóa Thành Công !!!')</script>";
         
-        redirect(base_url() . "admin/get_list_bv");
+        $this->get_list_bv();
     }
 
     public function add_bv(){
@@ -254,22 +220,25 @@ class Admin extends CI_Controller{
 
     public function pro_add_bv(){
         //Kiểm tra bằng form validation
+        //var_dump($_POST);
+
         $this->load->library('form_validation');
         $this->form_validation->set_rules('td', 'Tiêu Đề', 'required');
         $this->form_validation->set_rules('ndtt', 'Nội Dung Tóm Tắt', 'required');
         $this->form_validation->set_rules('dm', 'Danh Mục', 'required');
         if($this->form_validation->run() == FALSE){
             echo "<script>alert('Lỗi Nhập !!!')</script>";
-            redirect(base_url() . "admin/add_bv");
+            $this->add_bv();
         }
         else {
+            // Thêm bv
             $config['upload_path']          = './assets/img/bv/';
             $config['allowed_types']        = 'gif|jpg|jpeg|png';
             $this->load->library('upload', $config);
             if ( ! $this->upload->do_upload('link'))
             {
                 echo "<script>alert('Lỗi Upload File !!!')</script>";
-                redirect(base_url() . "admin/add_bv");
+                $this->add_bv();
             }
             else {
                 //var_dump($_POST);
@@ -278,11 +247,24 @@ class Admin extends CI_Controller{
                 $td = isset($_POST['td']) ? $_POST['td'] : "";
                 $ndtt = isset($_POST['ndtt']) ? $_POST['ndtt'] : "";                
                 $link = $this->upload->data('file_name');
-                $this->Mbv->add($dm, $td, $ndtt, $link);
-                echo "<script>alert('Thêm Thành Công !!!')</script>";
-                redirect(base_url() . "/admin/get_list_bv");
-            }
-        }
+                $this->Mbv->add($dm, $td, $ndtt, $link);                             
+                
+                // Thêm ctbv
+                // Số ctbv
+                $count = intval($_POST["count"]);      
+                $ma_bv = $this->Mbv->getMaxMaBV()[0]["ma_bv"];
+                //var_dump($ma_bv);      
+                for ($i=1; $i <= $count; $i++) {     
+                    $this->load->model("Mctbv");
+                    $ndct = isset($_POST[('ndct' . $i)]) ? $_POST[('ndct' . $i)] : "";
+                    $linkct = ($this->upload->do_upload(('linkct' . $i))) ? $this->upload->data('file_name') : ""; 
+                    $this->Mctbv->add(($ma_bv), $ndct, $linkct);
+                    
+                }
+                echo "<script>alert('Thêm Bài viết thành Công !!!')</script>";
+                $this->get_list_bv();
+            }            
+        }        
     }
 
     public function edit_bv($ma_bv){

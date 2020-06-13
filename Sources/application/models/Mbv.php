@@ -47,5 +47,11 @@ class Mbv extends CI_Model{
         $query=$this->db->query("select * from bai_viet bv inner join danh_muc dm on bv.ma_dm = dm.ma_dm where bv.tieu_de_bv like '%$s%' OR bv.noi_dung_tom_tat_bv like '%$s%' OR dm.ten_dm like '%$s%' limit $start , $size");
         return $query->result_array();
     }
+
+    public function getMaxMaBV()
+    {
+        $query=$this->db->query("select ma_bv from bai_viet order by ma_bv desc limit 1");
+        return $query->result_array();
+    }
 }
 ?>

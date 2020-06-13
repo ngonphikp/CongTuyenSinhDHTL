@@ -43,7 +43,7 @@
                                 <textarea name="ndct" class="form-control" id="" cols="30" rows="3"><?php echo $row['noi_dung_chi_tiet_ctbv'];?></textarea>
                             </td>
                             <td>
-                                <a href="<?php echo base_url() . 'assets/img/ctbv/'. $row['link_anh_ctbv']; ?>" class="btn btn-primary" target="_blank">Xem Ảnh</a>
+                                <a href="<?php echo base_url() . 'assets/img/bv/'. $row['link_anh_ctbv']; ?>" class="btn btn-primary" target="_blank">Xem Ảnh</a>
                                 <P>Ảnh chi tiết<input type="file" name="linkct" class="form-control"></p>
                             </td>
                         </tr>
