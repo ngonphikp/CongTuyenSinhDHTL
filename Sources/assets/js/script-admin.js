@@ -241,6 +241,31 @@ $(document).ready(function () {
     });  
 
 
+
+
+    $("#search1").click(function () {
+        var text = $(this).text();
+        if (text === "+Thêm nguyện vọng đăng ký") {
+            $(this).text("-Hủy nguyện vọng đăng ký");
+            $("#searchContent").show();
+            $('#thongtindangkyxettuyen').show();
+        } else {
+            $(this).text("+Thêm nguyện vọng đăng ký");
+            $("#searchContent").hide();
+        }
+    });
+
+    $("#labelnopkemfileminhchung").click(function () {
+        var text = $(this).text();
+        if (text === "+Nộp kèm file minh chứng và hoàn thành hồ sơ") {
+            $(this).text("-Nộp kèm file minh chứng và hoàn thành hồ sơ");
+            //$("#searchContent").show();
+            $('#nopkemfileminhchungDiv').show();
+        } else {
+            $(this).text("+Nộp kèm file minh chứng và hoàn thành hồ sơ");
+            $("#nopkemfileminhchungDiv").hide();
+        }
+    });
 });
 
 

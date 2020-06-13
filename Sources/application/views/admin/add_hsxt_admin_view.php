@@ -287,21 +287,82 @@
                                 </div>
                                 
                             </div>
-
-
-
-                            
+ <!--Thông tin đăng ký xét tuyển-->
+ <div class="col" >
+        <!--    -->
+        <div ng-show="item.Id>0" >
             <div class="row">
+                <div class="col-sm-12 col-12">
+                    <div class="admission-title" id="aspire">
+                        <h4><i class="fa fa-info-circle" aria-hidden="true"></i> THÔNG TIN ĐĂNG KÝ XÉT TUYỂN</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!--Begin Nguyện vọng-->
+            <div class="row">
+                <div class="col-md-12" ng-show="item.aspirationDtos.length>0">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div style="padding-top:10px;margin-bottom: 15px;" class="form-group has-success">
+                                <label><i class="fa fa-check" aria-hidden="true"></i> Kết quả đăng ký </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div style="padding-top:10px;margin-bottom: 15px;" class="pull-right">
+                                <label ng-show="!ViewChangeAspire" ng-click="ShowChangeAspire()" ng-if="item.ProgressStep<4"><i class="fa fa-pencil" aria-hidden="true"></i> Thay đổi nguyện vọng</label>
+                                <label ng-show="ViewChangeAspire" ng-click="SaveChangeAspire()" ng-if="item.ProgressStep<4"><i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu thay đổi</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table table-hover">
+                        <tr style="background-color: bisque;">
+
+                            <th>Nguyện vọng</th>
+                            <th>Mã xét tuyển</th>
+
+                            <th>Tổ hợp xét tuyển</th>
+                            <th>Trạng thái</th>
+                            <th>#</th>
+                        </tr>
+                        <tr ng-repeat="nv in item.aspirationDtos">
+
+                            <td>
+                                <span ng-bind-html="'Nguyện vọng '+nv.AspirationOrder" ng-show="!ViewChangeAspire"></span>
+                                <input type="number" max="20" class="form-control" ng-model="nv.AspirationOrder" style="width:75px" ng-show="ViewChangeAspire">
+                            </td>
+                            <td ng-bind-html="nv.ProgramCode"></td>
+                            <td ng-bind-html="nv.CombinCode"></td>
+                            <td>
+                                <!-- <span class="label label-success" ng-show="nv.IsApproved==1">Đã duyệt</span>
+                                <span class="label label-danger" ng-show="nv.IsApproved==2">Không được duyệt</span>
+                                <span class="label label-primary" ng-show="nv.IsApproved==0">Đã nhận</span> -->
+                            </td>
+                            <td>
+                                <a ng-click="EditItem(nv)" style="cursor:pointer" title="Sửa nguyện vọng" ng-if="item.ProgressStep<4">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+                            <div class="row">
 
 <div class="col-md-12">
     <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="ShowAspire()" ng-show="!ViewAspireForm">
-        <label><i class="fa fa-plus" aria-hidden="true"></i> Thêm nguyện vọng đăng ký</label>
+        <label id="search1">+Thêm nguyện vọng đăng ký</label>
     </div>
-    <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAspire()" ng-show="ViewAspireForm">
+    <!-- <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAspire()" ng-show="ViewAspireForm">
         <label><i class="fa fa-minus" aria-hidden="true"></i> Thêm nguyện vọng đăng ký</label>
-    </div>
+    </div> -->
 </div>
 </div>
+
+<div id="searchContent" style="display:none;">
 <div ng-show="ViewAspireForm">
 <div class="row">
     <div class="col-sm-6 col-12">
@@ -391,6 +452,9 @@
 
 <!--End Nguyện vọng-->
 </div>
+</div>    
+ 
+
 <!--Minh chứng-->
 <div class="col-md-12" ng-show="item.aspirationDtos.length>0">
 <div class="row">
@@ -426,13 +490,15 @@
 <div class="row">
     <div class="col-md-12">
         <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="ShowAttachFile()" ng-show="!ViewAttachForm">
-            <label><i class="fa fa-plus" aria-hidden="true"></i> Nộp kèm file minh chứng và hoàn thành hồ sơ</label>
+            <label id="labelnopkemfileminhchung">+Nộp kèm file minh chứng và hoàn thành hồ sơ</label>
         </div>
-        <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAttachFile()" ng-show="ViewAttachForm">
+        <!-- <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAttachFile()" ng-show="ViewAttachForm">
             <label><i class="fa fa-minus" aria-hidden="true"></i> Nộp kèm file minh chứng và hoàn thành hồ sơ</label>
-        </div>
+        </div> -->
     </div>
 </div>
+
+<div id="nopkemfileminhchungDiv" style="display:none;">
 <div ng-show="ViewAttachForm" id="attachfile">
 
     <div class="row">
@@ -465,6 +531,10 @@
         </div>
     </div>
 </div>
+
+</div>
+
+
                 
     <?php echo validation_errors();?>
 </div>
