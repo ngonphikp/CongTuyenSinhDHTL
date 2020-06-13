@@ -41,6 +41,30 @@ $(document).ready(function () {
     });
 
 
+    // Bài viết
+    var form_add_bv = $("#form_add_bv");
+    var add_ctbv_form_add_bv = $("#add_ctbv_form_add_bv");
+    var Save_add_form_bv = $("#Save_add_form_bv");
+
+    var count = $("#count_ctbv_form_bv").val();
+    console.log(count);
+    $(add_ctbv_form_add_bv).click(function (e) {
+        e.preventDefault();
+        console.log("add_ctbv_form_add_bv");  
+        count++;
+        $(form_add_bv).append('<tr><td><input type="button" value="-" class = "delete_ctbv_form_bv"><p>Nội dung chi tiết</p><textarea name="ndct'+ count +'" class="form-control" id="" cols="30" rows="3"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ count +'" class="form-control"></td></tr>')
+    });    
+
+    $(form_add_bv).on("click", ".delete_ctbv_form_bv", function(e) {
+        e.preventDefault();
+        console.log("delete_ctbv_form_bv");
+        $(this).parent().parent().remove();
+        //count--;
+    });
+
+    $(Save_add_form_bv).click(function () {
+        $("#count_ctbv_form_bv").val((count + ""));
+    });
     $('#selTinhThanhPhoAddHsxt').change(function () {
         //console.log("afdasdfa");
         //$("#selquanhuyencsdt").val([]);

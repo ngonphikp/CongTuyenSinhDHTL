@@ -329,6 +329,7 @@ INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) V
 INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.3', 'Tieu De 7', 'Noi Dung Tom Tat', 'kimanhblog_com_(51).jpg');
 
 -- select * from bai_viet;
+-- select ma_bv from bai_viet order by ma_bv desc limit 1;
 
 -- CREATE TABLE chi_tiet_bai_viet (
 --     ma_ctbv INT AUTO_INCREMENT PRIMARY KEY,
@@ -347,3 +348,5 @@ INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VAL
 INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('4', null, 'kimanhblog_com_(16).jpg');
 INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('4', 'Noi Dung Chi Tiet 3', null);
 INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VALUES ('5', 'Noi Dung Chi Tiet 1', 'kimanhblog_com_(16).jpg');
+
+-- select * from chi_tiet_bai_viet;
