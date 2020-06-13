@@ -588,7 +588,7 @@ class Admin extends CI_Controller{
                     $this->load->model("Mthmxt");
                     $this->Mthmxt->add($mathm,  $mandt);
                     echo "<script>alert('Thêm Thành Công !!!')</script>";
-                    $this->get_list_csdt();
+                    $this->get_list_thmxt();
                 }
                 catch(Exception $e){
                     echo "<script>alert('Tổ hợp xét tuyển đã tồn tại !!!')</script>";

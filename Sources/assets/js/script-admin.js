@@ -266,6 +266,11 @@ $(document).ready(function () {
             $("#nopkemfileminhchungDiv").hide();
         }
     });
+
+    $('#nhomnganhxettuyen').change(function () {
+        console.log(nhomnganhxettuyen.value);
+    });
+   
 });
 
 

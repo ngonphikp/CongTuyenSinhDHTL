@@ -15,7 +15,7 @@
                                     <div class="form-group">
                                         <label for="" class="title__ip">Giới tính:</label>
                                         <select name="" id="input" class="form-control" required="required" name="gt">
-                                            <option value="">Giới tính</option>
+                                            <option value="">Chọn giới tính</option>
                                             <option value="">Nam</option>
                                             <option value="">Nữ</option>
                                         </select>
@@ -253,7 +253,7 @@
                                     <div class="form-group">
                                         <label for="" class="title__ip">Khu vực ưu tiên:</label>
                                         <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
+                                            <option value="">Chọn khu vực</option>
                                             <option value="">KV1</option>
                                             <option value="">KV2</option>
                                             <option value="">KV2 - NT</option>
@@ -411,15 +411,17 @@
         <label>Ngành/Nhóm ngành xét tuyển :</label>
         <!-- <select ng-model="item.Aspiration.ProgramCode" ng-options="sc.ProgramCode as sc.ProgramsName for (key, sc) in EducationBase.educationPrograms" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
         </select> -->
-        <select name="nhomganh" class="form-control">
+        <select name="nhomganh" class="form-control" id="nhomnganhxettuyen">
                         <?php foreach ($listNhomNganh as $row){?>                            
                             <option value="<?php echo $row["ten_ndt"]; ?>"><?php echo $row["ten_ndt"];?></option>
                             <?php
                         }
                         ?>
-                        
                         </select>
+                        
     </div>
+    
+    
     <div class="col-sm-4 col-12">
         <label>Mã xét tuyển :</label>
         <input type="text" ng-model="item.Aspiration.ProgramCode" class="form-control" placeholder="mã xét tuyển" required disabled value="<?php echo $row["ma_ndt"]; ?>">
