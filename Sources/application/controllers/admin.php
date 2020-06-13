@@ -490,6 +490,8 @@ class Admin extends CI_Controller{
             $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
             $this->load->model("Mndt");
             $data['listNhomNganh']= $this->Mndt->getListAll();
+            $this->load->model("Mthmxt");
+            $data['listToHopMonXetTuyen']= $this->Mthmxt->getListAll();
             //$this->load->view("admin/s_add_ndt_admin_view", $data);
         $this->load->view("admin/s_add_hsxt_admin_view",$data);
     }

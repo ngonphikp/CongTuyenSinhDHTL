@@ -426,7 +426,15 @@
     </div>
     <div class="col-sm-4 col-12">
         <label>Tổ hợp xét tuyển:</label>
-        <select ng-model="item.Aspiration.CombinCode" ng-options="sc.CombinCode as sc.CombinName for (key, sc) in AllCombination" ng-change="CombinationChange(item.Aspiration.CombinCode)" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
+        <!-- <select ng-model="item.Aspiration.CombinCode" ng-options="sc.CombinCode as sc.CombinName for (key, sc) in AllCombination" ng-change="CombinationChange(item.Aspiration.CombinCode)" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
+        </select> -->
+        <select name="tohopxettuyen" class="form-control">
+                        <?php foreach ($listToHopMonXetTuyen as $row){?>                            
+                            <option value="<?php echo $row["ma_thm"]; ?>"><?php echo $row["ma_thm"];?></option>
+                            <?php
+                        }
+        ?>
+                        
         </select>
     </div>
 </div>
