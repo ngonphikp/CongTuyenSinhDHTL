@@ -47,6 +47,19 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
+                <a data-toggle="collapse" href="#me-admin-thm"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý tổ hợp môn xét tuyển</a>
+            </h4>
+        </div>
+        <div id="me-admin-thm" class="panel-collapse collapse">
+            <ul>
+                <li><a href="<?php echo base_url();?>index.php/admin/add_thmxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm tổ hợp môn xét tuyển</a></li>
+                <li><a href="<?php echo base_url();?>index.php/admin/get_list_thmxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem tổ hợp môn xét tuyển</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
                 <a data-toggle="collapse" href="#me-admin-hsxt"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Hồ Sơ Xét Tuyển</a>
             </h4>
         </div>

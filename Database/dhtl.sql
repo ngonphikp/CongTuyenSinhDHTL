@@ -147,7 +147,14 @@ CREATE TABLE to_hop_mon (
     ten_mon_2 TEXT,
     ten_mon_3 TEXT
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
-
+insert into to_hop_mon value('A00','Toán','Lý','Hóa');
+insert into to_hop_mon value('A01','Toán','Lý','Anh');
+insert into to_hop_mon value('A02','Toán','Lý','Sinh');
+insert into to_hop_mon value('B00','Toán','Hóa','Sinh');
+insert into to_hop_mon value('D01','Toán','Ngữ Văn','Anh');
+insert into to_hop_mon value('D07','Toán','Hóa','Anh');
+insert into to_hop_mon value('D08','Toán','Sinh','Anh');
+-- select * from to_hop_mon;
 CREATE TABLE to_hop_mon_xet_tuyen (
     ma_thm VARCHAR(5),
     ma_ndt VARCHAR(50),

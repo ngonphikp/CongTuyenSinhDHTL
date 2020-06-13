@@ -39,7 +39,7 @@
                             <?php
                         }
                         ?>
-                        <option value="Cơ sở khác">Cơ sở khác</option>
+                        <!-- <option value="Cơ sở khác">Cơ sở khác</option> -->
                         </select>
                     </td>
                 </tr>

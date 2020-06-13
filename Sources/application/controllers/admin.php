@@ -438,6 +438,10 @@ class Admin extends CI_Controller{
         public function edit_ndt($id){
             $this->load->model("Mndt");
             $data['ndt'] = $this->Mndt->getById($id);
+            
+            $this->load->model("Mcsdt");
+            
+            $data['listCoSoDaoTao'] = $this->Mcsdt->getListAll();
             $this->load->view("admin/s_edit_ndt_admin_view", $data);
         }
         
@@ -482,7 +486,12 @@ class Admin extends CI_Controller{
         }
 
         public function add_hsxt(){
-        $this->load->view("admin/s_add_hsxt_admin_view");
+            $this->load->model("Mcsdt");
+            $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
+            $this->load->model("Mndt");
+            $data['listNhomNganh']= $this->Mndt->getListAll();
+            //$this->load->view("admin/s_add_ndt_admin_view", $data);
+        $this->load->view("admin/s_add_hsxt_admin_view",$data);
     }
     
     public function pro_add_hsxt(){
@@ -542,6 +551,15 @@ class Admin extends CI_Controller{
             $this->load->view("admin/get_list_hsxt_admin_view", $data);
         }
 
+        public function edit_thmxt($id){
+            $this->load->model("Mthmxt");
+            $data['thmxt'] = $this->Mthmxt->getById($id);
+            $data['listNdt'] = $this->Mthmxt->getListAll();
+            $this->load->model("Mthm");
+            $data['listThm'] = $this->Mthm->getListAll();
+            $this->load->view("admin/s_edit_thmxt_admin_view", $data);
+        }
+
         public function edit_csdt($id){
             $this->load->model("Mcsdt");
             $data['csdt'] = $this->Mcsdt->getById($id);
@@ -552,6 +570,44 @@ class Admin extends CI_Controller{
         public function add_csdt(){
             $this->load->view("admin/s_add_csdt_admin_view");
         }
+        public function add_thmxt(){
+            $this->load->model("Mndt");
+            $data['listNdt'] = $this->Mndt->getListAll();
+            $this->load->model("Mthm");
+            $data['listThm'] = $this->Mthm->getListAll();
+            $this->load->view("admin/s_add_thm_admin_view",$data);
+        }
+
+        public function pro_add_thmxt(){
+        
+                try{
+                    $mandt = isset($_POST['mandt']) ? $_POST['mandt'] : "";
+                    $mathm = isset($_POST['mathm']) ? $_POST['mathm'] : "";
+                    $this->load->model("Mthmxt");
+                    $this->Mthmxt->add($mathm,  $mandt);
+                    echo "<script>alert('Thêm Thành Công !!!')</script>";
+                    $this->get_list_csdt();
+                }
+                catch(Exception $e){
+                    echo "<script>alert('Tổ hợp xét tuyển đã tồn tại !!!')</script>";
+                    $this->add_thmxt();
+                }
+        
+        }
+
+        public function get_list_thmxt(){
+            $this->load->model("Mthmxt");
+            $config['total_rows'] = $this->Mthmxt->countAll();
+            $config['base_url'] = base_url()."index.php/admin/get_list_csdt";
+            $config['per_page'] = 5;
+    
+            $start=$this->uri->segment(3);
+            $this->load->library('pagination', $config);
+            $data['listThmxt']= $this->Mthmxt->getList($start, $config['per_page']);
+            $this->load->view("admin/get_list_thmxt_admin_view", $data);
+        }
+
+
         public function get_list_csdt(){
             $this->load->model("Mcsdt");
             $config['total_rows'] = $this->Mcsdt->countAll();

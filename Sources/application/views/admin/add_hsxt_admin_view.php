@@ -241,11 +241,12 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Năm tốt nghiệp:</label>
-                                        <select name="" id="input" class="form-control" required="required">
+                                        <!-- <select name="" id="input" class="form-control" required="required">
                                             <option value=""></option>
                                             <option value="">2020</option>
                                             <option value="">2021</option>
-                                        </select>
+                                        </select> -->
+                                        <input type="text" class="form-control" id="" placeholder="Năm tốt nghiệp">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -367,25 +368,61 @@
 <div class="row">
     <div class="col-sm-6 col-12">
         <label>Cơ sở đào tạo :</label>
-        <select ng-model="item.Aspiration.EduBaseCode" ng-options="sc.BaseCode as sc.Name for (key, sc) in AllEducationBase" ng-change="EducationBaseChange(item.Aspiration.EduBaseCode)" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
-        </select>
+        <select name="coso" class="form-control">
+                        <?php foreach ($listCoSoDaoTao as $row){?>                            
+                            <option value="<?php echo $row["ma_csdt"]; ?>"><?php echo $row["ma_csdt"] . ": " . $row["ten_csdt"]; ?></option>
+                            <?php
+                        }
+                        ?>
+                        <option value="Cơ sở khác">Cơ sở khác</option>
+                        </select>
     </div>
     <div class="col-sm-6 col-12">
         <label>Nguyện vọng:</label>
-        <select ng-model="item.Aspiration.AspirationOrder" ng-options="sc.Id as sc.Name for (key, sc) in MyAspiration" ng-change="AspirationChange(item.Aspiration.AspirationOrder,'')" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
-        </select>
+        <!-- <select ng-model="item.Aspiration.AspirationOrder" ng-options="sc.Id as sc.Name for (key, sc) in MyAspiration" ng-change="AspirationChange(item.Aspiration.AspirationOrder,'')" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
+        </select> -->
+        <select name="" id="input" class="form-control" required="required">
+                                            <option value="">Nguyện vọng 1</option>
+                                            <option value="">Nguyện vọng 2</option>
+                                            <option value="">Nguyện vọng 3</option>
+                                            <option value="">Nguyện vọng 4</option>
+                                            <option value="">Nguyện vọng 5</option>
+                                            <option value="">Nguyện vọng 6</option>
+                                            <option value="">Nguyện vọng 7</option>
+                                            <option value="">Nguyện vọng 8</option>
+                                            <option value="">Nguyện vọng 9</option>
+                                            <option value="">Nguyện vọng 10</option>
+                                            <option value="">Nguyện vọng 11</option>
+                                            <option value="">Nguyện vọng 12</option>
+                                            <option value="">Nguyện vọng 13</option>
+                                            <option value="">Nguyện vọng 14</option>
+                                            <option value="">Nguyện vọng 15</option>
+                                            <option value="">Nguyện vọng 16</option>
+                                            <option value="">Nguyện vọng 17</option>
+                                            <option value="">Nguyện vọng 18</option>
+                                            <option value="">Nguyện vọng 19</option>
+                                            <option value="">Nguyện vọng 20</option>
+                                        </select>
     </div>
 </div>
 
 <div class="row">
     <div class="col-sm-4 col-12">
         <label>Ngành/Nhóm ngành xét tuyển :</label>
-        <select ng-model="item.Aspiration.ProgramCode" ng-options="sc.ProgramCode as sc.ProgramsName for (key, sc) in EducationBase.educationPrograms" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
-        </select>
+        <!-- <select ng-model="item.Aspiration.ProgramCode" ng-options="sc.ProgramCode as sc.ProgramsName for (key, sc) in EducationBase.educationPrograms" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
+        </select> -->
+        <select name="nhomganh" class="form-control">
+                        <?php foreach ($listNhomNganh as $row){?>                            
+                            <option value="<?php echo $row["ten_ndt"]; ?>"><?php echo $row["ten_ndt"];?></option>
+                            <?php
+                        }
+                        ?>
+                        
+                        </select>
     </div>
     <div class="col-sm-4 col-12">
         <label>Mã xét tuyển :</label>
-        <input type="text" ng-model="item.Aspiration.ProgramCode" class="form-control" placeholder="mã xét tuyển" required disabled>
+        <input type="text" ng-model="item.Aspiration.ProgramCode" class="form-control" placeholder="mã xét tuyển" required disabled value="<?php echo $row["ma_ndt"]; ?>">
     </div>
     <div class="col-sm-4 col-12">
         <label>Tổ hợp xét tuyển:</label>

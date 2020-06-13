@@ -48,5 +48,9 @@ class Mndt extends CI_Model{
         return $query->num_rows();
     }
     
+    public function getListAll(){
+        $query=$this->db->query("select * from nganh_dao_tao;");
+        return $query->result_array();
+    }
 }
 ?>
