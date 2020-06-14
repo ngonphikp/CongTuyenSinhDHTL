@@ -396,6 +396,7 @@ Footer{
 }
 .nav__menu{
     padding: 0 15px;
+    display: none;
 }
 .nav__menu i{
     color: #fff;

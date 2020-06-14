@@ -165,6 +165,7 @@
     <script src="<?php echo base_url();?>assets/fonts/a076d05399.js"></script>
     <script src="<?php echo base_url();?>assets/vendor/owlcarousel/owl.carousel.js"></script>
     <script src="<?php echo base_url();?>assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendor/comon.js"></script>
     <script src="<?php echo base_url();?>assets/js/script.js"></script>
 </body>
 </html>

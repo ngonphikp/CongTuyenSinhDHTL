@@ -1,19 +1,12 @@
 @media only screen and (max-width: 1024px) {
    
 }
-/* @media only screen and (max-width: 768px) {
-   
-} */
-/* @media only screen and (max-width: 576px) {
-   
-} */
+
 @media only screen and (max-width: 768px) {
   body {
     font-size: 12px;
   }
-  .dropdown{
-    display: none!important;
-  }
+
   .header__wrapp .header__left #logo{
     width: 120px!important;
   }
@@ -82,6 +75,9 @@
   #slider img{
     height: 200px !important;
   }
+  .dropdown{
+    display: none!important;
+  }
   #main #main__wrapp{
     flex-direction: column;
   }
@@ -104,6 +100,9 @@
   }
   #footer #footer__left .address-warpp .address{
     width: 100%!important;
+  }
+  .nav__menu{
+    display: block!important;
   }
 }
 @media only screen and (max-width: 425px) {

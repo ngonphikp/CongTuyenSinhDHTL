@@ -34,6 +34,9 @@ class Home extends CI_Controller{
     public function xhb(){
         $this->load->view('site2/xethocbaonline/index');
     }
+    public function xhb2(){
+        $this->load->view('site2/xethocbaonline/themnguyenvong');
+    }
     public function login_mb(){
         $this->load->view('site2/Login_moblie/index');
     }
