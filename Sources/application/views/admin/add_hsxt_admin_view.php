@@ -413,7 +413,7 @@
         </select> -->
         <select name="nhomganh" class="form-control" id="nhomnganhxettuyen">
                         <?php foreach ($listNhomNganh as $row){?>                            
-                            <option value="<?php echo $row["ten_ndt"]; ?>"><?php echo $row["ten_ndt"];?></option>
+                            <option value="<?php echo $row["ma_ndt"]; ?>"><?php echo $row["ten_ndt"];?></option>
                             <?php
                         }
                         ?>
@@ -421,11 +421,21 @@
                         
     </div>
     
+
+
     
     <div class="col-sm-4 col-12">
         <label>Mã xét tuyển :</label>
-        <input type="text" ng-model="item.Aspiration.ProgramCode" class="form-control" placeholder="mã xét tuyển" required disabled value="<?php echo $row["ma_ndt"]; ?>">
+        <input id="maxettuyen" type="text" ng-model="item.Aspiration.ProgramCode" class="form-control" placeholder="mã xét tuyển" required disabled value="">
+        
+                            
+            
+                        
     </div>
+   
+
+
+
     <div class="col-sm-4 col-12">
         <label>Tổ hợp xét tuyển:</label>
         <!-- <select ng-model="item.Aspiration.CombinCode" ng-options="sc.CombinCode as sc.CombinName for (key, sc) in AllCombination" ng-change="CombinationChange(item.Aspiration.CombinCode)" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">

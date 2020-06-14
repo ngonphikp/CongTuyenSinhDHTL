@@ -293,7 +293,24 @@ $(document).ready(function () {
 
     $('#nhomnganhxettuyen').change(function () {
         console.log(nhomnganhxettuyen.value);
+        //$date = "123";
+        // $.ajax({
+        //     url: './admin/add_hsxt', 
+        //     type: "POST",
+        //     dataType:'text', 
+        //     data: ({'date': nhomnganhxettuyen.value}),
+        //     success: function(data){
+        //         console.log("successfully");
+        //     }
+        // }); 
+        document.getElementById("maxettuyen").value=nhomnganhxettuyen.value;
+
+
     });
+
+
+
+    
    
 });
 
