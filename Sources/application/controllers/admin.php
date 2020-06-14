@@ -175,7 +175,6 @@ class Admin extends CI_Controller{
         $this->load->library('form_validation');
         $this->form_validation->set_rules('ten', 'Tên', 'required');
         $this->form_validation->set_rules('ma_cha', 'Mã Cha', 'required');
-        // $this->form_validation->set_rules('dm', 'Danh Mục', 'required');
         if($this->form_validation->run() == FALSE){
             echo "<script>alert('Lỗi Nhập !!!')</script>";
             $this->edit_dm($ma_dm);
@@ -185,6 +184,22 @@ class Admin extends CI_Controller{
             $ten = isset($_POST['ten']) ? $_POST['ten'] : "";
             $ma_cha = isset($_POST['ma_cha']) ? $_POST['ma_cha'] : "";
             $this->Mdm->edit($ma_dm, $ten, $ma_cha);
+
+            // Thêm dmc
+            // Số dmc
+            $count = intval($_POST["count"]);   
+            //echo "<br>";
+            //var_dump($count);   
+
+            for ($i=1; $i < $count + 1; $i++) { 
+                $ma = isset($_POST[('maC' . $i)]) ? $_POST[('maC' . $i)] : "";
+                $ten = isset($_POST[('tenC' . $i)]) ? $_POST[('tenC' . $i)] : "";
+
+                if($ma != "" && $ten != "") {                    
+                    $this->Mdm->add($ma, $ten, $ma_dm);                   
+                }              
+            }
+
             echo "<script>alert('Sửa Thành Công !!!')</script>";
             $this->edit_dm($ma_dm);
         }

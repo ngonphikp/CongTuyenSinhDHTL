@@ -30,8 +30,8 @@
                 </tr>
                 <input id = "count_ctbv_form_add_bv" type="text" style = "display: none;" value = "0" name = "count">             
             </table>
-            <!-- Cộng -->
-           <input value="+" class="btn btn-primary" id = "add_ctbv_form_add_bv">                  
+            <!-- Thêm chi tiết -->
+            <input value="Thêm chi tiết" class="btn btn-primary" id = "add_ctbv_form_add_bv">                  
         </div>
         <div class="col-md-3 form-group pull-right">
             <input type="submit" name="ok" value="Thêm" class="btn btn-primary btn-block" id = "save_form_add_bv">

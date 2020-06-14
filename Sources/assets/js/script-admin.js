@@ -80,6 +80,33 @@ $(document).ready(function () {
     $(save_form_edit_bv).click(function () {
         $("#count_ctbv_form_edit_bv").val((countEdit + ""));
     });
+
+    // Danh mục
+    var add_dmc_form_edit_dm = $("#add_dmc_form_edit_dm");
+    var form_edit_dm = $("#form_edit_dm");
+    var save_form_edit_dm = $("#save_form_edit_dm");
+
+    var countDMC = $("#count_dmc_form_edit_dm").val();
+    console.log(countDMC);
+
+    $(add_dmc_form_edit_dm).click(function (e) {
+        e.preventDefault();
+        console.log("add_dmc_form_edit_dm");  
+        countDMC++;
+        $(form_edit_dm).append('<tr><td><a class="btn btn-default delete_dmc_form_edit_dm" href=""><em class="fa fa-trash"></em></a></td><td><P>Mã: </p></td><td><textarea name="maC'+ countDMC +'" class="form-control" id="" cols="30" rows="1"></textarea></td><td><P>Tên: </p></td><td><textarea name="tenC'+ countDMC +'" class="form-control" id="" cols="30" rows="1"></textarea></td></tr>');
+    });
+
+    $(form_edit_dm).on("click", ".delete_dmc_form_edit_dm", function(e) {
+        e.preventDefault();
+        console.log("delete_dmc_form_edit_dm");
+        $(this).parent().parent().remove();
+        //count--;
+    });
+
+    $(save_form_edit_dm).click(function () {
+        $("#count_dmc_form_edit_dm").val((countDMC + ""));
+    });
+
 });
 
 

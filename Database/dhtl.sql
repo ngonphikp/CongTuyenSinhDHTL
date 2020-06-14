@@ -312,6 +312,3 @@ INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VAL
 -- select * from chi_tiet_bai_viet;
 -- delete from chi_tiet_bai_viet where ma_bv = '5';
 -- select * from danh_muc where ma_dm <> '1.1';
-
-delete from chi_tiet_bai_viet;
-delete from bai_viet;

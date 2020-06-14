@@ -53,8 +53,8 @@
                 ?>       
                 <input id = "count_ctbv_form_edit_bv" type="text" style = "display: none;" value = "<?php echo ($i - 1); ?>" name = "count">                           
             </table>
-            <!-- Cộng -->
-           <input value="+" class="btn btn-primary" id = "add_ctbv_form_edit_bv">                  
+            <!-- Thêm chi tiết -->
+            <input value="Thêm chi tiết" class="btn btn-primary" id = "add_ctbv_form_edit_bv">                  
         </div>
         <div class="col-md-3 form-group pull-right">
             <input type="submit" name="ok" value="Lưu" class="btn btn-primary btn-block" id = "save_form_edit_bv">
