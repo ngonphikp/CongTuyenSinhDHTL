@@ -30,28 +30,55 @@ $(document).ready(function () {
 
 
     // Bài viết
+    // Thêm
     var form_add_bv = $("#form_add_bv");
     var add_ctbv_form_add_bv = $("#add_ctbv_form_add_bv");
-    var Save_add_form_bv = $("#Save_add_form_bv");
+    var save_form_add_bv = $("#save_form_add_bv");
 
-    var count = $("#count_ctbv_form_bv").val();
-    console.log(count);
+    var countAdd = $("#count_ctbv_form_add_bv").val();
+    console.log(countAdd);
     $(add_ctbv_form_add_bv).click(function (e) {
         e.preventDefault();
         console.log("add_ctbv_form_add_bv");  
-        count++;
-        $(form_add_bv).append('<tr><td><input type="button" value="-" class = "delete_ctbv_form_bv"><p>Nội dung chi tiết</p><textarea name="ndct'+ count +'" class="form-control" id="" cols="30" rows="3"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ count +'" class="form-control"></td></tr>')
+        countAdd++;
+        $(form_add_bv).append('<tr><td><input type="button" value="-" class = "delete_ctbv_form_add_bv"><p>Nội dung chi tiết</p><textarea name="ndct'+ countAdd +'" class="form-control" id="" cols="30" rows="3"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ countAdd +'" class="form-control"></td></tr>')
     });    
 
-    $(form_add_bv).on("click", ".delete_ctbv_form_bv", function(e) {
+    $(form_add_bv).on("click", ".delete_ctbv_form_add_bv", function(e) {
         e.preventDefault();
-        console.log("delete_ctbv_form_bv");
+        console.log("delete_ctbv_form_add_bv");
+        $(this).parent().parent().remove();
+        //countAdd--;
+    });
+
+    $(save_form_add_bv).click(function () {
+        $("#count_ctbv_form_add_bv").val((countAdd + ""));
+    });
+
+    // Sửa
+    var form_edit_bv = $("#form_edit_bv");
+    var add_ctbv_form_edit_bv = $("#add_ctbv_form_edit_bv");
+    var save_form_edit_bv = $("#save_form_edit_bv");
+
+    var countEdit = $("#count_ctbv_form_edit_bv").val();
+    console.log(countEdit);
+
+    $(add_ctbv_form_edit_bv).click(function (e) {
+        e.preventDefault();
+        console.log("add_ctbv_form_edit_bv");  
+        countEdit++;
+        $(form_edit_bv).append('<tr><td><input type="button" value="-" class = "delete_ctbv_form_edit_bv"><p>Nội dung chi tiết</p><textarea name="ndct'+ countEdit +'" class="form-control" id="" cols="30" rows="3"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ countEdit +'" class="form-control"></td></tr>')
+    });    
+
+    $(form_edit_bv).on("click", ".delete_ctbv_form_edit_bv", function(e) {
+        e.preventDefault();
+        console.log("delete_ctbv_form_edit_bv");
         $(this).parent().parent().remove();
         //count--;
     });
 
-    $(Save_add_form_bv).click(function () {
-        $("#count_ctbv_form_bv").val((count + ""));
+    $(save_form_edit_bv).click(function () {
+        $("#count_ctbv_form_edit_bv").val((countEdit + ""));
     });
 });
 

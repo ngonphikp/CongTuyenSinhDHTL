@@ -295,6 +295,7 @@ class Admin extends CI_Controller{
             $this->edit_bv($ma_bv);
         }
         else {
+            // Sửa bài viết
             $config['upload_path']          = './assets/img/bv/';
             $config['allowed_types']        = 'gif|jpg|jpeg|png';
             $this->load->library('upload', $config);
@@ -310,6 +311,20 @@ class Admin extends CI_Controller{
                 $dm = isset($_POST['dm']) ? $_POST['dm'] : "";
                 $link = $this->upload->data('file_name');
                 $this->Mbv->edit($ma_bv, $td, $ndtt, $link, $dm);
+
+                // Xóa chi tiết cũ
+                $this->load->model("Mctbv");
+                $this->Mctbv->deleteByMaBV($ma_bv);
+
+                // Thêm chi tiết mới
+                $count = intval($_POST["count"]);      
+                //var_dump($ma_bv);      
+                for ($i=1; $i <= $count; $i++) {                         
+                    $ndct = isset($_POST[('ndct' . $i)]) ? $_POST[('ndct' . $i)] : "";
+                    $linkct = ($this->upload->do_upload(('linkct' . $i))) ? $this->upload->data('file_name') : ""; 
+                    $this->Mctbv->add(($ma_bv), $ndct, $linkct);                    
+                }
+
                 echo "<script>alert('Sửa Thành Công !!!')</script>";
                 $this->edit_bv($ma_bv);
             }

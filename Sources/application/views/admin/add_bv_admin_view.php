@@ -28,13 +28,13 @@
                     <td><P>Ảnh Bìa</p></td>
                     <td><input type="file" name="link" class="form-control"></td>
                 </tr>
-                <input id = "count_ctbv_form_bv" type="text" style = "display: none;" value = "0" name = "count">             
+                <input id = "count_ctbv_form_add_bv" type="text" style = "display: none;" value = "0" name = "count">             
             </table>
             <!-- Cộng -->
-           <input value="+" class="btn btn-primary" id = "add_ctbv_form_add_bv"></td>                    
+           <input value="+" class="btn btn-primary" id = "add_ctbv_form_add_bv">                  
         </div>
         <div class="col-md-3 form-group pull-right">
-            <input type="submit" name="ok" value="Thêm" class="btn btn-primary btn-block" id = "Save_add_form_bv">
+            <input type="submit" name="ok" value="Thêm" class="btn btn-primary btn-block" id = "save_form_add_bv">
         </div>
     </form>
     <?php echo validation_errors();?>
