@@ -159,6 +159,8 @@ class Admin extends CI_Controller{
         $this->load->model("Mdm");
         $data['dm'] = $this->Mdm->getByMaDM($ma_dm);
 
+        $data['listDanhMuc']= $this->Mdm->getListWithout($ma_dm);
+
         $data['dmC'] = $this->Mdm->getByMaDMCha($data["dm"]["ma_dm"]);
         //var_dump($data);
 
@@ -185,6 +187,51 @@ class Admin extends CI_Controller{
             $this->Mdm->edit($ma_dm, $ten, $ma_cha);
             echo "<script>alert('Sửa Thành Công !!!')</script>";
             $this->edit_dm($ma_dm);
+        }
+    }
+
+    public function delete_dm($ma_dm){
+        $this->load->model("Mctbv");
+        $this->load->model("Mbv");
+        $this->load->model("Mdm");        
+        $this->pro_delete_dm($ma_dm);
+        //Lấy các bài viết thuộc danh mục
+        $arrBv = $this->Mbv->getListByMaDM($ma_dm);
+        foreach($arrBv as $bv){
+            $ma_bv = $bv["ma_bv"];
+            //var_dump("ma_bv: " . $ma_bv);
+            //echo "<br>";
+            //Xóa bài viết và chi tiết bài viết
+            $this->Mctbv->deleteByMaBV($ma_bv);        
+            $this->Mbv->deleteByMaBV($ma_bv);
+        }
+        //echo "Xóa: " . $ma_dm  ."<br>";
+        $this->Mdm->deleteByMaDM($ma_dm);
+        echo "<script>alert('Xóa Thành Công !!!')</script>";        
+        $this->get_list_dm();
+    }
+
+    private function pro_delete_dm($ma_dm){
+        // Lấy các danh mục con
+        $arrDMC = $this->Mdm->getByMaDMCha($ma_dm);
+        foreach ($arrDMC as $DMC){
+            $ma_dmc = $DMC["ma_dm"];
+            //var_dump("ma_dm_c: " . $ma_dmc);
+            //echo "<br>";
+            //Lấy các bài viết thuộc từng danh mục con
+            $arrBv = $this->Mbv->getListByMaDM($ma_dmc);
+            foreach($arrBv as $bv){
+                $ma_bv = $bv["ma_bv"];
+                //var_dump("ma_bv: " . $ma_bv);
+                //echo "<br>";
+                //Xóa bài viết và chi tiết bài viết
+                $this->Mctbv->deleteByMaBV($ma_bv);        
+                $this->Mbv->deleteByMaBV($ma_bv);
+            }
+            $this->pro_delete_dm($ma_dmc);
+            // Xóa danh mục con$
+            //echo "Xóa: " . $ma_dmc  ."<br>";
+            $this->Mdm->deleteByMaDM($ma_dmc);
         }
     }
 

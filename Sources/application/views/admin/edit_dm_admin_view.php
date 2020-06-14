@@ -10,8 +10,16 @@
                     <td><textarea name="ten" class="form-control" id="" cols="30" rows="1"><?php echo $dm['ten_dm'];?></textarea></td>
                 </tr>
                 <tr>
-                    <td><P>Danh Mục Cha</p></td>
-                    <td><textarea name="ma_cha" class="form-control" id="" cols="30" rows="1"><?php echo $dm['ma_dm_cha'];?></textarea></td>
+                    <td><p>Lựa chọn danh mục cha</p></td>
+                    <td><select name="ma_cha" class="form-control">
+                        <?php foreach ($listDanhMuc as $row){?>                            
+                            <option value="<?php echo $row["ma_dm"]; ?>" <?php if ($dm["ma_dm_cha"] === $row["ma_dm"]) echo "selected"?>><?php echo $row["ma_dm"] . ": " . $row["ten_dm"]; ?></option>
+                            <?php
+                        }
+                        ?>
+                        <!-- <option value="Danh Mục Khác">Danh Mục Khác</option> -->
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -41,7 +49,7 @@
             </table>            
         </div>        
         <div class="col-md-3 form-group pull-right">  
-            <input type="buton" name="delete" value="Xóa" class="btn btn-warning btn-block">      
+        <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_dm/" . $dm['ma_dm'];?>"><em class="fa fa-trash"></em></a>
             <input type="submit" name="ok" value="Lưu" class="btn btn-primary btn-block">
         </div>
     </form>

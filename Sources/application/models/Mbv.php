@@ -14,6 +14,11 @@ class Mbv extends CI_Model{
         return $query->result_array();
     }
 
+    public function getListByMaDM($ma_dm){
+        $query=$this->db->query("select * from bai_viet where ma_dm = '$ma_dm'");
+        return $query->result_array();
+    }
+
     public function getList($start, $size){
         $start = isset($start)? $start : 0;
         $query=$this->db->query("select * from bai_viet bv inner join danh_muc dm on bv.ma_dm = dm.ma_dm limit $start, $size;");

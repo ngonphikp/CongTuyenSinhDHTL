@@ -14,6 +14,11 @@ class Mdm extends CI_Model{
         return $query->result_array();
     }
 
+    public function getListWithout($ma_dm){
+        $query=$this->db->query("select * from danh_muc where ma_dm <> '$ma_dm';");
+        return $query->result_array();
+    }
+
     public function getList($start, $size){
         $start = isset($start)? $start : 0;
         $query=$this->db->query("select * from danh_muc limit $start, $size;");
@@ -36,6 +41,10 @@ class Mdm extends CI_Model{
 
     public function edit($ma_dm, $ten, $ma_cha){
         $this->db->query("update danh_muc set ten_dm = '$ten', ma_dm_cha = '$ma_cha' where ma_dm = '$ma_dm';");
+    }
+
+    public function deleteByMaDM($ma_dm){
+        $this->db->query("delete from danh_muc where ma_dm = '$ma_dm';");
     }
 }
 ?>

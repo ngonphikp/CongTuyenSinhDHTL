@@ -26,10 +26,10 @@
                 }
             ?>
             <?php CreateListChild($listDm, null); ?>
-            <button type="button" class="btn btn-primary">+</button>
+            <button type="button"  data-toggle="collapse" href="#me-add-dm" role="button" aria-expanded="false" aria-controls="collapseExample" class="btn btn-primary">Thêm danh mục mới</button>
 
             <?php echo form_open_multipart('/admin/pro_add_dm'); ?>
-                <div class="form">
+                <div class="form collapse" id = "me-add-dm">
                     <table class="table">
                         <tr>
                             <td><P>Mã: </p></td>
@@ -38,13 +38,10 @@
                             <td><textarea name="ten" class="form-control" id="" cols="30" rows="1"></textarea></td>
                         </tr>
                     </table>
-                </div>                
-                <div class="col-md-3 form-group pull-right">
-                    <input type="submit" name="ok" value="Xác nhận" class="btn btn-primary btn-block">
-                </div> 
-                <div class="col-md-3 form-group pull-right">
-                    <input value = "Hủy" class="btn btn-default btn-block">
-                </div>               
+                    <div class="col-md-3 form-group pull-right">
+                        <input type="submit" name="ok" value="Xác nhận" class="btn btn-primary btn-block">
+                    </div>
+                </div>                                               
             </form>
             <?php echo validation_errors();?>
 
