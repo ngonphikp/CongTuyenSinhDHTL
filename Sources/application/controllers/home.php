@@ -34,7 +34,13 @@ class Home extends CI_Controller{
     public function xhb(){
         $this->load->view('site/xethocbaonline/index');
     }
-
+    public function xhb2(){
+        $this->load->view('site2/xethocbaonline/themnguyenvong');
+    }
+    public function login_mb(){
+        $this->load->view('site2/Login_moblie/index');
+    }
+    
     public function checkLogin(){
         $tk = isset($_POST['tk']) ? $_POST['tk'] : "";
         $mk = isset($_POST['mk']) ? $_POST['mk'] : "";

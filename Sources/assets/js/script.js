@@ -7,7 +7,6 @@ $(document).ready(function () {
     //Ẩn form login khi load
     //Click nút đăng nhập trên nav
     $(".btnDangNhap").click(function () {
-        console.log("click");
         $(".me-form-login").toggle();
     });
     
@@ -40,10 +39,12 @@ $(document).ready(function () {
         autoplayTimeout:3000,
         responsive:{
             0:{
-                items:1
+                items:1,
+                nav:false,
+                dots:false
             },
             600:{
-                items:3
+                items:1
             },
             1000:{
                 items:1
@@ -72,9 +73,28 @@ $(document).ready(function () {
         }, 700);
     });
     $('.btn-close').click(function(){
-        $("#modal__login").css("display","none");
+        $(".me-form-login").hide();
     })
-    $('.btn-login').click(function(){
-        $("#modal__login").css("display","block");
+    $('.fa-bars').click(function(){
+        $(".inner-menu").css("width","90%");
+        $(".inner-menu").toggle();
+        $(".D_modal").show();
     })
+    $('.D_modal').click(function(){
+        $(this).css("display","none");
+        $(".inner-menu").hide();
+    })
+    var changeMenu = document.getElementsByClassName('search__menu-mb fa-search');
+    var changeMenu = document.querySelector('.search__menu-mb .fa-search');
+        changeMenu.addEventListener("click",function(){
+            this.classList.toggle('fa-times');
+            $(".search-mb").slideToggle("slow");
+        });
 });
+    // var changeMenu = document.getElementsByClassName('fa-bars');
+    // var changeMenu = document.querySelector('.fa-bars');
+    //     changeMenu.addEventListener("click",function(){
+    //         this.classList.toggle('fa-times');
+    //         $("#menu-mb").toggle();
+    //         $(".D_modal").css("display","block");
+    //     });

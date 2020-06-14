@@ -37,17 +37,17 @@
                         <ul class="social-icons">
                             <li>
                                 <a href="https://www.facebook.com/daihocthuyloi1959/?fref=ts" target="_blank">
-                                    <i class="fab fa-facebook" style="color:#3b5998"></i>
+                                    <i class="fab fa-facebook"></i>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.youtube.com/user/daihocthuyloi" target="_blank">
-                                    <i class="fab fa-twitter-square" style="color:#38A1F3"></i>
+                                    <i class="fab fa-twitter-square"></i>
                                 </a>
                             </li>
                             <li>
                                 <a  href="https://www.youtube.com/user/daihocthuyloi" target="_blank">
-                                    <i class="fab fa-youtube-square" style="color:#ED3833"></i>
+                                    <i class="fab fa-youtube-square"></i>
                                 </a>
                             </li>
                         </ul>
@@ -79,14 +79,93 @@
                 <input class="form-control  w3-animate-left" type="password" placeholder="Mật Khẩu" id="MatKhau" name="mk">
                 <input class="btn btn-primary btn-block btn-lg btn-signin w3-animate-top" type="submit" value="Login" id="Login" name="Login">
             </form>
+            <div class="btn-close">
+                <i class="fas fa-times"></i>
+            </div>
         </div>
     </div>
+        <!-- Menu-Moblie -->
+        <div id="menu-mb">
+            <div class="inner-menu">
+                <a href="<?php echo base_url();?>home/login_mb" class="avatar">
+                    <div class="login-menu">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Đăng nhập</span>
+                        <svg class="arrow-left" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" size="20" height="20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
+                    </div>
+                </a>
+                <div class="content-menu">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="<?php echo base_url();?>home/ttxt">
+                                <img src="<?php echo base_url();?>assets/img/img_dhtl/nts.png" alt="">
+                                <span>
+                                    Thông tin xét tuyển
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url();?>home/tbxt">
+                                <img src="<?php echo base_url();?>assets/img/img_dhtl/tintuc1.png" alt="">
+                                <span>
+                                    Thông báo xét tuyển
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url();?>home/ttnxt">
+                                <img src="<?php echo base_url();?>assets/img/img_dhtl/nganhts1.png" alt="">
+                                <span>
+                                    Thông tin ngành tuyển sinh
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url();?>home/xhb">
+                                <i class="fas fa-book-open icon-xhb" ></i>
+                                <span>
+                                    Xét học bạ trực tuyến
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url();?>home/tvts">
+                                <img src="<?php echo base_url();?>assets/img/img_dhtl/tuvan1.png" alt="">
+                                <span>
+                                    Tư vấn tuyển sinh
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url();?>home/lienhe">
+                                <img src="<?php echo base_url();?>assets/img/img_dhtl/lienhe1.png" alt="">
+                                <span>
+                                    Liên hệ
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="content-hotline">
+                
+                </div> -->
+            </div>
+        </div>
+    <!-- Menu-Moblie-End -->
+  
+    
+    <!-- Modal -->
+        <div class="D_modal">
+            
+        </div>
+    <!-- End -->
 </div>
     <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
     <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url();?>assets/fonts/a076d05399.js"></script>
     <script src="<?php echo base_url();?>assets/vendor/owlcarousel/owl.carousel.js"></script>
     <script src="<?php echo base_url();?>assets/vendor/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url();?>assets/vendor/comon.js"></script>
     <script src="<?php echo base_url();?>assets/js/script.js"></script>
 </body>
 </html>

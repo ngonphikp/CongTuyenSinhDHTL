@@ -1,6 +1,15 @@
 body{
     height: 3000px;
 }
+/* #c:focus{
+    box-shadow: none!important;
+    border: none!important;
+    outline: none!important;
+} */
+form .form-control:focus{
+    border-color: #ced4da;
+    box-shadow: none;
+}
 .title-heading{
     display: flex;
     font-size: 18px;
@@ -45,6 +54,7 @@ body{
 button:focus{
     border: none!important;
     outline: none!important;
+    box-shadow: none!important;
 }
 .btn-nguyenvong{
     display: flex;
@@ -86,4 +96,11 @@ button:focus{
     height: 150px;
     border: 2px dotted #3c3c3c;
     border-width: 2px;
+}
+
+.content_tnv , .nop_ho_so{
+    display: none;
+}
+.nop_ho_so{
+    display: none!important;
 }
