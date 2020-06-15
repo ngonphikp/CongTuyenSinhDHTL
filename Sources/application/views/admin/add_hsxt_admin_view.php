@@ -355,7 +355,7 @@
 
 <div class="col-md-12">
     <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="ShowAspire()" ng-show="!ViewAspireForm">
-        <label id="search1">+Thêm nguyện vọng đăng ký</label>
+        <label id="themnguyenvongdangky">+Thêm nguyện vọng đăng ký</label>
     </div>
     <!-- <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAspire()" ng-show="ViewAspireForm">
         <label><i class="fa fa-minus" aria-hidden="true"></i> Thêm nguyện vọng đăng ký</label>
@@ -440,12 +440,12 @@
         <label>Tổ hợp xét tuyển:</label>
         <!-- <select ng-model="item.Aspiration.CombinCode" ng-options="sc.CombinCode as sc.CombinName for (key, sc) in AllCombination" ng-change="CombinationChange(item.Aspiration.CombinCode)" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
         </select> -->
-        <select name="tohopxettuyen" class="form-control">
-                        <?php foreach ($listToHopMonXetTuyen as $row){?>                            
+        <select name="tohopxettuyen" class="form-control" id="tohopxettuyen">
+                        <?php foreach ($listToHopMon as $row){?>                            
                             <option value="<?php echo $row["ma_thm"]; ?>"><?php echo $row["ma_thm"];?></option>
                             <?php
                         }
-        ?>
+                    ?>
                         
         </select>
     </div>
@@ -453,45 +453,45 @@
 <!--Điểm lớp 10 THPT-->
 <div class="row">
     <div class="col-sm-4 col-12">
-        <label>Lớp 10 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode"></span>
+        <label>Lớp 10 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="mon1"></span>
         <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_1" id="GPA10_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
-        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode"></span>
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode " id="mon2"></span>
         <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_2" id="GPA10_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
-        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode"></span>
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="mon3"></span>
         <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_3" id="GPA10_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
 </div>
 <!--Điểm lớp 11 THPT-->
 <div class="row">
     <div class="col-sm-4 col-12">
-        <label>Lớp 11 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode"></span>
+        <label>Lớp 11 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="monlop111" ></span>
         <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA11_1" id="GPA11_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
-        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode"></span>
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode" id="monlop112" ></span>
         <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA11_2" id="GPA11_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
-        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode"></span>
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="monlop113" ></span>
         <input type="number" min="0" max="10" class="form-control" ng-model="item.Aspiration.GPA11_3" id="GPA11_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
 </div>
 <!--Điểm lớp 12 THPT-->
 <div class="row">
     <div class="col-sm-4 col-12">
-        <label>Lớp 12 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode"></span>
+        <label>Lớp 12 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="monlop121" ></span>
         <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_1" id="GPA12_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
-        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode"></span>
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode" id="monlop122" ></span>
         <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_2" id="GPA12_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
-        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode"></span>
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="monlop123" ></span>
         <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_3" id="GPA12_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
 </div>
@@ -592,11 +592,8 @@
 </div>
 
 
-                
+     </form>           
     <?php echo validation_errors();?>
 </div>
-
-
-
 <div class="row">
                                 

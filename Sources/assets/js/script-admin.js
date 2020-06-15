@@ -267,7 +267,12 @@ $(document).ready(function () {
 
 
 
-    $("#search1").click(function () {
+
+
+
+    // js add hsxt
+
+    $("#themnguyenvongdangky").click(function () {
         var text = $(this).text();
         if (text === "+Thêm nguyện vọng đăng ký") {
             $(this).text("-Hủy nguyện vọng đăng ký");
@@ -292,26 +297,45 @@ $(document).ready(function () {
     });
 
     $('#nhomnganhxettuyen').change(function () {
-        console.log(nhomnganhxettuyen.value);
-        //$date = "123";
-        // $.ajax({
-        //     url: './admin/add_hsxt', 
-        //     type: "POST",
-        //     dataType:'text', 
-        //     data: ({'date': nhomnganhxettuyen.value}),
-        //     success: function(data){
-        //         console.log("successfully");
-        //     }
-        // }); 
+        //console.log(nhomnganhxettuyen.value);
+        
         document.getElementById("maxettuyen").value=nhomnganhxettuyen.value;
 
-
+        // $date = "123";
+        // $.ajax({
+        //     url: './admin/add_hsxt/x', 
+        //     type: "POST",
+        //     dataType:'text', 
+        //     data: ({'date': $date}),
+        //     success: function(data){
+        //         console.log($date);
+        //     }
+        // }); 
     });
 
 
-
+    var CombinSubjectBase_url=base_url+'/CongTuyenSinhDHTL/Sources/assets/json/CombinSubject.json';
     
-   
+    $('#tohopxettuyen').change(function () {
+        
+        //var tohopxettuyenAddHsxtValue =tohopxettuyen.value;
+        var indexMon=1;
+        $.getJSON(CombinSubjectBase_url, function(data)
+        {
+            $.each(data, function (index, value) {
+                //console.log(value.CombinCode);
+                if (value.CombinCode==tohopxettuyen.value) 
+                {
+                    console.log(value.SubjectCode);
+                    //$('#mon1').value=value.SubjectCode;
+                    document.getElementById("mon"+indexMon).innerHTML = value.SubjectCode;
+                    document.getElementById("monlop11"+indexMon).innerHTML = value.SubjectCode;
+                    document.getElementById("monlop12"+indexMon).innerHTML = value.SubjectCode;
+                    indexMon++;
+                }  
+            });
+        });     
+    });
 });
 
 
