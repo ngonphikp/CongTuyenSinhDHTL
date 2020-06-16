@@ -52,6 +52,7 @@
                         <i class="fas fa-exclamation-circle"></i>
                         <p>THÔNG TIN THÍ SINH</p>
                     </h3>
+                    
                     <div class="form-xettuyen">
                         <form action="" method="POST" role="form" id="form" name="form">
                             <div class="row">
@@ -104,7 +105,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Chứng minh thư nhân dân:</label>
-                                        <input type="text" class="form-control" id="cmt" required="required" placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân">
+                                        <input type="number" class="form-control" id="cmt" required="required" placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -305,7 +306,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Email:</label>
-                                        <input type="text" class="form-control" id="email" placeholder="Email">
+                                        <input type="email" class="form-control" id="email" placeholder="Email" required="required">
                                     </div>
                                     <span id="ShowError"></span>
                                 </div>
@@ -353,7 +354,7 @@
                                 <div class="col-md-12">
                                     <p style="color:#dd4b39;">Lưu ý: Mỗi CMTND chỉ được lưu 1 lần, vui lòng kiểm tra kỹ các thông tin trước khi đăng ký. </p>
                                     
-                                    <button type="button" class="btn btn-info btn__save" disabled="disabled">
+                                    <button type="submit" class="btn btn-info btn__save" >
                                         <i class="fas fa-file"></i>
                                         Lưu
                                     </button>
@@ -363,93 +364,159 @@
                         </form>
                     </div>
                 </div>
-                <div class="content content_tnv">
-               
-                </div>
-                <!--Kết quả đăng ký -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div style="padding-top:10px;margin-bottom: 15px;color:#00a65a;font-weight: 600;font-size: 18px;" class="form-group has-success">
-                                    <label><i class="fa fa-check" aria-hidden="true"></i> Kết quả đăng ký </label>
+                <div class="content_tnv" style="display:none;">
+                    <h3 class="title-hb">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>THÔNG TIN ĐĂNG KÍ XÉT TUYỂN</p>
+                    </h3>
+                       <!--Kết quả đăng ký -->
+                    <div class="row row_kqdk">
+                     
+                    </div>
+                    <!-- end -->
+                    <div>
+                        <label for="">
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                            Thêm nguyện vọng đăng ký 
+                        </label>
+                    </div>
+                    <div class="form-xettuyen them_nv">
+                        <form action="" method="POST" role="form" id="form " name="form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip">Cơ sở đào tạo:</label>
+                                        <select name="" id="input" class="form-control" required="required">
+                                            <option value="">Cơ sở Hà Nội</option>
+                                            <option value="">Cơ sở Phố Hiến</option>
+                                            <option value="">Phân hiệu Miền Nam</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip">Nguyện vọng:</label>
+                                        <select name="" id="input" class="form-control" required="required">
+                                            <option value="">Nguyện vọng 1</option>
+                                            <option value="">Nguyện vọng 2</option>
+                                            <option value="">Nguyện vọng 3</option>
+                                            <option value="">Nguyện vọng 4</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div style="padding-top:10px;margin-bottom: 15px;font-weight: 600;font-size: 18px;" class="float-right">
-                                    <label ng-show="!ViewChangeAspire"><i class="fas fa-pencil-alt"></i> Thay đổi nguyện vọng</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip">Ngành/nhóm ngành xét tuyển:</label>
+                                        <select name="" id="input" class="form-control" required="required">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip">Mã xét tuyển:</label>
+                                        <input type="text" class="form-control" id="cmt" required="required" placeholder="mã xét tuyển" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip">Tổ hợp xét tuyển</label>
+                                        <select name="" id="input" class="form-control" required="required">
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <table class="table table-hover">
-                            <tbody><tr style="background-color: bisque;">
-
-                                <th>Nguyện vọng</th>
-                                <th>Mã xét tuyển</th>
-
-                                <th>Tổ hợp xét tuyển</th>
-                                <th>Trạng thái</th>
-                                <th>#</th>
-                            </tr>
-                           <tr>
-
-                                <td>
-                                    <span>Nguyện vọng 1</span>
-                                </td>
-                                <td>TLA101</td>
-                                <td>A00</td>
-                                <td>
-                                    <span>Đã duyệt</span>
-                                    <span>Không được duyệt</span>
-                                    <span>Đã nhận</span>
-                                </td>
-                                <td>
-                                    <a style="cursor:pointer" title="Sửa nguyện vọng" >
-                                        <i class="fa fa-edit"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+                            <!-- Lớp 10 -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip">Lớp 10:</label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 1">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip" style="margin-bottom:.5em;height:18px;"></label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 2">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip" style="margin-bottom:.5em;height:18px;"></label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 3">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END 10 -->
+                            <!-- Lớp 11 -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip">Lớp 11:</label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 1">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip" style="margin-bottom:.5em;height:18px;"></label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 2">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip" style="margin-bottom:.5em;height:18px;"></label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 3">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END 11 -->
+                            <!-- Lớp 12 -->
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip">Lớp 12:</label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 1">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip" style="margin-bottom:.5em;height:18px;"></label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 2">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="" class="title__ip" style="margin-bottom:.5em;height:18px;"></label>
+                                        <input type="number" class="form-control" min="0" max="10" required="required"  placeholder="Điểm trung bình cả năm môn 3">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END 12 -->
+                            <div class="row" style="padding:15px 0;">
+                                <div class="col-md-12">
+                                    <button type="submit" class="btn btn-info btn__save-nv">
+                                        <i class="fas fa-file"></i>
+                                        LƯU NGUYỆN VỌNG
+                                    </button>
+                                </div>
+                                
+                            </div>
+                        </form>
                     </div>
                 </div>
-
                 
-                <div class="col-md-12">
-                    
+                
+                <div class="col-md-12 col_nop_tl" style="display:none;">
                     <div class="row">
                         <div style="padding-top:10px;margin-bottom: 15px;color:#00a65a;font-weight: 600;font-size: 18px;" class="form-group has-success">
                             <label><i class="fa fa-check" aria-hidden="true"></i>Danh mục file chứng minh</label>
                         </div>
-                        <table class="table table-bordered table-hover" style="background-color:white" ng-show="item.candidateAttachments.length>0">
-                            <tbody>
-                                <tr style="background-color: bisque;">
-                                    <th>TT</th>
-                                    <th>Mô tả</th>
-                                    <th>Tên file</th>
-                                    <th>Dung lượng</th>
-                                    <th>#</th>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <input type="text" max="100" class="form-control ng-pristine ng-valid ng-empty ng-touched" ng-model="file.FileDescription" placeholder="Mô tả">
-                                    </td>
-                                    <td ng-bind="file.FileName" class="ng-binding">20820_b3.PNG</td>
-
-
-                                    <td ng-bind="file.FileSize/1024 + '(KB)'" class="ng-binding">6.87109375(KB)</td>
-                                    <td>
-                                        <a href="javascript:void(0)" title="Xóa file">
-                                            <i class="far fa-trash-alt"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
-                    <div class="row">
+                    <div class="row row_upfile"></div>
+                    <div class="row row_nop_hs">
                         <div style="padding-top:10px;margin-bottom: 15px;font-weight: 600;font-size: 18px;" class="form-group has-success">
                         <label for="">
                             <i class="fa fa-minus" aria-hidden="true"></i>
@@ -470,11 +537,11 @@
                     </div>
                     <div class="row" style="padding:15px 0;">
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn-info btn__save" style="font-weight: 600;">
+                            <button type="submit" class="btn btn-info btn__save-tl" style="font-weight: 600;">
                                 <i class="fas fa-file"></i>
                                     LƯU FILE MINH CHỨNG
                             </button>
-                            <button type="submit" class="btn btn-info btn__save float-right" style="font-weight: 600;">
+                            <button type="submit" class="btn btn-info btn__save-hths float-right" style="font-weight: 600;">
                                 <i class="fa fa-check" aria-hidden="true"></i>
                                     HOÀN THÀNH HỒ SƠ
                             </button>
@@ -484,3 +551,5 @@
                 
             </div>
 </div>
+
+

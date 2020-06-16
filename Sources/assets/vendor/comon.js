@@ -20,19 +20,62 @@ $(document).ready(function() {
         return false;
       }
       $(".btn__save").on("submit", validate);
-      var showNV = document.getElementsByClassName('fa-minus');
-      var changeMenu = document.querySelector('.fa-minus');
+
+      $(".btn__save").click(function(){     
+        $(".content_tnv").show();
+      });
+      $(".btn__save-nv").click(function(){     
+        $(".col_nop_tl").show();
+      });
+      var changeMenu = document.getElementsByClassName('content_tnv fa-minus');
+      var changeMenu = document.querySelector('.content_tnv .fa-minus');
           changeMenu.addEventListener("click",function(){
               this.classList.toggle('fa-plus');
-              $(".nop_ho_so").slideToggle("slow");
+              $(".them_nv").slideToggle("slow");
           });
-
-      $(".btn__save").click(function(){
+          var changeMenu1 = document.getElementsByClassName('row_nop_hs fa-minus');
+          var changeMenu1 = document.querySelector('.row_nop_hs .fa-minus');
+          changeMenu1.addEventListener("click",function(){
+              this.classList.toggle('fa-plus');
+              $(".nop_ho_so").slideToggle("slow");
+          });  
+      $(".btn__save-nv").click(function(){
         $.ajax({
           url: "http://localhost/CongTuyenSinhDHTL/Sources/home/xhb2",
           type: 'GET',
           success: function(result){
-            $(".content_tnv").html(result);
+            $(".row_kqdk").html(result);
         }});
       })
+      $(".btn__save-tl").click(function(){
+        $.ajax({
+          url: "http://localhost/CongTuyenSinhDHTL/Sources/home/xhb3",
+          type: 'GET',
+          success: function(result){
+            $(".row_upfile").html(result);
+        }});
+      })
+      $("#form").on("submit", function(e) {
+              e.preventDefault();
+      });
+
+      var i = 0;
+    $(".btn__save").click(function(){
+      if (i == 0) {
+        i = 1;
+        var elem = document.getElementsByClassName("num");
+        var width = 1;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+          } else {
+            width++;
+            elem.style.width = width + "%";
+          }
+        }
+      }
+    })
+
 });
