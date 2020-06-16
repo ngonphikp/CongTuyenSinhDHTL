@@ -15,7 +15,7 @@
             </li>
             <li class="nav__menu--item">
                 <a href="<?php echo base_url();?>home/ttnxt">
-                    <img style="width:50px;height:50px;" src="<?php echo base_url();?>assets/img/img_dhtl/nganhts.png" alt=""><br>
+                    <img style="width:50px;height:50px;" src="<?php echo base_url();?>assets/img/img_dhtl/nganh_ts.png" alt=""><br>
                 </a>          
                 <a href="<?php echo base_url();?>home/ttnxt">THÔNG TIN NGÀNH XÉT TUYỂN</a>
             </li>

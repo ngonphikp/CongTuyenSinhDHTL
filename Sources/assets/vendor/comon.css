@@ -98,8 +98,8 @@ button:focus{
     border-width: 2px;
 }
 
-.content_tnv , .nop_ho_so{
-    display: none;
+.content_tnv{
+    display: none!important;
 }
 .nop_ho_so{
     display: none!important;
