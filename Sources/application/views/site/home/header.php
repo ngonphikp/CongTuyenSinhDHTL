@@ -33,7 +33,7 @@
                         </li>
                         <?php
                         //Nếu đăng nhập là Admin (hoặc NV)
-                        if ($this->session->userdata("cap_do") != 1 && $this->session->userdata("CheckLogin")){?>
+                        if ($this->session->userdata("CheckLogin")){?>
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link" href="<?php echo base_url();?>index.php/admin">Home Admin</a>
                             </li>
