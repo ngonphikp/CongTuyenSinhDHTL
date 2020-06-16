@@ -7,7 +7,7 @@
             <table class="table">
             <tr>
                     <td><P>Tên cơ sở đào tạo:</p></td>
-                    <td><textarea name="tencsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
+                    <td><textarea name="tencsdt" class="form-control" id="" cols="30" rows="1"><?php echo $csdt['ten_csdt'];?></textarea></td>
                 </tr>
                 <tr>
                     <td><p>Tỉnh/TP:</p></td>
@@ -31,11 +31,11 @@
                 </tr>
                 <tr>
                     <td><P>Xã/phường:</p></td>
-                    <td><textarea name="phuongthixacsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
+                    <td><textarea name="phuongthixacsdt" class="form-control" id="" cols="30" rows="1"><?php echo $csdt['dia_chi_xa_phuong'];?></textarea></td>
                 </tr>
                 <tr>
                     <td><P>Thôn/bản/đường phố:</p></td>
-                    <td><textarea name="thonbanduongphocsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
+                    <td><textarea name="thonbanduongphocsdt" class="form-control" id="" cols="30" rows="1"><?php echo $csdt['dia_chi_thon_ban_duong_pho'];?></textarea></td>
                 </tr>
                 <!-- <tr>
                     <td><p>Lựa chọn cơ sở</p></td>

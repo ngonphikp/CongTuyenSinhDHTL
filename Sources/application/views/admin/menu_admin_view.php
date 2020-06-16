@@ -44,7 +44,7 @@
             </ul>
         </div>
     </div>
-    <div class="panel panel-default">
+    <!-- <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
                 <a data-toggle="collapse" href="#me-admin-thm"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý tổ hợp môn xét tuyển</a>
@@ -56,7 +56,7 @@
                 <li><a href="<?php echo base_url();?>index.php/admin/get_list_thmxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem tổ hợp môn xét tuyển</a></li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
