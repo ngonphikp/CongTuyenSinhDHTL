@@ -21,9 +21,9 @@ $(document).ready(function() {
       }
       $(".btn__save").on("submit", validate);
 
-      $(".btn__save").click(function(){     
-        $(".content_tnv").show();
-      });
+      // $(".btn__save").click(function(){     
+      //   $(".content_tnv").show();
+      // });
       $(".btn__save-nv").click(function(){     
         $(".col_nop_tl").show();
       });
