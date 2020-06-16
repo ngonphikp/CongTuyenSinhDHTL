@@ -11,7 +11,7 @@ class Mhsxt extends CI_Model{
 
     public function getList($start, $size){
         $start = isset($start)? $start : 0;
-        $query=$this->db->query("select * from co_so_dao_tao csdt inner join phuong_thi_xa ptx on csdt.dia_chi_csdt = ptx.ma_ptx inner join quan_huyen qh on ptx.ma_qh = qh.ma_qh inner join tinh_thanh_pho ttp on qh.ma_ttp = ttp.ma_ttp  limit $start , $size");
+        $query=$this->db->query("select * from ho_so_xet_tuyen  limit $start , $size");
         return $query->result_array();
     }
 
