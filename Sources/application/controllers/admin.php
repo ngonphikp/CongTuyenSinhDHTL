@@ -418,7 +418,8 @@ class Admin extends CI_Controller{
         $config['total_rows'] = $this->Mndt->countAll();
         $config['base_url'] = base_url()."index.php/admin/get_list_ndt";
         $config['per_page'] = 5;
-        $start=$this->uri->segment(3);
+        //$start=$this->uri->segment(3);
+        $start=0;
         $this->load->library('pagination', $config);
         $data['listNdt']= $this->Mndt->getList($start, $config['per_page']);
         $this->load->view("admin/get_list_ndt_admin_view", $data);
@@ -428,7 +429,10 @@ class Admin extends CI_Controller{
 
     public function add_ndt(){
         //$this->load->view("admin/s_add_dd_admin_view");
-        $this->load->view("admin/s_add_ndt_admin_view");
+        $this->load->model("Mcsdt");
+            $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
+            $this->load->view("admin/s_add_ndt_admin_view", $data);
+        
     }
 
     
@@ -436,10 +440,11 @@ class Admin extends CI_Controller{
     public function pro_add_ndt(){
         //Kiểm tra bằng form validation
         $this->load->library('form_validation');
+        $this->form_validation->set_rules('manganh', 'Tên ngành', 'required');
         $this->form_validation->set_rules('tennganh', 'Tên ngành', 'required');
         $this->form_validation->set_rules('chuongtrinhdaotao', 'Chương trình đào tạo', 'required');
-        $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
-        $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
+        // $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
+        // $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
         $this->form_validation->set_rules('coso', 'Lựa chọn cơ sở', 'required');
         if($this->form_validation->run() == FALSE){
             echo "<script>alert('Lỗi Nhập !!!')</script>";
@@ -447,16 +452,24 @@ class Admin extends CI_Controller{
         }
      
         else {
-            $tennganh = isset($_POST['tennganh']) ? $_POST['tennganh'] : "";
-            $chuongtrinhdaotao = isset($_POST['chuongtrinhdaotao']) ? $_POST['chuongtrinhdaotao'] : "";
-            $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
-            $gioithieu = isset($_POST['gioithieu']) ? $_POST['gioithieu'] : "";
-            //$link = $this->upload->data('file_name');
-            $coso = isset($_POST['coso']) ? $_POST['coso'] : "";
-            $this->load->model("Mndt");
-            $this->Mndt->add($tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
-            echo "<script>alert('Thêm Thành Công !!!')</script>";
-            $this->get_list_ndt();
+            try {
+                $manganh = isset($_POST['manganh']) ? $_POST['manganh'] : "";
+                $tennganh = isset($_POST['tennganh']) ? $_POST['tennganh'] : "";
+                $chuongtrinhdaotao = isset($_POST['chuongtrinhdaotao']) ? $_POST['chuongtrinhdaotao'] : "";
+                $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
+                $gioithieu = isset($_POST['gioithieu']) ? $_POST['gioithieu'] : "";
+                //$link = $this->upload->data('file_name');
+                $coso = isset($_POST['coso']) ? $_POST['coso'] : "";
+                $this->load->model("Mndt");
+                $this->Mndt->add($manganh,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
+                echo "<script>alert('Thêm Thành Công !!!')</script>";
+                $this->get_list_ndt();
+            }
+            
+            catch(Exception $e){
+                echo "<script>alert('Tài Khoản Đã Tồn Tại !!!')</script>";
+                $this->add_ndt();
+            }
         }
                 
             
@@ -484,6 +497,10 @@ class Admin extends CI_Controller{
         public function edit_ndt($id){
             $this->load->model("Mndt");
             $data['ndt'] = $this->Mndt->getById($id);
+            
+            $this->load->model("Mcsdt");
+            
+            $data['listCoSoDaoTao'] = $this->Mcsdt->getListAll();
             $this->load->view("admin/s_edit_ndt_admin_view", $data);
         }
         
@@ -500,17 +517,18 @@ class Admin extends CI_Controller{
         public function pro_edit_ndt($id){
             //Kiểm tra bằng form validation
             $this->load->library('form_validation');
+            $this->form_validation->set_rules('manganh', 'Tên ngành', 'required');
             $this->form_validation->set_rules('tennganh', 'Tên ngành', 'required');
             $this->form_validation->set_rules('chuongtrinhdaotao', 'Chương trình đào tạo', 'required');
-            $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
-            $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
+            // $this->form_validation->set_rules('ghichu', 'Ghi chú', 'required');
+            // $this->form_validation->set_rules('gioithieu', 'Giới thiệu', 'required');
             $this->form_validation->set_rules('coso', 'Lựa chọn cơ sở', 'required');
             if($this->form_validation->run() == FALSE){
                 echo "<script>alert('Lỗi Nhập !!!')</script>";
                 $this->edit_ndt($id);
             }
             else{
-                
+                $manganh = isset($_POST['manganh']) ? $_POST['manganh'] : "";
                 $tennganh = isset($_POST['tennganh']) ? $_POST['tennganh'] : "";
                 $chuongtrinhdaotao = isset($_POST['chuongtrinhdaotao']) ? $_POST['chuongtrinhdaotao'] : "";
                 $ghichu = isset($_POST['ghichu']) ? $_POST['ghichu'] : "";
@@ -518,7 +536,7 @@ class Admin extends CI_Controller{
                 //$link = $this->upload->data('file_name');
                 $coso = isset($_POST['coso']) ? $_POST['coso'] : "";
                 $this->load->model("Mndt");
-                    $this->Mndt->edit($id,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
+                    $this->Mndt->edit($id,$manganh,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso);
                     echo "<script>alert('Sửa Thành Công !!!')</script>";
                     $this->edit_ndt($id);
                     
@@ -527,7 +545,16 @@ class Admin extends CI_Controller{
         }
 
         public function add_hsxt(){
-        $this->load->view("admin/s_add_hsxt_admin_view");
+            $this->load->model("Mcsdt");
+            $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
+            $this->load->model("Mndt");
+            $data['listNhomNganh']= $this->Mndt->getListAll();
+            $this->load->model("Mthm");
+            $data['listToHopMon']= $this->Mthm->getListAll();
+            // $this->load->model("Mthmxt");
+            // $data['listToHopMonXetTuyen']= $this->Mthmxt->getListAll();
+            //$this->load->view("admin/s_add_ndt_admin_view", $data);
+        $this->load->view("admin/s_add_hsxt_admin_view",$data);
     }
     
     public function pro_add_hsxt(){
@@ -587,6 +614,15 @@ class Admin extends CI_Controller{
             $this->load->view("admin/get_list_hsxt_admin_view", $data);
         }
 
+        public function edit_thmxt($id){
+            $this->load->model("Mthmxt");
+            $data['thmxt'] = $this->Mthmxt->getById($id);
+            $data['listNdt'] = $this->Mthmxt->getListAll();
+            $this->load->model("Mthm");
+            $data['listThm'] = $this->Mthm->getListAll();
+            $this->load->view("admin/s_edit_thmxt_admin_view", $data);
+        }
+
         public function edit_csdt($id){
             $this->load->model("Mcsdt");
             $data['csdt'] = $this->Mcsdt->getById($id);
@@ -597,6 +633,44 @@ class Admin extends CI_Controller{
         public function add_csdt(){
             $this->load->view("admin/s_add_csdt_admin_view");
         }
+        public function add_thmxt(){
+            $this->load->model("Mndt");
+            $data['listNdt'] = $this->Mndt->getListAll();
+            $this->load->model("Mthm");
+            $data['listThm'] = $this->Mthm->getListAll();
+            $this->load->view("admin/s_add_thm_admin_view",$data);
+        }
+
+        public function pro_add_thmxt(){
+        
+                try{
+                    $mandt = isset($_POST['mandt']) ? $_POST['mandt'] : "";
+                    $mathm = isset($_POST['mathm']) ? $_POST['mathm'] : "";
+                    $this->load->model("Mthmxt");
+                    $this->Mthmxt->add($mathm,  $mandt);
+                    echo "<script>alert('Thêm Thành Công !!!')</script>";
+                    $this->get_list_thmxt();
+                }
+                catch(Exception $e){
+                    echo "<script>alert('Tổ hợp xét tuyển đã tồn tại !!!')</script>";
+                    $this->add_thmxt();
+                }
+        
+        }
+
+        public function get_list_thmxt(){
+            $this->load->model("Mthmxt");
+            $config['total_rows'] = $this->Mthmxt->countAll();
+            $config['base_url'] = base_url()."index.php/admin/get_list_csdt";
+            $config['per_page'] = 5;
+    
+            $start=$this->uri->segment(3);
+            $this->load->library('pagination', $config);
+            $data['listThmxt']= $this->Mthmxt->getList($start, $config['per_page']);
+            $this->load->view("admin/get_list_thmxt_admin_view", $data);
+        }
+
+
         public function get_list_csdt(){
             $this->load->model("Mcsdt");
             $config['total_rows'] = $this->Mcsdt->countAll();

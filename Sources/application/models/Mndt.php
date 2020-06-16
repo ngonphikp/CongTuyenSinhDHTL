@@ -16,21 +16,21 @@ class Mndt extends CI_Model{
     }
 
     public function deleteById($id){
-        $this->db->query("delete from nganh_dao_tao where ma_ndt = $id;");
+        $this->db->query("delete from nganh_dao_tao where ma_ndt = '$id';");
     }
 
-    public function add($tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso){
-        $this->db->query("insert into nganh_dao_tao(ten_ndt, chuong_trinh_dao_tao_ndt, ghi_chu_ndt, gioi_thieu_ndt,ma_csdt) values('$tennganh','$chuongtrinhdaotao','$ghichu','$gioithieu','$coso');");
+    public function add($manganh,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso){
+        $this->db->query("insert into nganh_dao_tao(ma_ndt,ten_ndt, chuong_trinh_dao_tao_ndt, ghi_chu_ndt, gioi_thieu_ndt,ma_csdt) values('$manganh','$tennganh','$chuongtrinhdaotao','$ghichu','$gioithieu','$coso');");
         // $data=$this->db->query("select id_dd from dia_diem dd where id_dd >= all (select id_dd from dia_diem);")->row_array();
         // $id=$data['id_dd'];
         // $this->db->query("insert into ctdd(id_dd,tieu_de_dd, noi_dung_dd, loai) values($id,'$td','$nd','$loai');");
     }
-    public function edit($id,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso){
-        $this->db->query("update nganh_dao_tao set ten_ndt = '$tennganh', chuong_trinh_dao_tao_ndt = '$chuongtrinhdaotao', ghi_chu_ndt= '$ghichu' , gioi_thieu_ndt='$gioithieu',ma_csdt= '$coso' where ma_ndt = $id;");
+    public function edit($id,$manganh, $tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso){
+        $this->db->query("update nganh_dao_tao set ma_ndt='$manganh' , ten_ndt = '$tennganh', chuong_trinh_dao_tao_ndt = '$chuongtrinhdaotao', ghi_chu_ndt= '$ghichu' , gioi_thieu_ndt='$gioithieu',ma_csdt= '$coso' where ma_ndt = '$id';");
         
     }
     public function getById($id){
-        $query=$this->db->query("select * from nganh_dao_tao ndt inner join co_so_dao_tao csdt on ndt.ma_csdt = csdt.ma_csdt where ndt.ma_ndt = $id;");
+        $query=$this->db->query("select * from nganh_dao_tao ndt inner join co_so_dao_tao csdt on ndt.ma_csdt = csdt.ma_csdt where ndt.ma_ndt = '$id';");
         return $query->row_array();
     }
 
@@ -48,5 +48,9 @@ class Mndt extends CI_Model{
         return $query->num_rows();
     }
     
+    public function getListAll(){
+        $query=$this->db->query("select * from nganh_dao_tao;");
+        return $query->result_array();
+    }
 }
 ?>

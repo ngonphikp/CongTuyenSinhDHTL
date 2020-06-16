@@ -5,6 +5,9 @@
     <?php echo form_open_multipart('/admin/pro_edit_ndt/' . $ndt['ma_ndt']); ?>
         <div class="form">
             <table class="table">
+            <tr><td><P>Mã ngành</p></td>
+                    <td><textarea name="manganh" class="form-control" id="" cols="30" rows="1"><?php echo $ndt['ma_ndt'];?></textarea></td>
+                </tr>
                 <tr><td><P>Tên ngành</p></td>
                     <td><textarea name="tennganh" class="form-control" id="" cols="30" rows="1"><?php echo $ndt['ten_ndt'];?></textarea></td>
                 </tr>
@@ -24,10 +27,19 @@
                 <tr>
                     <td><p>Lựa chọn cơ sở</p></td>
 
-                    <td><select name="coso" class="form-control">
+                    <!-- <td><select name="coso" class="form-control">
                             <option value="1" selected>Cơ sở 1</option>
                             <option value="2" <?php if ($ndt['ma_csdt'] === "2") echo "selected"?>>Cơ sở 2</option>
                             <option value="3" <?php if ($ndt['ma_csdt'] === "3") echo "selected"?>>Cơ sở 3</option>
+                        </select> -->
+                        <td>
+                        <select name="coso" class="form-control">
+                        <?php foreach ($listCoSoDaoTao as $row){?>                            
+                            <option value="<?php echo $row["ma_csdt"]; ?>"><?php echo $row["ma_csdt"] . ": " . $row["ten_csdt"]; ?></option>
+                            <?php
+                        }
+                        ?>
+                        <!-- <option value="Cơ sở khác">Cơ sở khác</option> -->
                         </select>
                     </td>
                    
