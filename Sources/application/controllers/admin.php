@@ -610,7 +610,10 @@ class Admin extends CI_Controller{
                 //$maTs = intval($_POST["count"]);      
                 $maTs = $this->Mts->getMaxMaTS()[0]["ma_ts"];
                 //$maTs= $this->Mts->getMaxMaTS();
-                echo ''+$maTs;
+                //echo ''+$maTs;
+
+                $this->edit_hsxt($maTs);
+
                 // $this->edit_thong_tin_hsxt($id);
                 // $this->add_hsxt();
             }
