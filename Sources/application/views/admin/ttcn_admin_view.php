@@ -1,13 +1,6 @@
 <div class="container me-TTCN">
     <div class="row">
-        <div class="col-md-6 col-lg-4">
-            <h2>Bạn nên nhập thông tin chính xác.</h2>
-            <br>
-            <h4>Thông tin của bạn sẽ được bảo mật tuyệt đối và sẽ được sử dụng để xác nhận dịch vụ của chúng tôi</h4>
-            <br>
-            <img src="<?php echo base_url();?>assets/img/ttcn.PNG" alt="H/A">
-        </div>
-        <div class="col-md-6 col-lg-8">
+        <div class="col-md-12 col-lg-12">
             <div style="position: relative;">
                 <button class="btn" id="me-setting-ttcn"><i class="fa fa-cog"></i></button>
             </div>
@@ -23,8 +16,8 @@
                         <div class="col-sm-6 input-column"><input name="tk" class="form-control" type="text" value="<?php echo $user['ten_dang_nhap'];?>" readonly></div>
                     </div>
                     <div class="form-row form-group">
-                        <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label" for="pawssword-input-field">Mật Khẩu</label></div>
-                        <div class="col-lg-7 col-md-7 label-column"><input class="form-control hide-update" type="text" name="mk" value="<?php echo $user['mat_khau'];?>"></div>
+                        <div class="col-sm-4 label-column"><label class="col-form-label" for="pawssword-input-field">Mật Khẩu</label></div>
+                        <div class="col-sm-6 input-column"><input class="form-control hide-update" type="text" name="mk" value="<?php echo $user['mat_khau'];?>"></div>
                     </div>
                     <div class="form-row form-group">
                         <div class="col-sm-4 label-column"><label class="col-form-label">Họ Tên</label></div>
