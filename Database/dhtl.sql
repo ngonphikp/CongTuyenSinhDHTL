@@ -9,26 +9,18 @@ CREATE TABLE tai_khoan (
     cap_do INT DEFAULT 1
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
-CREATE TABLE tinh_thanh_pho (
-    ma_ttp VARCHAR(10) PRIMARY KEY,
-    ten_ttp TEXT
-)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
--- select * from co_so_dao_tao csdt inner join phuong_thi_xa ptx on csdt.dia_chi_csdt = ptx.ma_ptx inner join quan_huyen qh on ptx.ma_qh = qh.ma_qh inner join tinh_thanh_pho ttp on qh.ma_ttp = ttp.ma_ttp;
-CREATE TABLE quan_huyen (
-    ma_qh VARCHAR(10) PRIMARY KEY,
-    ten_qh TEXT,
-    ma_ttp VARCHAR(5),
-    FOREIGN KEY (ma_ttp)
-        REFERENCES tinh_thanh_pho (ma_ttp)
-)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
-
-CREATE TABLE phuong_thi_xa (
-    ma_ptx VARCHAR(10) PRIMARY KEY,
-    ten_ptx TEXT,
-    ma_qh VARCHAR(10),
-    FOREIGN KEY (ma_qh)
-        REFERENCES quan_huyen (ma_qh)
-)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
+-- CREATE TABLE tinh_thanh_pho (
+--     ma_ttp VARCHAR(10) PRIMARY KEY,
+--     ten_ttp TEXT
+-- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
+-- -- select * from co_so_dao_tao csdt inner join phuong_thi_xa ptx on csdt.dia_chi_csdt = ptx.ma_ptx inner join quan_huyen qh on ptx.ma_qh = qh.ma_qh inner join tinh_thanh_pho ttp on qh.ma_ttp = ttp.ma_ttp;
+-- CREATE TABLE quan_huyen (
+--     ma_qh VARCHAR(10) PRIMARY KEY,
+--     ten_qh TEXT,
+--     ma_ttp VARCHAR(5),
+--     FOREIGN KEY (ma_ttp)
+--         REFERENCES tinh_thanh_pho (ma_ttp)
+-- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE thong_tin_tai_khoan (
     id_tk INT PRIMARY KEY,
@@ -39,9 +31,7 @@ CREATE TABLE thong_tin_tai_khoan (
     dia_chi_tk VARCHAR(10),
     sdt_tk VARCHAR(20),
     FOREIGN KEY (id_tk)
-        REFERENCES tai_khoan (id_tk),
-    FOREIGN KEY (dia_chi_tk)
-        REFERENCES phuong_thi_xa (ma_ptx)
+        REFERENCES tai_khoan (id_tk)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE danh_muc (
@@ -74,25 +64,88 @@ CREATE TABLE thi_sinh (
     ho_ten_ts TEXT,
     gioi_tinh_ts TEXT,
     ngay_sinh_ts DATE,
-    dia_chi_ts VARCHAR(10),
+    noi_sinh_ts NVARCHAR(50),
+    dan_toc_ts TEXT,
     so_cmnd_cccd_ts VARCHAR(20),
+    ngay_cap DATE,
+    noi_cap TEXT,
+    ho_khau_tinh_thanh_pho TEXT,
+    ho_khau_quan_huyen TEXT,
+    ho_khau_xa_phuong TEXT,
+    ho_khau_thon_ban_duong_pho TEXT,
+    tinh_tp_lop_10 TEXT,
+    quan_huyen_lop_10 TEXT,
+    truong_lop_10 TEXT,
+    tinh_tp_lop_11 TEXT,
+    quan_huyen_lop_11 TEXT,
+    truong_lop_11 TEXT,
+    quan_huyen_lop_12 TEXT,
+    tinh_tp_lop_12 TEXT,
+     truong_lop_12 TEXT,
     sdt_ts VARCHAR(20),
     email_ts VARCHAR(50),
-    link_anh_cmnd_ts VARCHAR(50),
-    link_anh_chan_dung_ts VARCHAR(50),
-    dan_toc_ts TEXT,
-    ton_giao_ts TEXT,
-    ngay_dang_ki_ts DATE,
-    FOREIGN KEY (dia_chi_ts)
-        REFERENCES phuong_thi_xa (ma_ptx)
+    nam_tot_nghiep_ts INT,
+    khu_vuc_uu_tien TEXT,
+    doi_tuong_uu_tien TEXT
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
+insert into thi_sinh (
+ho_ten_ts,
+gioi_tinh_ts,
+ngay_sinh_ts,
+noi_sinh_ts,
+dan_toc_ts,
+so_cmnd_cccd_ts,
+ngay_cap ,
+noi_cap ,
+ho_khau_tinh_thanh_pho ,
+ho_khau_quan_huyen,
+ho_khau_xa_phuong ,
+ho_khau_thon_ban_duong_pho,
+tinh_tp_lop_10 ,
+quan_huyen_lop_10 ,
+truong_lop_10,
+    tinh_tp_lop_11 ,
+    quan_huyen_lop_11 ,
+    truong_lop_11 ,
+    tinh_tp_lop_12 ,
+    quan_huyen_lop_12 ,
+    truong_lop_12 ,
+    sdt_ts ,
+    email_ts ,
+    nam_tot_nghiep_ts ,
+    khu_vuc_uu_tien ,
+    doi_tuong_uu_tien) values (
+    'Chinh',
+    'Nam',
+    '2000-06-06',
+    'Thành Phố Hà Nội',
+    'Kinh',
+    '135900840',
+    '2000-10-6',
+    'Hà Nội',
+    'Thành Phố Hà Nội',
+    'Huyện Ba Vì',
+    'Xã Cờ Đỏ',
+    'Thôn Đông',
+    'Thành Phố Hà Nội',
+    'Huyện Ba Vì',
+    'THPT Diên Hồng',
+    'Thành Phố Hà Nội',
+    'Huyện Ba Vì',
+    'THPT Diên Hồng',
+    'Thành Phố Hà Nội',
+    'Huyện Ba Vì',
+    'THPT Diên Hồng',
+    '0376182631',
+    'adfdf@gmail.com',
+    '2020',
+    'KV1',
+    '01');
 CREATE TABLE truong (
     ma_truong VARCHAR(10) PRIMARY KEY,
     ten_truong TEXT,
-    dia_chi_truong VARCHAR(10),
-    FOREIGN KEY (dia_chi_truong)
-        REFERENCES quan_huyen (ma_qh)
+    dia_chi_truong VARCHAR(10)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE ho_so_xet_tuyen (
@@ -268,9 +321,9 @@ CREATE TABLE hoc_ba (
 --         REFERENCES quan_huyen (ma_qh)
 -- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
-insert into tinh_thanh_pho value('TEST1', 'Hà Nội');
-insert into quan_huyen value('TEST1', 'Đống Đa', 'TEST1');
-insert into phuong_thi_xa(ma_ptx,ten_ptx,ma_qh) values('TEST1','Tây Sơn','TEST1');
+-- insert into tinh_thanh_pho value('TEST1', 'Hà Nội');
+-- insert into quan_huyen value('TEST1', 'Đống Đa', 'TEST1');
+-- insert into phuong_thi_xa(ma_ptx,ten_ptx,ma_qh) values('TEST1','Tây Sơn','TEST1');
 
 insert into tai_khoan(ten_dang_nhap, mat_khau, cap_do) values('admin', '123456', 0);
 insert into tai_khoan(ten_dang_nhap, mat_khau) values('admin1', '123456');
@@ -359,4 +412,3 @@ INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VAL
 -- select * from chi_tiet_bai_viet;
 -- delete from chi_tiet_bai_viet where ma_bv = '5';
 -- select * from danh_muc where ma_dm <> '1.1';
-
