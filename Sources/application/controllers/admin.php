@@ -624,9 +624,13 @@ class Admin extends CI_Controller{
         }
     }
 
-    public function edit_hsxt(){
-        
-        $this->load->view("admin/s_edit_hsxt_admin_view");
+    public function edit_hsxt($ma_ts){        
+        $this->load->model("Mts");
+        $data['ts'] = $this->Mts->getByMaTS($ma_ts);
+
+        var_dump($data);
+
+        $this->load->view("admin/s_edit_hsxt_admin_view", $data);
     }
 
 

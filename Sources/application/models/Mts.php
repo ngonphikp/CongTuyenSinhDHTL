@@ -95,7 +95,10 @@ $ho_khau_tinh_thanh_pho, $ho_khau_quan_huyen, $ho_khau_xa_phuong, $ho_khau_thon_
     //     return $query->row_array();
     // }
 
-    
+    public function getByMaTS($ma_ts){
+        $query=$this->db->query("select * from thi_sinh where ma_ts = $ma_ts;");
+        return $query->row_array();
+    }  
     
 }
 ?>
