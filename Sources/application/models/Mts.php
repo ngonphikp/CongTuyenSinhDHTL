@@ -15,20 +15,20 @@ class Mts extends CI_Model{
         return $query->result_array();
     }
     
-    public function add($ho_ten_ts, $gioi_tinh_ts, $ngay_sinh_ts, $noi_sinh_ts, $dan_toc_ts, , $so_cmnd_cccd_ts, $ngay_cap, $noi_cap, 
-    $ho_khau_tinh_thanh_pho, $ho_khau_quan_huyen, $ho_khau_xa_phuong, $ho_khau_thon_ban_duong_pho, $tinh_tp_lop_10, $quan_huyen_lop_10, $truong_lop_10, $tinh_tp_lop_11, $quan_huyen_lop_11
-    , $truong_lop_11 text,, $tinh_tp_lop_11, $tinh_tp_lop_11, $tinh_tp_lop_11, $tinh_tp_lop_11, $tinh_tp_lop_11
+    // public function add($ho_ten_ts, $gioi_tinh_ts, $ngay_sinh_ts, $noi_sinh_ts, $dan_toc_ts, , $so_cmnd_cccd_ts, $ngay_cap, $noi_cap, 
+    // $ho_khau_tinh_thanh_pho, $ho_khau_quan_huyen, $ho_khau_xa_phuong, $ho_khau_thon_ban_duong_pho, $tinh_tp_lop_10, $quan_huyen_lop_10, $truong_lop_10, $tinh_tp_lop_11, $quan_huyen_lop_11
+    // , $truong_lop_11 text,, $tinh_tp_lop_11, $tinh_tp_lop_11, $tinh_tp_lop_11, $tinh_tp_lop_11, $tinh_tp_lop_11
     
-    ){
+    // ){
         
         
         
         
-        //$this->db->query("insert into co_so_dao_tao(tencsdt, dia_chi_csdt, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('$tencsdt','$dia_chi_csdt', '$dia_chi_xa_phuong', '$dia_chi_thon_ban_duong_pho ');");
-        // $data=$this->db->query("select id_dd from dia_diem dd where id_dd >= all (select id_dd from dia_diem);")->row_array();
-        // $id=$data['id_dd'];
-        // $this->db->query("insert into ctdd(id_dd,tieu_de_dd, noi_dung_dd, loai) values($id,'$td','$nd','$loai');");
-    }
+    //     //$this->db->query("insert into co_so_dao_tao(tencsdt, dia_chi_csdt, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('$tencsdt','$dia_chi_csdt', '$dia_chi_xa_phuong', '$dia_chi_thon_ban_duong_pho ');");
+    //     // $data=$this->db->query("select id_dd from dia_diem dd where id_dd >= all (select id_dd from dia_diem);")->row_array();
+    //     // $id=$data['id_dd'];
+    //     // $this->db->query("insert into ctdd(id_dd,tieu_de_dd, noi_dung_dd, loai) values($id,'$td','$nd','$loai');");
+    // }    
 
     // public function getList($start, $size){
     //     $start = isset($start)? $start : 0;
@@ -50,7 +50,10 @@ class Mts extends CI_Model{
     //     return $query->row_array();
     // }
 
-    
+    public function getByMaTS($ma_ts){
+        $query=$this->db->query("select * from thi_sinh where ma_ts = $ma_ts;");
+        return $query->row_array();
+    }  
     
 }
 ?>

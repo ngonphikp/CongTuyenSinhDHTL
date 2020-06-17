@@ -9,16 +9,16 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Họ, chữ đệm và tên của thí sinh:</label>
                     <input type="text" class="form-control" id="" required="required" name="ht"
-                        placeholder="Họ, chữ đệm và tên của thí sinh">
+                        placeholder="Họ, chữ đệm và tên của thí sinh" value = "<?php echo $ts['ho_ten_ts'] ?>">
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
                     <label for="" class="title__ip">Giới tính:</label>
                     <select id="input" class="form-control" name="gt">
-                        <option value="">Chọn giới tính</option>
-                        <option value="Nam">Nam</option>
-                        <option value="Nữ">Nữ</option>
+                        <option value="" selected>Chọn giới tính</option>
+                        <option value="Nam" <?php if ($ts['gioi_tinh_ts'] === "Nam")echo "selected";?>>Nam</option>
+                        <option value="Nữ" <?php if ($ts['gioi_tinh_ts'] === "Nữ")echo "selected";?>>Nữ</option>
                     </select>
                 </div>
             </div>
@@ -27,7 +27,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Ngày/tháng/năm sinh:</label>
-                    <input type="date" name="ngaythangnamsinh" id="ngaythangnamsinh" class="form-control">
+                    <input type="date" name="ngaythangnamsinh" id="ngaythangnamsinh"  value="<?php echo $ts['ngay_sinh_ts']; ?>" class="form-control">
                 </div>
             </div>
             <div class="col-md-4">
@@ -52,19 +52,19 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Chứng minh thư nhân dân:</label>
                     <input type="text" class="form-control" name="socmnd" id=""
-                        placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân">
+                        placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân" value = "<?php echo $ts['so_cmnd_cccd_ts']; ?>">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Ngày cấp:</small> </label>
-                    <input type="date" name="ngaycap" class="form-control">
+                    <input type="date" name="ngaycap" class="form-control" value="<?php echo $ts['ngay_cap']; ?>">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Nơi cấp:<small>(ghi theo cmnd/cccd)</small> </label>
-                    <input type="text" class="form-control" id="" name="noicap">
+                    <input type="text" class="form-control" id="" name="noicap" value="<?php echo $ts['noi_cap']; ?>">
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Xã/phường:</label>
-                    <input type="text" class="form-control" name="phuongthixa" id="">
+                    <input type="text" class="form-control" name="phuongthixa" id="" value="<?php echo $ts['ho_khau_xa_phuong']; ?>">
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="" class="title__ip">Thôn/bản/đường phố:</label>
-                    <input type="text" class="form-control" id="" name="thonbanduongpho">
+                    <input type="text" class="form-control" id="" name="thonbanduongpho" value="<?php echo $ts['ho_khau_thon_ban_duong_pho']; ?>">
                 </div>
             </div>
         </div>
@@ -232,13 +232,13 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="" class="title__ip">Điện thoại liên lạc:</label>
-                    <input type="text" class="form-control" name="sdt" id="" placeholder="Điện thoại liên lạc">
+                    <input type="text" class="form-control" name="sdt" id="" placeholder="Điện thoại liên lạc" value="<?php echo $ts['sdt_ts']; ?>">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="" class="title__ip">Email:</label>
-                    <input type="text" class="form-control" name="email" id="" placeholder="Email">
+                    <input type="text" class="form-control" name="email" id="" placeholder="Email" value="<?php echo $ts['email_ts']; ?>">
                 </div>
             </div>
         </div>
@@ -251,7 +251,7 @@
                                             <option value="">2020</option>
                                             <option value="">2021</option>
                                         </select> -->
-                    <input type="text" class="form-control" id="" placeholder="Năm tốt nghiệp">
+                    <input type="text" class="form-control" id="" placeholder="Năm tốt nghiệp" value="<?php echo $ts['nam_tot_nghiep_ts']; ?>">
                 </div>
             </div>
             <div class="col-md-4">
