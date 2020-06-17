@@ -718,6 +718,9 @@ class Admin extends CI_Controller{
             // $this->edit_hsxt($maTs);
             echo "Nhay vao day";
             var_dump($_POST);
+            //Insert database
+
+            // gửi dữ liệu về ajax
         }
 
         function get_category(){

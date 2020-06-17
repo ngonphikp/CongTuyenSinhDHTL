@@ -397,6 +397,8 @@ $(document).ready(function () {
             //   })
             //   $("#sub_category").html(option);
                 console.log(data);
+
+                // ĐỌc dữ liệu
             }
         });
     });
