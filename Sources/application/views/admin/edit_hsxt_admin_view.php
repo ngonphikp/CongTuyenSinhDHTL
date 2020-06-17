@@ -34,7 +34,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Nơi sinh:</label>
                     <select id="selNoiSinhAddHsxt" name="noisinh" class="form-control">
-                        <option value="">Chọn nơi sinh</option>
+                        <option value="<?php echo $ts['noi_sinh_ts']; ?>" selected><?php echo $ts['noi_sinh_ts']; ?></option>
                     </select>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Dân tộc:</label>
                     <select id="selDanTocAddHsxt" name="dantoc" class="form-control">
-                        <option value="">Chọn dân tộc</option>
+                        <option value="<?php echo $ts['dan_toc_ts']; ?>" selected><?php echo $ts['dan_toc_ts']; ?></option>
                     </select>
                 </div>
             </div>
@@ -84,16 +84,15 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Tỉnh/TP:</label>
                     <select id="selTinhThanhPhoAddHsxt" name="tinhthanhpho" class="form-control">
-                        <option value="">Chọn tỉnh thành phố</option>
-
+                        <option value="<?php echo $ts['ho_khau_tinh_thanh_pho']; ?>" selected><?php echo $ts['ho_khau_tinh_thanh_pho']; ?></option>   
                     </select>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Quận/huyện:</label>
-                    <select id="selQuanHuyenAddHsxt" name="quanhuyen" class="form-control">
-                        <option value="">Chọn quận huyện</option>
+                    <select id="selQuanHuyenAddHsxt" name="quanhuyen" class="form-control">                        
+                        <option value="<?php echo $ts['ho_khau_quan_huyen']; ?>" selected><?php echo $ts['ho_khau_quan_huyen']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -127,8 +126,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Tỉnh/TP:</label>
                     <select id="selTinhThanhPhoLop10AddHsxt" name="tinhthanhpholop10" class="form-control">
-                        <option value="">Chọn tỉnh thành phố</option>
-
+                        <option value="<?php echo $ts['tinh_tp_lop_10']; ?>" selected><?php echo $ts['tinh_tp_lop_10']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -136,7 +134,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Quận/huyện:</label>
                     <select id="selQuanHuyenLop10AddHsxt" name="quanhuyenlop10" class="form-control">
-                        <option value="">Chọn quận huyện</option>
+                        <option value="<?php echo $ts['quan_huyen_lop_10']; ?>" selected><?php echo $ts['quan_huyen_lop_10']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -144,7 +142,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Trường THPT:</label>
                     <select id="selTruongThptLop10AddHsxt" name="truongthptlop10" class="form-control">
-                        <option value="">Chọn trường:</option>
+                        <option value="<?php echo $ts['truong_lop_10']; ?>" selected><?php echo $ts['truong_lop_10']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -166,8 +164,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Tỉnh/TP:</label>
                     <select id="selTinhThanhPhoLop11AddHsxt" name="tinhthanhpholop11" class="form-control">
-                        <option value="">Chọn tỉnh thành phố</option>
-
+                        <option value="<?php echo $ts['tinh_tp_lop_11']; ?>" selected><?php echo $ts['tinh_tp_lop_11']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -175,7 +172,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Quận/huyện:</label>
                     <select id="selQuanHuyenLop11AddHsxt" name="quanhuyenlop11" class="form-control">
-                        <option value="">Chọn quận huyện</option>
+                        <option value="<?php echo $ts['quan_huyen_lop_11']; ?>" selected><?php echo $ts['quan_huyen_lop_11']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -183,7 +180,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Trường THPT:</label>
                     <select id="selTruongThptLop11AddHsxt" name="truongthptlop11" class="form-control">
-                        <option value="">Chọn trường:</option>
+                        <option value="<?php echo $ts['truong_lop_11']; ?>" selected><?php echo $ts['truong_lop_11']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -205,8 +202,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Tỉnh/TP:</label>
                     <select id="selTinhThanhPhoLop12AddHsxt" name="tinhthanhpholop12" class="form-control">
-                        <option value="">Chọn tỉnh thành phố</option>
-
+                        <option value="<?php echo $ts['tinh_tp_lop_12']; ?>" selected><?php echo $ts['tinh_tp_lop_12']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -214,7 +210,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Quận/huyện:</label>
                     <select id="selQuanHuyenLop12AddHsxt" name="quanhuyenlop12" class="form-control">
-                        <option value="">Chọn quận huyện</option>
+                        <option value="<?php echo $ts['quan_huyen_lop_12']; ?>" selected><?php echo $ts['quan_huyen_lop_12']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -222,7 +218,7 @@
                 <div class="form-group">
                     <label for="" class="title__ip">Trường THPT:</label>
                     <select id="selTruongThptLop12AddHsxt" name="truongthptlop12" class="form-control">
-                        <option value="">Chọn trường:</option>
+                        <option value="<?php echo $ts['truong_lop_12']; ?>" selected><?php echo $ts['truong_lop_12']; ?></option>   
                     </select>
                 </div>
             </div>
@@ -257,27 +253,27 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Khu vực ưu tiên:</label>
-                    <select name="" id="input" class="form-control">
-                        <option value="">Chọn khu vực</option>
-                        <option value="">KV1</option>
-                        <option value="">KV2</option>
-                        <option value="">KV2 - NT</option>
-                        <option value="">KV3</option>
+                    <select id="input" name="khuvucuutien" class="form-control">
+                        <option value="" selected>Chọn khu vực</option>
+                        <option value="KV1" <?php if ($ts['khu_vuc_uu_tien'] === "KV1")echo "selected";?>>KV1</option>
+                        <option value="KV2" <?php if ($ts['khu_vuc_uu_tien'] === "KV2")echo "selected";?>>KV2</option>
+                        <option value="KV2 - NT"  <?php if ($ts['khu_vuc_uu_tien'] === "KV2 - NT")echo "selected";?>>KV2 - NT</option>
+                        <option value="KV3"  <?php if ($ts['khu_vuc_uu_tien'] === "KV3")echo "selected";?>>KV3</option>
                     </select>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Đối tượng ưu tiên (nếu có):</label>
-                    <select name="" id="input" class="form-control">
-                        <option value="">Đối tượng ưu tiên </option>
-                        <option value="">01</option>
-                        <option value="">02</option>
-                        <option value="">03</option>
-                        <option value="">04</option>
-                        <option value="">05</option>
-                        <option value="">06</option>
-                        <option value="">07</option>
+                    <select  id="input" name="doituonguutien" class="form-control">
+                        <option value="" selected>Đối tượng ưu tiên </option>
+                        <option value="01" <?php if ($ts['doi_tuong_uu_tien'] === "01")echo "selected";?>>01</option>
+                        <option value="02" <?php if ($ts['doi_tuong_uu_tien'] === "02")echo "selected";?>>02</option>
+                        <option value="03" <?php if ($ts['doi_tuong_uu_tien'] === "03")echo "selected";?>>03</option>
+                        <option value="04" <?php if ($ts['doi_tuong_uu_tien'] === "04")echo "selected";?>>04</option>
+                        <option value="05" <?php if ($ts['doi_tuong_uu_tien'] === "05")echo "selected";?>>05</option>
+                        <option value="06" <?php if ($ts['doi_tuong_uu_tien'] === "06")echo "selected";?>>06</option>
+                        <option value="07" <?php if ($ts['doi_tuong_uu_tien'] === "07")echo "selected";?>>07</option>
                     </select>
                 </div>
             </div>

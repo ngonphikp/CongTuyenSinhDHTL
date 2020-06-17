@@ -628,7 +628,7 @@ class Admin extends CI_Controller{
         $this->load->model("Mts");
         $data['ts'] = $this->Mts->getByMaTS($ma_ts);
 
-        var_dump($data);
+        // var_dump($data);
 
         $this->load->view("admin/s_edit_hsxt_admin_view", $data);
     }
