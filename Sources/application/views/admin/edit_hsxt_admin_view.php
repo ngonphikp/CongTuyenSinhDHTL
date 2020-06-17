@@ -369,13 +369,13 @@
 <div class="row">
     <div class="col-sm-6 col-12">
         <label>Cơ sở đào tạo :</label>
-        <select name="coso" class="form-control">
-                        <?php foreach ($listCoSoDaoTao as $row){?>                            
+        <select name="coso" class="form-control" id = "csdt_edit_ts" >
+                        <?php 
+                            foreach ($listCoSoDaoTao as $row){?>                            
                             <option value="<?php echo $row["ma_csdt"]; ?>"><?php echo $row["ma_csdt"] . ": " . $row["ten_csdt"]; ?></option>
                             <?php
                         }
                         ?>
-                        <option value="Cơ sở khác">Cơ sở khác</option>
                         </select>
     </div>
     <div class="col-sm-6 col-12">

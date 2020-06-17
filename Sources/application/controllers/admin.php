@@ -716,8 +716,8 @@ class Admin extends CI_Controller{
             //     //$maTs= $this->Mts->getMaxMaTS();
             //     //echo ''+$maTs;
             // $this->edit_hsxt($maTs);
+            echo "Nhay vao day";
             var_dump($_POST);
-
         }
 
         function get_category(){

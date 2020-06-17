@@ -378,18 +378,25 @@ $(document).ready(function () {
     var btnNguyenVong = $("#btnNguyenVong");
     $(btnNguyenVong).click(function (e) {
         e.preventDefault();
-        console.log("Nhay vao day");
+        var url = base_url + "/CongTuyenSinhDHTL/Sources/index.php/admin/pro_add_nguyen_vong";
+        console.log("Nhay vao day: " + url);
+
+        var csdt_edit_ts = $("#csdt_edit_ts").val();
+        console.log(csdt_edit_ts);
+
+
         $.ajax({
-            url: 'get_category',  // gọi đến file server articles.php để xử lý
-            data: {category_id: category_id}, //lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+            url: '' + url + '',  // gọi đến file server articles.php để xử lý
+            data: {csdt_edit_ts: csdt_edit_ts}, //lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
             type: 'POST',   // phương thức dữ liệu được truyền đi
             datatype: 'json', // định dạng dữ liệu trả về là json
             success: function(data){ //kết quả trả về từ server nếu gửi thành công
-              var option = "";
-              $.each($.parseJSON(data),function(key, value){
-                option += "<option value='"+value['id']+"'>"+value['title']+"</option>"
-              })
-              $("#sub_category").html(option);
+            //   var option = "";
+            //   $.each($.parseJSON(data),function(key, value){
+            //     option += "<option value='"+value['id']+"'>"+value['title']+"</option>"
+            //   })
+            //   $("#sub_category").html(option);
+                console.log(data);
             }
         });
     });
