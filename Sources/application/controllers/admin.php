@@ -554,18 +554,22 @@ class Admin extends CI_Controller{
             // $this->load->model("Mthmxt");
             // $data['listToHopMonXetTuyen']= $this->Mthmxt->getListAll();
             //$this->load->view("admin/s_add_ndt_admin_view", $data);
-        $this->load->view("admin/s_add_hsxt_admin_view",$data);
+            $this->load->view("admin/s_add_hsxt_admin_view",$data);
     }
     
     public function pro_add_hsxt(){
+        //var_dump($_POST);
+
+
         //Kiểm tra bằng form validation
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('tk', 'Tên Đăng Nhập', 'required');
+        $this->form_validation->set_rules('ht', 'Họ tên', 'required');
+        //$this->form_validation->set_rules('tk', 'Tên Đăng Nhập', 'required');
         $this->form_validation->set_rules('gt', 'Giới Tính', 'required');
-        $this->form_validation->set_rules('ns', 'Ngày Sinh', 'required');
-        $this->form_validation->set_rules('tinhthanhpho', 'Tỉnh thành pho', 'required');
-        $this->form_validation->set_rules('quanhuyen', 'Quận Huyện', 'required');
-        $this->form_validation->set_rules('phuongthixa', 'Phường Thị Xã', 'required');
+        $this->form_validation->set_rules('ngaythangnamsinh', 'Ngày Sinh', 'required');
+        // $this->form_validation->set_rules('tinhthanhpho', 'Tỉnh thành pho', 'required');
+        // $this->form_validation->set_rules('quanhuyen', 'Quận Huyện', 'required');
+        // $this->form_validation->set_rules('phuongthixa', 'Phường Thị Xã', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('sdt', 'Số Điện Thoại', 'numeric');
         if($this->form_validation->run() == FALSE){
@@ -574,24 +578,35 @@ class Admin extends CI_Controller{
         }
         else{
             try{
-                $tk = isset($_POST['tk']) ? $_POST['tk'] : "";
-                $gt = isset($_POST['gt']) ? $_POST['gt'] : "Nam";
-                $ns = isset($_POST['ns']) ? $_POST['ns'] : "";
-                $tinhthanhpho = isset($_POST['tinhthanhpho']) ? $_POST['tinhthanhpho'] : "";
-                $quanhuyen = isset($_POST['quanhuyen']) ? $_POST['quanhuyen'] : "";
-                $phuongthixa = isset($_POST['phuongthixa']) ? $_POST['phuongthixa'] : "";
-                $email = isset($_POST['email']) ? $_POST['email'] : "";
-                $sdt = isset($_POST['sdt']) ? $_POST['sdt'] : "";
-                $this->load->model("Muser");
-                $this->Muser->add($tk, $mk, $ht, $gt, $email, $ns, $dc, $sdt);
-                echo "<script>alert('Thêm Thành Công !!!')</script>";
-                $this->get_list_user();
+                var_dump($_POST);
+                // $ht = isset($_POST['ht']) ? $_POST['ht'] : "";
+                // $gt = isset($_POST['gt']) ? $_POST['gt'] : "Nam";
+                // $tk = isset($_POST['tk']) ? $_POST['tk'] : "";
+                // $ns = isset($_POST['ns']) ? $_POST['ns'] : "";
+                // $tinhthanhpho = isset($_POST['tinhthanhpho']) ? $_POST['tinhthanhpho'] : "";
+                // $quanhuyen = isset($_POST['quanhuyen']) ? $_POST['quanhuyen'] : "";
+                // $phuongthixa = isset($_POST['phuongthixa']) ? $_POST['phuongthixa'] : "";
+                // $email = isset($_POST['email']) ? $_POST['email'] : "";
+                // $sdt = isset($_POST['sdt']) ? $_POST['sdt'] : "";
+                // $this->load->model("Mhsxt");
+                // //$this->Muser->add($tk, $mk, $ht, $gt, $email, $ns, $dc, $sdt);
+                // //echo "<script>alert('Thêm Thành Công !!!')</script>";
+                // $this->edit_thong_tin_hsxt($id);
+                //$this->add_hsxt();
             }
             catch(Exception $e){
                 echo "<script>alert('Hồ Sơ Đã Tồn Tại !!!')</script>";
                 $this->add_hsxt();
             }
         }
+    }
+
+
+
+    public function edit_thong_tin_hsxt($id){
+        $this->load->model("Mhsxt");
+        $data['thmxt'] = $this->Mthmxt->getById($id);
+        $this->load->view("admin/s_edit_thong_tin_hsxt_admin_view", $data);
     }
 
     public function delete_csdt($id){
@@ -607,12 +622,12 @@ class Admin extends CI_Controller{
             $config['total_rows'] = $this->Mhsxt->countAll();
             $config['base_url'] = base_url()."index.php/admin/get_list_hsxt";
             $config['per_page'] = 5;
-    
             $start=$this->uri->segment(3);
             $this->load->library('pagination', $config);
             $data['listHsxt']= $this->Mhsxt->getList($start, $config['per_page']);
             $this->load->view("admin/get_list_hsxt_admin_view", $data);
         }
+        
 
         public function edit_thmxt($id){
             $this->load->model("Mthmxt");
@@ -740,5 +755,4 @@ class Admin extends CI_Controller{
             }
             
         }
-    
 }
