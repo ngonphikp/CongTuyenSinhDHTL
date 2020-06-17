@@ -579,20 +579,29 @@ class Admin extends CI_Controller{
         else{
             try{
                 var_dump($_POST);
-                // $ht = isset($_POST['ht']) ? $_POST['ht'] : "";
-                // $gt = isset($_POST['gt']) ? $_POST['gt'] : "Nam";
-                // $tk = isset($_POST['tk']) ? $_POST['tk'] : "";
-                // $ns = isset($_POST['ns']) ? $_POST['ns'] : "";
-                // $tinhthanhpho = isset($_POST['tinhthanhpho']) ? $_POST['tinhthanhpho'] : "";
-                // $quanhuyen = isset($_POST['quanhuyen']) ? $_POST['quanhuyen'] : "";
-                // $phuongthixa = isset($_POST['phuongthixa']) ? $_POST['phuongthixa'] : "";
-                // $email = isset($_POST['email']) ? $_POST['email'] : "";
-                // $sdt = isset($_POST['sdt']) ? $_POST['sdt'] : "";
-                // $this->load->model("Mhsxt");
-                // //$this->Muser->add($tk, $mk, $ht, $gt, $email, $ns, $dc, $sdt);
-                // //echo "<script>alert('Thêm Thành Công !!!')</script>";
+                $ht = isset($_POST['ht']) ? $_POST['ht'] : "";
+                $gt = isset($_POST['gt']) ? $_POST['gt'] : "Nam";
+                $ngaythangnamsinh = isset($_POST['ngaythangnamsinh']) ? $_POST['ngaythangnamsinh'] : "";
+                $noisinh = isset($_POST['noisinh']) ? $_POST['noisinh'] : "";
+
+                $dantoc = isset($_POST['noisinh']) ? $_POST['noisinh'] : "";
+                $noisinh = isset($_POST['noisinh']) ? $_POST['noisinh'] : "";
+                $noisinh = isset($_POST['noisinh']) ? $_POST['noisinh'] : "";
+                $noisinh = isset($_POST['noisinh']) ? $_POST['noisinh'] : "";
+                $noisinh = isset($_POST['noisinh']) ? $_POST['noisinh'] : "";
+                $noisinh = isset($_POST['noisinh']) ? $_POST['noisinh'] : "";
+
+
+                $tinhthanhpho = isset($_POST['tinhthanhpho']) ? $_POST['tinhthanhpho'] : "";
+                $quanhuyen = isset($_POST['quanhuyen']) ? $_POST['quanhuyen'] : "";
+                $phuongthixa = isset($_POST['phuongthixa']) ? $_POST['phuongthixa'] : "";
+                $email = isset($_POST['email']) ? $_POST['email'] : "";
+                $sdt = isset($_POST['sdt']) ? $_POST['sdt'] : "";
+                $this->load->model("Mhsxt");
+                $this->Muser->add($tk, $mk, $ht, $gt, $email, $ns, $dc, $sdt);
+                echo "<script>alert('Thêm Thành Công !!!')</script>";
                 // $this->edit_thong_tin_hsxt($id);
-                //$this->add_hsxt();
+                // $this->add_hsxt();
             }
             catch(Exception $e){
                 echo "<script>alert('Hồ Sơ Đã Tồn Tại !!!')</script>";
