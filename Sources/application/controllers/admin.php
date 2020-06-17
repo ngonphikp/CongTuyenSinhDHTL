@@ -601,6 +601,11 @@ class Admin extends CI_Controller{
         }
     }
 
+    public function edit_hsxt(){
+        
+        $this->load->view("admin/s_edit_hsxt_admin_view");
+    }
+
 
 
     public function edit_thong_tin_hsxt($id){

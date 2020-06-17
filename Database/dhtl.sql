@@ -2,12 +2,12 @@ DROP DATABASE dhtl;
 CREATE DATABASE dhtl CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 Use dhtl;
 
-create table tai_khoan(
-id_tk int AUTO_INCREMENT primary key,
-ten_dang_nhap varchar(30) not null UNIQUE,
-mat_khau varchar(30) not null,
-cap_do int default 1
-)ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1;
+CREATE TABLE tai_khoan (
+    id_tk INT AUTO_INCREMENT PRIMARY KEY,
+    ten_dang_nhap VARCHAR(30) NOT NULL UNIQUE,
+    mat_khau VARCHAR(30) NOT NULL,
+    cap_do INT DEFAULT 1
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE tinh_thanh_pho (
     ma_ttp VARCHAR(10) PRIMARY KEY,
@@ -30,17 +30,19 @@ CREATE TABLE phuong_thi_xa (
         REFERENCES quan_huyen (ma_qh)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
-create table thong_tin_tai_khoan(
-id_tk int primary key,
-ho_ten_tk  text not null,
-email_tk  varchar(50) not null,
-ngay_sinh_tk  date,
-gioi_tinh_tk  varchar(4),
-dia_chi_tk  varchar(10),
-sdt_tk  varchar(20),
-foreign key(id_tk) references tai_khoan(id_tk),
-FOREIGN KEY (dia_chi_tk) REFERENCES phuong_thi_xa (ma_ptx)
-)ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE thong_tin_tai_khoan (
+    id_tk INT PRIMARY KEY,
+    ho_ten_tk TEXT NOT NULL,
+    email_tk VARCHAR(50) NOT NULL,
+    ngay_sinh_tk DATE,
+    gioi_tinh_tk VARCHAR(4),
+    dia_chi_tk VARCHAR(10),
+    sdt_tk VARCHAR(20),
+    FOREIGN KEY (id_tk)
+        REFERENCES tai_khoan (id_tk),
+    FOREIGN KEY (dia_chi_tk)
+        REFERENCES phuong_thi_xa (ma_ptx)
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE danh_muc (
     ma_dm VARCHAR(10) PRIMARY KEY,
@@ -116,13 +118,11 @@ CREATE TABLE co_so_dao_tao (
     dia_chi_quan_huyen NVARCHAR(50),
     dia_chi_xa_phuong NVARCHAR(50),
     dia_chi_thon_ban_duong_pho NVARCHAR(50)
-    -- FOREIGN KEY (dia_chi_csdt)
---         REFERENCES quan_huyen (ma_qh)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 insert into co_so_dao_tao(ten_csdt, dia_chi_tinh_thanh_pho, dia_chi_quan_huyen, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('Cơ sở 1','Thành Phố Hà Nội','Quận Đống Đa' ,'Phường Trung Liệt', 'Số 175 Tây Sơn');
 insert into co_so_dao_tao(ten_csdt, dia_chi_tinh_thanh_pho, dia_chi_quan_huyen, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('Cơ sở 2','Thành phố Hồ Chí Minh','Quận Bình Thạnh' ,'Phường 17', 'Số 2 Trường Sa');
 CREATE TABLE nganh_dao_tao (
-    ma_ndt varchar(50) PRIMARY KEY,
+    ma_ndt VARCHAR(50) PRIMARY KEY,
     ma_csdt INT,
     ten_ndt TEXT NOT NULL,
     chuong_trinh_dao_tao_ndt TEXT,
@@ -136,7 +136,7 @@ insert into nganh_dao_tao(ma_ndt,ma_csdt, ten_ndt, chuong_trinh_dao_tao_ndt) val
 insert into nganh_dao_tao(ma_ndt,ma_csdt, ten_ndt, chuong_trinh_dao_tao_ndt) values('TLS101','2','Kỹ thuật xây dựng công trình thủy','Chương trình đào tạo bằng Tiếng Việt');
 CREATE TABLE diem_chuan (
     ma_dc INT AUTO_INCREMENT PRIMARY KEY,
-    ma_ndt varchar(50),
+    ma_ndt VARCHAR(50),
     nam_dc DATE,
     diem_dc FLOAT,
     chi_tieu_dc INT,
@@ -173,38 +173,44 @@ insert into to_hop_mon_xet_tuyen value('A01','TLS101');
 insert into to_hop_mon_xet_tuyen value('A00','TLA106');
 insert into to_hop_mon_xet_tuyen value('A01','TLA106');
 CREATE TABLE nguyen_vong (
-	ma_hsxt int,
-	ten_nguyen_vong NVARCHAR(50),
-    ma_csdt int,
+    ma_hsxt INT,
+    ten_nguyen_vong NVARCHAR(50),
+    ma_csdt INT,
     ma_ndt VARCHAR(50),
     ma_thm NVARCHAR(50),
-    PRIMARY KEY (ma_hsxt, ten_nguyen_vong),
-    FOREIGN KEY (ma_csdt) REFERENCES co_so_dao_tao(ma_csdt),
-    FOREIGN KEY (ma_ndt) REFERENCES nganh_dao_tao (ma_ndt),
-    FOREIGN KEY (ma_hsxt) REFERENCES ho_so_xet_tuyen (ma_hsxt),
-    FOREIGN KEY (ma_thm) REFERENCES to_hop_mon (ma_thm)
+    PRIMARY KEY (ma_hsxt , ten_nguyen_vong),
+    FOREIGN KEY (ma_csdt)
+        REFERENCES co_so_dao_tao (ma_csdt),
+    FOREIGN KEY (ma_ndt)
+        REFERENCES nganh_dao_tao (ma_ndt),
+    FOREIGN KEY (ma_hsxt)
+        REFERENCES ho_so_xet_tuyen (ma_hsxt),
+    FOREIGN KEY (ma_thm)
+        REFERENCES to_hop_mon (ma_thm)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 
 CREATE TABLE trang_thai_nguyen_vong (
     ten_nguyen_vong NVARCHAR(50),
     ma_hsxt INT,
-    PRIMARY KEY (ten_nguyen_vong, ma_hsxt),
-    ma_xet_tuyen varchar(50), -- ma_ndt
+    PRIMARY KEY (ten_nguyen_vong , ma_hsxt),
+    ma_xet_tuyen VARCHAR(50),
     to_hop_xet_tuyen NVARCHAR(50),
-    trang_thai text,
-    -- FOREIGN KEY (ten_nguyen_vong) REFERENCES nguyen_vong(ten_nguyen_vong),
-    FOREIGN KEY (ma_xet_tuyen) REFERENCES nganh_dao_tao(ma_ndt),
-    FOREIGN KEY (to_hop_xet_tuyen) REFERENCES to_hop_mon_xet_tuyen(ma_thm)
+    trang_thai TEXT,
+    FOREIGN KEY (ma_xet_tuyen)
+        REFERENCES nganh_dao_tao (ma_ndt),
+    FOREIGN KEY (to_hop_xet_tuyen)
+        REFERENCES to_hop_mon_xet_tuyen (ma_thm)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE mon (
     ten_mon NVARCHAR(50),
-    ma_hsxt int,
+    ma_hsxt INT,
     diem_lop_10 FLOAT,
     diem_lop_11 FLOAT,
     diem_lop_12 FLOAT,
     PRIMARY KEY (ten_mon , ma_hsxt),
-    FOREIGN KEY (ma_hsxt) REFERENCES ho_so_xet_tuyen(ma_hsxt)
+    FOREIGN KEY (ma_hsxt)
+        REFERENCES ho_so_xet_tuyen (ma_hsxt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE hoc_ba (
@@ -353,3 +359,4 @@ INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VAL
 -- select * from chi_tiet_bai_viet;
 -- delete from chi_tiet_bai_viet where ma_bv = '5';
 -- select * from danh_muc where ma_dm <> '1.1';
+
