@@ -142,6 +142,8 @@ truong_lop_10,
     '2020',
     'KV1',
     '01');
+    use dhtl;
+    select * from thi_sinh;
 CREATE TABLE truong (
     ma_truong VARCHAR(10) PRIMARY KEY,
     ten_truong TEXT,

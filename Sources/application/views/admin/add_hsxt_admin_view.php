@@ -251,33 +251,33 @@
                                             <option value="">2020</option>
                                             <option value="">2021</option>
                                         </select> -->
-                    <input type="text" class="form-control" id="" placeholder="Năm tốt nghiệp">
+                    <input type="text" name="namtotnghiep" class="form-control" id="" placeholder="Năm tốt nghiệp">
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Khu vực ưu tiên:</label>
-                    <select name="" id="input" class="form-control">
+                    <select id="input" name="khuvucuutien" class="form-control">
                         <option value="">Chọn khu vực</option>
-                        <option value="">KV1</option>
-                        <option value="">KV2</option>
-                        <option value="">KV2 - NT</option>
-                        <option value="">KV3</option>
+                        <option value="KV1">KV1</option>
+                        <option value="KV2">KV2</option>
+                        <option value="KV2 - NT">KV2 - NT</option>
+                        <option value="KV3">KV3</option>
                     </select>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Đối tượng ưu tiên (nếu có):</label>
-                    <select name="" id="input" class="form-control">
+                    <select  id="input" name="doituonguutien" class="form-control">
                         <option value="">Đối tượng ưu tiên </option>
-                        <option value="">01</option>
-                        <option value="">02</option>
-                        <option value="">03</option>
-                        <option value="">04</option>
-                        <option value="">05</option>
-                        <option value="">06</option>
-                        <option value="">07</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
                     </select>
                 </div>
             </div>

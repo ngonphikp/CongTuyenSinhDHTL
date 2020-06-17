@@ -9,14 +9,14 @@ class Mts extends CI_Model{
         return $query->num_rows();
     }
 
-    public function getMaxMaBV()
+    public function getMaxMaTS()
     {
         $query=$this->db->query("select ma_ts from thi_sinh order by ma_ts desc limit 1");
         return $query->result_array();
     }
     
-    public function add($ho_ten_ts, $gioi_tinh_ts, $ngay_sinh_ts, $noi_sinh_ts, $dan_toc_ts, , $so_cmnd_cccd_ts, $ngay_cap, $noi_cap, 
-    $ho_khau_tinh_thanh_pho, $ho_khau_quan_huyen, $ho_khau_xa_phuong, $ho_khau_thon_ban_duong_pho, $tinh_tp_lop_10, $quan_huyen_lop_10, $truong_lop_10, $tinh_tp_lop_11, $quan_huyen_lop_11, $truong_lop_11, $quan_huyen_lop_12, $tinh_tp_lop_12, $sdt_ts, $email_ts, $nam_tot_nghiep_ts, $khu_vuc_uu_tien, $doi_tuong_uu_tien){
+    public function add($ho_ten_ts, $gioi_tinh_ts, $ngay_sinh_ts, $noi_sinh_ts, $dan_toc_ts , $so_cmnd_cccd_ts, $ngay_cap, $noi_cap, 
+$ho_khau_tinh_thanh_pho, $ho_khau_quan_huyen, $ho_khau_xa_phuong, $ho_khau_thon_ban_duong_pho, $tinh_tp_lop_10, $quan_huyen_lop_10, $truong_lop_10, $tinh_tp_lop_11, $quan_huyen_lop_11, $truong_lop_11, $quan_huyen_lop_12, $tinh_tp_lop_12, $truong_lop_12, $sdt_ts, $email_ts, $nam_tot_nghiep_ts, $khu_vuc_uu_tien, $doi_tuong_uu_tien){
         $this->db->query("insert into thi_sinh (
             ho_ten_ts,
             gioi_tinh_ts,
