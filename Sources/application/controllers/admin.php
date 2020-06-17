@@ -630,6 +630,12 @@ class Admin extends CI_Controller{
 
         var_dump($data);
 
+        $this->load->model("Mcsdt");
+            $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
+            $this->load->model("Mndt");
+            $data['listNhomNganh']= $this->Mndt->getListAll();
+            $this->load->model("Mthm");
+            $data['listToHopMon']= $this->Mthm->getListAll();
         $this->load->view("admin/s_edit_hsxt_admin_view", $data);
     }
 
@@ -704,6 +710,23 @@ class Admin extends CI_Controller{
                 }
         
         }
+
+        public function pro_add_nguyen_vong(){
+            // $maTs = $this->Mts->getMaxMaTS()[0]["ma_ts"];
+            //     //$maTs= $this->Mts->getMaxMaTS();
+            //     //echo ''+$maTs;
+            // $this->edit_hsxt($maTs);
+            var_dump($_POST);
+
+        }
+
+        function get_category(){
+            $category_id = $this->input->post('category_id');  //lấy category_id từ view
+            $this->db->where('category_id', $category_id);    //đưa vào điều kiện tìm kiếm
+            $query = $this->db->get('sub_categories');       // lấy ra các subcategory có  category_id như đưa vào
+            $result = $query->result();
+            echo json_encode($result);      //trả về response dưới dạng json
+          }
 
         public function get_list_thmxt(){
             $this->load->model("Mthmxt");
