@@ -559,9 +559,6 @@ class Admin extends CI_Controller{
     
     public function pro_add_hsxt(){
         //var_dump($_POST);
-
-
-        //Kiểm tra bằng form validation
         $this->load->library('form_validation');
         $this->form_validation->set_rules('ht', 'Họ tên', 'required');
         //$this->form_validation->set_rules('tk', 'Tên Đăng Nhập', 'required');
