@@ -375,6 +375,14 @@ $(document).ready(function () {
         });     
     });
 
+    var btnNguyenVong = $("#btnNguyenVong");
+
+    $(btnNguyenVong).click(function (e) {
+        e.preventDefault();
+        console.log("Nhay vao day");
+    });
+    
+
     
 });
 
