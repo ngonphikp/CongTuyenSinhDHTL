@@ -285,4 +285,219 @@
     </div>
     </form>
     <?php echo validation_errors();?>
+
+
+    
+    <div class="form">
+
+
+    <div class="col" >
+        <!--    -->
+        <div ng-show="item.Id>0" >
+            <div class="row">
+                <div class="col-sm-12 col-12">
+                    <div class="admission-title" id="aspire">
+                        <h4><i class="fa fa-info-circle" aria-hidden="true"></i> THÔNG TIN ĐĂNG KÝ XÉT TUYỂN</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!--Begin Nguyện vọng-->
+            <div class="row">
+                <div class="col-md-12" ng-show="item.aspirationDtos.length>0">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div style="padding-top:10px;margin-bottom: 15px;" class="form-group has-success">
+                                <label><i class="fa fa-check" aria-hidden="true"></i> Kết quả đăng ký </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div style="padding-top:10px;margin-bottom: 15px;" class="pull-right">
+                                <label ng-show="!ViewChangeAspire" ng-click="ShowChangeAspire()" ng-if="item.ProgressStep<4"><i class="fa fa-pencil" aria-hidden="true"></i> Thay đổi nguyện vọng</label>
+                                <label ng-show="ViewChangeAspire" ng-click="SaveChangeAspire()" ng-if="item.ProgressStep<4"><i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu thay đổi</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <table class="table table-hover">
+                        <tr style="background-color: bisque;">
+
+                            <th>Nguyện vọng</th>
+                            <th>Mã xét tuyển</th>
+
+                            <th>Tổ hợp xét tuyển</th>
+                            <th>Trạng thái</th>
+                            <th>#</th>
+                        </tr>
+                        <tr ng-repeat="nv in item.aspirationDtos">
+
+                            <td>
+                                <span ng-bind-html="'Nguyện vọng '+nv.AspirationOrder" ng-show="!ViewChangeAspire"></span>
+                                <input type="number" max="20" class="form-control" ng-model="nv.AspirationOrder" style="width:75px" ng-show="ViewChangeAspire">
+                            </td>
+                            <td ng-bind-html="nv.ProgramCode"></td>
+                            <td ng-bind-html="nv.CombinCode"></td>
+                            <td>
+                                <!-- <span class="label label-success" ng-show="nv.IsApproved==1">Đã duyệt</span>
+                                <span class="label label-danger" ng-show="nv.IsApproved==2">Không được duyệt</span>
+                                <span class="label label-primary" ng-show="nv.IsApproved==0">Đã nhận</span> -->
+                            </td>
+                            <td>
+                                <a ng-click="EditItem(nv)" style="cursor:pointer" title="Sửa nguyện vọng" ng-if="item.ProgressStep<4">
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+                            <div class="row">
+
+<div class="col-md-12">
+    <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="ShowAspire()" ng-show="!ViewAspireForm">
+        <label id="themnguyenvongdangky">+Thêm nguyện vọng đăng ký</label>
+    </div>
+    <!-- <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAspire()" ng-show="ViewAspireForm">
+        <label><i class="fa fa-minus" aria-hidden="true"></i> Thêm nguyện vọng đăng ký</label>
+    </div> -->
+</div>
+
+
+
+<div id="searchContent" style="display:none;">
+<div class="row">
+    <div class="col-sm-6 col-12">
+        <label>Cơ sở đào tạo :</label>
+        <select name="coso" class="form-control">
+                        <?php foreach ($listCoSoDaoTao as $row){?>                            
+                            <option value="<?php echo $row["ma_csdt"]; ?>"><?php echo $row["ma_csdt"] . ": " . $row["ten_csdt"]; ?></option>
+                            <?php
+                        }
+                        ?>
+                        <option value="Cơ sở khác">Cơ sở khác</option>
+                        </select>
+    </div>
+    <div class="col-sm-6 col-12">
+        <label>Nguyện vọng:</label>
+        <!-- <select ng-model="item.Aspiration.AspirationOrder" ng-options="sc.Id as sc.Name for (key, sc) in MyAspiration" ng-change="AspirationChange(item.Aspiration.AspirationOrder,'')" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
+        </select> -->
+        <select name="" id="input" class="form-control" required="required">
+                                            <option value="">Nguyện vọng 1</option>
+                                            <option value="">Nguyện vọng 2</option>
+                                            <option value="">Nguyện vọng 3</option>
+                                            <option value="">Nguyện vọng 4</option>
+                                            <option value="">Nguyện vọng 5</option>
+                                            <option value="">Nguyện vọng 6</option>
+                                            <option value="">Nguyện vọng 7</option>
+                                            <option value="">Nguyện vọng 8</option>
+                                            <option value="">Nguyện vọng 9</option>
+                                            <option value="">Nguyện vọng 10</option>
+                                            <option value="">Nguyện vọng 11</option>
+                                            <option value="">Nguyện vọng 12</option>
+                                            <option value="">Nguyện vọng 13</option>
+                                            <option value="">Nguyện vọng 14</option>
+                                            <option value="">Nguyện vọng 15</option>
+                                            <option value="">Nguyện vọng 16</option>
+                                            <option value="">Nguyện vọng 17</option>
+                                            <option value="">Nguyện vọng 18</option>
+                                            <option value="">Nguyện vọng 19</option>
+                                            <option value="">Nguyện vọng 20</option>
+                                        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4 col-12">
+        <label>Nhóm ngành xét tuyển :</label>
+        <!-- <select ng-model="item.Aspiration.ProgramCode" ng-options="sc.ProgramCode as sc.ProgramsName for (key, sc) in EducationBase.educationPrograms" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
+        </select> -->
+        <select name="nhomganh" class="form-control" id="nhomnganhxettuyen">
+                        <?php foreach ($listNhomNganh as $row){?>                            
+                            <option value="<?php echo $row["ma_ndt"]; ?>"><?php echo $row["ten_ndt"];?></option>
+                            <?php
+                        }
+                        ?>
+                        </select>
+                        
+    </div>
+    
+
+    
+    <div class="col-sm-4 col-12">
+        <label>Mã xét tuyển :</label>
+        <input id="maxettuyen" type="text" ng-model="item.Aspiration.ProgramCode" class="form-control" placeholder="mã xét tuyển" required disabled value="">
+        
+                            
+            
+                        
+    </div>
+   
+
+
+    <div class="col-sm-4 col-12">
+        <label>Tổ hợp xét tuyển:</label>
+        <!-- <select ng-model="item.Aspiration.CombinCode" ng-options="sc.CombinCode as sc.CombinName for (key, sc) in AllCombination" ng-change="CombinationChange(item.Aspiration.CombinCode)" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
+        </select> -->
+        <select name="tohopxettuyen" class="form-control" id="tohopxettuyen">
+                        <?php foreach ($listToHopMon as $row){?>                            
+                            <option value="<?php echo $row["ma_thm"]; ?>"><?php echo $row["ma_thm"];?></option>
+                            <?php
+                        }
+                    ?>
+                        
+        </select>
+    </div>
+</div>
+<!--Điểm lớp 10 THPT-->
+<div class="row">
+    <div class="col-sm-4 col-12">
+        <label>Lớp 10 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="mon1"></span>
+        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_1" id="GPA10_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+    <div class="col-sm-4 col-12">
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode " id="mon2"></span>
+        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_2" id="GPA10_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+    <div class="col-sm-4 col-12">
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="mon3"></span>
+        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_3" id="GPA10_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+</div>
+<!--Điểm lớp 11 THPT-->
+<div class="row">
+    <div class="col-sm-4 col-12">
+        <label>Lớp 11 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="monlop111" ></span>
+        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA11_1" id="GPA11_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+    <div class="col-sm-4 col-12">
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode" id="monlop112" ></span>
+        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA11_2" id="GPA11_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+    <div class="col-sm-4 col-12">
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="monlop113" ></span>
+        <input type="number" min="0" max="10" class="form-control" ng-model="item.Aspiration.GPA11_3" id="GPA11_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+</div>
+<!--Điểm lớp 12 THPT-->
+<div class="row">
+    <div class="col-sm-4 col-12">
+        <label>Lớp 12 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="monlop121" ></span>
+        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_1" id="GPA12_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+    <div class="col-sm-4 col-12">
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode" id="monlop122" ></span>
+        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_2" id="GPA12_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+    <div class="col-sm-4 col-12">
+        <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="monlop123" ></span>
+        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_3" id="GPA12_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+    </div>
+</div>     
+</div>
+<div class="col-md-3 form-group pull-right">
+        <input id="btnNguyenVong" name="ok" value="Lưu nguyện vọng" class="btn btn-primary btn-block">
+    </div>
+    </form>
+    
 </div>
