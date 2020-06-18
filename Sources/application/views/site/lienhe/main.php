@@ -84,7 +84,7 @@
                     <div id="block-xet-hoc-ba" class="block block-1">
                         <p>
                             <a href="">
-                                <img src="<?php echo base_url();?>asset/image/img/hb.gif" alt="">
+                                <img src="<?php echo base_url();?>assets/img/img_dhtl/hb.gif" alt="">
                             </a>
                         </p>
                     </div>

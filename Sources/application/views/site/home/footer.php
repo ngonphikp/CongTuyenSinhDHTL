@@ -152,8 +152,15 @@
             </div>
         </div>
     <!-- Menu-Moblie-End -->
-  
-    
+    <!-- PHONE RING -->
+    <div class='phone'>
+        <a href="#">
+            <div class="quick-alo-ph-circle"></div>
+            <div class="quick-alo-ph-circle-fill"></div>
+            <div class="quick-alo-ph-img-circle"></div>
+        </a>
+    </div>
+    <!-- PHONE RING -->
     <!-- Modal -->
         <div class="D_modal">
             

@@ -22,29 +22,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="row">
+                <div class="row" style="padding: 30px 0;text-align: center;font-weight: 600;">
                     <div class="col-sm-12">
-                        <div class="col-sm-6"></div>
-                        <div class="col-sm-6 float-right">
-                            <p>
-                                <strong>Tìm kiếm</strong>
-                            </p>
-                            <hr>
-                            <div class="Search_tt">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="Số CMND">
-                                </div>
-                                <div class="form-group" style="display:flex;">
-                                    <input type="text" class="form-control" id="" placeholder="Mã số thí sinh">
-                                    <button type="submit" class="btn">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
-                                
-                            </div>
-                            
-                        </div>
-                        
+                        <p>Tra cứu đăng ký xét tuyển tại <a href="<?php echo base_url();?>home/tracuutuyensinh">đây.</a></p>
                     </div>
                 </div>
                 <div class="content">
@@ -83,20 +63,14 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Nơi sinh:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Thành phố Hà Nội</option>
-                                            <option value="">Thành phố Hồ Chí Minh</option>
+                                        <select name="" id="selNoiSinhAddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Dân tộc:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Kinh</option>
-                                            <option value="">Thái</option>
+                                        <select name="" id="selDanTocAddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
@@ -105,7 +79,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Chứng minh thư nhân dân:</label>
-                                        <input type="number" class="form-control" id="cmt" required="required" placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân">
+                                        <input type="text" class="form-control" id="cmt" required="required" placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -133,17 +107,14 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Tỉnh/TP:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Thành phố Hà Nội</option>
-                                            <option value="">Thành phố Hồ Chí Minh</option>
+                                        <select name="" id="selTinhThanhPhoAddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Quận/huyện:</label>
-                                        <select name="" id="input" class="form-control" required="required">
+                                        <select name="" id="selQuanHuyenAddHsxt" class="form-control" required="required">
                                             <option value=""></option>
                                             <option value="">Quận Hoàng Mai</option>
                                             <option value="">Quận Đống Đa</option>
@@ -178,37 +149,26 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Tỉnh/TP:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Thành phố Hà Nội</option>
-                                            <option value="">Thành phố Hồ Chí Minh</option>
+                                        <select name="tinhthanhpholop10" id="selTinhThanhPhoLop10AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Quận/huyện:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Quận Hoàng Mai</option>
-                                            <option value="">Quận Đống Đa</option>
-                                            <option value="">Huyện Thường Tín</option>
+                                        <select name="quanhuyenlop10" id="selQuanHuyenLop10AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Trường THPT:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">THPT Vân Tảo</option>
-                                            <option value="">THPT Thường Tín</option>
+                                        <select name="truongthptlop10" id="selTruongThptLop10AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <!-- END 10 -->
-
                             <!-- Lớp 11 -->
                             <div class="row">
                                 <div class="col-md-12">
@@ -222,31 +182,21 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Tỉnh/TP:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Thành phố Hà Nội</option>
-                                            <option value="">Thành phố Hồ Chí Minh</option>
+                                        <select name="tinhthanhpholop11" id="selTinhThanhPhoLop11AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Quận/huyện:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Quận Hoàng Mai</option>
-                                            <option value="">Quận Đống Đa</option>
-                                            <option value="">Huyện Thường Tín</option>
+                                        <select name="quanhuyenlop11" id="selQuanHuyenLop11AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Trường THPT:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">THPT Vân Tảo</option>
-                                            <option value="">THPT Thường Tín</option>
+                                        <select name="truongthptlop11" id="selTruongThptLop11AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
@@ -266,31 +216,21 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Tỉnh/TP:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Thành phố Hà Nội</option>
-                                            <option value="">Thành phố Hồ Chí Minh</option>
+                                        <select name="tinhthanhpholop12" id="selTinhThanhPhoLop12AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Quận/huyện:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">Quận Hoàng Mai</option>
-                                            <option value="">Quận Đống Đa</option>
-                                            <option value="">Huyện Thường Tín</option>
+                                        <select name="quanhuyenlop12" id="selQuanHuyenLop12AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="" class="title__ip">Trường THPT:</label>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value=""></option>
-                                            <option value="">THPT Vân Tảo</option>
-                                            <option value="">THPT Thường Tín</option>
+                                        <select name="truongthptlop12" id="selTruongThptLop12AddHsxt" class="form-control" required="required">
                                         </select>
                                     </div>
                                 </div>
