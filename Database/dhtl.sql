@@ -349,17 +349,20 @@ insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_
 --     ten_dm TEXT NOT NULL,
 --     ma_dm_cha VARCHAR(10)
 -- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
-INSERT INTO danh_muc VALUES ('1', 'Danh mục 1', null);
-INSERT INTO danh_muc VALUES ('2', 'Danh mục 2', null);
+INSERT INTO danh_muc VALUES ('1', 'Tuyển sinh', null);
+INSERT INTO danh_muc VALUES ('2', 'Giới thiệu', null);
 INSERT INTO danh_muc VALUES ('3', 'Danh mục 3', null);
 
-INSERT INTO danh_muc VALUES ('1.1', 'Danh mục 1.1', '1');
-INSERT INTO danh_muc VALUES ('1.2', 'Danh mục 1.2', '1');
-INSERT INTO danh_muc VALUES ('1.3', 'Danh mục 1.3', '1');
+INSERT INTO danh_muc VALUES ('1.1', 'Đại học chính quy', '1');
+INSERT INTO danh_muc VALUES ('1.2', 'Thạc sĩ', '1');
+INSERT INTO danh_muc VALUES ('1.3', 'Tiến sĩ', '1');
+INSERT INTO danh_muc VALUES ('1.4', 'Vừa học vừa làm', '1');
+INSERT INTO danh_muc VALUES ('1.5', 'Tuyển sinh liên thông', '1');
+INSERT INTO danh_muc VALUES ('1.6', 'Văn bằng 2', '1');
 
-INSERT INTO danh_muc VALUES ('1.1.1', 'Danh mục 1.1.1', '1.1');
-INSERT INTO danh_muc VALUES ('1.1.1.1', 'Danh mục 1.1.1.1', '1.1.1');
-INSERT INTO danh_muc VALUES ('1.1.2', 'Danh mục 1.1.2', '1.1');
+INSERT INTO danh_muc VALUES ('1.1.1', 'Thông tin tuyển sinh', '1.1');
+INSERT INTO danh_muc VALUES ('1.1.2', 'Điểm chuẩn các năm', '1.1');
+INSERT INTO danh_muc VALUES ('1.1.3', 'Cổng tuyển sinh bộ GDĐT', '1.1');
 
 INSERT INTO danh_muc VALUES ('2.2.1', 'Danh mục 2.2.1', '2.2');
 

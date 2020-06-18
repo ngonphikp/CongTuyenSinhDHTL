@@ -2,95 +2,34 @@
     <div class="container">
         <div id="main__wrapp">
             <div id="main__left">
-                <div class="main__left--news">
+                <div class="main__left--news block-tts">
+                <?php foreach($dmC as $dm){?>
+                    
                     <h1 class="title__news">
-                        <p>Tin tuyển sinh 2020</p>
+                        <p><?php echo $dm["ten_dm"]; ?></p>
                     </h1>
                     <ul class="list__news">
-                        <li  class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
-                        <li class="list__news--item">
-                            <a href="">
-                                Đại học thủy lợi tổ chức buổi tư vấn trực tuyến ngày 30.5.2020
-                            </a>
-                            <p class="create__time">
-                                Thứ sáu,May 30,2020-10:12
-                            </p>
-                        </li>
+                        <?php foreach($bvC as $bv){
+                            if ($bv["ma_dm"] == $dm["ma_dm"]) {?>
+
+                            <li  class="list__news--item">
+                                <a href="">
+                                    <?php echo $bv["tieu_de_bv"]; ?>
+                                </a>
+                            </li>
+
+                            <?php
+                            }                            
+                        }                        
+                        ?>
                     </ul>
+
+                    <?php
+                }                    
+                ?>
                 </div>
                 <!-- block-tin-tuyen-sinh -->
-                <div class="main__left--news block-tts">
+                <!-- <div class="main__left--news block-tts">
                     <h1 class="title__news">
                         <p>Các tin tuyển sinh khác</p>
                     </h1>
@@ -146,11 +85,11 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- END -->
 
                 <!-- PHÂN__TRANG -->
-                <div class="list-page">
+                <!-- <div class="list-page">
                     <ul class="pagination justify-content-center">
                         <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                         <li class="page-item active"><a class="page-link" href="#">1</a></li>
@@ -160,7 +99,7 @@
                         <li class="page-item"><a class="page-link" href="#">5</a></li>
                         <li class="page-item"><a class="page-link" href="#">Next</a></li>
                     </ul>
-                </div>
+                </div> -->
                    
                 <!-- END -->
             </div>

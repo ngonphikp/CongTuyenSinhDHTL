@@ -167,3 +167,7 @@ header .me-nav #navcol-1 .btn{
     position: absolute; /*lớp cha * relative */
     right: 0;
 }
+
+.me-dm ul {
+    list-style-type: none;
+}

@@ -9,14 +9,14 @@
                 </div>
             </div>
         </div>
-        <div class="panel-body">            
+        <div class="panel-body me-dm">  
             <?php            
                 function CreateListChild($listDm, $ma_cha){
                     foreach($listDm as $dm){                        
                         if ($dm["ma_dm_cha"] == $ma_cha){?>
                             <ul>
                                 <li>
-                                    <a href="<?php echo base_url();?>index.php/admin/edit_dm/<?php echo $dm['ma_dm'];?>"><?php echo $dm["ma_dm"] . ": " . $dm["ten_dm"];?></a>
+                                    <a href="<?php echo base_url();?>index.php/admin/edit_dm/<?php echo $dm['ma_dm'];?>"><button class = "btn btn-primary"><?php echo $dm["ma_dm"] . ": " . $dm["ten_dm"];?></button></a>
                                     <?php CreateListChild($listDm, $dm["ma_dm"]); ?>                                                                        
                                 </li>
                             </ul>

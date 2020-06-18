@@ -17,8 +17,8 @@
             <div class="col-lg-4 col-md-4 label-column"><label class="col-form-label">Giới Tính</label></div>
             <div class="col-lg-4 col-md-4 label-column">
                 <div class="Sex">
-                    <div class="form-check"><input class="form-check-input" type="radio" name="gt" value="Nam"><label class="form-check-label">Nam</label></div>
-                    <div class="form-check"><input class="form-check-input" type="radio" name="gt" value="Nữ"><label class="form-check-label">Nữ</label></div>
+                    <div class="form-check-inline"><input class="form-check-input" type="radio" name="gt" value="Nam"><label class="form-check-label">Nam</label></div>
+                    <div class="form-check-inline"><input class="form-check-input" type="radio" name="gt" value="Nữ"><label class="form-check-label">Nữ</label></div>
                 </div>
             </div>
         </div>
