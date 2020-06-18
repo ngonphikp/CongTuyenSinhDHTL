@@ -8,7 +8,14 @@ class Home extends CI_Controller{
 
     public function index()
 	{
-        $this->load->view('site/home/index');
+        $this->load->model("Mdm");
+        $this->load->model("Mbv");
+        $data['dmC'] = $this->Mdm->getByMaDMCha(1);
+
+        $data['bvC'] = $this->Mbv->getListAll();
+        //var_dump($data);
+
+        $this->load->view('site/home/index', $data);
     }
     
     public function lienhe(){

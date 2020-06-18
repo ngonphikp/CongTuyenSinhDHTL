@@ -27,7 +27,7 @@
                     <th>Mã</th>
                     <th>Tiêu Đề</th>
                     <th>Nội Dung Tóm Tắt</th>
-                    <th>Link Ảnh Bìa</th>   
+                    <!-- <th>Link Ảnh Bìa</th>    -->
                     <th>Danh Mục</th>                 
                 </tr>
                 </thead>
@@ -40,11 +40,13 @@
                             <a  class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_bv/" . $row['ma_bv'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['ma_bv'];?></td>
-                        <td><?php echo $row['tieu_de_bv'];?></td>
                         <td><?php
-                            echo substr($row['noi_dung_tom_tat_bv'],0,70) . "  ...";
+                            echo substr($row['tieu_de_bv'],0,40) . "  ...";
                             ?></td>
-                        <td><?php echo $row['link_anh_bia_bv'];?></td>
+                        <td><?php
+                            echo substr($row['noi_dung_tom_tat_bv'],0,40) . "  ...";
+                            ?></td>
+                        <!-- <td><?php //echo $row['link_anh_bia_bv'];?></td> -->
                         <td><?php echo $row['ten_dm'];?></td>
                     </tr>
                     <?php

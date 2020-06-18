@@ -11,7 +11,7 @@ $(document).ready(function () {
         e.preventDefault();
         console.log("add_ctbv_form_add_bv");  
         countAdd++;
-        $(form_add_bv).append('<tr><td><input type="button" value="-" class = "delete_ctbv_form_add_bv"><p>Nội dung chi tiết</p><textarea name="ndct'+ countAdd +'" class="form-control" id="" cols="30" rows="3"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ countAdd +'" class="form-control"></td></tr>')
+        $(form_add_bv).append('<tr><td><p>Chi tiết bài viết</p><a class="btn btn-default delete_ctbv_form_add_bv" href=""><em class="fa fa-trash"></em></a></td><td><p>Nội dung chi tiết</p><textarea name="ndct'+ countAdd +'" class="form-control" id="" cols="40" rows="1"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ countAdd +'" class="form-control"></td></tr>');
     });    
 
     $(form_add_bv).on("click", ".delete_ctbv_form_add_bv", function(e) {
@@ -65,7 +65,7 @@ $(document).ready(function () {
         e.preventDefault();
         console.log("add_ctbv_form_edit_bv");  
         countEdit++;
-        $(form_edit_bv).append('<tr><td><input type="button" value="-" class = "delete_ctbv_form_edit_bv"><p>Nội dung chi tiết</p><textarea name="ndct'+ countEdit +'" class="form-control" id="" cols="30" rows="3"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ countEdit +'" class="form-control"></td></tr>')
+        $(form_edit_bv).append('<tr><td><p>Chi tiết bài viết</p><a class="btn btn-default delete_ctbv_form_edit_bv" href=""><em class="fa fa-trash"></em></a></td><td><p>Nội dung chi tiết</p><textarea name="ndct'+ countEdit +'" class="form-control" id="" cols="40" rows="1"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ countEdit +'" class="form-control"></td></tr>');
     });    
 
     $(form_edit_bv).on("click", ".delete_ctbv_form_edit_bv", function(e) {

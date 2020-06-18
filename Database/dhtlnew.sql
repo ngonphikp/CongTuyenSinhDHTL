@@ -288,25 +288,43 @@ insert into thong_tin_tai_khoan(id_tk,ho_ten_tk,email_tk,ngay_sinh_tk,gioi_tinh_
 --     ten_dm TEXT NOT NULL,
 --     ma_dm_cha VARCHAR(10)
 -- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
-INSERT INTO danh_muc VALUES ('1', 'Danh mục 1', null);
-INSERT INTO danh_muc VALUES ('2', 'Danh mục 2', null);
-INSERT INTO danh_muc VALUES ('3', 'Danh mục 3', null);
+INSERT INTO danh_muc VALUES ('1', 'Thông báo tuyển sinh', null);
+INSERT INTO danh_muc VALUES ('2', 'Thông tin xét tuyển', null);
+INSERT INTO danh_muc VALUES ('3', 'Thông tin ngành tuyển sinh', null);
+INSERT INTO danh_muc VALUES ('4', 'Tư vấn tuyển sinh', null);
+INSERT INTO danh_muc VALUES ('5', 'Liên hệ', null);
+INSERT INTO danh_muc VALUES ('6', 'THÔNG TIN GIỚI THIỆU TRƯỜNG ĐẠI HỌC THỦY LỢI ', null);
 
-INSERT INTO danh_muc VALUES ('1.1', 'Danh mục 1.1', '1');
-INSERT INTO danh_muc VALUES ('1.2', 'Danh mục 1.2', '1');
-INSERT INTO danh_muc VALUES ('1.3', 'Danh mục 1.3', '1');
+INSERT INTO danh_muc VALUES ('1.1', 'Tuyển sinh 2020', '1');
+INSERT INTO danh_muc VALUES ('1.2', 'Các tuyển sinh khác', '1');
 
-INSERT INTO danh_muc VALUES ('1.1.1', 'Danh mục 1.1.1', '1.1');
-INSERT INTO danh_muc VALUES ('1.1.1.1', 'Danh mục 1.1.1.1', '1.1.1');
-INSERT INTO danh_muc VALUES ('1.1.2', 'Danh mục 1.1.2', '1.1');
+INSERT INTO danh_muc VALUES ('2.1', 'THÔNG TIN TUYỂN SINH ĐẠI HỌC CHÍNH QUY NĂM 2020', '2');
+INSERT INTO danh_muc VALUES ('2.2', 'Thí sinh cần lưu ý', '2');
 
-INSERT INTO danh_muc VALUES ('2.2.1', 'Danh mục 2.2.1', '2.2');
+INSERT INTO danh_muc VALUES ('2.2.1', 'Quy chế tuyển sinh', '2.2');
+INSERT INTO danh_muc VALUES ('2.2.2', 'Thông tin xét tuyển', '2.2');
 
-INSERT INTO danh_muc VALUES ('2.1', 'Danh mục 2.1', '2');
-INSERT INTO danh_muc VALUES ('2.2', 'Danh mục 2.2', '2');
+INSERT INTO danh_muc VALUES ('3.1', 'Khoa Công trình', '3');
+INSERT INTO danh_muc VALUES ('3.2', 'Khoa Cơ khí', '3');
+INSERT INTO danh_muc VALUES ('3.3', 'Khoa Công nghệ thông tin', '3');
+INSERT INTO danh_muc VALUES ('3.4', 'Khoa Kỹ thuật xây dựng', '3');
+INSERT INTO danh_muc VALUES ('3.5', 'Khoa Kỹ thuật tài nguyên nước', '3');
+INSERT INTO danh_muc VALUES ('3.6', 'Khoa Thủy văn và tài nguyên nước', '3');
+INSERT INTO danh_muc VALUES ('3.7', 'Khoa Điện - Điện tử', '3');
+INSERT INTO danh_muc VALUES ('3.8', 'Khoa Kỹ thuật xây dựng', '3');
+INSERT INTO danh_muc VALUES ('3.9', 'Khoa Kinh tế và quản lý', '3');
+INSERT INTO danh_muc VALUES ('3.10', 'Khoa Kỹ thuật biển', '3');
+INSERT INTO danh_muc VALUES ('3.11', 'Khoa Hóa và Môi trường', '3');
+INSERT INTO danh_muc VALUES ('3.12', 'Khoa Lý luận chính trị', '3');
 
-INSERT INTO danh_muc VALUES ('3.1', 'Danh mục 3.1', '3');
-INSERT INTO danh_muc VALUES ('3.2', 'Danh mục 3.2', '3');
+INSERT INTO danh_muc VALUES ('4.1', 'Danh sách cán bộ tư vấn tuyển sinh', '4');
+INSERT INTO danh_muc VALUES ('4.2', 'Danh sách câu hỏi', '4');
+INSERT INTO danh_muc VALUES ('4.3', 'Câu hỏi thường gặp', '4');
+
+INSERT INTO danh_muc VALUES ('5.1', 'Trường Đại Học Thủy Lợi', '5');
+INSERT INTO danh_muc VALUES ('5.2', 'Website Khoa viện', '5');
+
+INSERT INTO danh_muc VALUES ('6.1', 'Thông tin hoạt động', '6');
 
 -- CREATE TABLE bai_viet (
 --     ma_bv INT AUTO_INCREMENT PRIMARY KEY,
@@ -318,15 +336,54 @@ INSERT INTO danh_muc VALUES ('3.2', 'Danh mục 3.2', '3');
 --         REFERENCES danh_muc (ma_dm)
 -- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
-INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Tieu De 1', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
-INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Tieu De 2', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
-INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Tieu De 3', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'TÓM TẮT ĐỀ ÁN TUYỂN SINH ĐẠI HỌC HỆ CHÍNH QUY NĂM 2020', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Các mốc thời gian đăng ký xét tuyển bằng kết quả thi THPT', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Trường ĐH Thủy Lợi công bố đề án tuyển sinh trình độ đại học 2020', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Trường ĐH Thủy Lợi tổ chức buổi tư vấn tuyển sinh trực tuyến ngày 24.05.2020', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Danh sách thí sinh gửi Đăng ký xét tuyển đại học chính quy bằng học bạ qua đường bưu điện', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Hướng dẫn tính điểm đủ điều kiện xét tuyển bằng hình xét tuyển học bạ THPT', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Thông báo xét tuyển đại học chính quy năm 2020 theo kết quả học bạ THPT', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'HƯỚNG DẪN ĐĂNG KÝ XÉT TUYỂN ĐẠI HỌC CHÍNH QUY BẰNG KẾT QUẢ HỌC BẠ', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Thông báo tuyển sinh Đại học chính quy năm 2020', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Clip giới thiệu trường ĐH Giao thông vận tải - Tuyển sinh 2020', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Thông báo về phương thức tuyển sinh đại học hệ chính quy năm 2020', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'THÔNG TƯ Sửa đổi, bổ sung một số điều của Quy chế thi trung học phổ thông quốc gia và xét công nhận tốt nghiệp trung học phổ thông', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.1', 'Thông tin tuyển sinh đại học chính quy năm 2020', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
 
-INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('2.1', 'Tieu De 4', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
-INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('3.2', 'Tieu De 5', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Danh sách thí sinh xác nhận nhập học qua đường bưu điện', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'NHỮNG ĐIỀU CẦN BIẾT VỚI TÂN SINH VIÊN K60', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Thông báo điểm trúng tuyển và các tiêu chí xét tuyển Đại học chính quy 2019 xét tuyển bằng kết quả thi THPT QG 2019', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Thông báo về thời gian tra cứu kết quả xét tuyển', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Hướng dẫn cách tra cứu kết quả xét tuyển Đại học hệ chính quy năm 2019 tại trường Đại học Giao thông vận tải', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Thông báo kế hoạch xác nhận nhập học đối với thí sinh xét tuyển bằng kết quả thi THPT 2019', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Thông báo gửi giấy báo nhập học đối với các thí sinh xét tuyển học bạ', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Thông báo danh sách thí sinh đủ điểm trúng tuyển đại học hệ chính quy 2019 xét tuyển theo kết quả học bạ (đợt 2)', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Thông báo điểm trúng tuyển đại học chính quy 2019 xét tuyển theo kết quả học bạ (đợt 2)', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Công bố mức điểm đủ điều kiện nộp hồ sơ đăng ký xét tuyển đại học hệ chính quy năm 2019', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
 
-INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.3', 'Tieu De 6', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
-INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.3', 'Tieu De 7', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Phổ điểm thi THPT quốc gia 2019', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Hướng dẫn tra cứu điểm thi THPTQG 2019', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'DANH SÁCH THÍ SINH ĐĂNG KÝ XÉT TUYỂN THEO HÌNH THỨC HỌC BẠ GỬI QUA ĐƯỜNG BƯU ĐIỆN (đợt 2)', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Thông báo Điểm trúng tuyển và Danh sách thí sinh đủ điểm trúng tuyển đại học hệ chính quy 2019 xét tuyển theo kết quả học bạ', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'DANH SÁCH THÍ SINH ĐĂNG KÝ XÉT TUYỂN THEO HÌNH THỨC HỌC BẠ NỘP QUA ĐƯỜNG BƯU ĐIỆN (UPDATE HÀNG NGÀY)', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('1.2', 'Danh sách máy tính bỏ túi được đem vào phòng thi kỳ thi THPT Quốc gia năm 2019', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Công trình', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Cơ khí', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Công nghệ thông tin', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Điện - Điện tử', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Vận tải - Kinh tế', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Kỹ thuật xây dựng', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Đào tạo quốc tế', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Môi trường và An toàn giao thông', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Khoa học cơ bản', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('5.2', 'Khoa Quản lý xây dựng', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('6.1', 'ĐH Giao thông vận tải tham gia Chương trình Ngày hội hướng nghiệp tại THPT Cầu Giấy', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('6.1', 'Đoàn CB-GV trường ĐH GTVT lên đường thực hiện nhiệm vụ coi thi THPT QG 2019', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('6.1', 'Trường Đại học Giao thông vận tải tham dự Ngày hội tư vấn tuyển sinh hướng nghiệp năm 2019 tại Bắc Ninh', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('6.1', 'Trường Đại học Giao thông vận tải tham dự Ngày hội tư vấn tuyển sinh hướng nghiệp năm 2019 do báo Tuổi trẻ tổ chức tại Nghệ An, Thanh Hóa', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
+INSERT INTO bai_viet (ma_dm, tieu_de_bv, noi_dung_tom_tat_bv, link_anh_bia_bv) VALUES ('6.1', 'Khoa Đào tạo Quốc tế trường ĐH Giao thông vận tải tham gia Ngày hội hướng nghiệp Đường Đến Thành Công tại Trường THPT Thăng Long - Hà Nội', 'Noi Dung Tom Tat', 'kimanhblog_com_(16).jpg');
 
 -- select COUNT(*) from bai_viet;
 -- select * from bai_viet where ma_dm = '1.1';
