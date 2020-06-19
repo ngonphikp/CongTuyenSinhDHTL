@@ -156,7 +156,7 @@ CREATE TABLE ho_so_xet_tuyen (
     FOREIGN KEY (ma_ts)
         REFERENCES thi_sinh (ma_ts)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
-
+insert into ho_so_xet_tuyen(ma_ts) values(1);
 CREATE TABLE trang_thai_ho_son (
     ma_tths INT AUTO_INCREMENT PRIMARY KEY,
     ma_hsxt INT,
@@ -243,7 +243,8 @@ CREATE TABLE nguyen_vong (
     FOREIGN KEY (ma_thm)
         REFERENCES to_hop_mon (ma_thm)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
-
+select * from nguyen_vong;
+insert into nguyen_vong(ma_hsxt, ten_nguyen_vong, ma_csdt, ma_ndt, ma_thm)  values('1','1','1', 'TLA106', 'A00');
 CREATE TABLE trang_thai_nguyen_vong (
     ten_nguyen_vong NVARCHAR(50),
     ma_hsxt INT,

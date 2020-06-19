@@ -3,6 +3,7 @@
         <h4 class="text-center"><b>Thêm Hồ Sơ Xét Tuyển</b></h4>
     </div>
     <?php echo form_open_multipart('/admin/pro_add_hsxt'); ?>
+    <input type="hidden" id="ma_hsxt" name="ma_hsxt" value="<?php echo $ma_hsxt["ma_hsxt"]; ?>">
     <div class="form">
         <div class="row">
             <div class="col-md-9">
@@ -319,7 +320,7 @@
                         </div>
                     </div>
 
-                    <table class="table table-hover">
+                    <table id="myTable" class="table table-hover">
                         <tr style="background-color: bisque;">
 
                             <th>Nguyện vọng</th>
@@ -382,27 +383,27 @@
         <label>Nguyện vọng:</label>
         <!-- <select ng-model="item.Aspiration.AspirationOrder" ng-options="sc.Id as sc.Name for (key, sc) in MyAspiration" ng-change="AspirationChange(item.Aspiration.AspirationOrder,'')" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
         </select> -->
-        <select name="" id="input" class="form-control" required="required">
-                                            <option value="">Nguyện vọng 1</option>
-                                            <option value="">Nguyện vọng 2</option>
-                                            <option value="">Nguyện vọng 3</option>
-                                            <option value="">Nguyện vọng 4</option>
-                                            <option value="">Nguyện vọng 5</option>
-                                            <option value="">Nguyện vọng 6</option>
-                                            <option value="">Nguyện vọng 7</option>
-                                            <option value="">Nguyện vọng 8</option>
-                                            <option value="">Nguyện vọng 9</option>
-                                            <option value="">Nguyện vọng 10</option>
-                                            <option value="">Nguyện vọng 11</option>
-                                            <option value="">Nguyện vọng 12</option>
-                                            <option value="">Nguyện vọng 13</option>
-                                            <option value="">Nguyện vọng 14</option>
-                                            <option value="">Nguyện vọng 15</option>
-                                            <option value="">Nguyện vọng 16</option>
-                                            <option value="">Nguyện vọng 17</option>
-                                            <option value="">Nguyện vọng 18</option>
-                                            <option value="">Nguyện vọng 19</option>
-                                            <option value="">Nguyện vọng 20</option>
+        <select name="" id="tennguyenvong" class="form-control" required="required">
+                                            <option value="1">Nguyện vọng 1</option>
+                                            <option value="2">Nguyện vọng 2</option>
+                                            <option value="3">Nguyện vọng 3</option>
+                                            <option value="4">Nguyện vọng 4</option>
+                                            <option value="5">Nguyện vọng 5</option>
+                                            <option value="6">Nguyện vọng 6</option>
+                                            <option value="7">Nguyện vọng 7</option>
+                                            <option value="8">Nguyện vọng 8</option>
+                                            <option value="9">Nguyện vọng 9</option>
+                                            <option value="10">Nguyện vọng 10</option>
+                                            <option value="11">Nguyện vọng 11</option>
+                                            <option value="12">Nguyện vọng 12</option>
+                                            <option value="13">Nguyện vọng 13</option>
+                                            <option value="14">Nguyện vọng 14</option>
+                                            <option value="15">Nguyện vọng 15</option>
+                                            <option value="16">Nguyện vọng 16</option>
+                                            <option value="17">Nguyện vọng 17</option>
+                                            <option value="18">Nguyện vọng 18</option>
+                                            <option value="19">Nguyện vọng 19</option>
+                                            <option value="20">Nguyện vọng 20</option>
                                         </select>
     </div>
 </div>
@@ -412,7 +413,7 @@
         <label>Nhóm ngành xét tuyển :</label>
         <!-- <select ng-model="item.Aspiration.ProgramCode" ng-options="sc.ProgramCode as sc.ProgramsName for (key, sc) in EducationBase.educationPrograms" class="form-control select2" style="width: 100%;" ng-disabled="item.ProgressStep==4">
         </select> -->
-        <select name="nhomganh" class="form-control" id="nhomnganhxettuyen">
+        <select name="nhomganh" class="form-control" id="nhomnganhxettuyen" >
                         <?php foreach ($listNhomNganh as $row){?>                            
                             <option value="<?php echo $row["ma_ndt"]; ?>"><?php echo $row["ten_ndt"];?></option>
                             <?php

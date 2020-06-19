@@ -575,7 +575,7 @@ class Admin extends CI_Controller{
         }
         else{
             try{
-                var_dump($_POST);
+                //var_dump($_POST);
                 $ht = isset($_POST['ht']) ? $_POST['ht'] : "";
                 $gt = isset($_POST['gt']) ? $_POST['gt'] : "Nam";
                 $ngaythangnamsinh = isset($_POST['ngaythangnamsinh']) ? $_POST['ngaythangnamsinh'] : "";
@@ -611,7 +611,8 @@ class Admin extends CI_Controller{
                 $maTs = $this->Mts->getMaxMaTS()[0]["ma_ts"];
                 //$maTs= $this->Mts->getMaxMaTS();
                 //echo ''+$maTs;
-
+                $this->load->model("Mhsxt");
+                $this->Mhsxt->add($maTs);
                 $this->edit_hsxt($maTs);
 
                 // $this->edit_thong_tin_hsxt($id);
@@ -627,9 +628,9 @@ class Admin extends CI_Controller{
     public function edit_hsxt($ma_ts){        
         $this->load->model("Mts");
         $data['ts'] = $this->Mts->getByMaTS($ma_ts);
-
+        $this->load->model("Mhsxt");
+        $data['ma_hsxt'] = $this->Mhsxt->getByMaTS($ma_ts);
         // var_dump($data);
-
         $this->load->model("Mcsdt");
             $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
             $this->load->model("Mndt");
@@ -716,9 +717,21 @@ class Admin extends CI_Controller{
             //     //$maTs= $this->Mts->getMaxMaTS();
             //     //echo ''+$maTs;
             // $this->edit_hsxt($maTs);
-            echo "Nhay vao day";
-            var_dump($_POST);
+            //echo "Nhay vao day";
+            //var_dump($_POST);
             //Insert database
+            $ma_hsxt = $this->input->post('ma_hsxt');  
+            $tennguyenvong = $this->input->post('tennguyenvong');  
+            $csdt_edit_ts = $this->input->post('csdt_edit_ts');  
+            $nhomnganhxettuyen = $this->input->post('nhomnganhxettuyen');  
+            $tohopxettuyen = $this->input->post('tohopxettuyen');  
+            $this->load->model("Mnv");
+            $this->Mnv->add($ma_hsxt,  $tennguyenvong, $csdt_edit_ts, $nhomnganhxettuyen, $tohopxettuyen);
+            //echo  $tennguyenvong;//lấy category_id từ view
+            //$this->db->where('category_id', $category_id);    //đưa vào điều kiện tìm kiếm
+            // $query = $this->db->get('sub_categories');       // lấy ra các subcategory có  category_id như đưa vào
+            // $result = $query->result();
+            //echo json_encode($tennguyenvong); 
 
             // gửi dữ liệu về ajax
         }
