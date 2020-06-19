@@ -736,12 +736,12 @@ class Admin extends CI_Controller{
             $tohopxettuyen = $this->input->post('tohopxettuyen');  
             $this->load->model("Mnv");
             $this->Mnv->add($ma_hsxt,  $tennguyenvong, $csdt_edit_ts, $nhomnganhxettuyen, $tohopxettuyen);
+            $result=$this->Mnv->where($ma_hsxt,$tennguyenvong);
+            echo json_encode($result); 
             //echo  $tennguyenvong;//lấy category_id từ view
             //$this->db->where('category_id', $category_id);    //đưa vào điều kiện tìm kiếm
             // $query = $this->db->get('sub_categories');       // lấy ra các subcategory có  category_id như đưa vào
             // $result = $query->result();
-            //echo json_encode($tennguyenvong); 
-
             // gửi dữ liệu về ajax
         }
 
