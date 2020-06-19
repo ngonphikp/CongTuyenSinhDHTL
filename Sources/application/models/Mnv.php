@@ -1,5 +1,5 @@
 <?php
-class Mts extends CI_Model{
+class Mnv extends CI_Model{
     public function __construct(){
         parent::__construct();
     }
@@ -15,8 +15,11 @@ class Mts extends CI_Model{
         return $query->result_array();
     }
     
+    public function add($ma_hsxt,  $tennguyenvong, $csdt_edit_ts, $nhomnganhxettuyen, $tohopxettuyen){
+        $this->db->query("insert into nguyen_vong(ma_hsxt, ten_nguyen_vong, ma_csdt, ma_ndt, ma_thm)  values('$ma_hsxt','$tennguyenvong','$csdt_edit_ts', '$nhomnganhxettuyen', '$tohopxettuyen');");
+        
     
-    
+    }
     
 }
 ?>

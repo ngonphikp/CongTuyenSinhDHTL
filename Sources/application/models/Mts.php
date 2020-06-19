@@ -99,6 +99,8 @@ $ho_khau_tinh_thanh_pho, $ho_khau_quan_huyen, $ho_khau_xa_phuong, $ho_khau_thon_
         $query=$this->db->query("select * from thi_sinh where ma_ts = $ma_ts;");
         return $query->row_array();
     }  
+
+    
     
 }
 ?>

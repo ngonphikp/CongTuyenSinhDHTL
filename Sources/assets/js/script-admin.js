@@ -411,11 +411,17 @@ $(document).ready(function () {
 
         var csdt_edit_ts = $("#csdt_edit_ts").val();
         console.log(csdt_edit_ts);
-
-
+        var tennguyenvong = $("#tennguyenvong").val();
+        console.log(tennguyenvong);
+        var nhomnganhxettuyen = $("#nhomnganhxettuyen").val();
+        console.log(nhomnganhxettuyen);
+        var tohopxettuyen = $("#tohopxettuyen").val();
+        console.log(tohopxettuyen);
+        var ma_hsxt = $("#ma_hsxt").val();
+        console.log(ma_hsxt);
         $.ajax({
-            url: '' + url + '',  // gọi đến file server articles.php để xử lý
-            data: {csdt_edit_ts: csdt_edit_ts}, //lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
+            url: '' + url + '',  // gọi đến file server articles.php để xử lý;
+            data: {ma_hsxt:ma_hsxt, tennguyenvong:tennguyenvong, nhomnganhxettuyen:nhomnganhxettuyen, csdt_edit_ts: csdt_edit_ts, tohopxettuyen:tohopxettuyen}, //lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
             type: 'POST',   // phương thức dữ liệu được truyền đi
             datatype: 'json', // định dạng dữ liệu trả về là json
             success: function(data){ //kết quả trả về từ server nếu gửi thành công
@@ -424,8 +430,22 @@ $(document).ready(function () {
             //     option += "<option value='"+value['id']+"'>"+value['title']+"</option>"
             //   })
             //   $("#sub_category").html(option);
-                console.log(data);
+                //console.log(data);
+                // $.each($.parseJSON(data),function(key, value){
+                //         console.log(key+" "+value);
+                // })
+                //$(table).append("<tr><th>x</th><th>Mã xét tuyển</th><th>Tổ hợp xét tuyển</th><th>Trạng thái</th><th>#</th></tr>");
+                //$('#myTable').append("<tr><td>" + data.csdt_edit_ts + "</td><td>" + data.column2 + "</td><td>" + data.column3 + "</td></tr>");
+                // var row = 
+                // "<th>$x</th><th>Mã xét tuyển</th><th>Tổ hợp xét tuyển</th><th>Trạng thái</th><th>#</th>"
 
+                //     //Add row
+                //     table.append(row.compose({
+                //         'id': 3,
+                //         'name': 'Lee',
+                //         'phone': '123 456 789'
+                //     }));
+                //console.log(data);
                 // ĐỌc dữ liệu
             }
         });
