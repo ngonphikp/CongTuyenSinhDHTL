@@ -14,6 +14,15 @@ class Admin extends CI_Controller{
         $this->load->model("Muser");
         $data['countUser'] = $this->Muser->countAll();
 
+        $this->load->model("Mbv");
+        $data['countBV'] = $this->Mbv->countAll();
+
+        $this->load->model("Mhsxt");
+        $data['countHSXT'] = $this->Mhsxt->countAll();
+
+        $this->load->model("Mndt");
+        $data['countNDT'] = $this->Mndt->countAll();
+
         $this->load->view('admin/home_admin_view', $data);
     }
 
