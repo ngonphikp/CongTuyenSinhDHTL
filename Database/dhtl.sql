@@ -244,6 +244,7 @@ CREATE TABLE nguyen_vong (
         REFERENCES to_hop_mon (ma_thm)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
 select * from nguyen_vong;
+select * from nguyen_vong where ma_hsxt='1' and ten_nguyen_vong="1";
 insert into nguyen_vong(ma_hsxt, ten_nguyen_vong, ma_csdt, ma_ndt, ma_thm)  values('1','1','1', 'TLA106', 'A00');
 CREATE TABLE trang_thai_nguyen_vong (
     ten_nguyen_vong NVARCHAR(50),
