@@ -23,7 +23,7 @@
                     <th><em class="fa fa-cog"></em></th>
                     <th>ID</th>
                     <th>Tên Đăng Nhập</th>
-                    <th>Mật Khẩu</th>
+                    <!-- <th>Mật Khẩu</th> -->
                     <th>Cấp Độ</th>
                     <th>Họ Tên</th>
                     <th>Email</th>
@@ -43,7 +43,7 @@
                         </td>
                         <td><?php echo $row['id_tk'];?></td>
                         <td><?php echo $row['ten_dang_nhap'];?></td>
-                        <td><?php echo $row['mat_khau'];?></td>
+                        <!-- <td><?php //echo $row['mat_khau'];?></td> -->
                         <td><?php echo $row['cap_do'];?></td>
                         <td><?php echo $row['ho_ten_tk'];?></td>
                         <td><?php echo $row['email_tk'];?></td>

@@ -9,8 +9,7 @@
 }
 /*Nav*/
 header .me-nav {
-    background: linear-gradient(95.82deg, #007bff 0%, rgba(255, 255, 255, 0) 50.26%),
-    linear-gradient(264.18deg, #007bff 0%, rgba(255, 255, 255, 0) 50.26%), #FFFFFF;
+    background-color: #189eff;
 }
 header .me-nav .navbar-brand img{
     height: 35px;
@@ -158,7 +157,7 @@ header .me-nav #navcol-1 .btn{
 .me-TTCN label{
     padding: 0 10px;
 }
-.me-TTCN .row,.me-TTCN .col-sm-4,.me-TTCN .col-sm-6,.me-TTCN .col-md-6,.me-TTCN .col-lg-4,.me-TTCN .col-lg-8{
+.me-TTCN .row,.me-TTCN .col-sm-4,.me-TTCN .col-sm-6,.me-TTCN .col-md-6,.me-TTCN .col-lg-4,.me-TTCN .col-lg-6, .col-lg-8{
     padding: 0;
     margin: 0;
 }

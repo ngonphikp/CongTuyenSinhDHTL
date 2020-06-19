@@ -5,7 +5,7 @@ class Mhsxt extends CI_Model{
     }
 
     public function countAll(){
-        $query=$this->db->query("select * from co_so_dao_tao csdt ");
+        $query=$this->db->query("select * from ho_so_xet_tuyen");
         return $query->num_rows();
     }
 

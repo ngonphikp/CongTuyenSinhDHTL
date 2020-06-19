@@ -1,9 +1,9 @@
 <div class="container me-TTCN">
     <div class="row">
-        <div class="col-md-12 col-lg-12">
-            <div style="position: relative;">
-                <button class="btn" id="me-setting-ttcn"><i class="fa fa-cog"></i></button>
-            </div>
+    <div class="d-none d-lg-block col-lg-6">
+            <img src="<?php echo base_url();?>assets/img/ttcn.png" class="w-100 h-100">
+        </div>
+        <div class="col-lg-6">
             <div class="row register-form">
                 <form class="custom-form" method="post" action="<?php echo base_url() . 'index.php/home/pro_ttcn/' .$user['id_tk']; ?>">
                     <h1>Thông Tin Cá Nhân</h1>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="form-row form-group">
                         <div class="col-sm-4 label-column"><label class="col-form-label">Giới Tính</label></div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
                             <div class="Sex">
                                 <div class="form-check"><input class="form-check-input hide-update" type="radio" name="gt" value="Nam" checked><label class="form-check-label hide-update">Nam</label></div>
                                 <div class="form-check"><input class="form-check-input hide-update" type="radio" name="gt" value="Nữ" <?php if ($user['gioi_tinh_tk'] === "Nữ")echo "checked";?>><label class="form-check-label hide-update">Nữ</label></div>

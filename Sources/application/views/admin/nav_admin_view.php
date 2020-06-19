@@ -1,7 +1,7 @@
 <header>
     <nav class="me-nav navbar navbar-light navbar-expand-md navigation-clean-button">
         <a class="navbar-brand" href="<?php echo base_url();?>index.php/admin">
-            <span><img src="<?php echo base_url();?>assets/img/logo.png">Home Admin</span>
+            <span><img src="<?php echo base_url();?>assets/img/logo/Logo-Thuy_Loi.png">Home Admin</span>
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
             <span class="sr-only">Toggle navigation</span>
@@ -10,7 +10,7 @@
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav nav-right">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="<?php echo base_url();?>">Cổng Tuyển Sinh Đại Học Thủy Lợi</a>
+                    <a class="nav-link" href="<?php echo base_url();?>">Website</a>
                 </li>
             </ul>
             <p class="ml-auto navbar-text actions">
