@@ -89,185 +89,88 @@
                         </p>
                     </div>
                     <div id="block-hoi-dap" class="block block-hoi-dap">
-                        <h2 class="block__title">Tư vấn tuyển sinh</h2>
+                        <h2 class="block__title"><?php echo $TVTS["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Danh sách cán bộ tư vấn tuyển sinh</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Danh sách câu hỏi</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Câu hỏi thường gặp</a>
-                                    </div>
-                                </li>
+                                <?php foreach ($TVTSC as $row) {?>
+                                    
+                                    <li class="views-row">
+                                        <div class="views-filed-title">
+                                            <a href=""><?php echo $row["ten_dm"]; ?></a>
+                                        </div>
+                                    </li>
+
+                                    <?php
+                                } ?>
                             </ul>
                         </div>
                     </div>
-                    <div id="block-video" class="block block-video" style="display:none;">
-                        <div class="content">
-                            <iframe src="https://www.youtube.com/embed/_BkPGggLKpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                    <div id="block-tin-tuyen-sinh" class="block block-menu" style="display:none;">
-                        <h2 class="block__title">Thí sinh cần lưu ý</h2>
+                    <div id="block-tin-tuyen-sinh" class="block block-menu">
+                        <h2 class="block__title"><?php echo $TSCLY["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Quy chế tuyển sinh</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Thông tin xét tuyển</a>
-                                    </div>
-                                </li>
+                                <?php foreach ($TSCLYC as $row) {?>
+                                    
+                                    <li class="views-row">
+                                        <div class="views-filed-title">
+                                            <a href=""><?php echo $row["ten_dm"]; ?></a>
+                                        </div>
+                                    </li>
+
+                                    <?php
+                                } ?>
                             </ul>
                         </div>
                     </div>
-                    <div id="block-9" class="block block-block" style="display:none;">
+                    <div id="block-9" class="block block-block">
                         <h2 class="block__title">
                             <a href="">
                                 <i class="fas fa-exclamation-circle fa-2x" style="color:#fff;"></i>
                             </a>
                             <p>
-                                THÔNG TIN GIỚI THIỆU TRƯỜNG
+                                THÔNG TIN GIỚI THIỆU TRƯỜNG 
                                 <br>
                                 ĐẠI HỌC THỦY LỢI
                             </p>
                         </h2>
-
+                      
                     </div>
                     <div id="block-thong-tin-hoat-dong" class="block block-menu">
-                        <h2 class="block__title">Thông tin hoạt động</h2>
+                        <h2 class="block__title"><?php echo $TTHD["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi
-                                            THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi
-                                            THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi
-                                            THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi
-                                            THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi
-                                            THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi
-                                            THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi
-                                            THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi
-                                            THPT QG 2019</a>
-                                    </div>
-                                </li>
+                                    <?php foreach($bvC as $bv){
+                                    if ($bv["ma_dm"] == $TTHD["ma_dm"]) {?>
+                                    <li class="views-row">
+                                        <div class="views-filed-title">
+                                            <a href=""><?php echo $bv["tieu_de_bv"]; ?></a>
+                                        </div>
+                                    </li>
+                                    <?php
+                                    }                            
+                                }                        
+                                ?>
                             </ul>
                         </div>
                     </div>
                     <div id="block-thong-tin-nganh-tuyens-sinh" class="block block-menu">
-                        <h2 class="block__title">Thông tin ngành tuyển sinh</h2>
+                        <h2 class="block__title"><?php echo $TTNTS["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Công trình</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Cơ khí</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Công nghệ thông tin</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kỹ thuật xây dựng</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kỹ thuật tài nguyên nước</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Thủy văn và tài nguyên nước</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Điện - Điện tử</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kỹ thuật xây dựng</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kinh tế và quản lý</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kỹ thuật biển</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Hóa và Môi trường</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Lý luận chính trị</a>
-                                    </div>
-                                </li>
+                            <?php foreach ($TTNTSC as $row) {?>
+                                    
+                                    <li class="views-row">
+                                        <div class="views-filed-title">
+                                            <a href=""><?php echo $row["ten_dm"]; ?></a>
+                                        </div>
+                                    </li>
+
+                                    <?php
+                                } ?>
                             </ul>
                         </div>
                     </div>
+
                     <div id="block-formblock-cau-hoi" class="block block-formblock">
                         <h2 class="block__title">Đặt câu hỏi mới</h2>
                         <div class="content">
@@ -318,78 +221,31 @@
                                         <option value="25">Kế toán</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-info">Gửi câu hỏi</button>
+                                <div class="form-group">
+                                    <label for="diachi">Câu hỏi</label>
+                                    <textarea name="" id="input" class="form-control" rows="3"
+                                        required="required"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Gửi câu hỏi</button>
                             </form>
                         </div>
                     </div>
 
                     <div id="block-thong-tin-nganh-tuyens-sinh" class="block block-menu">
-                        <h2 class="block__title">Website Khoa viện</h2>
+                        <h2 class="block__title"><?php echo $WSKV["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://ce.tlu.edu.vn/" target="_blank">Khoa Công trình</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://khoacokhi.tlu.edu.vn/" target="_blank">Khoa Cơ khí</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://cse.tlu.edu.vn/" target="_blank">Khoa Công nghệ thông tin</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://kttnn.tlu.edu.vn/" target="_blank">Khoa Kỹ thuật tài nguyên
-                                            nước</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://tvmt.tlu.edu.vn/" target="_blank">Khoa Thủy văn và tài nguyên
-                                            nước</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://ee.tlu.edu.vn/" target="_blank">Khoa Điện - Điện tử</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://fem.tlu.edu.vn/" target="_blank">Khoa Kinh tế và quản lý</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://coastal.tlu.edu.vn/" target="_blank">Khoa Kỹ thuật biển</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://env.tlu.edu.vn/" target="_blank">Khoa Hóa và Môi trường</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://sie.tlu.edu.vn/" target="_blank">Trung tâm đào tạo quốc tế</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://tlus.edu.vn/" target="_blank">Cơ sở 2 - Đại học Thủy Lợi</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://vienmientrung.edu.vn/" target="_blank">Viện Đào tạo và Khoa học
-                                            ứng dụng Miền Trung</a>
-                                    </div>
-                                </li>
+                                <?php foreach($bvC as $bv){
+                                    if ($bv["ma_dm"] == $WSKV["ma_dm"]) {?>
+
+                                    <li  class="list__news--item">
+                                        <a href="http://ce.tlu.edu.vn/" target="_blank"><?php echo $bv["tieu_de_bv"]; ?></a>
+                                    </li>
+
+                                    <?php
+                                    }                            
+                                }                        
+                                ?>
                             </ul>
                         </div>
                     </div>

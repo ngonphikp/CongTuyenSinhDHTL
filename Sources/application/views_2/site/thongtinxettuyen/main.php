@@ -13,20 +13,21 @@
                         <div class="content">
                             <p>
                                 <strong>1. Đối tượng tuyển sinh: </strong>
-                                Thí sinh đã tốt nghiệp chương trình trung học phổ thông hoặc tương đương theo quy định của Bộ Giáo dục và Đào tạo.
+                                Thí sinh đã tốt nghiệp chương trình trung học phổ thông hoặc tương đương theo quy định
+                                của Bộ Giáo dục và Đào tạo.
                             </p>
                             <p>
-                                <strong>2. Phạm vi tuyển sinh:  </strong>
+                                <strong>2. Phạm vi tuyển sinh: </strong>
                                 Tuyển sinh trong cả nước.
                             </p>
                             <p>
                                 <strong>3. Phương thức tuyển sinh gồm 3 phương thức: </strong>
                                 <br>
-                                <p style="padding-left:20px;color:#064a75;">
-                                    <strong> Xét tuyển thẳng;</strong><br>
-                                    <strong> Xét tuyển dựa vào kết quả kỳ thi THPT năm 2020;</strong><br>
-                                    <strong> Xét tuyển dựa trên kết quả học bạ.</strong>
-                                </p>
+                            <p style="padding-left:20px;color:#064a75;">
+                                <strong> Xét tuyển thẳng;</strong><br>
+                                <strong> Xét tuyển dựa vào kết quả kỳ thi THPT năm 2020;</strong><br>
+                                <strong> Xét tuyển dựa trên kết quả học bạ.</strong>
+                            </p>
                             </p>
                             <!-- Tuyển sinh tại cơ sở HÀ NỘI -->
                             <p>
@@ -35,54 +36,70 @@
                                 </strong>
                             </p>
                             <p>
-                                - <strong>Phương thức 1:</strong> 
-                                Sử dụng kết quả kỳ thi Trung học phổ thông (THPT) năm 2020 để xét tuyển. Điểm xét tuyển là tổng điểm 3 môn của tổ hợp đăng ký xét tuyển + điểm ưu tiên (nếu có).
-                                    <br>    
+                                - <strong>Phương thức 1:</strong>
+                                Sử dụng kết quả kỳ thi Trung học phổ thông (THPT) năm 2020 để xét tuyển. Điểm xét tuyển
+                                là tổng điểm 3 môn của tổ hợp đăng ký xét tuyển + điểm ưu tiên (nếu có).
+                                <br>
                                 + Số lượng: Không quá 10% tổng chỉ tiêu của cơ sở Hà nội
 
                             </p>
                             <p>
-                                - <strong>Phương thức 2:</strong> 
-                                Sử dụng kết quả học tập THPT (học bạ THPT) để xét tuyển: Thí sinh tốt nghiệp THPT có tổng điểm ba môn học trong tổ hợp xét tuyển (điểm trung bình cả năm lớp 10 + điểm trung bình cả năm lớp 11 + điểm trung bình học kỳ 1 lớp 12) + điểm ưu tiên (nếu có) từ ngưỡng điểm được nộp hồ sơ đăng ký xét tuyển trở lên.
-                                 Lưu ý: Ba môn trong tổ hợp xét tuyển, không có điểm trung bình môn nào dưới 5,00 điểm.
-                                    <br>    
+                                - <strong>Phương thức 2:</strong>
+                                Sử dụng kết quả học tập THPT (học bạ THPT) để xét tuyển: Thí sinh tốt nghiệp THPT có
+                                tổng điểm ba môn học trong tổ hợp xét tuyển (điểm trung bình cả năm lớp 10 + điểm trung
+                                bình cả năm lớp 11 + điểm trung bình học kỳ 1 lớp 12) + điểm ưu tiên (nếu có) từ ngưỡng
+                                điểm được nộp hồ sơ đăng ký xét tuyển trở lên.
+                                Lưu ý: Ba môn trong tổ hợp xét tuyển, không có điểm trung bình môn nào dưới 5,00 điểm.
+                                <br>
                                 + Số lượng: Từ 70% tổng chỉ tiêu của cơ sở Hà nội
                             </p>
                             <p>
-                                - <strong>Phương thức 3:</strong> 
-                                Xét tuyển thẳng học sinh đạt giải Nhất, Nhì, Ba trong các kỳ thi học sinh giỏi Quốc gia và các cuộc thi khoa học kỹ thuật cấp Quốc gia, Quốc tế.Thí sinh học tại các trường chuyên.
-                                Thí sinh có học lực loại giỏi 3 năm lớp 10, 11, 12 (đối với học sinh tốt nghiệp năm 2020 chỉ xét học kỳ 1).Thí sinh có học lực loại khá trở lên năm lớp 12, đạt chứng chỉ Tiếng Anh từ 5.0 IELTS hoặc tương đương trở lên.
-                                    <br>    
+                                - <strong>Phương thức 3:</strong>
+                                Xét tuyển thẳng học sinh đạt giải Nhất, Nhì, Ba trong các kỳ thi học sinh giỏi Quốc gia
+                                và các cuộc thi khoa học kỹ thuật cấp Quốc gia, Quốc tế.Thí sinh học tại các trường
+                                chuyên.
+                                Thí sinh có học lực loại giỏi 3 năm lớp 10, 11, 12 (đối với học sinh tốt nghiệp năm 2020
+                                chỉ xét học kỳ 1).Thí sinh có học lực loại khá trở lên năm lớp 12, đạt chứng chỉ Tiếng
+                                Anh từ 5.0 IELTS hoặc tương đương trở lên.
+                                <br>
                                 + Số lượng: Không quá 10% tổng chỉ tiêu của cơ sở Hà nội
                             </p>
                             <!--Tuyển sinh tại cơ sở HÀ NỘI-END  -->
 
                             <!-- Tuyển sinh tại cơ sở PHỐ HIẾN -->
-                             <p>
+                            <p>
                                 <strong>
                                     <em>Tuyển sinh học tại cơ sở PHỐ HIẾN</em>
                                 </strong>
                             </p>
                             <p>
-                                - <strong>Phương thức 1:</strong> 
-                                Sử dụng kết quả kỳ thi Trung học phổ thông (THPT) năm 2020 để xét tuyển. Điểm xét tuyển là tổng điểm 3 môn của tổ hợp đăng ký xét tuyển + điểm ưu tiên (nếu có).
-                                    <br>    
+                                - <strong>Phương thức 1:</strong>
+                                Sử dụng kết quả kỳ thi Trung học phổ thông (THPT) năm 2020 để xét tuyển. Điểm xét tuyển
+                                là tổng điểm 3 môn của tổ hợp đăng ký xét tuyển + điểm ưu tiên (nếu có).
+                                <br>
                                 + Số lượng: Không quá 50% tổng chỉ tiêu của cơ sở Phố Hiến
 
                             </p>
                             <p>
-                                - <strong>Phương thức 2:</strong> 
-                                Sử dụng kết quả học tập THPT (học bạ THPT) để xét tuyển: Thí sinh tốt nghiệp THPT có tổng điểm ba môn học trong tổ hợp xét tuyển (điểm trung bình cả năm lớp 10 + điểm trung bình cả năm lớp 11 + điểm trung bình học kỳ 1 lớp 12) + điểm ưu tiên (nếu có) từ ngưỡng điểm được nộp hồ sơ đăng ký xét tuyển trở lên.
-                                 Lưu ý: Ba môn trong tổ hợp xét tuyển, không có điểm trung bình môn nào dưới 5,00 điểm.
-                                    <br>    
-                                +  Số lượng:  Không vượt 50% tổng chỉ tiêu của Cơ sở Phố Hiến
+                                - <strong>Phương thức 2:</strong>
+                                Sử dụng kết quả học tập THPT (học bạ THPT) để xét tuyển: Thí sinh tốt nghiệp THPT có
+                                tổng điểm ba môn học trong tổ hợp xét tuyển (điểm trung bình cả năm lớp 10 + điểm trung
+                                bình cả năm lớp 11 + điểm trung bình học kỳ 1 lớp 12) + điểm ưu tiên (nếu có) từ ngưỡng
+                                điểm được nộp hồ sơ đăng ký xét tuyển trở lên.
+                                Lưu ý: Ba môn trong tổ hợp xét tuyển, không có điểm trung bình môn nào dưới 5,00 điểm.
+                                <br>
+                                + Số lượng: Không vượt 50% tổng chỉ tiêu của Cơ sở Phố Hiến
                             </p>
                             <p>
-                                - <strong>Phương thức 3:</strong> 
-                                Xét tuyển thẳng học sinh đạt giải Nhất, Nhì, Ba trong các kỳ thi học sinh giỏi Quốc gia và các cuộc thi khoa học kỹ thuật cấp Quốc gia, Quốc tế.Thí sinh học tại các trường chuyên.
-                                Thí sinh có học lực loại giỏi 3 năm lớp 10, 11, 12 (đối với học sinh tốt nghiệp năm 2020 chỉ xét học kỳ 1).Thí sinh có học lực loại khá trở lên năm lớp 12, đạt chứng chỉ Tiếng Anh từ 5.0 IELTS hoặc tương đương trở lên.
-                                    <br>    
-                                + Số lượng:  Không vượt 50% tổng chỉ tiêu của Cơ sở Phố Hiến
+                                - <strong>Phương thức 3:</strong>
+                                Xét tuyển thẳng học sinh đạt giải Nhất, Nhì, Ba trong các kỳ thi học sinh giỏi Quốc gia
+                                và các cuộc thi khoa học kỹ thuật cấp Quốc gia, Quốc tế.Thí sinh học tại các trường
+                                chuyên.
+                                Thí sinh có học lực loại giỏi 3 năm lớp 10, 11, 12 (đối với học sinh tốt nghiệp năm 2020
+                                chỉ xét học kỳ 1).Thí sinh có học lực loại khá trở lên năm lớp 12, đạt chứng chỉ Tiếng
+                                Anh từ 5.0 IELTS hoặc tương đương trở lên.
+                                <br>
+                                + Số lượng: Không vượt 50% tổng chỉ tiêu của Cơ sở Phố Hiến
                             </p>
                             <!--Tuyển sinh tại cơ sở PHỐ HIẾN-END  -->
 
@@ -93,25 +110,33 @@
                                 </strong>
                             </p>
                             <p>
-                                - <strong>Phương thức 1:</strong> 
-                                Sử dụng kết quả kỳ thi Trung học phổ thông (THPT) năm 2020 để xét tuyển. Điểm xét tuyển là tổng điểm 3 môn của tổ hợp đăng ký xét tuyển + điểm ưu tiên (nếu có).
-                                    <br>    
-                                +  Số lượng:  Không vượt 50% tổng chỉ tiêu của Phân hiệu
+                                - <strong>Phương thức 1:</strong>
+                                Sử dụng kết quả kỳ thi Trung học phổ thông (THPT) năm 2020 để xét tuyển. Điểm xét tuyển
+                                là tổng điểm 3 môn của tổ hợp đăng ký xét tuyển + điểm ưu tiên (nếu có).
+                                <br>
+                                + Số lượng: Không vượt 50% tổng chỉ tiêu của Phân hiệu
 
                             </p>
                             <p>
-                                - <strong>Phương thức 2:</strong> 
-                                Sử dụng kết quả học tập THPT (học bạ THPT) để xét tuyển: Thí sinh tốt nghiệp THPT có tổng điểm ba môn học trong tổ hợp xét tuyển (điểm trung bình cả năm lớp 10 + điểm trung bình cả năm lớp 11 + điểm trung bình học kỳ 1 lớp 12) + điểm ưu tiên (nếu có) từ ngưỡng điểm được nộp hồ sơ đăng ký xét tuyển trở lên.
-                                 Lưu ý: Ba môn trong tổ hợp xét tuyển, không có điểm trung bình môn nào dưới 5,00 điểm.
-                                    <br>    
-                                +  Số lượng:  Không vượt 50% tổng chỉ tiêu của Phân hiệu
+                                - <strong>Phương thức 2:</strong>
+                                Sử dụng kết quả học tập THPT (học bạ THPT) để xét tuyển: Thí sinh tốt nghiệp THPT có
+                                tổng điểm ba môn học trong tổ hợp xét tuyển (điểm trung bình cả năm lớp 10 + điểm trung
+                                bình cả năm lớp 11 + điểm trung bình học kỳ 1 lớp 12) + điểm ưu tiên (nếu có) từ ngưỡng
+                                điểm được nộp hồ sơ đăng ký xét tuyển trở lên.
+                                Lưu ý: Ba môn trong tổ hợp xét tuyển, không có điểm trung bình môn nào dưới 5,00 điểm.
+                                <br>
+                                + Số lượng: Không vượt 50% tổng chỉ tiêu của Phân hiệu
                             </p>
                             <p>
-                                - <strong>Phương thức 3:</strong> 
-                                Xét tuyển thẳng học sinh đạt giải Nhất, Nhì, Ba trong các kỳ thi học sinh giỏi Quốc gia và các cuộc thi khoa học kỹ thuật cấp Quốc gia, Quốc tế.Thí sinh học tại các trường chuyên.
-                                Thí sinh có học lực loại giỏi 3 năm lớp 10, 11, 12 (đối với học sinh tốt nghiệp năm 2020 chỉ xét học kỳ 1).Thí sinh có học lực loại khá trở lên năm lớp 12, đạt chứng chỉ Tiếng Anh từ 5.0 IELTS hoặc tương đương trở lên.
-                                    <br>    
-                                + Số lượng:  Không vượt 50% tổng chỉ tiêu của Phân hiệu
+                                - <strong>Phương thức 3:</strong>
+                                Xét tuyển thẳng học sinh đạt giải Nhất, Nhì, Ba trong các kỳ thi học sinh giỏi Quốc gia
+                                và các cuộc thi khoa học kỹ thuật cấp Quốc gia, Quốc tế.Thí sinh học tại các trường
+                                chuyên.
+                                Thí sinh có học lực loại giỏi 3 năm lớp 10, 11, 12 (đối với học sinh tốt nghiệp năm 2020
+                                chỉ xét học kỳ 1).Thí sinh có học lực loại khá trở lên năm lớp 12, đạt chứng chỉ Tiếng
+                                Anh từ 5.0 IELTS hoặc tương đương trở lên.
+                                <br>
+                                + Số lượng: Không vượt 50% tổng chỉ tiêu của Phân hiệu
                             </p>
                             <!--Tuyển sinh tại cơ sở PHỐ HIẾN-END  -->
                             <p>
@@ -192,12 +217,13 @@
                             <p><strong>1.Xét tuyển tại cơ sở Hà Nội (Mã trường: TLA)</strong></p>
                             <p><strong>Các ngành đào tạo bằng Tiếng Anh</strong></p>
                             <div class="D_table">
-                                <table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 794px;" width="700">
+                                <table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 794px;"
+                                    width="700">
                                     <thead>
                                         <tr>
                                             <th style="width:70px;height:78px;">
                                                 <br clear="all">
-                                                    <p align="center"><strong>TT</strong></p>
+                                                <p align="center"><strong>TT</strong></p>
                                             </th>
                                             <th style="width: 292px; height: 78px;">
                                                 <p align="center">
@@ -231,7 +257,8 @@
                                                 <p align="center">1</p>
                                             </td>
                                             <td style="width: 292px; height: 78px;">
-                                                <p>Chương trình tiên tiến ngành Kỹ thuật xây dựng (Hợp tác với Đại học Arkansas, Hoa Kỳ, học bằng Tiếng Anh)<br>
+                                                <p>Chương trình tiên tiến ngành Kỹ thuật xây dựng (Hợp tác với Đại học
+                                                    Arkansas, Hoa Kỳ, học bằng Tiếng Anh)<br>
                                                     Đào tạo các chuyên ngành: <br>
 
                                                     - Xây dựng dân dụng và công nghiệp;<br>
@@ -246,7 +273,7 @@
                                                 <p align="center">TLA201</p>
                                             </td>
                                             <td style="width: 118px; height: 78px;">
-                                                <p align="center">	
+                                                <p align="center">
                                                     A00, A01, D07, D01
                                                 </p>
                                             </td>
@@ -274,13 +301,13 @@
                                         <tr>
                                             <td colspan="4" style="width:57px;height:42px;">
                                                 <p align="center">
-                                                <strong>Tổng</strong>
+                                                    <strong>Tổng</strong>
                                                 </p>
                                             </td>
-                                            
+
                                             <td style="width: 100px; height: 78px;">
                                                 <p align="center">
-                                                <strong>120</strong>
+                                                    <strong>120</strong>
                                                 </p>
                                             </td>
                                         </tr>
@@ -288,12 +315,13 @@
                                 </table>
                             </div>
                             <p><strong>Các ngành đào tạo bằng Tiếng Việt</strong></p>
-                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 794px;" width="700">
+                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width: 794px;"
+                                width="700">
                                 <thead>
                                     <tr>
                                         <th style="width:70px;height:78px;">
                                             <br clear="all">
-                                                <p align="center"><strong>TT</strong></p>
+                                            <p align="center"><strong>TT</strong></p>
                                         </th>
                                         <th style="width: 292px; height: 78px;">
                                             <p align="center">
@@ -340,7 +368,7 @@
                                             <p align="center">TLA101</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -387,7 +415,7 @@
                                             <p align="center">4</p>
                                         </td>
                                         <td style="width: 292px; height: 42px;">
-                                            <p>	Kỹ thuật xây dựng công trình giao thông</p>
+                                            <p> Kỹ thuật xây dựng công trình giao thông</p>
                                         </td>
                                         <td style="width: 86px; height: 42px;">
                                             <p align="center">TLA104</p>
@@ -404,7 +432,7 @@
                                             <p align="center">5</p>
                                         </td>
                                         <td style="width: 292px; height: 78px;">
-                                            <p>	Quản lý xây dựng<br>
+                                            <p> Quản lý xây dựng<br>
                                                 Đào tạo các chuyên ngành: <br>
                                                 - Kinh tế xây dựng;<br>
                                                 - Quản lý xây dựng.<br>
@@ -414,7 +442,7 @@
                                             <p align="center">TLA114</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -461,7 +489,7 @@
                                             <p align="center">8</p>
                                         </td>
                                         <td style="width: 292px; height: 42px;">
-                                            <p>	Kỹ thuật cơ sở hạ tầng</p>
+                                            <p> Kỹ thuật cơ sở hạ tầng</p>
                                         </td>
                                         <td style="width: 86px; height: 42px;">
                                             <p align="center">TLA110</p>
@@ -488,7 +516,7 @@
                                             <p align="center">TLA101</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -555,8 +583,8 @@
                                             <p>Nhóm ngành Công nghệ thông tin<br>
                                                 Gồm các ngành: <br>
                                                 + Công nghệ thông tin<br>
-                                                    - Công nghệ thông tin.<br>
-                                                    - Công nghệ thông tin Việt-Nhật.<br>
+                                                - Công nghệ thông tin.<br>
+                                                - Công nghệ thông tin Việt-Nhật.<br>
                                                 + Hệ thống thông tin.<br>
                                                 + Kỹ thuật phần mềm.
                                             </p>
@@ -565,7 +593,7 @@
                                             <p align="center">TLA106</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -595,7 +623,7 @@
                                             <p align="center">15</p>
                                         </td>
                                         <td style="width: 292px; height: 78px;">
-                                            <p>	Kỹ thuật cơ khí<br>
+                                            <p> Kỹ thuật cơ khí<br>
                                                 Đào tạo các chuyên ngành: <br>
                                                 - Kỹ thuật cơ khí;<br>
                                                 - Kỹ thuật cơ khí định hướng việc làm tại - Hàn Quốc.<br>
@@ -605,7 +633,7 @@
                                             <p align="center">TLA101</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -628,7 +656,7 @@
                                             <p align="center">TLA122</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -651,7 +679,7 @@
                                             <p align="center">TLA123</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -692,7 +720,7 @@
                                             <p align="center">TLA112</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -734,7 +762,7 @@
                                             <p align="center">TLA401</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -758,7 +786,7 @@
                                             <p align="center">TLA401</p>
                                         </td>
                                         <td style="width: 118px; height: 78px;">
-                                            <p align="center">	
+                                            <p align="center">
                                                 A00, A01, D07, D01
                                             </p>
                                         </td>
@@ -786,13 +814,13 @@
                                     <tr>
                                         <td colspan="4" style="width:57px;height:42px;">
                                             <p align="center">
-                                               <strong>Tổng</strong>
+                                                <strong>Tổng</strong>
                                             </p>
                                         </td>
-                                        
+
                                         <td style="width: 100px; height: 78px;">
                                             <p align="center">
-                                               <strong>2670</strong>
+                                                <strong>2670</strong>
                                             </p>
                                         </td>
                                     </tr>
@@ -800,10 +828,12 @@
                             </table>
                             <p>
                                 <strong>2. Xét tuyển tại Cơ sở mở rộng Phố Hiến (Mã trường: TLA);
-                                 Sinh viên học năm thứ nhất và năm thứ hai tại Hưng Yên, các năm còn lại học tại Hà Nội.
+                                    Sinh viên học năm thứ nhất và năm thứ hai tại Hưng Yên, các năm còn lại học tại Hà
+                                    Nội.
                                 </strong>
                             </p>
-                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="670">
+                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:100%;"
+                                width="670">
                                 <tbody>
                                     <tr>
                                         <td style="width:36px;height:30px;">
@@ -827,10 +857,10 @@
                                             <p align="center">1</p>
                                         </td>
                                         <td style="width:98px;height:29px;">
-                                            <p >Công nghệ thông tin</p>
+                                            <p>Công nghệ thông tin</p>
                                         </td>
                                         <td style="width:30px;height:29px;">
-                                            <p  align="center">PHA106</p>
+                                            <p align="center">PHA106</p>
                                         </td>
                                         <td style="width:76px;height:29px;">
                                             <p align="center">A00, A01, D07, D0170</p>
@@ -844,7 +874,7 @@
                                             <p align="center">2</p>
                                         </td>
                                         <td style="width:98px;height:27px;">
-                                            <p >Kỹ thuật cơ khí</p>
+                                            <p>Kỹ thuật cơ khí</p>
                                         </td>
                                         <td style="width:30px;height:27px;">
                                             <p align="center">PHA105</p>
@@ -920,8 +950,8 @@
                                     <tr>
                                         <td colspan="4" style="width:436px;height:29px;">
                                             <p align="center"><strong>Tổng</strong></p>
-                                            </td>
-                                            <td style="width:76px;height:29px;">
+                                        </td>
+                                        <td style="width:76px;height:29px;">
                                             <p align="center"><strong><em>330</em></strong></p>
                                         </td>
                                     </tr>
@@ -931,7 +961,8 @@
                             <p>
                                 <strong>3. Xét tuyển tại Cơ sở 2 – TP Hồ Chí Minh (Mã trường: TLS)</strong>
                             </p>
-                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:100%;" width="670">
+                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:100%;"
+                                width="670">
                                 <tbody>
                                     <tr>
                                         <td style="width:36px;height:30px;">
@@ -955,10 +986,10 @@
                                             <p align="center">1</p>
                                         </td>
                                         <td style="width:98px;height:29px;">
-                                            <p >Kỹ thuật xây dựng công trình thuỷ</p>
+                                            <p>Kỹ thuật xây dựng công trình thuỷ</p>
                                         </td>
                                         <td style="width:30px;height:29px;">
-                                            <p  align="center">TLS101</p>
+                                            <p align="center">TLS101</p>
                                         </td>
                                         <td style="width:76px;height:29px;">
                                             <p align="center">A00, A01, D07, D01</p>
@@ -1094,8 +1125,8 @@
                                     <tr>
                                         <td colspan="4" style="width:436px;height:29px;">
                                             <p align="center"><strong>Tổng</strong></p>
-                                            </td>
-                                            <td style="width:76px;height:29px;">
+                                        </td>
+                                        <td style="width:76px;height:29px;">
                                             <p align="center"><strong><em>580</em></strong></p>
                                         </td>
                                     </tr>
@@ -1104,17 +1135,20 @@
                             <p>
                                 <strong>Ghi chú mã tổ hợp xét tuyển:</strong>
                             </p>
-                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:670px;" width="670">
+                            <table align="center" border="1" cellpadding="0" cellspacing="0" style="width:670px;"
+                                width="670">
                                 <tbody>
                                     <tr>
                                         <td nowrap="nowrap" style="width:101px;height:30px;">
-                                            <p align="center"><strong>Mã</strong> <strong>tổ</strong> <strong>hợp</strong></p>
+                                            <p align="center"><strong>Mã</strong> <strong>tổ</strong>
+                                                <strong>hợp</strong></p>
                                         </td>
                                         <td style="width:217px;height:30px;">
                                             <p align="center"><strong>Danh sách môn</strong></p>
                                         </td>
                                         <td style="width:105px;height:30px;">
-                                            <p align="center"><strong>Mã</strong> <strong>tổ</strong> <strong>hợp</strong></p>
+                                            <p align="center"><strong>Mã</strong> <strong>tổ</strong>
+                                                <strong>hợp</strong></p>
                                         </td>
                                         <td style="width:246px;height:30px;">
                                             <p align="center"><strong>Danh sách môn</strong></p>
@@ -1182,18 +1216,24 @@
                             <p><strong>Tại Hà Nội: PHÒNG KHẢO THÍ VÀ ĐẢM BẢO CHẤT LƯỢNG ĐÀO TẠO</strong></p>
                             <div style="margin-left:20px;">
                                 <p style="margin-left:2.0cm;">
-                                   <strong> P104 nhà A1 - ĐT : 043.564.3417P115 nhà A1 <br> P115 nhà A1 - ĐT : 043.564.1228</strong>
+                                    <strong> P104 nhà A1 - ĐT : 043.564.3417P115 nhà A1 <br> P115 nhà A1 - ĐT :
+                                        043.564.1228</strong>
                                 </p>
-                                <p style="margin-left:2.0cm;"><strong>Địa chỉ : </strong> 175 TÂY SƠN, QUẬN ĐỐNG ĐA.THÀNH PHỐ HÀ NỘI</p>
-                                <p style="margin-left:2.0cm;"><strong>Điện thoại: </strong>024.37606352; 0979389372; 0396666831</p>
-                                <p style="margin-left:2.0cm;"><strong>Website: </strong><a href="http://www.tlu.edu.vn/">http://www.tlu.edu.vn/</a></p>
-                                <p style="margin-left:2.0cm;"><strong>Fanpage: </strong><a href="https://www.facebook.com/groups/dhthuyloi/">https://www.facebook.com/groups/dhthuyloi/</a></p>
+                                <p style="margin-left:2.0cm;"><strong>Địa chỉ : </strong> 175 TÂY SƠN, QUẬN ĐỐNG
+                                    ĐA.THÀNH PHỐ HÀ NỘI</p>
+                                <p style="margin-left:2.0cm;"><strong>Điện thoại: </strong>024.37606352; 0979389372;
+                                    0396666831</p>
+                                <p style="margin-left:2.0cm;"><strong>Website: </strong><a
+                                        href="http://www.tlu.edu.vn/">http://www.tlu.edu.vn/</a></p>
+                                <p style="margin-left:2.0cm;"><strong>Fanpage: </strong><a
+                                        href="https://www.facebook.com/groups/dhthuyloi/">https://www.facebook.com/groups/dhthuyloi/</a>
+                                </p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
-           
+
             </div>
             <div id="main__right">
                 <div class="col-tuyensinh">
@@ -1208,44 +1248,33 @@
                         <h2 class="block__title">Tư vấn tuyển sinh</h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Danh sách cán bộ tư vấn tuyển sinh</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Danh sách câu hỏi</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Câu hỏi thường gặp</a>
-                                    </div>
-                                </li>
+                                <?php foreach ($TVTSC as $row) {?>
+                                    
+                                    <li class="views-row">
+                                        <div class="views-filed-title">
+                                            <a href=""><?php echo $row["ten_dm"]; ?></a>
+                                        </div>
+                                    </li>
+
+                                    <?php
+                                } ?>
                             </ul>
                         </div>
                     </div>
-                    <div id="block-video" class="block block-video" style="display:none">
-                        <div class="content">
-                            <iframe src="https://www.youtube.com/embed/_BkPGggLKpI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
                     <div id="block-tin-tuyen-sinh" class="block block-menu">
-                        <h2 class="block__title">Thí sinh cần lưu ý</h2>
+                        <h2 class="block__title"><?php echo $TSCLY["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Quy chế tuyển sinh</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Thông tin xét tuyển</a>
-                                    </div>
-                                </li>
+                                <?php foreach ($TSCLYC as $row) {?>
+                                    
+                                    <li class="views-row">
+                                        <div class="views-filed-title">
+                                            <a href=""><?php echo $row["ten_dm"]; ?></a>
+                                        </div>
+                                    </li>
+
+                                    <?php
+                                } ?>
                             </ul>
                         </div>
                     </div>
@@ -1263,239 +1292,116 @@
                       
                     </div>
                     <div id="block-thong-tin-hoat-dong" class="block block-menu">
-                        <h2 class="block__title">Thông tin hoạt động</h2>
+                        <h2 class="block__title"><?php echo $TTHD["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi THPT QG 2019</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Đoàn CB-GV trường ĐH THỦY LỢI lên đường thực hiện nhiệm vụ coi thi THPT QG 2019</a>
-                                    </div>
-                                </li>
+                                    <?php foreach($bvC as $bv){
+                                    if ($bv["ma_dm"] == $TTHD["ma_dm"]) {?>
+                                    <li class="views-row">
+                                        <div class="views-filed-title">
+                                            <a href=""><?php echo $bv["tieu_de_bv"]; ?></a>
+                                        </div>
+                                    </li>
+                                    <?php
+                                    }                            
+                                }                        
+                                ?>
                             </ul>
                         </div>
                     </div>
                     <div id="block-thong-tin-nganh-tuyens-sinh" class="block block-menu">
-                        <h2 class="block__title">Thông tin ngành tuyển sinh</h2>
+                        <h2 class="block__title"><?php echo $TTNTS["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Công trình</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Cơ khí</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Công nghệ thông tin</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kỹ thuật xây dựng</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kỹ thuật tài nguyên nước</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Thủy văn và tài nguyên nước</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Điện - Điện tử</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kỹ thuật xây dựng</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kinh tế và quản lý</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Kỹ thuật biển</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Hóa và Môi trường</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="">Khoa Lý luận chính trị</a>
-                                    </div>
-                                </li>
+                            <?php foreach ($TTNTSC as $row) {?>
+                                    
+                                    <li class="views-row">
+                                        <div class="views-filed-title">
+                                            <a href=""><?php echo $row["ten_dm"]; ?></a>
+                                        </div>
+                                    </li>
+
+                                    <?php
+                                } ?>
                             </ul>
                         </div>
                     </div>
+
                     <div id="block-formblock-cau-hoi" class="block block-formblock">
                         <h2 class="block__title">Đặt câu hỏi mới</h2>
                         <div class="content">
-                             <form action="/action_page.php">
+                            <form action="/action_page.php">
                                 <div class="form-group">
                                     <label for="email">Họ tên</label>
-                                    <input type="email" class="form-control" id="name" placeholder="Nhập tên" name="name">
+                                    <input type="email" class="form-control" id="name" placeholder="Nhập tên"
+                                        name="name">
                                 </div>
                                 <div class="form-group">
                                     <label for="diachi">Địa chỉ</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Nhập địac chỉ" name="email">
+                                    <input type="email" class="form-control" id="email" placeholder="Nhập địac chỉ"
+                                        name="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="diachi">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                        name="email">
                                 </div>
                                 <div class="form-group">
-                                    <label  for="">Ngành tuyển sinh</label><br>
-                                        <select name="" id="input" class="form-control" required="required">
-                                            <option value="16" selected="selected">Hỏi đáp chung</option>
-                                            <option value="1" >Kỹ thuật xây dựng công trình thủy</option>
-                                            <option value="2" >Kỹ thuật xây dựng</option>
-                                            <option value="3" >Công nghệ kỹ thuật xây dựng</option>
-                                            <option value="4" >Kỹ thuật xây dựng công trình giao thông</option>
-                                            <option value="5" >Quản lý xây dựng</option>
-                                            <option value="6" >Kỹ thuật tài nguyên nước</option>
-                                            <option value="7" >Kỹ thuật cấp thoát nước</option>
-                                            <option value="8" >Kỹ thuật cơ sở hạ tầng</option>
-                                            <option value="9" >Thuỷ văn học</option>
-                                            <option value="10" >Kỹ thuật môi trường</option>
-                                            <option value="11" >Kỹ thuật hóa học</option>
-                                            <option value="12" >Công nghệ sinh học</option>
-                                            <option value="13" >Công nghệ thông tin</option>
-                                            <option value="14" >Hệ thống thông tin</option>
-                                            <option value="15" >Kỹ thuật phần mềm</option>
-                                            <option value="26" >Kỹ thuật trắc địa - bản đồ</option>
-                                            <option value="17" >Kỹ thuật cơ khí</option>
-                                            <option value="18" >Công nghệ chế tạo máy</option>
-                                            <option value="19" >Kỹ thuật Ô tô</option>
-                                            <option value="20" >Kỹ thuật cơ điện tử</option>
-                                            <option value="21" >Kỹ thuật điện</option>
-                                            <option value="22" >Kỹ thuật điều khiển và tự động hóa</option>
-                                            <option value="23" >Kinh tế</option>
-                                            <option value="24" >Quản trị kinh doanh</option>
-                                            <option value="25" >Kế toán</option>
-                                        </select>
+                                    <label for="">Ngành tuyển sinh</label><br>
+                                    <select name="" id="input" class="form-control" required="required">
+                                        <option value="16" selected="selected">Hỏi đáp chung</option>
+                                        <option value="1">Kỹ thuật xây dựng công trình thủy</option>
+                                        <option value="2">Kỹ thuật xây dựng</option>
+                                        <option value="3">Công nghệ kỹ thuật xây dựng</option>
+                                        <option value="4">Kỹ thuật xây dựng công trình giao thông</option>
+                                        <option value="5">Quản lý xây dựng</option>
+                                        <option value="6">Kỹ thuật tài nguyên nước</option>
+                                        <option value="7">Kỹ thuật cấp thoát nước</option>
+                                        <option value="8">Kỹ thuật cơ sở hạ tầng</option>
+                                        <option value="9">Thuỷ văn học</option>
+                                        <option value="10">Kỹ thuật môi trường</option>
+                                        <option value="11">Kỹ thuật hóa học</option>
+                                        <option value="12">Công nghệ sinh học</option>
+                                        <option value="13">Công nghệ thông tin</option>
+                                        <option value="14">Hệ thống thông tin</option>
+                                        <option value="15">Kỹ thuật phần mềm</option>
+                                        <option value="26">Kỹ thuật trắc địa - bản đồ</option>
+                                        <option value="17">Kỹ thuật cơ khí</option>
+                                        <option value="18">Công nghệ chế tạo máy</option>
+                                        <option value="19">Kỹ thuật Ô tô</option>
+                                        <option value="20">Kỹ thuật cơ điện tử</option>
+                                        <option value="21">Kỹ thuật điện</option>
+                                        <option value="22">Kỹ thuật điều khiển và tự động hóa</option>
+                                        <option value="23">Kinh tế</option>
+                                        <option value="24">Quản trị kinh doanh</option>
+                                        <option value="25">Kế toán</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="diachi">Câu hỏi</label>
-                                    <textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>
+                                    <textarea name="" id="input" class="form-control" rows="3"
+                                        required="required"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Gửi câu hỏi</button>
-                            </form>   
+                            </form>
                         </div>
-                    </div>                
+                    </div>
 
                     <div id="block-thong-tin-nganh-tuyens-sinh" class="block block-menu">
-                        <h2 class="block__title">Website Khoa viện</h2>
+                        <h2 class="block__title"><?php echo $WSKV["ten_dm"]; ?></h2>
                         <div class="content">
                             <ul class="menu-news">
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://ce.tlu.edu.vn/" target="_blank">Khoa Công trình</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://khoacokhi.tlu.edu.vn/" target="_blank">Khoa Cơ khí</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://cse.tlu.edu.vn/" target="_blank">Khoa Công nghệ thông tin</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://kttnn.tlu.edu.vn/" target="_blank">Khoa Kỹ thuật tài nguyên nước</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://tvmt.tlu.edu.vn/" target="_blank">Khoa Thủy văn và tài nguyên nước</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://ee.tlu.edu.vn/" target="_blank">Khoa Điện - Điện tử</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://fem.tlu.edu.vn/" target="_blank">Khoa Kinh tế và quản lý</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://coastal.tlu.edu.vn/" target="_blank">Khoa Kỹ thuật biển</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://env.tlu.edu.vn/" target="_blank">Khoa Hóa và Môi trường</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://sie.tlu.edu.vn/" target="_blank">Trung tâm đào tạo quốc tế</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://tlus.edu.vn/" target="_blank">Cơ sở 2 - Đại học Thủy Lợi</a>
-                                    </div>
-                                </li>
-                                <li class="views-row">
-                                    <div class="views-filed-title">
-                                        <a href="http://vienmientrung.edu.vn/" target="_blank">Viện Đào tạo và Khoa học ứng dụng Miền Trung</a>
-                                    </div>
-                                </li>
+                                <?php foreach($bvC as $bv){
+                                    if ($bv["ma_dm"] == $WSKV["ma_dm"]) {?>
+
+                                    <li  class="list__news--item">
+                                        <a href="http://ce.tlu.edu.vn/" target="_blank"><?php echo $bv["tieu_de_bv"]; ?></a>
+                                    </li>
+
+                                    <?php
+                                    }                            
+                                }                        
+                                ?>
                             </ul>
                         </div>
                     </div>
