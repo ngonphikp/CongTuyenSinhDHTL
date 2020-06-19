@@ -13,29 +13,129 @@ class Home extends CI_Controller{
         $data['dmC'] = $this->Mdm->getByMaDMCha(1);
 
         $data['bvC'] = $this->Mbv->getListAll();
+
+        $data['TVTS'] = $this->Mdm->getByMaDM(4);
+        $data['TVTSC'] = $this->Mdm->getByMaDMCha(4);
+
+        $data['TSCLY'] = $this->Mdm->getByMaDM(2.2);
+        $data['TSCLYC'] = $this->Mdm->getByMaDMCha(2.2);
+
+        $data['TTHD'] = $this->Mdm->getByMaDM(6.1);
+
+        $data['TTNTS'] = $this->Mdm->getByMaDM(3);
+        $data['TTNTSC'] = $this->Mdm->getByMaDMCha(3);
+
+        $data['WSKV'] = $this->Mdm->getByMaDM(5.2);
+
         //var_dump($data);
 
         $this->load->view('site/home/index', $data);
     }
     
     public function lienhe(){
-        $this->load->view("site/lienhe/index");
+        $this->load->model("Mdm");
+        $this->load->model("Mbv");
+        $data['dmC'] = $this->Mdm->getByMaDMCha(1);
+
+        $data['bvC'] = $this->Mbv->getListAll();
+
+        $data['TVTS'] = $this->Mdm->getByMaDM(4);
+        $data['TVTSC'] = $this->Mdm->getByMaDMCha(4);
+
+        $data['TSCLY'] = $this->Mdm->getByMaDM(2.2);
+        $data['TSCLYC'] = $this->Mdm->getByMaDMCha(2.2);
+
+        $data['TTHD'] = $this->Mdm->getByMaDM(6.1);
+
+        $data['TTNTS'] = $this->Mdm->getByMaDM(3);
+        $data['TTNTSC'] = $this->Mdm->getByMaDMCha(3);
+
+        $data['WSKV'] = $this->Mdm->getByMaDM(5.2);
+        $this->load->view("site/lienhe/index", $data);
     }
 
     public function tbxt(){
-        $this->load->view('site/thongbaoxettuyen/index');
+        $this->load->model("Mdm");
+        $this->load->model("Mbv");
+        $data['dmC'] = $this->Mdm->getByMaDMCha(1);
+
+        $data['bvC'] = $this->Mbv->getListAll();
+
+        $data['TVTS'] = $this->Mdm->getByMaDM(4);
+        $data['TVTSC'] = $this->Mdm->getByMaDMCha(4);
+
+        $data['TSCLY'] = $this->Mdm->getByMaDM(2.2);
+        $data['TSCLYC'] = $this->Mdm->getByMaDMCha(2.2);
+
+        $data['TTHD'] = $this->Mdm->getByMaDM(6.1);
+
+        $data['TTNTS'] = $this->Mdm->getByMaDM(3);
+        $data['TTNTSC'] = $this->Mdm->getByMaDMCha(3);
+
+        $data['WSKV'] = $this->Mdm->getByMaDM(5.2);
+
+        $this->load->view('site/thongbaoxettuyen/index', $data);
     }
 
     public function ttnxt(){
-        $this->load->view('site/thongtinnganhxettuyen/index');
+        $this->load->model("Mdm");
+        $this->load->model("Mbv");
+        $data['bvC'] = $this->Mbv->getListAll();
+
+        $data['TTHD'] = $this->Mdm->getByMaDM(6.1);
+
+        $data['TTNTS'] = $this->Mdm->getByMaDM(3);
+        $data['TTNTSC'] = $this->Mdm->getByMaDMCha(3);
+
+        $data['WSKV'] = $this->Mdm->getByMaDM(5.2);
+        $this->load->view('site/thongtinnganhxettuyen/index', $data);
     }
 
     public function ttxt(){
-        $this->load->view('site/thongtinxettuyen/index');
+        $this->load->model("Mdm");
+        $this->load->model("Mbv");
+
+        $data['bvC'] = $this->Mbv->getListAll();
+
+        $data['TVTS'] = $this->Mdm->getByMaDM(4);
+        $data['TVTSC'] = $this->Mdm->getByMaDMCha(4);
+
+        $data['TSCLY'] = $this->Mdm->getByMaDM(2.2);
+        $data['TSCLYC'] = $this->Mdm->getByMaDMCha(2.2);
+
+        $data['TTHD'] = $this->Mdm->getByMaDM(6.1);
+
+        $data['TTNTS'] = $this->Mdm->getByMaDM(3);
+        $data['TTNTSC'] = $this->Mdm->getByMaDMCha(3);
+
+        $data['WSKV'] = $this->Mdm->getByMaDM(5.2);
+
+        $this->load->view('site/thongtinxettuyen/index', $data);
     }
 
     public function tvts(){
-        $this->load->view('site/tuvantuyensinh/index');
+        $this->load->model("Mdm");
+        $this->load->model("Mbv");
+        $data['dmC'] = $this->Mdm->getByMaDMCha(1);
+
+        $data['bvC'] = $this->Mbv->getListAll();
+
+        $data['TVTS'] = $this->Mdm->getByMaDM(4);
+        $data['TVTSC'] = $this->Mdm->getByMaDMCha(4);
+
+        $data['TSCLY'] = $this->Mdm->getByMaDM(2.2);
+        $data['TSCLYC'] = $this->Mdm->getByMaDMCha(2.2);
+
+        $data['TTHD'] = $this->Mdm->getByMaDM(6.1);
+
+        $data['TTNTS'] = $this->Mdm->getByMaDM(3);
+        $data['TTNTSC'] = $this->Mdm->getByMaDMCha(3);
+
+        $data['WSKV'] = $this->Mdm->getByMaDM(5.2);
+
+        $data['DSCH'] = $this->Mdm->getByMaDM(4.2);
+
+        $this->load->view('site/tuvantuyensinh/index', $data);
     }
 
     public function xhb(){
