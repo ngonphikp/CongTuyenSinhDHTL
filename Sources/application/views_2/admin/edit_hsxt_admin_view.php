@@ -520,20 +520,17 @@
                 <th>Dung lượng</th>
                 <th>#</th>
             </tr>
-            <tr ng-repeat="file in item.candidateAttachments">
-                <td ng-bind="$index+1"></td>
-                <td>
-                    <input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả">
-                </td>
-                <td ng-bind="file.FileName">312321</td>
-
-                <td ng-bind="file.FileSize/1024 + '(KB)'">321321</td>
+            <!-- <tr>
+                <td></td>
+                <td><input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả"></td>
+                <td></td>
+                <td></td>
                 <td>
                     <a href="javascript:void(0)" class="text-red" ng-click="DeleteAttachFile(file)" title="Xóa file" ng-if="item.ProgressStep<4">
                         <i class="fa fa-trash-o"></i>
                     </a>
                 </td>
-            </tr>
+            </tr> -->
         </table>
     </div>
 
@@ -577,7 +574,7 @@
             <div class="col-sm-3 col-12 pull-right" ng-if="item.ProgressStep>=3">
                 <!--ng-if="item.ProgressStep>=3">-->
                 <!--ng-disabled="item.ProgressStep==4"-->
-                <button type="button" ng-click="Finish()" class="btn btn-block btn-primary btn-lg" style="height:40px;font-size:17px;text-transform:uppercase" ng-disabled="item.ProgressStep==4">
+                <button type="button" class="btn btn-block btn-primary btn-lg" style="height:40px;font-size:17px;text-transform:uppercase" style="display:none;" id = "btnHoanThanhHS">
                     <i class="fa fa-check" aria-hidden="true"></i> Hoàn thành hồ sơ
                 </button>
             </div>
