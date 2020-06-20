@@ -456,6 +456,8 @@ $(document).ready(function () {
 
         var formData = new FormData();
         formData.append("file", fileToUpLoad);
+        var ma_hsxt = $("#ma_hsxt").val();
+        formData.append("ma_hsxt", ma_hsxt);
 
         jQuery.ajax({
             type: "POST",
@@ -464,26 +466,31 @@ $(document).ready(function () {
             processData: false,
             contentType: false,
             success: function(data) {
-                $.each($.parseJSON(data),function(key, value){
-                    //console.log(key + ": " + value);
-                    if (key == "status" && value == "success") {
-                        console.log("File successfully uploaded");
+                console.log(data);
+                // $.each($.parseJSON(data),function(key, value){
+                //     //console.log(key + ": " + value);
+                //     if (key == "status" && value == "success") {
+                //         console.log("File successfully uploaded");
 
-                        //console.log(fileToUpLoad);
-                        console.log("name: " + fileToUpLoad["name"]);
-                        console.log("size: " + fileToUpLoad["size"] + " byte");
+                //         //console.log(fileToUpLoad);
+                //         console.log("name: " + fileToUpLoad["name"]);
+                //         console.log("size: " + fileToUpLoad["size"] + " byte");
 
-                        $(form_minh_chung).append('<tr><td>' + countXM++ + '</td><td><input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả"></td><td>' + fileToUpLoad["name"] + '</td><td>' + fileToUpLoad["size"] + 'byte</td><td><a href="" class="text-red" title="Xóa file"><i class="fa fa-trash-o"></i></a></td></tr>');
-                    }
+                //         $(form_minh_chung).append('<tr><td>' + countXM++ + '</td><td><input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả"></td><td>' + fileToUpLoad["name"] + '</td><td>' + fileToUpLoad["size"] + 'byte</td><td><a href="" class="text-red" title="Xóa file"><i class="fa fa-trash-o"></i></a></td></tr>');
+                //     }
 
 
-                    // Mở nút hoàn thành
+                //     // Mở nút hoàn thành
+                //     $("#btnHoanThanhHS").show();
 
-                    
-                });
+                // });
             }
         });
     });
+
+    // $("#btnHoanThanhHS").click(function (e){
+    //     console.log("Hoàn thành hồ sơ");
+    // });
 });
 
 
