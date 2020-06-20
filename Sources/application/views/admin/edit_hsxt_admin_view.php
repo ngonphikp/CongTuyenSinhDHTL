@@ -330,7 +330,7 @@
                             <th>Trạng thái</th>
                             <th>#</th>
                         </tr>
-                        <tr ng-repeat="nv in item.aspirationDtos">
+                        <!-- <tr ng-repeat="nv in item.aspirationDtos">
 
                             <td>
                                 <span ng-bind-html="'Nguyện vọng '+nv.AspirationOrder" ng-show="!ViewChangeAspire"></span>
@@ -338,16 +338,16 @@
                             </td>
                             <td ng-bind-html="nv.ProgramCode"></td>
                             <td ng-bind-html="nv.CombinCode"></td>
-                            <td>
+                            <td> -->
                                 <!-- <span class="label label-success" ng-show="nv.IsApproved==1">Đã duyệt</span>
                                 <span class="label label-danger" ng-show="nv.IsApproved==2">Không được duyệt</span>
                                 <span class="label label-primary" ng-show="nv.IsApproved==0">Đã nhận</span> -->
-                            </td>
+                            <!-- </td>
                             <td>
                                 <a ng-click="EditItem(nv)" style="cursor:pointer" title="Sửa nguyện vọng" ng-if="item.ProgressStep<4">
                                     <i class="fa fa-edit"></i>
                                 </a>
-                            </td>
+                            </td> -->
                         </tr>
                     </table>
                 </div>
@@ -569,12 +569,12 @@
 
     <div class="row" style="padding-top:30px">
         <div class="col-sm-12 col-12">
-            <div class="col-sm-3 col-12" style="padding-bottom:20px">
+            <div class="col-sm-4 col-12" style="padding-bottom:20px">
                 <button type="button" id = "btn_luu_file_minh_chung" class="btn btn-block btn-primary btn-lg" style="height:40px;font-size:17px;text-transform:uppercase" ng-disabled="item.ProgressStep==4">
                     <i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu file minh chứng
                 </button>
             </div>
-            <div class="col-sm-3 col-12 pull-right" ng-if="item.ProgressStep>=3">
+            <div class="col-sm-4 col-12 pull-right" ng-if="item.ProgressStep>=3">
                 <!--ng-if="item.ProgressStep>=3">-->
                 <!--ng-disabled="item.ProgressStep==4"-->
                 <button type="button" ng-click="Finish()" class="btn btn-block btn-primary btn-lg" style="height:40px;font-size:17px;text-transform:uppercase" ng-disabled="item.ProgressStep==4">

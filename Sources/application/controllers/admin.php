@@ -866,7 +866,7 @@ class Admin extends CI_Controller{
                 'smtp_host' => 'ssl://smtp.googlemail.com',
                 'smtp_port' => 465,
                 'smtp_user' => 'chinhtp62@wru.vn',
-                'smtp_pass' => 'dodaihoc12',
+                'smtp_pass' => '',
                 'mailtype' => 'html'
             );
             $this->load->library('email', $config);
