@@ -249,5 +249,99 @@ class Home extends CI_Controller{
         $s = trim(htmlspecialchars(addslashes($s)));
         $this->load->view("site/s_search_site_view", $data);
     }
+    
+    public function add_hsxt(){
+        $this->load->model("Mcsdt");
+        $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
+        $this->load->model("Mndt");
+        $data['listNhomNganh']= $this->Mndt->getListAll();
+        $this->load->model("Mthm");
+        $data['listToHopMon']= $this->Mthm->getListAll();
+        // $this->load->model("Mthmxt");
+        // $data['listToHopMonXetTuyen']= $this->Mthmxt->getListAll();
+        //$this->load->view("admin/s_add_ndt_admin_view", $data);
+        $this->load->view("site/xethocbaonline/index",$data);
+    }
+    public function edit_hsxt($ma_ts){        
+        $this->load->model("Mts");
+        $data['ts'] = $this->Mts->getByMaTS($ma_ts);
+        $this->load->model("Mhsxt");
+        $data['ma_hsxt'] = $this->Mhsxt->getByMaTS($ma_ts);
+        //var_dump($data);
+        $this->load->model("Mcsdt");
+            $data['listCoSoDaoTao']= $this->Mcsdt->getListAll();
+            $this->load->model("Mndt");
+            $data['listNhomNganh']= $this->Mndt->getListAll();
+            $this->load->model("Mthm");
+            $data['listToHopMon']= $this->Mthm->getListAll();
+        $this->load->view("home/edit_hsxt_home_view", $data);
+    }
+
+    public function pro_add_hsxt(){
+        //var_dump($_POST);
+        //echo "adfasdfasdfasdfasdf";
+        $this->load->library('form_validation');
+        // $this->form_validation->set_rules('ht', 'Họ tên', 'required');
+        // $this->form_validation->set_rules('gt', 'Giới Tính', 'required');
+        // $this->form_validation->set_rules('ngaythangnamsinh', 'Ngày Sinh', 'required');
+        // $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        // $this->form_validation->set_rules('sdt', 'Số Điện Thoại', 'numeric');
+        // if ($this->form_validation->run() == FALSE){
+        //     echo "<script>alert('Lỗi Nhập !!!')</script>";
+        //     $this->add_hsxt();
+        // }
+        // else
+        {
+            try{
+                //var_dump($_POST);
+                //echo 'adfasd';
+                $ht = isset($_POST['ht']) ? $_POST['ht'] : "";
+                $gt = isset($_POST['gt']) ? $_POST['gt'] : "Nam";
+                $ngaythangnamsinh = isset($_POST['ngaythangnamsinh']) ? $_POST['ngaythangnamsinh'] : "";
+                $noisinh = isset($_POST['noisinh']) ? $_POST['noisinh'] : "";
+                $dantoc = isset($_POST['dantoc']) ? $_POST['dantoc'] : "";
+                $socmnd = isset($_POST['socmnd']) ? $_POST['socmnd'] : "";
+                $ngaycap = isset($_POST['ngaycap']) ? $_POST['ngaycap'] : "";
+                $noicap = isset($_POST['noicap']) ? $_POST['noicap'] : "";
+                $ho_khau_tinh_thanh_pho = isset($_POST['tinhthanhpho']) ? $_POST['tinhthanhpho'] : "";
+                $ho_khau_quan_huyen = isset($_POST['quanhuyen']) ? $_POST['quanhuyen'] : "";
+                $ho_khau_xa_phuong = isset($_POST['phuongthixa']) ? $_POST['phuongthixa'] : "";
+                $ho_khau_thon_ban_duong_pho = isset($_POST['thonbanduongpho']) ? $_POST['thonbanduongpho'] : "";
+                $tinh_tp_lop_10 = isset($_POST['tinhthanhpholop10']) ? $_POST['tinhthanhpholop10'] : "";
+                $quan_huyen_lop_10 = isset($_POST['quanhuyenlop10']) ? $_POST['quanhuyenlop10'] : "";
+                $truong_lop_10 = isset($_POST['truongthptlop10']) ? $_POST['truongthptlop10'] : "";
+                $tinh_tp_lop_11 = isset($_POST['tinhthanhpholop11']) ? $_POST['tinhthanhpholop11'] : "";
+                $quan_huyen_lop_11 = isset($_POST['quanhuyenlop11']) ? $_POST['quanhuyenlop11'] : "";
+                $truong_lop_11 = isset($_POST['truongthptlop11']) ? $_POST['truongthptlop11'] : "";
+                $tinh_tp_lop_12 = isset($_POST['tinhthanhpholop12']) ? $_POST['tinhthanhpholop12'] : "";
+                $quan_huyen_lop_12 = isset($_POST['quanhuyenlop12']) ? $_POST['quanhuyenlop12'] : "";
+                $truong_lop_12 = isset($_POST['truongthptlop12']) ? $_POST['truongthptlop12'] : "";
+                $sdt_ts = isset($_POST['sdt']) ? $_POST['sdt'] : "";
+                $email_ts = isset($_POST['email']) ? $_POST['email'] : "";
+                $nam_tot_nghiep_ts = isset($_POST['namtotnghiep']) ? $_POST['namtotnghiep'] : "";
+                $khu_vuc_uu_tien = isset($_POST['khuvucuutien']) ? $_POST['khuvucuutien'] : "";
+                $doi_tuong_uu_tien = isset($_POST['doituonguutien']) ? $_POST['doituonguutien'] : "";
+                $this->load->model("Mts");
+                $this->Mts->add($ht, $gt, $ngaythangnamsinh, $noisinh, $dantoc, $socmnd, $ngaycap, $noicap, $ho_khau_tinh_thanh_pho, $ho_khau_quan_huyen, $ho_khau_xa_phuong,$ho_khau_thon_ban_duong_pho, $tinh_tp_lop_10, $quan_huyen_lop_10,$truong_lop_10, $tinh_tp_lop_11, $quan_huyen_lop_11, $truong_lop_11,$quan_huyen_lop_12, $tinh_tp_lop_12, $truong_lop_12,$sdt_ts, $email_ts,$nam_tot_nghiep_ts, $khu_vuc_uu_tien, $doi_tuong_uu_tien);
+                echo "<script>alert('Thêm Thành Công !!!')</script>";
+                
+                // LAY MA
+                //$maTs = intval($_POST["count"]);      
+                $maTs = $this->Mts->getMaxMaTS()[0]["ma_ts"];
+                //$maTs= $this->Mts->getMaxMaTS();
+                //echo ''+$maTs;
+                $this->load->model("Mhsxt");
+                $this->Mhsxt->add($maTs);
+                $this->edit_hsxt($maTs);
+
+                // $this->edit_thong_tin_hsxt($id);
+                // $this->add_hsxt();
+            }
+            catch(Exception $e){
+                echo "<script>alert('Thí sinh đã Tồn Tại !!!')</script>";
+                $this->add_hsxt();
+            }
+        }
+    }
 
 }
