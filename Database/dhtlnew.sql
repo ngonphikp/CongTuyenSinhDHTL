@@ -244,6 +244,7 @@ CREATE TABLE nguyen_vong (
     ma_csdt INT,
     ma_ndt VARCHAR(50),
     ma_thm NVARCHAR(50),
+     trang_thai TEXT,
     PRIMARY KEY (ma_hsxt , ten_nguyen_vong),
     FOREIGN KEY (ma_csdt)
         REFERENCES co_so_dao_tao (ma_csdt),
@@ -281,11 +282,21 @@ CREATE TABLE mon (
         REFERENCES ho_so_xet_tuyen (ma_hsxt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
+create table file_minh_chung
+(
+	ma_file_minh_chung INT AUTO_INCREMENT PRIMARY KEY,
+	ma_hsxt int,
+    mo_ta text,
+    ten_file text,
+    dungluong text,
+    FOREIGN KEY (ma_hsxt)
+        REFERENCES ho_so_xet_tuyen (ma_hsxt)
+) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 CREATE TABLE hoc_ba (
     ma_hb INT AUTO_INCREMENT PRIMARY KEY,
     ma_ts INT,
     xep_loai_hb TEXT,
-    link_anh_hb VARCHAR(50),
+    -- link_anh_hb VARCHAR(50),
     FOREIGN KEY (ma_ts)
         REFERENCES thi_sinh (ma_ts)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;

@@ -776,8 +776,7 @@
                                                         class="btn btn-block btn-primary btn-lg"
                                                         style="height:40px;font-size:17px;text-transform:uppercase"
                                                         ng-disabled="item.ProgressStep==4">
-                                                        <i class="fa fa-check" aria-hidden="true"></i> Hoàn thành hồ sơ
-                                                    </button>
+                                                        <i class="fa fa-check" aria-hidden="true"></i> Hoàn thành hồ sơ</button>
                                                 </div>
                                             </div>
                                         </div>

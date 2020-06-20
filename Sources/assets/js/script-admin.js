@@ -405,7 +405,7 @@ $(document).ready(function () {
                     //if (key=='tennguyenvong')
                         console.log(key);
                   }
-                  $('#myTable').append("<tr><td>" +value['ten_nguyen_vong'] + "</td><td>" + value['ma_ndt'] + "</td><td>" +value['ma_thm'] + "</td></tr>");
+                  $('#myTable').append("<tr><td>" +value['ten_nguyen_vong'] + "</td><td>" + value['ma_ndt'] + "</td><td>" +value['ma_thm'] + "</td><td>" +value['trang_thai'] + "</td></tr>");
                 //console.log(value[tennguyenvong]);
               });
             
