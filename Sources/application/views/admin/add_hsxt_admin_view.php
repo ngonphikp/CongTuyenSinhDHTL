@@ -8,7 +8,7 @@
             <div class="col-md-9">
                 <div class="form-group">
                     <label for="" class="title__ip">Họ, chữ đệm và tên của thí sinh:</label>
-                    <input type="text" class="form-control" id="" required="required" name="ht"
+                    <input type="text" class="form-control"   name="ht"
                         placeholder="Họ, chữ đệm và tên của thí sinh">
                 </div>
             </div>
@@ -51,7 +51,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Chứng minh thư nhân dân:</label>
-                    <input type="text" class="form-control" name="socmnd" id=""
+                    <input type="text" class="form-control" name="socmnd" 
                         placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân">
                 </div>
             </div>
@@ -64,7 +64,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Nơi cấp:<small>(ghi theo cmnd/cccd)</small> </label>
-                    <input type="text" class="form-control" id="" name="noicap">
+                    <input type="text" class="form-control"  name="noicap">
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Xã/phường:</label>
-                    <input type="text" class="form-control" name="phuongthixa" id="">
+                    <input type="text" class="form-control" name="phuongthixa" >
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="" class="title__ip">Thôn/bản/đường phố:</label>
-                    <input type="text" class="form-control" id="" name="thonbanduongpho">
+                    <input type="text" class="form-control"  name="thonbanduongpho">
                 </div>
             </div>
         </div>
@@ -232,13 +232,13 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="" class="title__ip">Điện thoại liên lạc:</label>
-                    <input type="text" class="form-control" name="sdt" id="" placeholder="Điện thoại liên lạc">
+                    <input type="text" class="form-control" name="sdt"  placeholder="Điện thoại liên lạc">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="" class="title__ip">Email:</label>
-                    <input type="text" class="form-control" name="email" id="" placeholder="Email">
+                    <input type="text" class="form-control" name="email"  placeholder="Email">
                 </div>
             </div>
         </div>
@@ -246,12 +246,12 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="" class="title__ip">Năm tốt nghiệp:</label>
-                    <!-- <select name="" id="input" class="form-control" required="required">
+                    <!-- <select  id="input" class="form-control" >
                                             <option value=""></option>
                                             <option value="">2020</option>
                                             <option value="">2021</option>
                                         </select> -->
-                    <input type="text" name="namtotnghiep" class="form-control" id="" placeholder="Năm tốt nghiệp">
+                    <input type="text" name="namtotnghiep" class="form-control"  placeholder="Năm tốt nghiệp">
                 </div>
             </div>
             <div class="col-md-4">

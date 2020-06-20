@@ -569,20 +569,22 @@ class Admin extends CI_Controller{
     public function pro_add_hsxt(){
         //var_dump($_POST);
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('ht', 'Họ tên', 'required');
+        // $this->form_validation->set_rules('ht', 'Họ tên', 'required');
         //$this->form_validation->set_rules('tk', 'Tên Đăng Nhập', 'required');
-        $this->form_validation->set_rules('gt', 'Giới Tính', 'required');
-        $this->form_validation->set_rules('ngaythangnamsinh', 'Ngày Sinh', 'required');
+        // $this->form_validation->set_rules('gt', 'Giới Tính', 'required');
+        // $this->form_validation->set_rules('ngaythangnamsinh', 'Ngày Sinh', 'required');
         // $this->form_validation->set_rules('tinhthanhpho', 'Tỉnh thành pho', 'required');
         // $this->form_validation->set_rules('quanhuyen', 'Quận Huyện', 'required');
         // $this->form_validation->set_rules('phuongthixa', 'Phường Thị Xã', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
-        $this->form_validation->set_rules('sdt', 'Số Điện Thoại', 'numeric');
-        if($this->form_validation->run() == FALSE){
-            echo "<script>alert('Lỗi Nhập !!!')</script>";
-            $this->add_hsxt();
-        }
-        else{
+        // $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        // $this->form_validation->set_rules('sdt', 'Số Điện Thoại', 'numeric');
+        // if($this->form_validation->run() == FALSE){
+        //     echo "<script>alert('Lỗi Nhập !!!')</script>";
+        //     $this->add_hsxt();
+        // }
+        // else
+        
+        {
             try{
                 //var_dump($_POST);
                 $ht = isset($_POST['ht']) ? $_POST['ht'] : "";
@@ -720,6 +722,27 @@ class Admin extends CI_Controller{
                     $this->add_thmxt();
                 }
         
+        }
+
+        public function pro_luu_file_minh_chung()
+        {
+            $config['upload_path']          = './assets/img/file/';
+            $config['allowed_types']        = 'gif|jpg|jpeg|png';
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload("file"))
+            {
+                $status = 'error';
+                $msg = $this->upload->display_errors('', '');
+            }
+            else
+            {
+                $data = $this->upload->data();
+                //$data['file_name']
+                $status = "success";
+                $msg = "File successfully uploaded";
+            }
+            echo json_encode(array('status' => $status, 'msg' => $msg));
         }
 
         public function pro_add_nguyen_vong(){
