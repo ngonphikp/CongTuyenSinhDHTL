@@ -725,7 +725,7 @@ class Admin extends CI_Controller{
 
         public function pro_luu_file_minh_chung()
         {
-            
+            $ma_hsxt = $_POST["ma_hsxt"];
             $config['upload_path']          = './assets/img/file/';
             $config['allowed_types']        = 'gif|jpg|jpeg|png';
             $this->load->library('upload', $config);
