@@ -440,6 +440,9 @@ $(document).ready(function () {
     var form_minh_chung = $("#form_minh_chung");
 
     var btn_luu_file_minh_chung = $("#btn_luu_file_minh_chung");
+
+    var countXM = 1;
+
     $(btn_luu_file_minh_chung).click(function (e) {
         e.preventDefault();
         var url = base_url + "/CongTuyenSinhDHTL/Sources/index.php/admin/pro_luu_file_minh_chung";
@@ -469,7 +472,14 @@ $(document).ready(function () {
                         //console.log(fileToUpLoad);
                         console.log("name: " + fileToUpLoad["name"]);
                         console.log("size: " + fileToUpLoad["size"] + " byte");
+
+                        $(form_minh_chung).append('<tr><td>' + countXM++ + '</td><td><input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả"></td><td>' + fileToUpLoad["name"] + '</td><td>' + fileToUpLoad["size"] + 'byte</td><td><a href="" class="text-red" title="Xóa file"><i class="fa fa-trash-o"></i></a></td></tr>');
                     }
+
+
+                    // Mở nút hoàn thành
+
+                    
                 });
             }
         });
