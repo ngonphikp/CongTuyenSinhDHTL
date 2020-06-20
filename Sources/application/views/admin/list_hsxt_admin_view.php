@@ -24,17 +24,17 @@
                     <th><em class="fa fa-cog"></em></th>
                     <th>Mã hồ sơ</th>
                     <th>Họ Tên</th>
-                    <th>Giới Tính </th>
+                    <!-- <th>Giới Tính </th>
                     <th>Ngày Sinh</th>
                     <th>Tỉnh Thành Phố </th>
                     <th>Phường Thị Xã</th>
-                    <th>Quận Huyện</th>
+                    <th>Quận Huyện</th> -->
                     <th> Số CMND</th>
                     <th>Số Điện Thoại</th>
                     <th>Email</th>
-                    <th>Hình ảnh CMND</th>
-                    <th>Hình ảnh chân dung</th>
-                    <th>Tôn giáo</th>
+                    <!-- <th>Hình ảnh CMND</th>
+                    <th>Hình ảnh chân dung</th> -->
+                    <!-- <th>Tôn giáo</th> -->
                     <th>Ngày đăng kí</th>
                     
                     
@@ -51,19 +51,18 @@
                 <tbody>
                 <?php 
                 foreach ($listHsxt as $row){?>
-                
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_csdt/<?php echo $row['ma_csdt'];?>"><em class="fa fa-pencil"></em></a>
+                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_csdt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-pencil"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_csdt/<?php echo $row['ma_csdt'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_csdt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-trash"></em></a>
                         </td>
-                        <!-- <td><?php echo $row['ma_csdt'];?></td>
-                        <td><?php echo $row['ten_csdt'];?></td>
-                        <td><?php echo $row['ten_ttp'];?></td>
-                        <td><?php echo $row['ten_qh'];?></td>
-                        <td><?php echo $row['dia_chi_xa_phuong'];?></td>
-                        <td><?php echo $row['dia_chi_thon_ban_duong_pho'];?></td> -->
+                        <td><?php echo $row['ma_hsxt'];?></td>
+                        <td><?php echo $row['ho_ten_ts'];?></td>
+                        <td><?php echo $row['so_cmnd_cccd_ts'];?></td>
+                        <td><?php echo $row['sdt_ts'];?></td>
+                        <td><?php echo $row['email_ts'];?></td>
+                        <!-- <td><?php echo $row['dia_chi_thon_ban_duong_pho'];?></td> -->
                         
                     </tr>
                 <?php

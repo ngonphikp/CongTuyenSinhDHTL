@@ -454,45 +454,45 @@
 <div class="row">
     <div class="col-sm-4 col-12">
         <label>Lớp 10 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="mon1"></span>
-        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_1" id="GPA10_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" max="10" class="form-control" ng-model="item.Aspiration.GPA10_1" id="GPA10_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
         <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode " id="mon2"></span>
-        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_2" id="GPA10_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" max="10" class="form-control" ng-model="item.Aspiration.GPA10_2" id="GPA10_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
         <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="mon3"></span>
-        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA10_3" id="GPA10_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" max="10" class="form-control" ng-model="item.Aspiration.GPA10_3" id="GPA10_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
 </div>
 <!--Điểm lớp 11 THPT-->
 <div class="row">
     <div class="col-sm-4 col-12">
         <label>Lớp 11 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="monlop111" ></span>
-        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA11_1" id="GPA11_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" max="10" class="form-control" ng-model="item.Aspiration.GPA11_1" id="GPA11_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
         <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode" id="monlop112" ></span>
-        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA11_2" id="GPA11_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" max="10" class="form-control" ng-model="item.Aspiration.GPA11_2" id="GPA11_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
         <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="monlop113" ></span>
-        <input type="number" min="0" max="10" class="form-control" ng-model="item.Aspiration.GPA11_3" id="GPA11_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" min="0" max="10" class="form-control" ng-model="item.Aspiration.GPA11_3" id="GPA11_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
 </div>
 <!--Điểm lớp 12 THPT-->
 <div class="row">
     <div class="col-sm-4 col-12">
         <label>Lớp 12 :</label><span ng-bind-html="CombinSubjectByCode[0].SubjectCode" id="monlop121" ></span>
-        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_1" id="GPA12_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" max="10" class="form-control" ng-model="item.Aspiration.GPA12_1" id="GPA12_1" placeholder="Điểm trung bình cả năm môn 1 {{CombinSubjectByCode[0].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
         <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[1].SubjectCode" id="monlop122" ></span>
-        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_2" id="GPA12_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" max="10" class="form-control" ng-model="item.Aspiration.GPA12_2" id="GPA12_2" placeholder="Điểm trung bình cả năm môn 2 {{CombinSubjectByCode[1].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
     <div class="col-sm-4 col-12">
         <label>&nbsp;</label><span ng-bind-html="CombinSubjectByCode[2].SubjectCode" id="monlop123" ></span>
-        <input type="number" max="10" class="form-control" ng-model="item.Aspiration.GPA12_3" id="GPA12_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
+        <input type="number" step="0.1" max="10" class="form-control" ng-model="item.Aspiration.GPA12_3" id="GPA12_3" placeholder="Điểm trung bình cả năm môn 3 {{CombinSubjectByCode[2].SubjectCode}}" required ng-disabled="item.ProgressStep==4">
     </div>
 </div>     
 </div>
@@ -501,4 +501,93 @@
     </div>
     </form>
     
+    
+
+
+    <!--Minh chứng-->
+<div class="col-md-12" ng-show="item.aspirationDtos.length>0">
+<div class="row">
+    <div style="padding-top:10px;margin-bottom: 15px;" class="form-group has-success">
+        <label><i class="fa fa-check" aria-hidden="true"></i> Danh mục file minh chứng </label>
+    </div>
+    <table class="table table-bordered table-hover" style="background-color:white" ng-show="item.candidateAttachments.length>0">
+        <tr style="background-color: bisque;">
+            <th>TT</th>
+            <th>Mô tả</th>
+            <th>Tên file</th>
+            <th>Dung lượng</th>
+            <th>#</th>
+        </tr>
+        <tr ng-repeat="file in item.candidateAttachments">
+            <td ng-bind="$index+1"></td>
+            <td>
+                <input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả">
+            </td>
+            <td ng-bind="file.FileName"></td>
+
+            <td ng-bind="file.FileSize/1024 + '(KB)'"></td>
+            <td>
+                <a href="javascript:void(0)" class="text-red" ng-click="DeleteAttachFile(file)" title="Xóa file" ng-if="item.ProgressStep<4">
+                    <i class="fa fa-trash-o"></i>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="ShowAttachFile()" ng-show="!ViewAttachForm">
+            <label id="labelnopkemfileminhchung">+Nộp kèm file minh chứng và hoàn thành hồ sơ</label>
+        </div>
+        <!-- <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAttachFile()" ng-show="ViewAttachForm">
+            <label><i class="fa fa-minus" aria-hidden="true"></i> Nộp kèm file minh chứng và hoàn thành hồ sơ</label>
+        </div> -->
+    </div>
+</div>
+
+<div id="nopkemfileminhchungDiv" style="display:none;">
+<div ng-show="ViewAttachForm" id="attachfile">
+
+    <div class="row">
+        <div class="col-md-12" style="padding-top: 30px;">
+            <div>
+                Nộp kèm file minh chứng (ảnh chụp/scan: Phiếu ĐKXT, Học bạ hoặc Đơn xác nhận KQ học tập, Giấy xác nhận hưởng chế độ ưu tiên nếu có).
+            </div>
+            <div class="text-red">
+                Lưu ý: Chỉ chấp nhận file pdf, jpg, jpeg, png. Có thể đính kèm nhiều file
+            </div>
+            <input type="file" id="fileAttach" ng-model="fileAttachs" ngf-select ngf-multiple="true" class="form-control" onchange="angular.element(this).scope().loadFile(this.files)" ng-disabled="item.ProgressStep==4" />
+        </div>
+    </div>
+
+</div>
+
+<div class="row" style="padding-top:30px">
+    <div class="col-sm-12 col-12">
+        <div class="col-sm-3 col-12" style="padding-bottom:20px">
+            <button type="button" ng-click="SaveAttachFile()" class="btn btn-block btn-primary btn-lg" style="height:40px;font-size:17px;text-transform:uppercase" ng-disabled="item.ProgressStep==4">
+                <i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu file minh chứng
+            </button>
+        </div>
+        <div class="col-sm-3 col-12 pull-right" ng-if="item.ProgressStep>=3">
+            <!--ng-if="item.ProgressStep>=3">-->
+            <!--ng-disabled="item.ProgressStep==4"-->
+            <button type="button" ng-click="Finish()" class="btn btn-block btn-primary btn-lg" style="height:40px;font-size:17px;text-transform:uppercase" ng-disabled="item.ProgressStep==4">
+                <i class="fa fa-check" aria-hidden="true"></i> Hoàn thành hồ sơ
+            </button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+     </form>           
+    <?php echo validation_errors();?>
+</div>
+<div class="row">
+                                
+
+
+
 </div>
