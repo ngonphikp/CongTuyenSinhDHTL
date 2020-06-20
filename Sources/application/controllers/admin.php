@@ -738,11 +738,20 @@ class Admin extends CI_Controller{
             else
             {
                 $data = $this->upload->data();
-                var_dump($data);
+                //var_dump($data);
                 //$data['file_name']
                 $status = "success";
                 $msg = "File successfully uploaded";
-                
+                $ma_hsxt = $this->input->post('ma_hsxt');  
+                //$this->load->model("Mhsxt");
+                //$ma_hsxt = $this->input->post('ma_hsxt');  
+                //$this->Mhsxt->getMa(
+                $ma_file_minh_chung = $this->input->post('file_name');  
+                $mo_ta = "";  
+                $ten_file = $this->input->post('file_name');  
+                $dung_luong = $this->input->post('file_size');  
+                $this->load->model("Mfmc");
+                $this->Mfmc->add($ma_hsxt, $mo_ta, $ten_file, $dung_luong);
             }
             echo json_encode(array('status' => $status, 'msg' => $msg));
         }
