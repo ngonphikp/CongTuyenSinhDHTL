@@ -512,7 +512,7 @@
         <div style="padding-top:10px;margin-bottom: 15px;" class="form-group has-success">
             <label><i class="fa fa-check" aria-hidden="true"></i> Danh mục file minh chứng </label>
         </div>
-        <table class="table table-bordered table-hover" style="background-color:white" ng-show="item.candidateAttachments.length>0">
+        <table class="table table-bordered table-hover" style="background-color:white" ng-show="item.candidateAttachments.length>0" id = "form_minh_chung">
             <tr style="background-color: bisque;">
                 <th>TT</th>
                 <th>Mô tả</th>
@@ -525,9 +525,9 @@
                 <td>
                     <input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả">
                 </td>
-                <td ng-bind="file.FileName"></td>
+                <td ng-bind="file.FileName">312321</td>
 
-                <td ng-bind="file.FileSize/1024 + '(KB)'"></td>
+                <td ng-bind="file.FileSize/1024 + '(KB)'">321321</td>
                 <td>
                     <a href="javascript:void(0)" class="text-red" ng-click="DeleteAttachFile(file)" title="Xóa file" ng-if="item.ProgressStep<4">
                         <i class="fa fa-trash-o"></i>
