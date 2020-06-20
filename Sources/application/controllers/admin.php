@@ -725,6 +725,7 @@ class Admin extends CI_Controller{
 
         public function pro_luu_file_minh_chung()
         {
+            
             $config['upload_path']          = './assets/img/file/';
             $config['allowed_types']        = 'gif|jpg|jpeg|png';
             $this->load->library('upload', $config);
@@ -737,9 +738,11 @@ class Admin extends CI_Controller{
             else
             {
                 $data = $this->upload->data();
+                var_dump($data);
                 //$data['file_name']
                 $status = "success";
                 $msg = "File successfully uploaded";
+                
             }
             echo json_encode(array('status' => $status, 'msg' => $msg));
         }
