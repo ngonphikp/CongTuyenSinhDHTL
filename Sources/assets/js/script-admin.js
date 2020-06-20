@@ -465,6 +465,8 @@ $(document).ready(function () {
         });
     });
 
+    var form_minh_chung = $("#form_minh_chung");
+
     var btn_luu_file_minh_chung = $("#btn_luu_file_minh_chung");
     $(btn_luu_file_minh_chung).click(function (e) {
         e.preventDefault();
@@ -486,8 +488,17 @@ $(document).ready(function () {
             data: formData,
             processData: false,
             contentType: false,
-            success: function(res) {
-                console.log(res);
+            success: function(data) {
+                $.each($.parseJSON(data),function(key, value){
+                    //console.log(key + ": " + value);
+                    if (key == "status" && value == "success") {
+                        console.log("File successfully uploaded");
+
+                        //console.log(fileToUpLoad);
+                        console.log("name: " + fileToUpLoad["name"]);
+                        console.log("size: " + fileToUpLoad["size"] + " byte");
+                    }
+                });
             }
         });
     });
