@@ -616,7 +616,6 @@ class Admin extends CI_Controller{
                 $this->load->model("Mts");
                 $this->Mts->add($ht, $gt, $ngaythangnamsinh, $noisinh, $dantoc, $socmnd, $ngaycap, $noicap, $ho_khau_tinh_thanh_pho, $ho_khau_quan_huyen, $ho_khau_xa_phuong,$ho_khau_thon_ban_duong_pho, $tinh_tp_lop_10, $quan_huyen_lop_10,$truong_lop_10, $tinh_tp_lop_11, $quan_huyen_lop_11, $truong_lop_11,$quan_huyen_lop_12, $tinh_tp_lop_12, $truong_lop_12,$sdt_ts, $email_ts,$nam_tot_nghiep_ts, $khu_vuc_uu_tien, $doi_tuong_uu_tien);
                 echo "<script>alert('Thêm Thành Công !!!')</script>";
-                
                 // LAY MA
                 //$maTs = intval($_POST["count"]);      
                 $maTs = $this->Mts->getMaxMaTS()[0]["ma_ts"];
@@ -858,5 +857,29 @@ class Admin extends CI_Controller{
                     
             }
             
+        }
+
+        public function hoan_thanh_ho_so()
+        {
+            $config = Array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://smtp.googlemail.com',
+                'smtp_port' => 465,
+                'smtp_user' => 'chinhtp62@wru.vn',
+                'smtp_pass' => 'dodaihoc12',
+                'mailtype' => 'html'
+            );
+            $this->load->library('email', $config);
+            $this->email->set_newline("\r\n");
+
+            $this->email->to("tpctlu98@gmail.com");
+
+            $this->email->from("chinhtp62@wru.vn","Ban tuyển sinh Đại học Thủy Lợi");
+            $this->email->bcc("ngonphikp@gmail.com"); 
+            $this->email->subject("Hồ sơ xét tuyển học bạ của bạn");
+
+            $this->email->message("<b>Link</b> ...");
+            $result = $this->email->send();
+            echo $this->email->print_debugger();
         }
 }

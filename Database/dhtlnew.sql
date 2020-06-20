@@ -165,7 +165,8 @@ CREATE TABLE ho_so_xet_tuyen (
     FOREIGN KEY (ma_ts)
         REFERENCES thi_sinh (ma_ts)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
-select * from ho_so_xet_tuyen hsxt inner join  thi_sinh ts on hsxt.ma_ts=ts.ma_ts;
+-- select * from ho_so_xet_tuyen hsxt inner join  thi_sinh ts on hsxt.ma_ts=ts.ma_ts;
+-- select * from thi_sinh;
 insert into ho_so_xet_tuyen(ma_ts) values(1);
 CREATE TABLE trang_thai_ho_son (
     ma_tths INT AUTO_INCREMENT PRIMARY KEY,
