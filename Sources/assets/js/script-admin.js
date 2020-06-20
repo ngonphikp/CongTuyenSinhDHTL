@@ -401,10 +401,10 @@ $(document).ready(function () {
                 //option += "<option value='"+value['id']+"'>"+value['title']+"</option>"
                 //console.log(value.length);
                 // var 
-                //for (var key in value) {
+                for (var key in value) {
                     //if (key=='tennguyenvong')
-                        //console.log(key);
-                  //}
+                        console.log(key);
+                  }
                   $('#myTable').append("<tr><td>" +value['ten_nguyen_vong'] + "</td><td>" + value['ma_ndt'] + "</td><td>" +value['ma_thm'] + "</td><td>" +value['trang_thai'] + "</td></tr>");
                 //console.log(value[tennguyenvong]);
               });
@@ -456,38 +456,41 @@ $(document).ready(function () {
 
         var formData = new FormData();
         formData.append("file", fileToUpLoad);
+        var ma_hsxt = $("#ma_hsxt").val();
+        formData.append("ma_hsxt", ma_hsxt);
 
         jQuery.ajax({
             type: "POST",
             url: url,
             data: formData,
-            //data: {formData:formData}, //lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
             processData: false,
             contentType: false,
             success: function(data) {
                 console.log(data);
-                $.each($.parseJSON(data),function(key, value){
-                    //console.log(key + ": " + value);
-                    if (key == "status" && value == "success") {
-                        console.log("File successfully uploaded");
+                // $.each($.parseJSON(data),function(key, value){
+                //     //console.log(key + ": " + value);
+                //     if (key == "status" && value == "success") {
+                //         console.log("File successfully uploaded");
 
-                        //console.log(fileToUpLoad);
-                        console.log("name: " + fileToUpLoad["name"]);
-                        console.log("size: " + fileToUpLoad["size"] + " byte");
+                //         //console.log(fileToUpLoad);
+                //         console.log("name: " + fileToUpLoad["name"]);
+                //         console.log("size: " + fileToUpLoad["size"] + " byte");
 
-                        $(form_minh_chung).append('<tr><td>' + countXM++ + '</td><td><input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả"></td><td>' + fileToUpLoad["name"] + '</td><td>' + fileToUpLoad["size"] + 'byte</td><td><a href="" class="text-red" title="Xóa file"><i class="fa fa-trash-o"></i></a></td></tr>');
-                    }
+                //         $(form_minh_chung).append('<tr><td>' + countXM++ + '</td><td><input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả"></td><td>' + fileToUpLoad["name"] + '</td><td>' + fileToUpLoad["size"] + 'byte</td><td><a href="" class="text-red" title="Xóa file"><i class="fa fa-trash-o"></i></a></td></tr>');
+                //     }
 
 
-                    // Mở nút hoàn thành
+                //     // Mở nút hoàn thành
+                //     $("#btnHoanThanhHS").show();
 
-                    
-                });
+                // });
             }
         });
     });
 
-    
+    // $("#btnHoanThanhHS").click(function (e){
+    //     console.log("Hoàn thành hồ sơ");
+    // });
 });
 
 
