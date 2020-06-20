@@ -673,6 +673,7 @@ class Admin extends CI_Controller{
             $start=$this->uri->segment(3);
             $this->load->library('pagination', $config);
             $data['listHsxt']= $this->Mhsxt->getList($start, $config['per_page']);
+            //$data['listTs']= $this->Mts->getList($start, $config['per_page']);
             $this->load->view("admin/get_list_hsxt_admin_view", $data);
         }
         
