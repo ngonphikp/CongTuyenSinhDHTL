@@ -282,7 +282,7 @@
 
     </div>
     <div class="col-md-3 form-group pull-right">
-        <input type="submit" name="ok" value="Thêm" class="btn btn-primary btn-block">
+        <input type="submit" name="ok" value="Lưu" class="btn btn-primary btn-block">
     </div>
     </form>
     <?php echo validation_errors();?>
@@ -515,7 +515,7 @@
         <table class="table table-bordered table-hover" style="background-color:white" ng-show="item.candidateAttachments.length>0" id = "form_minh_chung">
             <tr style="background-color: bisque;">
                 <th>TT</th>
-                <th>Mô tả</th>
+                <th id="mota">Mô tả</th>
                 <th>Tên file</th>
                 <th>Dung lượng</th>
                 <th>#</th>
