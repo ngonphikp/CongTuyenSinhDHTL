@@ -746,8 +746,11 @@ class Admin extends CI_Controller{
                 $name = $data['file_name'];
                 $size = $data['file_size'];     
                 
-                var_dump($name);
-                var_dump($size);
+                // var_dump($name);
+                // var_dump($size);
+
+                $this->load->model("Mfmc");
+                $this->Mfmc->add($ma_hsxt, "...", $name, $size);
             }
             echo json_encode(array('status' => $status, 'msg' => $msg));
         }

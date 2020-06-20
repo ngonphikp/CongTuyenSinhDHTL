@@ -574,9 +574,9 @@
             <div class="col-sm-4 col-12 pull-right" ng-if="item.ProgressStep>=3">
                 <!--ng-if="item.ProgressStep>=3">-->
                 <!--ng-disabled="item.ProgressStep==4"-->
-                <button type="button" class="btn btn-block btn-primary btn-lg" style="display:none;" id = "btnHoanThanhHS">
+                <a class="btn btn-block btn-primary btn-lg" style="display:none;" id = "btnHoanThanhHS" onclick="return confirm('Bạn có muốn hoàn thành hồ sơ không?');" href="">
                     <i class="fa fa-check" aria-hidden="true"></i> HOÀN THÀNH HỒ SƠ
-                </button>
+                </a>
             </div>
         </div>
     </div>
