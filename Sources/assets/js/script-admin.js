@@ -487,10 +487,6 @@ $(document).ready(function () {
             }
         });
     });
-
-    // $("#btnHoanThanhHS").click(function (e){
-    //     console.log("Hoàn thành hồ sơ");
-    // });
 });
 
 

@@ -870,6 +870,7 @@ class Admin extends CI_Controller{
             
         }
 
+        //public function hoan_thanh_ho_so($ma_hsxt, $mail)
         public function hoan_thanh_ho_so()
         {
             $config = Array(
@@ -891,6 +892,8 @@ class Admin extends CI_Controller{
 
             $this->email->message("<b>Link</b> ...");
             $result = $this->email->send();
-            echo $this->email->print_debugger();
+            echo $this->email->print_debugger();            
+
+            redirect(base_url() . "home/hosoxettuyen/1");
         }
 }
