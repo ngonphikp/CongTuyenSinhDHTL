@@ -72,18 +72,84 @@ CREATE TABLE thi_sinh (
     ho_ten_ts TEXT,
     gioi_tinh_ts TEXT,
     ngay_sinh_ts DATE,
-    dia_chi_ts VARCHAR(10),
+    noi_sinh_ts NVARCHAR(50),
+    dan_toc_ts TEXT,
     so_cmnd_cccd_ts VARCHAR(20),
+    ngay_cap DATE,
+    noi_cap TEXT,
+    ho_khau_tinh_thanh_pho TEXT,
+    ho_khau_quan_huyen TEXT,
+    ho_khau_xa_phuong TEXT,
+    ho_khau_thon_ban_duong_pho TEXT,
+    tinh_tp_lop_10 TEXT,
+    quan_huyen_lop_10 TEXT,
+    truong_lop_10 TEXT,
+    tinh_tp_lop_11 TEXT,
+    quan_huyen_lop_11 TEXT,
+    truong_lop_11 TEXT,
+    quan_huyen_lop_12 TEXT,
+    tinh_tp_lop_12 TEXT,
+     truong_lop_12 TEXT,
     sdt_ts VARCHAR(20),
     email_ts VARCHAR(50),
-    link_anh_cmnd_ts VARCHAR(50),
-    link_anh_chan_dung_ts VARCHAR(50),
-    dan_toc_ts TEXT,
-    ton_giao_ts TEXT,
-    ngay_dang_ki_ts DATE,
-    FOREIGN KEY (dia_chi_ts)
-        REFERENCES phuong_thi_xa (ma_ptx)
+    nam_tot_nghiep_ts INT,
+    khu_vuc_uu_tien TEXT,
+    doi_tuong_uu_tien TEXT
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
+
+insert into thi_sinh (
+ho_ten_ts,
+gioi_tinh_ts,
+ngay_sinh_ts,
+noi_sinh_ts,
+dan_toc_ts,
+so_cmnd_cccd_ts,
+ngay_cap ,
+noi_cap ,
+ho_khau_tinh_thanh_pho ,
+ho_khau_quan_huyen,
+ho_khau_xa_phuong ,
+ho_khau_thon_ban_duong_pho,
+tinh_tp_lop_10 ,
+quan_huyen_lop_10 ,
+truong_lop_10,
+    tinh_tp_lop_11 ,
+    quan_huyen_lop_11 ,
+    truong_lop_11 ,
+    tinh_tp_lop_12 ,
+    quan_huyen_lop_12 ,
+    truong_lop_12 ,
+    sdt_ts ,
+    email_ts ,
+    nam_tot_nghiep_ts ,
+    khu_vuc_uu_tien ,
+    doi_tuong_uu_tien) values (
+    'Chinh',
+    'Nam',
+    '2000-06-06',
+    'Thành Phố Hà Nội',
+    'Kinh',
+    '135900840',
+    '2000-10-6',
+    'Hà Nội',
+    'Thành Phố Hà Nội',
+    'Huyện Ba Vì',
+    'Xã Cờ Đỏ',
+    'Thôn Đông',
+    'Thành Phố Hà Nội',
+    'Huyện Ba Vì',
+    'THPT Diên Hồng',
+    'Thành Phố Hà Nội',
+    'Huyện Ba Vì',
+    'THPT Diên Hồng',
+    'Thành Phố Hà Nội',
+    'Huyện Ba Vì',
+    'THPT Diên Hồng',
+    '0376182631',
+    'adfdf@gmail.com',
+    '2020',
+    'KV1',
+    '01');
 
 CREATE TABLE truong (
     ma_truong VARCHAR(10) PRIMARY KEY,
@@ -99,7 +165,7 @@ CREATE TABLE ho_so_xet_tuyen (
     FOREIGN KEY (ma_ts)
         REFERENCES thi_sinh (ma_ts)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
-
+insert into ho_so_xet_tuyen(ma_ts) values(1);
 CREATE TABLE trang_thai_ho_son (
     ma_tths INT AUTO_INCREMENT PRIMARY KEY,
     ma_hsxt INT,
@@ -116,13 +182,11 @@ CREATE TABLE co_so_dao_tao (
     dia_chi_quan_huyen NVARCHAR(50),
     dia_chi_xa_phuong NVARCHAR(50),
     dia_chi_thon_ban_duong_pho NVARCHAR(50)
-    -- FOREIGN KEY (dia_chi_csdt)
---         REFERENCES quan_huyen (ma_qh)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 insert into co_so_dao_tao(ten_csdt, dia_chi_tinh_thanh_pho, dia_chi_quan_huyen, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('Cơ sở 1','Thành Phố Hà Nội','Quận Đống Đa' ,'Phường Trung Liệt', 'Số 175 Tây Sơn');
 insert into co_so_dao_tao(ten_csdt, dia_chi_tinh_thanh_pho, dia_chi_quan_huyen, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('Cơ sở 2','Thành phố Hồ Chí Minh','Quận Bình Thạnh' ,'Phường 17', 'Số 2 Trường Sa');
 CREATE TABLE nganh_dao_tao (
-    ma_ndt varchar(50) PRIMARY KEY,
+    ma_ndt VARCHAR(50) PRIMARY KEY,
     ma_csdt INT,
     ten_ndt TEXT NOT NULL,
     chuong_trinh_dao_tao_ndt TEXT,
@@ -136,7 +200,7 @@ insert into nganh_dao_tao(ma_ndt,ma_csdt, ten_ndt, chuong_trinh_dao_tao_ndt) val
 insert into nganh_dao_tao(ma_ndt,ma_csdt, ten_ndt, chuong_trinh_dao_tao_ndt) values('TLS101','2','Kỹ thuật xây dựng công trình thủy','Chương trình đào tạo bằng Tiếng Việt');
 CREATE TABLE diem_chuan (
     ma_dc INT AUTO_INCREMENT PRIMARY KEY,
-    ma_ndt varchar(50),
+    ma_ndt VARCHAR(50),
     nam_dc DATE,
     diem_dc FLOAT,
     chi_tieu_dc INT,
@@ -173,38 +237,46 @@ insert into to_hop_mon_xet_tuyen value('A01','TLS101');
 insert into to_hop_mon_xet_tuyen value('A00','TLA106');
 insert into to_hop_mon_xet_tuyen value('A01','TLA106');
 CREATE TABLE nguyen_vong (
-	ma_hsxt int,
-	ten_nguyen_vong NVARCHAR(50),
-    ma_csdt int,
+    ma_hsxt INT,
+    ten_nguyen_vong NVARCHAR(50),
+    ma_csdt INT,
     ma_ndt VARCHAR(50),
     ma_thm NVARCHAR(50),
-    PRIMARY KEY (ma_hsxt, ten_nguyen_vong),
-    FOREIGN KEY (ma_csdt) REFERENCES co_so_dao_tao(ma_csdt),
-    FOREIGN KEY (ma_ndt) REFERENCES nganh_dao_tao (ma_ndt),
-    FOREIGN KEY (ma_hsxt) REFERENCES ho_so_xet_tuyen (ma_hsxt),
-    FOREIGN KEY (ma_thm) REFERENCES to_hop_mon (ma_thm)
+    PRIMARY KEY (ma_hsxt , ten_nguyen_vong),
+    FOREIGN KEY (ma_csdt)
+        REFERENCES co_so_dao_tao (ma_csdt),
+    FOREIGN KEY (ma_ndt)
+        REFERENCES nganh_dao_tao (ma_ndt),
+    FOREIGN KEY (ma_hsxt)
+        REFERENCES ho_so_xet_tuyen (ma_hsxt),
+    FOREIGN KEY (ma_thm)
+        REFERENCES to_hop_mon (ma_thm)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
-
+-- select * from nguyen_vong-- 
+-- select * from nguyen_vong where ma_hsxt='1' and ten_nguyen_vong="1";
+insert into nguyen_vong(ma_hsxt, ten_nguyen_vong, ma_csdt, ma_ndt, ma_thm)  values('1','1','1', 'TLA106', 'A00');
 CREATE TABLE trang_thai_nguyen_vong (
     ten_nguyen_vong NVARCHAR(50),
     ma_hsxt INT,
-    PRIMARY KEY (ten_nguyen_vong, ma_hsxt),
-    ma_xet_tuyen varchar(50), -- ma_ndt
+    PRIMARY KEY (ten_nguyen_vong , ma_hsxt),
+    ma_xet_tuyen VARCHAR(50),
     to_hop_xet_tuyen NVARCHAR(50),
-    trang_thai text,
-    -- FOREIGN KEY (ten_nguyen_vong) REFERENCES nguyen_vong(ten_nguyen_vong),
-    FOREIGN KEY (ma_xet_tuyen) REFERENCES nganh_dao_tao(ma_ndt),
-    FOREIGN KEY (to_hop_xet_tuyen) REFERENCES to_hop_mon_xet_tuyen(ma_thm)
+    trang_thai TEXT,
+    FOREIGN KEY (ma_xet_tuyen)
+        REFERENCES nganh_dao_tao (ma_ndt),
+    FOREIGN KEY (to_hop_xet_tuyen)
+        REFERENCES to_hop_mon_xet_tuyen (ma_thm)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE mon (
     ten_mon NVARCHAR(50),
-    ma_hsxt int,
+    ma_hsxt INT,
     diem_lop_10 FLOAT,
     diem_lop_11 FLOAT,
     diem_lop_12 FLOAT,
     PRIMARY KEY (ten_mon , ma_hsxt),
-    FOREIGN KEY (ma_hsxt) REFERENCES ho_so_xet_tuyen(ma_hsxt)
+    FOREIGN KEY (ma_hsxt)
+        REFERENCES ho_so_xet_tuyen (ma_hsxt)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE hoc_ba (
