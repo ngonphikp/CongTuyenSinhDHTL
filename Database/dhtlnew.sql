@@ -288,10 +288,11 @@ create table file_minh_chung
 	ma_hsxt int,
     mo_ta text,
     ten_file text,
-    dungluong text,
+    dung_luong text,
     FOREIGN KEY (ma_hsxt)
         REFERENCES ho_so_xet_tuyen (ma_hsxt)
 ) ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
+select * from file_minh_chung;
 CREATE TABLE hoc_ba (
     ma_hb INT AUTO_INCREMENT PRIMARY KEY,
     ma_ts INT,

@@ -429,10 +429,10 @@ $(document).ready(function () {
                 //option += "<option value='"+value['id']+"'>"+value['title']+"</option>"
                 //console.log(value.length);
                 // var 
-                for (var key in value) {
+                //for (var key in value) {
                     //if (key=='tennguyenvong')
-                        console.log(key);
-                  }
+                        //console.log(key);
+                  //}
                   $('#myTable').append("<tr><td>" +value['ten_nguyen_vong'] + "</td><td>" + value['ma_ndt'] + "</td><td>" +value['ma_thm'] + "</td><td>" +value['trang_thai'] + "</td></tr>");
                 //console.log(value[tennguyenvong]);
               });
@@ -489,9 +489,11 @@ $(document).ready(function () {
             type: "POST",
             url: url,
             data: formData,
+            //data: {formData:formData}, //lấy toàn thông tin các fields trong form bằng hàm serialize của jquery
             processData: false,
             contentType: false,
             success: function(data) {
+                console.log(data);
                 $.each($.parseJSON(data),function(key, value){
                     //console.log(key + ": " + value);
                     if (key == "status" && value == "success") {
