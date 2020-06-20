@@ -516,8 +516,6 @@ $(document).ready(function () {
             }
         });
     });
-
-    
 });
 
 

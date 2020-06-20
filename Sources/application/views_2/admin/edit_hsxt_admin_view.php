@@ -574,7 +574,7 @@
             <div class="col-sm-4 col-12 pull-right" ng-if="item.ProgressStep>=3">
                 <!--ng-if="item.ProgressStep>=3">-->
                 <!--ng-disabled="item.ProgressStep==4"-->
-                <a class="btn btn-block btn-primary btn-lg" style="display:none;" id = "btnHoanThanhHS" onclick="return confirm('Bạn có muốn hoàn thành hồ sơ không?');" href="">
+                <a class="btn btn-block btn-primary btn-lg" style="display:none;" id = "btnHoanThanhHS" onclick="return confirm('Bạn có muốn hoàn thành hồ sơ không?');" href="<?php echo base_url() . "index.php/admin/hoan_thanh_ho_so";?>">
                     <i class="fa fa-check" aria-hidden="true"></i> HOÀN THÀNH HỒ SƠ
                 </a>
             </div>
