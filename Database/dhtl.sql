@@ -66,7 +66,7 @@ CREATE TABLE thi_sinh (
     ngay_sinh_ts DATE,
     noi_sinh_ts NVARCHAR(50),
     dan_toc_ts TEXT,
-    so_cmnd_cccd_ts VARCHAR(20),
+    so_cmnd_cccd_ts VARCHAR(20) ,-- unique
     ngay_cap DATE,
     noi_cap TEXT,
     ho_khau_tinh_thanh_pho TEXT,
@@ -142,8 +142,9 @@ truong_lop_10,
     '2020',
     'KV1',
     '01');
-    use dhtl;
-    select * from thi_sinh;
+--     use dhtl;
+--     select * from thi_sinh;
+--     select * from ho_so_xet_tuyen;
 CREATE TABLE truong (
     ma_truong VARCHAR(10) PRIMARY KEY,
     ten_truong TEXT,
@@ -233,6 +234,7 @@ CREATE TABLE nguyen_vong (
     ma_csdt INT,
     ma_ndt VARCHAR(50),
     ma_thm NVARCHAR(50),
+    trang_thai TEXT,
     PRIMARY KEY (ma_hsxt , ten_nguyen_vong),
     FOREIGN KEY (ma_csdt)
         REFERENCES co_so_dao_tao (ma_csdt),
@@ -243,21 +245,22 @@ CREATE TABLE nguyen_vong (
     FOREIGN KEY (ma_thm)
         REFERENCES to_hop_mon (ma_thm)
 )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI;
-select * from nguyen_vong;
-select * from nguyen_vong where ma_hsxt='1' and ten_nguyen_vong="1";
-insert into nguyen_vong(ma_hsxt, ten_nguyen_vong, ma_csdt, ma_ndt, ma_thm)  values('1','1','1', 'TLA106', 'A00');
-CREATE TABLE trang_thai_nguyen_vong (
-    ten_nguyen_vong NVARCHAR(50),
-    ma_hsxt INT,
-    PRIMARY KEY (ten_nguyen_vong , ma_hsxt),
-    ma_xet_tuyen VARCHAR(50),
-    to_hop_xet_tuyen NVARCHAR(50),
-    trang_thai TEXT,
-    FOREIGN KEY (ma_xet_tuyen)
-        REFERENCES nganh_dao_tao (ma_ndt),
-    FOREIGN KEY (to_hop_xet_tuyen)
-        REFERENCES to_hop_mon_xet_tuyen (ma_thm)
-)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
+-- select * from nguyen_vong;
+-- select * from nguyen_vong where ma_hsxt='1' and ten_nguyen_vong="1";
+
+insert into nguyen_vong(ma_hsxt, ten_nguyen_vong, ma_csdt, ma_ndt, ma_thm,trang_thai)  values('1','1','1', 'TLA106', 'A00','Đã nhận');
+-- CREATE TABLE trang_thai_nguyen_vong (
+-- 	ma_hsxt INT,
+--     ten_nguyen_vong NVARCHAR(50),
+--     PRIMARY KEY (ten_nguyen_vong , ma_hsxt),
+--     ma_xet_tuyen VARCHAR(50),
+--     to_hop_xet_tuyen NVARCHAR(50),
+--     trang_thai TEXT,
+--     FOREIGN KEY (ma_xet_tuyen)
+--         REFERENCES nganh_dao_tao (ma_ndt),
+--     FOREIGN KEY (to_hop_xet_tuyen)
+--         REFERENCES to_hop_mon_xet_tuyen (ma_thm)
+-- )  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4 COLLATE = UTF8MB4_UNICODE_CI AUTO_INCREMENT=1;
 
 CREATE TABLE mon (
     ten_mon NVARCHAR(50),
@@ -420,4 +423,4 @@ INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VAL
 -- delete from chi_tiet_bai_viet where ma_bv = '5';
 -- select * from danh_muc where ma_dm <> '1.1';
 
-select * from thi_sinh where ma_ts = 1;
+-- select * from thi_sinh where ma_ts = 1;
