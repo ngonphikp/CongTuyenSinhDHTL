@@ -19,11 +19,15 @@ class Mhsxt extends CI_Model{
     //     $this->db->query("delete from nganh_dao_tao where ma_ndt = $id;");
     // }
 
-    public function add($tencsdt, $dia_chi_csdt, $dia_chi_xa_phuong, $dia_chi_thon_ban_duong_pho){
-        $this->db->query("insert into co_so_dao_tao(tencsdt, dia_chi_csdt, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('$tencsdt','$dia_chi_csdt', '$dia_chi_xa_phuong', '$dia_chi_thon_ban_duong_pho ');");
-        // $data=$this->db->query("select id_dd from dia_diem dd where id_dd >= all (select id_dd from dia_diem);")->row_array();
-        // $id=$data['id_dd'];
-        // $this->db->query("insert into ctdd(id_dd,tieu_de_dd, noi_dung_dd, loai) values($id,'$td','$nd','$loai');");
+    // public function add($tencsdt, $dia_chi_csdt, $dia_chi_xa_phuong, $dia_chi_thon_ban_duong_pho){
+    //     $this->db->query("insert into co_so_dao_tao(tencsdt, dia_chi_csdt, dia_chi_xa_phuong, dia_chi_thon_ban_duong_pho) values('$tencsdt','$dia_chi_csdt', '$dia_chi_xa_phuong', '$dia_chi_thon_ban_duong_pho ');");
+    //     // $data=$this->db->query("select id_dd from dia_diem dd where id_dd >= all (select id_dd from dia_diem);")->row_array();
+    //     // $id=$data['id_dd'];
+    //     // $this->db->query("insert into ctdd(id_dd,tieu_de_dd, noi_dung_dd, loai) values($id,'$td','$nd','$loai');");
+    // }
+
+    public function add($ma_ts){
+        $this->db->query("insert into ho_so_xet_tuyen(ma_ts) values($ma_ts);");
     }
     public function edit($id,$tennganh, $chuongtrinhdaotao, $ghichu, $gioithieu, $coso){
         $this->db->query("update nganh_dao_tao set ten_ndt = '$tennganh', chuong_trinh_dao_tao_ndt = '$chuongtrinhdaotao', ghi_chu_ndt= '$ghichu' , gioi_thieu_ndt='$gioithieu',ma_csdt= '$coso' where ma_ndt = $id;");
@@ -47,6 +51,9 @@ class Mhsxt extends CI_Model{
     //     on ndt.ma_csdt = csdt.ma_csdt where ndt.ten_ndt like '%$s%' OR ndt.ma_ndt like '%$s%';");
     //     return $query->num_rows();
     // }
-    
+    public function getByMaTS($ma_ts){
+        $query=$this->db->query("select ma_hsxt from ho_so_xet_tuyen where ma_ts = $ma_ts;");
+        return $query->row_array();
+    }  
 }
 ?>
