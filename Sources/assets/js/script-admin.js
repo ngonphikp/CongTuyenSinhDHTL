@@ -435,7 +435,7 @@ $(document).ready(function () {
                   }
                   $('#myTable').append("<tr><td>" +value['ten_nguyen_vong'] + "</td><td>" + value['ma_ndt'] + "</td><td>" +value['ma_thm'] + "</td></tr>");
                 //console.log(value[tennguyenvong]);
-              })
+              });
             
             //console.log(data['tennguyenvong']);
             //   $("#sub_category").html(option);
@@ -456,10 +456,41 @@ $(document).ready(function () {
                 //     }));
                 //console.log(data);
                 // ĐỌc dữ liệu
+
+
+
+                // Mở file minh chứng
+                $("#form_file_minh_chung").show();
             }
         });
     });
-    
+
+    var btn_luu_file_minh_chung = $("#btn_luu_file_minh_chung");
+    $(btn_luu_file_minh_chung).click(function (e) {
+        e.preventDefault();
+        var url = base_url + "/CongTuyenSinhDHTL/Sources/index.php/admin/pro_luu_file_minh_chung";
+        console.log("Nhay vao day: " + url);
+
+        var inputFile = $("input[name=file]");
+        //console.log(inputFile);
+
+        var fileToUpLoad = inputFile[0].files[0];
+        //console.log(fileToUpLoad);
+
+        var formData = new FormData();
+        formData.append("file", fileToUpLoad);
+
+        jQuery.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(res) {
+                console.log(res);
+            }
+        });
+    });
 });
 
 
