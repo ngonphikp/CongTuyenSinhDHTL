@@ -872,29 +872,32 @@ class Admin extends CI_Controller{
         }
 
         //public function hoan_thanh_ho_so($ma_hsxt, $mail)
-        public function hoan_thanh_ho_so()
+        public function hoan_thanh_ho_so($ma_hsxt, $mail)
         {
             $config = Array(
                 'protocol' => 'smtp',
                 'smtp_host' => 'ssl://smtp.googlemail.com',
                 'smtp_port' => 465,
                 'smtp_user' => 'chinhtp62@wru.vn',
-                'smtp_pass' => '',
+                'smtp_pass' => 'signinoptions',
                 'mailtype' => 'html'
             );
+
+            $mail = base64_decode($mail);
+            //$mail=
             $this->load->library('email', $config);
             $this->email->set_newline("\r\n");
 
-            $this->email->to("tpctlu98@gmail.com");
+            $this->email->to("$mail");
 
             $this->email->from("chinhtp62@wru.vn","Ban tuyển sinh Đại học Thủy Lợi");
             $this->email->bcc("ngonphikp@gmail.com"); 
             $this->email->subject("Hồ sơ xét tuyển học bạ của bạn");
 
-            $this->email->message("<b>Link</b> ...");
+            $this->email->message("<b>Link</b> hồ sơ của bạn: ".base_url()."home/hosoxettuyen/$ma_hsxt");
             $result = $this->email->send();
             echo $this->email->print_debugger();            
 
-            redirect(base_url() . "home/hosoxettuyen/1");
+            redirect(base_url() . "home/hosoxettuyen/$ma_hsxt");
         }
 }
