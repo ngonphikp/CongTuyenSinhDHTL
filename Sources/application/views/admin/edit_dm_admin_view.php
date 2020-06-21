@@ -31,9 +31,9 @@
                             <table class="table">
                                 <tr>
                                     <td align="center">
-                                        <a class="btn btn-default" href="<?php echo base_url() . 'index.php/admin/edit_dm/' . $row['ma_dm'];?>"><em class="fa fa-pencil"></em></a>
+                                        <a class="edit ed" href="<?php echo base_url() . 'index.php/admin/edit_dm/' . $row['ma_dm'];?>"><em class="fas fa-pencil-alt"></em></a>
                                         <br>
-                                        <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_dm/" . $row['ma_dm'];?>"><em class="fa fa-trash"></em></a>
+                                        <a class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_dm/" . $row['ma_dm'];?>"><em class="fa fa-trash"></em></a>
                                     </td>
                                     <td><P>Mã: </p></td>
                                     <td><textarea name="maC<?php echo $row['ma_dm']; ?>" class="form-control" id="" cols="30" rows="1" readonly><?php echo $row['ma_dm'];?></textarea></td>

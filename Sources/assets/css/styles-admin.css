@@ -102,3 +102,6 @@ body{
     width: 100%;
     justify-content: space-around;
 }
+.form_ip{
+    border: none;
+}

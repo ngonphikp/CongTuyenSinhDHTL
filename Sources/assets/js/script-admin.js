@@ -11,7 +11,7 @@ $(document).ready(function () {
         e.preventDefault();
         console.log("add_ctbv_form_add_bv");  
         countAdd++;
-        $(form_add_bv).append('<tr><td><p>Chi tiết bài viết</p><a class="btn btn-default delete_ctbv_form_add_bv" href=""><em class="fa fa-trash"></em></a></td><td><p>Nội dung chi tiết</p><textarea name="ndct'+ countAdd +'" class="form-control" id="" cols="40" rows="1"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ countAdd +'" class="form-control"></td></tr>');
+        $(form_add_bv).append('<tr><td><p>Chi tiết bài viết</p><a class="delete ed delete_ctbv_form_add_bv" href=""><em class="fa fa-trash"></em></a></td><td><p>Nội dung chi tiết</p><textarea name="ndct'+ countAdd +'" class="form-control" id="" cols="40" rows="1"></textarea></td><td><P>Ảnh chi tiết</p><input type="file" name="linkct'+ countAdd +'" class="form-control"></td></tr>');
     });    
 
     $(form_add_bv).on("click", ".delete_ctbv_form_add_bv", function(e) {
@@ -63,7 +63,7 @@ $(document).ready(function () {
         e.preventDefault();
         console.log("add_dmc_form_edit_dm");  
         countDMC++;
-        $(form_edit_dm).append('<tr><td><a class="btn btn-default delete_dmc_form_edit_dm" href=""><em class="fa fa-trash"></em></a></td><td><P>Mã: </p></td><td><textarea name="maC'+ countDMC +'" class="form-control" id="" cols="30" rows="1"></textarea></td><td><P>Tên: </p></td><td><textarea name="tenC'+ countDMC +'" class="form-control" id="" cols="30" rows="1"></textarea></td></tr>');
+        $(form_edit_dm).append('<tr><td><a class="delete ed delete_dmc_form_edit_dm" href=""><em class="fa fa-trash"></em></a></td><td><P>Mã: </p></td><td><textarea name="maC'+ countDMC +'" class="form-control" id="" cols="30" rows="1"></textarea></td><td><P>Tên: </p></td><td><textarea name="tenC'+ countDMC +'" class="form-control" id="" cols="30" rows="1"></textarea></td></tr>');
     });
 
     $(form_edit_dm).on("click", ".delete_dmc_form_edit_dm", function(e) {

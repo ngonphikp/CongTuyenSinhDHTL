@@ -1,6 +1,6 @@
 <div class="content">
-    <div class="col-md-6 add-dm">
-        <h4 class="text-center"><b>Thêm Bài Viết</b></h4>
+    <div class="col-md-12">
+        <h1 class="title_form"><b>Thêm Bài Viết</b></h1>
     </div>
     <?php echo form_open_multipart('/admin/pro_add_bv'); ?>
         <div class="form">

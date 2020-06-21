@@ -48,7 +48,7 @@
                 <p>Tổng số hồ sơ tuyển sinh</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="far fa-file"></i>
               </div>
             </div>
           </div>

@@ -11,12 +11,12 @@
                         <div id="content-wrap" class="">
                             <div class="region region-content">
                                 <div class="view-filter" style="display:flex;">
-                                    <div class="filter1">
+                                    <!-- <div class="filter1">
                                         <label for="search">Tìm kiếm câu hỏi</label>
                                         <br />
                                         <input type="text" id="search" class="form-text" />
-                                    </div>
-                                    <div class="filter2 ml-4" style="margin-left: 10px;">
+                                    </div> -->
+                                    <!-- <div class="filter2 ml-4" style="margin-left: 10px;">
                                         <label for="filter">Lọc theo ngành tuyển sinh</label>
                                         <br />
                                         <select name="danh-muc" id="filter" class="form-select required"
@@ -39,7 +39,7 @@
                                             <option value="15">Công nghệ kĩ thuật giao thông</option>
                                             <option value="16">Kinh tế xây dựng</option>
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="view-content">
                                     <div class="item-list">

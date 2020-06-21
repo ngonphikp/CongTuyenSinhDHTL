@@ -21,7 +21,7 @@
             </li>
             <li class="nav__menu--item">
                 <a href="<?php echo base_url();?>home/xhb">
-                <i class="fas fa-book-open" style="font-size:50px;"></i>
+                <img style="width:50px;height:50px;" src="<?php echo base_url();?>assets/img/img_dhtl/book2.png" alt=""><br>
                 </a>        
                 <a href="<?php echo base_url();?>home/xhb">XÉT HỌC BẠ TRỰC TUYẾN</a>
             </li>
