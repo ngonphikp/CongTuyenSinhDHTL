@@ -482,7 +482,7 @@
 
                                             <th>Tổ hợp xét tuyển</th>
                                             <th>Trạng thái</th>
-                                            <th>#</th>
+                                            <!-- <th>#</th> -->
                                         </tr>
                                         <!-- <tr ng-repeat="nv in item.aspirationDtos">
 
@@ -507,6 +507,27 @@
                                                 </a>
                                             </td>
                                         </tr>  -->
+                                        <tbody>
+                <?php 
+                foreach ($listNv as $row){?>
+                
+                    <tr class="w3-animate-left">
+                        <!-- <td align="center">
+                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_csdt/<?php echo $row['ma_csdt'];?>"><em class="fa fa-pencil"></em></a>
+                            <br>
+                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_csdt/<?php echo $row['ma_csdt'];?>"><em class="fa fa-trash"></em></a>
+                        </td> -->
+                        <td>Nguyện vọng <?php echo $row['ten_nguyen_vong'];?></td>
+                        <td><?php echo $row['ma_ndt'];?></td>
+                        <td><?php echo $row['ma_thm'];?></td>
+                        <td><?php echo $row['trang_thai'];?></td>
+                        
+                        
+                    </tr>
+                <?php
+                }
+                ?>
+                </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -720,9 +741,9 @@
                                                 <th>Mô tả</th>
                                                 <th>Tên file</th>
                                                 <th>Dung lượng</th>
-                                                <th>#</th>
+                                                <!-- <th>#</th> -->
                                             </tr>
-                                            <tr ng-repeat="file in item.candidateAttachments">
+                                            <!-- <tr ng-repeat="file in item.candidateAttachments">
                                                 <td ng-bind="$index+1"></td>
                                                 <td>
                                                     <input disabled="true" type="text" max="100" class="form-control"
@@ -738,7 +759,25 @@
                                                         <i class="fa fa-trash-o"></i>
                                                     </a>
                                                 </td>
-                                            </tr>
+                                            </tr> -->
+                                            <tbody>
+                                            <?php 
+                                            foreach ($listFmc as $row){?>
+                                            
+                                                <tr class="w3-animate-left">
+                                                    
+                                                    <td><?php echo $row['ma_file_minh_chung'];?></td>
+                                                    <td><?php echo $row['mo_ta'];?></td>
+                                                    <td><?php echo $row['ten_file'];?></td>
+                                                    <td><?php echo $row['dung_luong'];?></td>
+                                                    
+                                                    
+                                                    
+                                                </tr>
+                                            <?php
+                                            }
+                                            ?>
+                                            </tbody>
                                         </table>
                                     </div>
 

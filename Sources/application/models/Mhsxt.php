@@ -55,5 +55,12 @@ class Mhsxt extends CI_Model{
         $query=$this->db->query("select ma_hsxt from ho_so_xet_tuyen where ma_ts = $ma_ts;");
         return $query->row_array();
     }  
+
+    public function deleteById($id){
+        $this->db->query("delete from nguyen_vong where ma_hsxt = $id;");
+        $this->db->query("delete from file_minh_chung where ma_hsxt = $id;");
+        $this->db->query("delete from ho_so_xet_tuyen where ma_hsxt = $id;");
+
+    }
 }
 ?>

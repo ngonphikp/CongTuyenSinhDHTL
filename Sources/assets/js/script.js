@@ -407,9 +407,65 @@ $(document).ready(function () {
                 //     }));
                 //console.log(data);
                 // ĐỌc dữ liệu
+                $("#form_file_minh_chung").show();
             }
         });
     });
+
+
+    var form_minh_chung = $("#form_minh_chung");
+
+    var btn_luu_file_minh_chung = $("#btn_luu_file_minh_chung");
+
+    var countXM = 1;
+
+    $(btn_luu_file_minh_chung).click(function (e) {
+        e.preventDefault();
+        var url = base_url + "/CongTuyenSinhDHTL/Sources/index.php/admin/pro_luu_file_minh_chung";
+        console.log("Nhay vao day: " + url);
+
+        var inputFile = $("input[name=file]");
+        //console.log(inputFile);
+
+        var fileToUpLoad = inputFile[0].files[0];
+        //console.log(fileToUpLoad);
+
+        var formData = new FormData();
+        formData.append("file", fileToUpLoad);
+        var ma_hsxt = $("#ma_hsxt").val();
+        formData.append("ma_hsxt", ma_hsxt);
+
+        jQuery.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(data) {
+                //console.log(data);
+                $.each($.parseJSON(data),function(key, value){
+                    //console.log(key + ": " + value);
+                    if (key == "status" && value == "success") {
+                        console.log("File successfully uploaded");
+
+                        //console.log(fileToUpLoad);
+                        console.log("name: " + fileToUpLoad["name"]);
+                        console.log("size: " + fileToUpLoad["size"] + " byte");
+
+                        $(form_minh_chung).append('<tr><td>' + countXM++ + '</td><td><input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả"></td><td>' + fileToUpLoad["name"] + '</td><td>' + fileToUpLoad["size"] + 'byte</td><td><a href="" class="text-red" title="Xóa file"><i class="fa fa-trash-o"></i></a></td></tr>');
+                    }
+
+
+                    // Mở nút hoàn thành
+                    $("#btnHoanThanhHS").show();
+
+                });
+            }
+        });
+    });
+
+
+
 });
     // var changeMenu = document.getElementsByClassName('fa-bars');
     // var changeMenu = document.querySelector('.fa-bars');

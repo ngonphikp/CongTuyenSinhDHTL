@@ -664,14 +664,20 @@ class Admin extends CI_Controller{
         echo "<script>alert('Xóa Thành Công !!!')</script>";
         $this->get_list_csdt();
     }
-    
+    public function delete_hsxt($id){
+        $this->load->model("Mhsxt");
+        $this->Mhsxt->deleteById($id);
+        echo "<script>alert('Xóa Thành Công !!!')</script>";
+        $this->get_list_hsxt();
+    }
        
         public function get_list_hsxt(){
             $this->load->model("Mhsxt");
             $config['total_rows'] = $this->Mhsxt->countAll();
             $config['base_url'] = base_url()."index.php/admin/get_list_hsxt";
             $config['per_page'] = 5;
-            $start=$this->uri->segment(3);
+            //$start=$this->uri->segment(3);
+            $start=0;
             $this->load->library('pagination', $config);
             $data['listHsxt']= $this->Mhsxt->getList($start, $config['per_page']);
             //$data['listTs']= $this->Mts->getList($start, $config['per_page']);
@@ -806,7 +812,8 @@ class Admin extends CI_Controller{
             $config['base_url'] = base_url()."index.php/admin/get_list_csdt";
             $config['per_page'] = 5;
     
-            $start=$this->uri->segment(3);
+            //$start=$this->uri->segment(3);
+            $start=0;
             $this->load->library('pagination', $config);
             $data['listCsdt']= $this->Mcsdt->getList($start, $config['per_page']);
             $this->load->view("admin/get_list_csdt_admin_view", $data);
@@ -864,7 +871,8 @@ class Admin extends CI_Controller{
                     $this->load->model("Mcsdt");
                     $this->Mcsdt->edit($id,$tencsdt, $tinhthanhphocsdt, $quanhuyencsdt, $phuongthixacsdt, $thonbanduongphocsdt);
                     echo "<script>alert('Sửa Thành Công !!!')</script>";
-                    $this->edit_csdt($id);
+                    //$this->edit_csdt($id);
+                    $this->get_list_csdt();
                     
             }
             

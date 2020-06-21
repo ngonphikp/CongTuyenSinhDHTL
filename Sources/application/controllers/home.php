@@ -343,7 +343,6 @@ class Home extends CI_Controller{
             }
         }
     }
-
     
     public function hosoxettuyen($ma_ts){        
         $this->load->model("Mts");
@@ -356,6 +355,10 @@ class Home extends CI_Controller{
         // $data['listNhomNganh']= $this->Mndt->getListAll();
         // $this->load->model("Mthm");
         // $data['listToHopMon']= $this->Mthm->getListAll();
+        $this->load->model("Mnv");
+        $data['listNv']=$this->Mnv->getByMaHsxt($ma_ts);
+        $this->load->model("Mfmc");
+        $data['listFmc']=$this->Mfmc->getByMaHsxt($ma_ts);
         $this->load->view("home/hosoxettuyen", $data);
     }
 }
