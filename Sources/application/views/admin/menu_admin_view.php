@@ -1,93 +1,171 @@
-<div class="panel-group me-menu-admin">
-    <?php
-        if ($this->session->userdata("cap_do") == 0){
-            ?>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#me-admin-tv"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Tài Khoản</a>
-                    </h4>
-                </div>
-                <div id="me-admin-tv" class="panel-collapse collapse">
-                    <ul>
-                        <li><a href="<?php echo base_url();?>index.php/admin/add_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Tài Khoản</a></li>
-                        <li><a href="<?php echo base_url();?>index.php/admin/get_list_user"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Tài Khoản</a></li>
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <a href="index3.html" class="brand-link">
+      <img src="<?php echo base_url();?>assets/dist/img/AdminLTELogo.png" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Home Admin</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="<?php echo base_url();?>assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Nguyễn Xuân Phi</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+          </li>
+           <?php
+            if ($this->session->userdata("cap_do") == 0){
+                ?>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>
+                        Quản lý tài khoản
+                        <i class="right fas fa-angle-left"></i>
+                    </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                          
+                          <a class="nav-link" href="<?php echo base_url();?>admin/add_user">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Thêm tài khoản</p>
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="<?php echo base_url();?>admin/get_list_user">
+                            <i class="far fa-circle nav-icon"></i>
+                            <p>Xem tài khoản</p>  
+                          </a>
+                      </li>
                     </ul>
-                </div>
-            </div>
-        <?php
-        }
-    ?>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" href="#me-admin-cs"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Cơ Sở Đào Tạo</a>
-            </h4>
-        </div>
-        <div id="me-admin-cs" class="panel-collapse collapse">
-            <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_csdt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Cơ Sở</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_csdt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Cơ Sở</a></li>
+                </li>
+            <?php
+            }
+            ?>
+          <li class="nav-item h
+          as-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-university"></i>
+              <p>
+                Quản lý cơ sở đào tạo
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url();?>admin/add_csdt">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Thêm cơ sở</p> 
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url();?>admin/get_list_csdt">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Xem Cơ Sở</p>  
+                  </a>
+                </li>
             </ul>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" href="#me-admin-ndt"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Ngành Đào Tạo</a>
-            </h4>
-        </div>
-        <div id="me-admin-ndt" class="panel-collapse collapse">
-            <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_ndt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Ngành Đào Tạo</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_ndt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Ngành Đào Tạo</a></li>
+          </li>
+          <li class="nav-item h
+          as-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Quản lý ngành đào tạo
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url();?>admin/add_ndt">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Thêm Ngành Đào Tạo</p> 
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url();?>admin/get_list_ndt"> 
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Xem Ngành Đào Tạo</p>
+                  </a>
+                </li>
             </ul>
-        </div>
-    </div>
-    <!-- <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" href="#me-admin-thm"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý tổ hợp môn xét tuyển</a>
-            </h4>
-        </div>
-        <div id="me-admin-thm" class="panel-collapse collapse">
-            <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_thmxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm tổ hợp môn xét tuyển</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_thmxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem tổ hợp môn xét tuyển</a></li>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-folder-open"></i>
+              <p>
+                Quản lý hồ sơ xét tuyển
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url();?>admin/add_hsxt">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Thêm Hồ Sơ Xét Tuyển</p> 
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url();?>admin/get_list_hsxt">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Xem Hồ Sơ Xét Tuyển</p> 
+                  </a>
+                </li>
             </ul>
-        </div>
-    </div> -->
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" href="#me-admin-hsxt"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Hồ Sơ Xét Tuyển</a>
-            </h4>
-        </div>
-        <div id="me-admin-hsxt" class="panel-collapse collapse">
-            <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_hsxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Hồ Sơ Xét Tuyển</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_hsxt"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Hồ Sơ Xét Tuyển</a></li>
+          </li>
+          <li class="nav-item h
+          as-treeview">
+            <a href="<?php echo base_url();?>index.php/admin/get_list_dm" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Quản lý danh mục
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item h
+          as-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Quản lý bài viết
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url();?>admin/add_bv">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Thêm bài viết</p> 
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url();?>admin/get_list_bv">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Xem bài viết</p> 
+                  </a>
+                </li>
             </ul>
-        </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
     </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a href="<?php echo base_url();?>index.php/admin/get_list_dm"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Danh Mục</a>
-            </h4>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-                <a data-toggle="collapse" href="#me-admin-bv"><i class="fa fa-user" aria-hidden="true"></i>   Quản lý Bài Viết</a>
-            </h4>
-        </div>
-        <div id="me-admin-bv" class="panel-collapse collapse">
-            <ul>
-                <li><a href="<?php echo base_url();?>index.php/admin/add_bv"><i class="fa fa-angle-right" aria-hidden="true"></i>  Thêm Bài Viết</a></li>
-                <li><a href="<?php echo base_url();?>index.php/admin/get_list_bv"><i class="fa fa-angle-right" aria-hidden="true"></i>  Xem Bài Viết</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+    <!-- /.sidebar -->
+  </aside>

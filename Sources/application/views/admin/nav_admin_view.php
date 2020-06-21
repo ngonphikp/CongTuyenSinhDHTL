@@ -1,27 +1,43 @@
-<header>
-    <nav class="me-nav navbar navbar-light navbar-expand-md navigation-clean-button">
-        <a class="navbar-brand" href="<?php echo base_url();?>index.php/admin">
-            <span><img src="<?php echo base_url();?>assets/img/logo/Logo-Thuy_Loi.png">Home Admin</span>
-        </a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav nav-right">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="<?php echo base_url();?>">Website</a>
+<div class="wrapper">
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <div class="navbar__left">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="<?php echo base_url();?>admin/index" class="nav-link">Home</a>
                 </li>
             </ul>
-            <p class="ml-auto navbar-text actions">
-                <div class="dropdown">
-                    <a class="btn btn-light" style="color: black;"><i class="fa fa-user"></i><?php echo $this->session->userdata("ho_ten_tk"); ?></a>
-                    <div class="dropdown-content">
-                        <a href="<?php echo base_url() . "index.php/home/ttcn/" . $this->session->userdata("id_tk");?>"><i class="fa fa-cogs"></i>Setting</a>
-                        <a href="<?php echo base_url();?>index.php/home/logout"><i class="fa fa-power-off"></i>Logout</a>
+
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
                     </div>
                 </div>
-            </p>
+            </form>
+        </div>
+        <div class="navbar__right">
+            <div class="toggle_home_admin">
+                <div class="rediect">
+                    <a class="nav-link" href="<?php echo base_url();?>">Cổng Tuyển Sinh Đại Học Thủy Lợi</a>
+                </div>
+                <div class="account_admin">
+                    <a style="color:#555;" class="user_name-ad">
+                        <i class="fa fa-user"></i>
+                        <?php echo $this->session->userdata("ho_ten_tk"); ?>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="<?php echo base_url() . "index.php/home/ttcn/" . $this->session->userdata("id_tk");?>"><i class="fa fa-cogs"></i>Cài đặt</a>
+                        <a href="<?php echo base_url();?>index.php/home/logout"><i class="fa fa-power-off"></i>Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
-</header>
