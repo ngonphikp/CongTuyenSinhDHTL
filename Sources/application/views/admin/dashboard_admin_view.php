@@ -45,7 +45,7 @@
                 <p>Tổng số hồ sơ xét tuyển</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="far fa-file"></i>
               </div>
             </div>
           </div>

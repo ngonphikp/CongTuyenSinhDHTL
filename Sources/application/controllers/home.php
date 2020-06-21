@@ -140,9 +140,12 @@ class Home extends CI_Controller{
     public function xhb(){
         $this->load->view('site/xethocbaonline/index');
     }
-    public function tracuutuyensinh(){
-        $this->load->view('site/tracuutuyensinh/index');
-    }
+    // public function xhb2(){
+    //     $this->load->view('site/xethocbaonline/themnguyenvong');
+    // }
+    // public function xhb3(){
+    //     $this->load->view('site/xethocbaonline/noptailieu');
+    // }
     public function login_mb(){
         $this->load->view('site/Login_moblie/index');
     }
