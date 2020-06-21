@@ -38,7 +38,7 @@ class Home extends CI_Controller{
         $this->load->view('site/tracuutuyensinh/index');
     }
     public function login_mb(){
-        $this->load->view('site2/Login_moblie/index');
+        $this->load->view('site/Login_moblie/index');
     }
     
     public function checkLogin(){
