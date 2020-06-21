@@ -513,3 +513,5 @@ INSERT INTO chi_tiet_bai_viet (ma_bv, noi_dung_chi_tiet_ctbv, link_anh_ctbv) VAL
 -- delete from chi_tiet_bai_viet where ma_bv = '5';
 -- select * from danh_muc where ma_dm <> '1.1';
 
+-- select * from nguyen_vong where ma_hsxt='1';
+select * from file_minh_chung;

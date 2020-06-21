@@ -462,7 +462,7 @@
 
                                             <th>Tổ hợp xét tuyển</th>
                                             <th>Trạng thái</th>
-                                            <th>#</th>
+                                            <!-- <th>#</th> -->
                                         </tr>
                                         <!-- <tr ng-repeat="nv in item.aspirationDtos">
 
@@ -685,107 +685,82 @@
 
 
 
-                                <!--Minh chứng-->
-                                <div class="col-md-12" ng-show="item.aspirationDtos.length>0">
-                                    <div class="row">
-                                        <div style="padding-top:10px;margin-bottom: 15px;"
-                                            class="form-group has-success">
-                                            <label><i class="fa fa-check" aria-hidden="true"></i> Danh mục file minh
-                                                chứng </label>
-                                        </div>
-                                        <table class="table table-bordered table-hover" style="background-color:white"
-                                            ng-show="item.candidateAttachments.length>0">
-                                            <tr style="background-color: bisque;">
-                                                <th>TT</th>
-                                                <th>Mô tả</th>
-                                                <th>Tên file</th>
-                                                <th>Dung lượng</th>
-                                                <th>#</th>
-                                            </tr>
-                                            <tr ng-repeat="file in item.candidateAttachments">
-                                                <td ng-bind="$index+1"></td>
-                                                <td>
-                                                    <input type="text" max="100" class="form-control"
-                                                        ng-model="file.FileDescription" placeholder="Mô tả">
-                                                </td>
-                                                <td ng-bind="file.FileName"></td>
+                                
+<!--Minh chứng-->
+<div class="col-md-12" ng-show="item.aspirationDtos.length>0" id="form_file_minh_chung" style="display:none;">
+    <div class="row">
+        <div style="padding-top:10px;margin-bottom: 15px;" class="form-group has-success">
+            <label><i class="fa fa-check" aria-hidden="true"></i> Danh mục file minh chứng </label>
+        </div>
+        <table class="table table-bordered table-hover" style="background-color:white" ng-show="item.candidateAttachments.length>0" id = "form_minh_chung">
+            <tr style="background-color: bisque;">
+                <th>TT</th>
+                <th id="mota">Mô tả</th>
+                <th>Tên file</th>
+                <th>Dung lượng</th>
+                <!-- <th>#</th> -->
+            </tr>
+            <!-- <tr>
+                <td></td>
+                <td><input type="text" max="100" class="form-control" ng-model="file.FileDescription" placeholder="Mô tả"></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a href="javascript:void(0)" class="text-red" ng-click="DeleteAttachFile(file)" title="Xóa file" ng-if="item.ProgressStep<4">
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+                </td>
+            </tr> -->
+        </table>
+    </div>
 
-                                                <td ng-bind="file.FileSize/1024 + '(KB)'"></td>
-                                                <td>
-                                                    <a href="javascript:void(0)" class="text-red"
-                                                        ng-click="DeleteAttachFile(file)" title="Xóa file"
-                                                        ng-if="item.ProgressStep<4">
-                                                        <i class="fa fa-trash-o"></i>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="ShowAttachFile()" ng-show="!ViewAttachForm">
+                <label id="labelnopkemfileminhchung">+Nộp kèm file minh chứng và hoàn thành hồ sơ</label>
+            </div>
+            <!-- <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAttachFile()" ng-show="ViewAttachForm">
+                <label><i class="fa fa-minus" aria-hidden="true"></i> Nộp kèm file minh chứng và hoàn thành hồ sơ</label>
+            </div> -->
+        </div>
+    </div>
+</div>
+<div id="nopkemfileminhchungDiv" style="display:none;">
+    <div ng-show="ViewAttachForm" id="attachfile">
 
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;"
-                                                ng-click="ShowAttachFile()" ng-show="!ViewAttachForm">
-                                                <label id="labelnopkemfileminhchung">+Nộp kèm file minh chứng và hoàn
-                                                    thành hồ sơ</label>
-                                            </div>
-                                            <!-- <div style="border-bottom:0px solid #AAA;padding-top:10px;margin-bottom: 15px;" ng-click="HiddenAttachFile()" ng-show="ViewAttachForm">
-            <label><i class="fa fa-minus" aria-hidden="true"></i> Nộp kèm file minh chứng và hoàn thành hồ sơ</label>
-        </div> -->
-                                        </div>
-                                    </div>
+    
+        <div class="row">
+            <div class="col-md-12" style="padding-top: 30px;">
+                <div>
+                    Nộp kèm file minh chứng (ảnh chụp/scan: Phiếu ĐKXT, Học bạ hoặc Đơn xác nhận KQ học tập, Giấy xác nhận hưởng chế độ ưu tiên nếu có).
+                </div>
+                <div class="text-red">
+                    Lưu ý: Chỉ chấp nhận file pdf, jpg, jpeg, png. Có thể đính kèm nhiều file
+                </div>
+                <form id="first_form" method="post" enctype="multipart/form-data">
+                    <input type="file" id="file" name="file" accept="image/*" id = "file_xac_minh">
+                </form>
+            </div>
+        </div>    
+    </div>
 
-                                    <div id="nopkemfileminhchungDiv" style="display:none;">
-                                        <div ng-show="ViewAttachForm" id="attachfile">
-
-                                            <div class="row">
-                                                <div class="col-md-12" style="padding-top: 30px;">
-                                                    <div>
-                                                        Nộp kèm file minh chứng (ảnh chụp/scan: Phiếu ĐKXT, Học bạ hoặc
-                                                        Đơn xác nhận KQ học tập, Giấy xác nhận hưởng chế độ ưu tiên nếu
-                                                        có).
-                                                    </div>
-                                                    <div class="text-red">
-                                                        Lưu ý: Chỉ chấp nhận file pdf, jpg, jpeg, png. Có thể đính kèm
-                                                        nhiều file
-                                                    </div>
-                                                    <input type="file" id="fileAttach" ng-model="fileAttachs" ngf-select
-                                                        ngf-multiple="true" class="form-control"
-                                                        onchange="angular.element(this).scope().loadFile(this.files)"
-                                                        ng-disabled="item.ProgressStep==4" />
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="row" style="padding-top:30px">
-                                            <div class="col-sm-12 col-12">
-                                                <div class="col-sm-3 col-12" style="padding-bottom:20px">
-                                                    <button type="button" ng-click="SaveAttachFile()"
-                                                        class="btn btn-block btn-primary btn-lg"
-                                                        style="height:40px;font-size:17px;text-transform:uppercase"
-                                                        ng-disabled="item.ProgressStep==4">
-                                                        <i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu file minh
-                                                        chứng
-                                                    </button>
-                                                </div>
-                                                <div class="col-sm-3 col-12 pull-right" ng-if="item.ProgressStep>=3">
-                                                    <!--ng-if="item.ProgressStep>=3">-->
-                                                    <!--ng-disabled="item.ProgressStep==4"-->
-                                                    <button type="button" ng-click="Finish()"
-                                                        class="btn btn-block btn-primary btn-lg"
-                                                        style="height:40px;font-size:17px;text-transform:uppercase"
-                                                        ng-disabled="item.ProgressStep==4">
-                                                        <i class="fa fa-check" aria-hidden="true"></i> Hoàn thành hồ sơ</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                    </form>
-                                    <?php echo validation_errors();?>
-                                </div>
+    <div class="row" style="padding-top:30px">
+        <div class="col-sm-12 col-12">
+            <div class="col-sm-4 col-12" style="padding-bottom:20px">
+                <button type="button" id = "btn_luu_file_minh_chung" class="btn btn-block btn-primary btn-lg" style="height:40px;font-size:17px;text-transform:uppercase" ng-disabled="item.ProgressStep==4">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu file minh chứng
+                </button>
+            </div>
+            <div class="col-sm-4 col-12 pull-right" ng-if="item.ProgressStep>=3">
+                <!--ng-if="item.ProgressStep>=3">-->
+                <!--ng-disabled="item.ProgressStep==4"-->
+                <a class="btn btn-block btn-primary btn-lg" style="display:none;" id = "btnHoanThanhHS" onclick="return confirm('Bạn có muốn hoàn thành hồ sơ không?');" href="<?php echo base_url();?>admin/hoan_thanh_ho_so/<?php echo $ma_hsxt["ma_hsxt"]; ?>/<?php echo base64_encode($ts['email_ts']); ?>">
+                    <i class="fa fa-check" aria-hidden="true"></i> HOÀN THÀNH HỒ SƠ
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 <?php 

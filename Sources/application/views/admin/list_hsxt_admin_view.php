@@ -5,13 +5,13 @@
                 <div class="row">
                     <div class="col col-xs-6">
                         <h3 class="panel-title">Bảng hồ sơ xét tuyển</h3>
-                        <form action="<?php echo base_url();?>index.php/admin/get_list_hsxt_s" method="post" class="form-inline mr-auto">
+                        <!-- <form action="<?php echo base_url();?>index.php/admin/get_list_hsxt_s" method="post" class="form-inline mr-auto">
                             <div class="form-control">
                                 <label for="search-field"></label>
                                 <input class="form-control search-field" type="text" placeholder="Tìm kiếm.." name="search">
                                 <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>
@@ -53,9 +53,9 @@
                 foreach ($listHsxt as $row){?>
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_csdt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-pencil"></em></a>
+                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_hsxt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-pencil"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_csdt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_hsxt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['ma_hsxt'];?></td>
                         <td><?php echo $row['ho_ten_ts'];?></td>

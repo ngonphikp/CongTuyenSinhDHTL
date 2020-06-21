@@ -19,6 +19,12 @@ class Mnv extends CI_Model{
         $this->db->query("insert into nguyen_vong(ma_hsxt, ten_nguyen_vong, ma_csdt, ma_ndt, ma_thm,trang_thai)  values('$ma_hsxt','$tennguyenvong','$csdt_edit_ts', '$nhomnganhxettuyen', '$tohopxettuyen','Đã nhận');");
         //$this->db->query("insert into ho_so_xet_tuyen(ma_ts) values($ma_ts);");
     }
+
+    public function getByMaHsxt($ma_hsxt)
+    {
+        $query=$this->db->query("select * from nguyen_vong where ma_hsxt='$ma_hsxt';");
+        return $query->result_array();
+    }
     
 }
 ?>
