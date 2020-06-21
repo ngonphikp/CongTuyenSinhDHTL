@@ -7,7 +7,7 @@
                         <h1 class="title_form">Bảng thông tin ngành đào tạo</h1>
                         <form action="<?php echo base_url();?>index.php/admin/get_list_user_s" method="post" class="form-inline ml-3">
                             <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" name="search" placeholder="Tìm kiếm.." aria-label="Search">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
                                 <div class="input-group-append">
                                     <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
                                         <i class="fas fa-search"></i>
@@ -40,7 +40,7 @@
                 
                     <tr class="w3-animate-left">
                         <td align="center">
-                        <a  class="edit ed" href="<?php echo base_url();?>index.php/admin/edit_ndt/<?php echo $row['ma_ndt'];?>"><em class="fas fa-pencil-alt"></em></a>
+                            <a  class="edit ed" href="<?php echo base_url();?>index.php/admin/edit_ndt/<?php echo $row['ma_ndt'];?>"><em class="fas fa-pencil-alt"></em></a>
                             <br>
                             <a  class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_ndt/<?php echo $row['ma_ndt'];?>"><em class="fa fa-trash"></em></a>
                         </td>

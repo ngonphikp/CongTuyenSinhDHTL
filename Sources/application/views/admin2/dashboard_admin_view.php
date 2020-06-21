@@ -1,4 +1,5 @@
 <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
@@ -26,7 +27,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3><?php echo $countUser;?></h3>
+                <h3>44</h3>
 
                 <p>Tổng số thành viên</p>
               </div>
@@ -40,9 +41,9 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3><?php echo $countHSXT;?></h3>
+                <h3>150</h3>
 
-                <p>Tổng số hồ sơ xét tuyển</p>
+                <p>New Orders</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -54,7 +55,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3><?php echo $countBV;?><sup style="font-size: 20px"></sup></h3>
+                <h3>53<sup style="font-size: 20px">%</sup></h3>
 
                 <p>Tổng số bài viết</p>
               </div>
@@ -67,9 +68,9 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3><?php echo $countNDT;?></h3>
+                <h3>65</h3>
 
-                <p>Tổng Số ngành đào tạo</p>
+                <p>Số lượng người truy cập</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>

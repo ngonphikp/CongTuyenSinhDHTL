@@ -105,6 +105,9 @@
   .nav__menu{
     display: block!important;
   }
+  .navbar-expand{
+    flex-direction: column;
+  }
 }
 @media only screen and (max-width: 425px) {
   #nav .nav__mid{
@@ -118,7 +121,9 @@
     flex-direction: column;
   }
   .navbar__right{
-    font-size: 9px;
+    width: 100%;
+    font-size: 13px;
+    padding: 5px 0;
   }
 }
 @media only screen and (max-width: 375px) {

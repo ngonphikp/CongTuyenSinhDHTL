@@ -1,6 +1,6 @@
 <div class="content">
-    <div class="col-md-6 add-dm">
-        <h4 class="text-center"><b>Thêm Bài Viết</b></h4>
+    <div class="col-md-12">
+        <h1 class="title_form"><b>Thêm bài viết</b></h1>
     </div>
     <?php echo form_open_multipart('/admin/pro_add_bv'); ?>
         <div class="form">
@@ -36,10 +36,16 @@
                 </tr> -->
             </table>            
         </div>
-        <div class="col-md-3 form-group pull-right">
-            <!-- Thêm chi tiết -->
+        <!-- <div class="col-md-3 form-group pull-right">
             <input type="buton" value="Thêm chi tiết" class="btn btn-primary left" id = "add_ctbv_form_add_bv">                  
             <input type="submit" name="ok" value="Thêm" class="btn btn-primary right" id = "save_form_add_bv">
+        </div> -->
+        <div class="form-row form-group">
+            <div class="col-lg-3 col-md-3 label-column"><label class="col-form-label"></label></div>
+            <div class="col-lg-8 col-md-8 label-column">
+                <input type="buton" value="Thêm chi tiết" class="btn btn-primary left" id = "add_ctbv_form_add_bv">                  
+                <input class="btn btn-info" type="submit" value="Thêm">
+            </div>
         </div>
     </form>
     <?php echo validation_errors();?>

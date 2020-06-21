@@ -16,12 +16,12 @@ include_once "head_admin_view.php";
         <div class="container-fluid">
             <div class="row">
                 <!-- Menu -->
-                <div class="col-md-3 col-lg-3 me-admin-menu">
+                <div class="col-md-4 col-lg-3 me-admin-menu">
                     <?php include_once "menu_admin_view.php"; ?>
                 </div>
                 <!-- Nội dung Thay đổi -->
-                <div class="col-md-9 col-lg-9 me-admin-content">
-                    <?php include "list_user_admin_view.php"; ?>
+                <div class="col-md-8 col-lg-9 me-admin-content">
+                    <?php include "list_hsxt_admin_view.php"; ?>
                 </div>
             </div>
         </div>

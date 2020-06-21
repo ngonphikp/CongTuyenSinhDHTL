@@ -53,7 +53,6 @@ class Home extends CI_Controller{
         $data['WSKV'] = $this->Mdm->getByMaDM(5.2);
         $this->load->view("site/lienhe/index", $data);
     }
-
     public function tbxt(){
         $this->load->model("Mdm");
         $this->load->model("Mbv");

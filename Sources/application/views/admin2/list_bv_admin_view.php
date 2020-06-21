@@ -7,7 +7,7 @@
                         <h1 class="title_form">Bảng bài viết</h1>
                         <form action="<?php echo base_url();?>index.php/admin/get_list_bv_s" method="post" class="form-inline ml-3">
                             <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Tìm kiếm..." aria-label="Search">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
                                 <div class="input-group-append">
                                     <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
                                         <i class="fas fa-search"></i>
@@ -27,7 +27,7 @@
                     <th>Mã</th>
                     <th>Tiêu Đề</th>
                     <th>Nội Dung Tóm Tắt</th>
-                    <!-- <th>Link Ảnh Bìa</th>    -->
+                    <th>Link Ảnh Bìa</th>   
                     <th>Danh Mục</th>                 
                 </tr>
                 </thead>
@@ -35,18 +35,16 @@
                 <?php foreach ($listBV as $row){?>
                     <tr class="w3-animate-left">
                         <td align="center">
-                        <a  class="edit ed" href="<?php echo base_url() . 'index.php/admin/edit_bv/' . $row['ma_bv'];?>"><em class="fas fa-pencil-alt"></em></a>
+                            <a  class="edit ed" href="<?php echo base_url() . 'index.php/admin/edit_bv/' . $row['ma_bv'];?>"><em class="fas fa-pencil-alt"></em></a>
                             <br>
                             <a  class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_bv/" . $row['ma_bv'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['ma_bv'];?></td>
+                        <td><?php echo $row['tieu_de_bv'];?></td>
                         <td><?php
-                            echo substr($row['tieu_de_bv'],0,40) . "  ...";
+                            echo substr($row['noi_dung_tom_tat_bv'],0,70) . "  ...";
                             ?></td>
-                        <td><?php
-                            echo substr($row['noi_dung_tom_tat_bv'],0,40) . "  ...";
-                            ?></td>
-                        <!-- <td><?php //echo $row['link_anh_bia_bv'];?></td> -->
+                        <td><?php echo $row['link_anh_bia_bv'];?></td>
                         <td><?php echo $row['ten_dm'];?></td>
                     </tr>
                     <?php

@@ -6,7 +6,7 @@
         <div class="col-lg-6">
         <div class="row register-form">
             <form action="<?php echo base_url();?>index.php/admin/pro_add_user" method="post" class="custom-form" style="padding: 0; margin: 0; width: 100%">
-                <h1>Thêm Tài khoản</h1>
+                <h1 class="title_form">Thêm Tài khoản</h1>
                 <div class="form-row form-group">
                     <div class="col-sm-4 label-column"><label class="col-form-label">Tên Đăng Nhập</label></div>
                     <div class="col-sm-6 input-column"><input class="form-control" type="text" name="tk"></div>
@@ -44,7 +44,12 @@
                     <div class="col-sm-4 label-column"><label class="col-form-label">Địa Chỉ</label></div>
                     <div class="col-sm-6 label-column"><input class="form-control" type="text" name="dc"></div>
                 </div>
-                <input class="btn btn-light submit-button" type="submit" value="Đăng Ký">
+                <div class="form-row form-group">
+                    <div class="col-sm-4 label-column"><label class="col-form-label"></label></div>
+                    <div class="col-sm-6 label-column">
+                        <input class="btn btn-info submit-button" type="submit" value="Đăng Ký">
+                    </div>
+                </div>
             </form>
             <?php echo validation_errors();?>
         </div>

@@ -21,7 +21,7 @@ include_once "head_admin_view.php";
                 </div>
                 <!-- Nội dung Thay đổi -->
                 <div class="col-md-9 col-lg-9 me-admin-content">
-                    <?php include "list_user_admin_view.php"; ?>
+                    <?php include "add_user_admin_view.php"; ?>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 <?php
-include_once "head_admin_view.php";
+    include_once "head_admin_view.php";
 ?>
     <!-- Nav -->
     <div>
@@ -15,13 +15,11 @@ include_once "head_admin_view.php";
     <div>
         <div class="container-fluid">
             <div class="row">
-                <!-- Menu -->
-                <div class="col-md-3 col-lg-3 me-admin-menu">
+                <div class="me-admin-menu">
                     <?php include_once "menu_admin_view.php"; ?>
                 </div>
-                <!-- Nội dung Thay đổi -->
-                <div class="col-md-9 col-lg-9 me-admin-content">
-                    <?php include "list_user_admin_view.php"; ?>
+                <div class="me-admin-content">
+                    <?php include "dashboard_admin_view.php"; ?>
                 </div>
             </div>
         </div>
@@ -37,5 +35,5 @@ include_once "head_admin_view.php";
         </div>
     </div>
 <?php
-include_once "foot_admin_view.php";
+    include_once "foot_admin_view.php";
 ?>

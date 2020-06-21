@@ -3,18 +3,15 @@
         <div class="panel panel-default panel-table">
             <div class="panel-heading">
                 <div class="row">
-                    <div class="col col-xs-6 title_form-wrap">
+                    <div class="col col-xs-6">
                         <h1 class="title_form">Bảng cơ sở đào tạo</h1>
-                        <form action="<?php echo base_url();?>index.php/admin/get_list_csdt_s" method="post" class="form-inline ml-3">
-                            <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" name="search" placeholder="Tìm kiếm.." aria-label="Search">
-                                <div class="input-group-append">
-                                    <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </div>
+                        <!-- <form action="<?php //echo base_url();?>index.php/admin/get_list_csdt_s" method="post" class="form-inline mr-auto">
+                            <div class="form-control">
+                                <label for="search-field"></label>
+                                <input class="form-control search-field" type="text" placeholder="Tìm kiếm.." name="search">
+                                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>
@@ -37,6 +34,7 @@
                 <tbody>
                 <?php 
                 foreach ($listCsdt as $row){?>
+                
                     <tr class="w3-animate-left">
                         <td align="center">
                             <a class="edit ed" href="<?php echo base_url();?>index.php/admin/edit_csdt/<?php echo $row['ma_csdt'];?>"><em class="fas fa-pencil-alt"></em></a>

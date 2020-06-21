@@ -23,7 +23,7 @@ class Admin extends CI_Controller{
         $this->load->model("Mndt");
         $data['countNDT'] = $this->Mndt->countAll();
 
-        $this->load->view('admin/home_admin_view', $data);
+        $this->load->view('admin/index', $data);
     }
 
     //USER
