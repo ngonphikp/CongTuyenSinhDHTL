@@ -16,11 +16,11 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Menu -->
-                <div class="col-md-4 col-lg-3 me-admin-menu">
+                <div class="me-admin-menu">
                     <?php include_once "menu_admin_view.php"; ?>
                 </div>
                 <!-- Nội dung Thay đổi -->
-                <div class="col-md-8 col-lg-9 me-admin-content">
+                <div class="me-admin-content">
                     <?php include "dashboard_admin_view.php"; ?>
                 </div>
             </div>

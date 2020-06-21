@@ -1,6 +1,6 @@
 <div class="content">
     <div class="col-md-6 add-dm">
-        <h4 class="text-center"><b>Thêm Hồ Sơ Xét Tuyển</b></h4>
+        <h1 class="text-center"><b>Thêm Hồ Sơ Xét Tuyển</b></h1>
     </div>
     <?php echo form_open_multipart('/admin/pro_add_hsxt'); ?>
     <div class="form">

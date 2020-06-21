@@ -56,11 +56,6 @@
 .navigation-clean-button .navbar-toggle .icon-bar {
   background-color:#888;
 }
-
-.navigation-clean-button .navbar-collapse, .navigation-clean-button .navbar-form {
-  border-top-color:#ddd;
-}
-
 .navigation-clean-button .navbar-nav > .active > a, .navigation-clean-button .navbar-nav > .open > a {
   background:none;
   box-shadow:none;

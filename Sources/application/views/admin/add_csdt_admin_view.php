@@ -5,10 +5,6 @@
     <?php echo form_open_multipart('/admin/pro_add_csdt'); ?>
         <div class="form">
             <table class="table">
-               
-               
-               
-                
                 <table class="table">
                 <tr>
                     <td><P>Tên cơ sở đào tạo:</p></td>

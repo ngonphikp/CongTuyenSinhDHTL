@@ -20,6 +20,34 @@ $(document).ready(function () {
         $(this).parent().parent().remove();
         //countAdd--;
     });
+    var panel_df = $(".panel-default");
+    for(var i = 0 ; i < panel_df.length ; i++){
+        panel_df[i].click(function(){
+            // $(".panel-heading").addClass("active");
+            console.log(panel_df + "a");
+        })
+    }
+    var nav_item_link = $(".nav-item_link");
+    var me_admin_menu = $(".me-admin-menu");
+    var info = $(".info");
+    info.show();
+    // $(nav_item_link).click(function(){
+    //     $(me_admin_menu).toggle("width","5%");
+    //     $(info).toggle();
+    // })
+    $(nav_item_link).click( function() {
+        var toggleWidth = $(me_admin_menu).width() == 297 ? "68px" : "297px";
+        $(me_admin_menu).animate({ width: toggleWidth });
+        $(info).toggle();
+    });
+    //class toggle with CSS animation would allow for percentages
+    // $('.toggle-button-two').click( function() {
+    //     $('.toggle.two').toggleClass('hot');
+    //     //var toggleWidth = $("#toggle").width() == 800 ? "0px" : "800px";
+    //     //$('#toggle').animate({ width: toggleWidth });
+    // });
+
+
 
     $(save_form_add_bv).click(function () {
         $("#count_ctbv_form_add_bv").val((countAdd + ""));

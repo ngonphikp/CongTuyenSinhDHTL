@@ -2,7 +2,7 @@
 
 <script src="<?php echo base_url();?>assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="<?php echo base_url();?>assets/js/script-admin.js"></script>
-
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <!-- jQuery -->
 <!-- <script src="<?php //echo base_url();?>assets/plugins/jquery/jquery.min.js"></script> -->
 

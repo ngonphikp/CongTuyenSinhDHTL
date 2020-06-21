@@ -21,7 +21,7 @@ class Admin extends CI_Controller{
     public function get_list_user(){
         $this->load->model("Muser");
         $config['total_rows'] = $this->Muser->countAll();
-        $config['base_url'] = base_url()."index.php/admin/get_list_user";
+        $config['base_url'] = base_url()."admin/get_list_user";
         $config['per_page'] = 5;
 
         $start=$this->uri->segment(3);
