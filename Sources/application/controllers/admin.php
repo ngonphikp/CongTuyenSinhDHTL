@@ -893,10 +893,61 @@ class Admin extends CI_Controller{
             $this->email->bcc("ngonphikp@gmail.com"); 
             $this->email->subject("Hồ sơ xét tuyển học bạ của bạn");
 
-            $this->email->message("<b>Link</b> hồ sơ của bạn: ".base_url()."home/hosoxettuyen/$ma_hsxt");
+            $mes = base_url()."home/hosoxettuyen/$ma_hsxt";
+
+            $this->email->message("Bạn đã hoàn thành hồ sơ");
+
+            // Tạo QR Code
+            $this->load->library('ciqrcode');
+
+            $params['data'] = $mes;
+            $params['level'] = 'H';
+            $params['size'] = 20;
+            $path = '\assets\img\qrcode\\' . base64_encode($mes) . '.png';
+
+            //var_dump($path);
+            $params['savename'] = FCPATH . $path;
+
+            $this->ciqrcode->generate($params);
+            
+            $linkfile = base_url(). $path;
+
+            //echo '<img src="' . $linkfile . '" />';
+
+            // End - QRCode
+
+            $this->email->attach($linkfile);
+
             $result = $this->email->send();
             echo $this->email->print_debugger();            
 
             redirect(base_url() . "home/hosoxettuyen/$ma_hsxt");
-        }
+        }    
+
+    public function QRCode()
+    {
+        $this->load->view('test/testQRCode');
+    }
+
+    public function pro_QRCode()
+    {
+        var_dump($_POST);
+
+        $url = $_POST["url"];
+
+        $this->load->library('ciqrcode');
+
+        $params['data'] = $url;
+        $params['level'] = 'H';
+        $params['size'] = 20;
+        $path = '\assets\img\qrcode\\' . base64_encode($url) . '.png';
+
+        var_dump($path);
+        $params['savename'] = FCPATH . $path;
+
+        $this->ciqrcode->generate($params);
+        $linkfile = base_url(). $path;
+
+        echo '<img src="' . $linkfile . '" />';
+    }
 }
