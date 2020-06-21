@@ -1,4 +1,4 @@
-/*Reset*/
+/* 
 .container-fluid{
     padding: 0;
     width: 100%;
@@ -12,7 +12,7 @@
     border-radius: 5px;
     color: #fff!important;
 }
-/*Nav*/
+
 #header{
     border-bottom: 1px solid #dee2e6;
     margin-left: 300px;
@@ -25,11 +25,11 @@
     border: 0;
     background-color: #f2f4f6;
 }
-::-webkit-input-placeholder { /* Edge */
+::-webkit-input-placeholder {
     font-size:12px;
 }
 
-:-ms-input-placeholder { /* Internet Explorer */
+:-ms-input-placeholder {
     font-size:12px;
 }
 
@@ -62,9 +62,6 @@ header .me-nav {
 header .me-nav .navbar-brand img{
     height: 35px;
 }
-/* header .me-nav .dropdown .dropdown-menu{
-    background-color: #0069d9;
-} */
 header .me-nav .dropdown-item:hover{
     background-color: white;
 }
@@ -78,7 +75,6 @@ header .me-nav #navcol-1 .nav-link:hover{
 .form-control{
     border-radius: 0px;
 }
-/*Menu*/
 .me-menu-admin{
     padding:10px;
 }
@@ -107,23 +103,14 @@ header .me-nav #navcol-1 .nav-link:hover{
     border-left: 5px solid #fff;
     border-bottom: 5px solid transparent;
 }
-/* .panel-title>a:focus{
-    color: #ff9708;
-    text-decoration: underline;
-} */
-/* .panel-title>a:hover{
-    text-decoration: underline;
-    color: #ff9708;
-} */
+
 .panel-title>a:active{
     text-decoration: underline;
 }
 
-/*Footer*/
 .me-footer-admin .copyright{
     font-size: 15px;
 }
-/*Nội dung thay đổi*/
 .me-admin-menu{
     background-color: #343a40;
     position: fixed;
@@ -193,31 +180,23 @@ header .me-nav #navcol-1 .nav-link:hover{
     font-size: 15px;
     color: #dee2e6;
 }
-/* .me-admin-menu .panel-default .me-admin-bv ul li a{
-    font-size: 13px;
-} */
 .me-admin-content{
     flex-grow: 1;
     min-height: 560px;
     margin-left: 300px;
 }
 
-/*List*/
 .me-list-admin{
     width: 100%;
     padding: 10px;
     overflow-y: auto;
 }
-/* .me-menu-admin .admin_menu{
-    
-} */
 .list123{
     font-size: 1.5em;
     color: #dc3545;
     text-align: center;
 }
 
-/*Dashboard*/
 .content{
     padding: 20px 30px;
 }
@@ -225,7 +204,6 @@ header .me-nav #navcol-1 .nav-link:hover{
     padding: 0 30px;
 }
 
-/*Form đăng ký*/
 .Sex{
     height: 100%;
     width: 100%;
@@ -235,8 +213,6 @@ header .me-nav #navcol-1 .nav-link:hover{
     float: left;
     height: 100%;
 }
-
-/*Drop menu*/
 .dropdown {
     height: 100%;
     display: flex;
@@ -283,7 +259,7 @@ header .me-nav #navcol-1 .nav-link:hover{
     background-color: #3e8e41;
 }
 
-/*Form TTCN*/
+
 .me-TTCN {
     padding-top: 30px;
     box-sizing: border-box;
@@ -305,6 +281,109 @@ header .me-nav #navcol-1 .nav-link:hover{
 }
 .me-TTCN #me-setting-ttcn{
     border-radius: 30px;
-    position: absolute; /*lớp cha * relative */
+    position: absolute;
     right: 0;
+} */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar-expand .nav-link{
+    display: inline;
+}
+.me-admin-content h1{
+    margin: 0;
+}
+.navbar-expand{
+    justify-content: space-between;
+}
+.navbar-expand .navbar__left{
+    flex: 0 0 50%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.navbar .account_admin{
+    margin-right: 30px;
+    position: relative;
+}
+.navbar .account_admin:hover .dropdown-content{
+    display: block;
+}
+.navbar .account_admin a i{
+    margin-right: 5px;
+}
+.me-admin-content{
+    color: #555;
+}
+.me-admin-content .title_form-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+}
+.me-admin-content h1.title_form{
+    text-align: center;
+    font-size: 30px;
+    padding: 15px 0px;
+}
+.me-admin-content table{
+    font-size: 13px;
+}
+.me-admin-content table .edit{
+    color: #d70018;
+}
+.me-admin-content table .ed{
+    font-size: 20px;
+}
+.me-admin-content form textarea{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.row_add-bv{
+    display: flex;
+}
+.row_add-bv .add_bv{
+    margin-left: 10px;
+}
+.Sex{
+    display: flex;    
+}
+.Sex .form-check{
+    margin-right: 10px;
+}
+.layout-fixed .main-sidebar{
+    font-size: 15px;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 3px 7px 0px #ccc;
+    z-index: 3;
+    left: -11%;
+    padding: 10px 4px;
+    color: #000;
+    background: #fff;
+    top: calc(100%);
+    border-radius: 5px;
+    transform-origin: right top;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px !important;
+}
+.dropdown-content a:hover {
+    background-color: #9c27b0;
+    color: #fff!important;
+    border-radius: 5px;
+}
+.toggle_home_admin{
+    display: flex;
+    /* font-size: 13px; */
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
 }
