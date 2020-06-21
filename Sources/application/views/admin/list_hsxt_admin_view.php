@@ -53,9 +53,9 @@
                 foreach ($listHsxt as $row){?>
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_hsxt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-pencil"></em></a>
+                            <a class="edit ed" href="<?php echo base_url();?>index.php/admin/edit_hsxt/<?php echo $row['ma_hsxt'];?>"><em class="fas fa-pencil-alt"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_hsxt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_hsxt/<?php echo $row['ma_hsxt'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['ma_hsxt'];?></td>
                         <td><?php echo $row['ho_ten_ts'];?></td>

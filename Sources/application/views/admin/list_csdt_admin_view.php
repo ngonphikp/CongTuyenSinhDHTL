@@ -37,9 +37,9 @@
                 
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_csdt/<?php echo $row['ma_csdt'];?>"><em class="fa fa-pencil"></em></a>
+                            <a class="edit ed" href="<?php echo base_url();?>index.php/admin/edit_csdt/<?php echo $row['ma_csdt'];?>"><em class="fas fa-pencil-alt"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_csdt/<?php echo $row['ma_csdt'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_csdt/<?php echo $row['ma_csdt'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['ma_csdt'];?></td>
                         <td><?php echo $row['ten_csdt'];?></td>

@@ -1,12 +1,10 @@
 @media only screen and (max-width: 1024px) {
-   
-}
-
-@media only screen and (max-width: 768px) {
   body {
     font-size: 12px;
   }
+}
 
+@media only screen and (max-width: 768px) {
   .header__wrapp .header__left #logo{
     width: 120px!important;
   }
@@ -67,6 +65,9 @@
   .D_table{
     overflow: auto;
   }
+  .navbar-expand .navbar__left{
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 576px) { 
   #nav .nav__left--list li{
@@ -116,7 +117,9 @@
   #header .header__wrapp{
     flex-direction: column;
   }
-
+  .navbar__right{
+    font-size: 9px;
+  }
 }
 @media only screen and (max-width: 375px) {
    

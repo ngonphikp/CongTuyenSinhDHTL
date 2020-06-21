@@ -37,9 +37,9 @@
                 <?php foreach ($listUser as $row){?>
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_user/<?php echo $row['id_tk'];?>"><em class="fa fa-pencil"></em></a>
+                            <a class="edit ed" href="<?php echo base_url();?>index.php/admin/edit_user/<?php echo $row['id_tk'];?>"><em class="fas fa-pencil-alt"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_user/<?php echo $row['id_tk'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_user/<?php echo $row['id_tk'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['id_tk'];?></td>
                         <td><?php echo $row['ten_dang_nhap'];?></td>

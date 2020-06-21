@@ -3,13 +3,25 @@
         <div class="panel panel-default panel-table">
             <div class="panel-heading">
                 <div class="row">
-                    <div class="col col-xs-6">
-                        <h3 class="panel-title">Bảng Bài Viết</h3>
+                    <div class="col col-xs-6 title_form-wrap">
+                        <h1 class="title_form">Bảng bài viết</h1>
+                        <!-- <form action="<?php echo base_url();?>index.php/admin/get_list_bv_s" method="post" class="form-inline ml-3">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form> -->
                         <form action="<?php echo base_url();?>index.php/admin/get_list_bv_s" method="post" class="form-inline mr-auto">
                             <div class="form-control">
-                                <label for="search-field"></label>
                                 <input class="form-control search-field" type="text" placeholder="Search.." name="search">
-                                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                                <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
+                                    <i class="fa fa-search">
+                                    </i>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -24,7 +36,7 @@
                     <th>Mã</th>
                     <th>Tiêu Đề</th>
                     <th>Nội Dung Tóm Tắt</th>
-                    <!-- <th>Link Ảnh Bìa</th>    -->
+                    <th>Link Ảnh Bìa</th>   
                     <th>Danh Mục</th>                 
                 </tr>
                 </thead>
@@ -32,18 +44,16 @@
                 <?php foreach ($listBV as $row){?>
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url() . 'index.php/admin/edit_bv/' . $row['ma_bv'];?>"><em class="fa fa-pencil"></em></a>
+                            <a  class="edit ed" href="<?php echo base_url() . 'index.php/admin/edit_bv/' . $row['ma_bv'];?>"><em class="fas fa-pencil-alt"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_bv/" . $row['ma_bv'];?>"><em class="fa fa-trash"></em></a>
+                            <a  class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_bv/" . $row['ma_bv'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['ma_bv'];?></td>
+                        <td><?php echo $row['tieu_de_bv'];?></td>
                         <td><?php
-                            echo substr($row['tieu_de_bv'],0,40) . "  ...";
+                            echo substr($row['noi_dung_tom_tat_bv'],0,70) . "  ...";
                             ?></td>
-                        <td><?php
-                            echo substr($row['noi_dung_tom_tat_bv'],0,40) . "  ...";
-                            ?></td>
-                        <!-- <td><?php //echo $row['link_anh_bia_bv'];?></td> -->
+                        <td><?php echo $row['link_anh_bia_bv'];?></td>
                         <td><?php echo $row['ten_dm'];?></td>
                     </tr>
                     <?php

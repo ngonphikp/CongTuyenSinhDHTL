@@ -37,9 +37,9 @@
                 
                     <tr class="w3-animate-left">
                         <td align="center">
-                            <a class="btn btn-default" href="<?php echo base_url();?>index.php/admin/edit_ndt/<?php echo $row['ma_ndt'];?>"><em class="fa fa-pencil"></em></a>
+                            <a class="edit ed" href="<?php echo base_url();?>index.php/admin/edit_ndt/<?php echo $row['ma_ndt'];?>"><em class="fas fa-pencil-alt"></em></a>
                             <br>
-                            <a class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_ndt/<?php echo $row['ma_ndt'];?>"><em class="fa fa-trash"></em></a>
+                            <a class="delete ed" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url();?>index.php/admin/delete_ndt/<?php echo $row['ma_ndt'];?>"><em class="fa fa-trash"></em></a>
                         </td>
                         <td><?php echo $row['ma_ndt'];?></td>
                         <td><?php echo $row['ten_ndt'];?></td>
