@@ -1,7 +1,18 @@
-input:focus,button:focus{
+/* input:focus,button:focus{
     border: none;
-    outline: none;
     box-shadow: none!important;
+    border-radius: 0 4px 4px 0;
+} */
+.form_seach-hsxt{
+    display: flex!important;
+    border: none;
+    padding: 35px 0;
+}
+.form_seach-hsxt input{
+    border-radius: 4px 0 0 4px;
+}
+.form_seach-hsxt button{
+    border: 1px solid #ccc;
     border-radius: 0 4px 4px 0;
 }
 .active{
@@ -12,8 +23,7 @@ input:focus,button:focus{
     display: flex;
 }
 form .form-control:focus{
-    border-color: #ced4da;
-    box-shadow: none;
+    border:0;
 }
 .name-truong{
     text-align: center;

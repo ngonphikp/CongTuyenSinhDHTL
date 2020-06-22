@@ -6,10 +6,10 @@ body{
     border: none!important;
     outline: none!important;
 } */
-form .form-control:focus{
+/* form .form-control:focus{
     border-color: #ced4da;
     box-shadow: none;
-}
+} */
 .title-heading{
     display: flex;
     font-size: 18px;
@@ -51,11 +51,11 @@ form .form-control:focus{
     border: none;
     padding-left: 10px;
 }
-button:focus{
+/* button:focus{
     border: none!important;
     outline: none!important;
     box-shadow: none!important;
-}
+} */
 .btn-nguyenvong{
     display: flex;
     border-radius: 50px;

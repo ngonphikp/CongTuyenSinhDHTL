@@ -40,31 +40,31 @@
                 </li>
             </ul>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-sm-12">
                 <div class="col-sm-6"></div>
-                <div class="col-sm-6 float-right">
-                    <p>
-                        <strong>Tìm kiếm</strong>
-                    </p>
-                    <hr>
-                    <div class="Search_tt">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Số CMND">
-                        </div>
-                        <div class="form-group" style="display:flex;">
-                            <input type="text" class="form-control" placeholder="Mã số thí sinh">
-                            <button type="submit" class="btn">
-                                <i class="fas fa-search"></i>
-                            </button>
+                    <div class="col-sm-6 float-right">
+                        <p>
+                            <strong>Tìm kiếm</strong>
+                        </p>
+                        <hr>
+                        <div class="Search_tt">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Số CMND">
+                            </div>
+                            <div class="form-group" style="display:flex;">
+                                <input type="text" class="form-control" placeholder="Mã số thí sinh">
+                                <button type="submit" class="btn">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+
                         </div>
 
                     </div>
-
                 </div>
-
             </div>
-        </div>
+        </div> -->
 
 
         <div class="content">

@@ -25,19 +25,17 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="col-sm-6">
-                
                 </div>
-                
                 <div class="col-sm-3 float-right">
-                <form action="<?php echo base_url();?>home/get_hsxt_s" method="post" class="form-inline mr-auto">
-                            <div class="form-control">
-                                <input required  class="form-control search-field" type="text" placeholder="Mã tra cứu .." name="search">
-                                <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
-                                    <i class="fa fa-search">
-                                    </i>
-                                </button>
-                            </div>
-                        </form>
+                    <form action="<?php echo base_url();?>home/get_hsxt_s" method="post" class="form-inline mr-auto">
+                        <div class="form-control form_seach-hsxt">
+                            <input required  class="form-control search-field" type="text" placeholder="Mã tra cứu .." name="search">
+                            <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
+                                <i class="fa fa-search">
+                                </i>
+                            </button>
+                        </div>
+                    </form>
                     <!-- <p>
                         <strong>Tìm kiếm</strong>
                     </p>
@@ -120,7 +118,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Chứng minh thư nhân dân:</label>
-                            <input required  type="number" class="form-control" name="socmnd" id="cmt"
+                            <input required  type="number" class="form-control" min="0" max="999999999999" name="socmnd" id="cmt"
                                 placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân">
                         </div>
                     </div>
@@ -298,7 +296,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="title__ip">Điện thoại liên lạc:</label>
-                            <input required  type="text" class="form-control" name="sdt" placeholder="Điện thoại liên lạc">
+                            <input required  type="number" maxlength="10" class="form-control" name="sdt" placeholder="Điện thoại liên lạc">
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -313,7 +311,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Năm tốt nghiệp:</label>
-                            <input required  type="text" name="namtotnghiep" class="form-control" placeholder="Năm tốt nghiệp">
+                            <input required  type="number" min="1990" max="2020" name="namtotnghiep" class="form-control" placeholder="Năm tốt nghiệp">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -358,16 +356,13 @@
 
                 </div> -->
             </div>
-            <div class="col-md-3 form-group pull-right">
+            <div class="col-md-12 form-group pull-right">
                 <div class="col-md-12">
-                        <p style="color:#dd4b39;">Lưu ý: Mỗi CMTND chỉ được lưu 1 lần, vui lòng kiểm tra kỹ các thông
-                            tin trước khi đăng ký. </p>
-                            <div class="col-md-3 form-group pull-right">
-                            
+                    <p style="color:#dd4b39;">Lưu ý: Mỗi CMTND chỉ được lưu 1 lần, vui lòng kiểm tra kỹ các thôngtin trước khi đăng ký. </p>
+                        <div class="col-md-3 form-group pull-right">
+                            <input required  type="submit" name="ok" value="Lưu thông tin" class="btn btn-primary btn-block"> 
                         </div>
-                        <input required  type="submit" name="ok" value="Lưu thông tin" class="btn btn-primary btn-block"> 
                 </div>
-                
             </div>
             </form>
             <?php echo validation_errors();?>

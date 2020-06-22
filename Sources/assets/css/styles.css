@@ -163,8 +163,7 @@ Footer{
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
-
-/* Safari 4.0 - 8.0 */
+/* 
 @-webkit-keyframes example {
     0%   {background-color: #FFFFFF;}
     25%  {background-color: #CCFFFF;}
@@ -172,7 +171,6 @@ Footer{
     100% {background-color: #FFFFFF;}
 }
 
-/* Standard syntax */
 @keyframes example {
     0%   {background-color: #FFFFFF;}
     25%  {background-color: #CCFFFF;}
@@ -181,14 +179,12 @@ Footer{
 }
 
 .me-fix-dtm i {
-    -webkit-animation-name: example2; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 5s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: example2;
+    -webkit-animation-duration: 5s; 
     animation-name: example2;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
-
-/* Safari 4.0 - 8.0 */
 @-webkit-keyframes example2 {
     0%   {color: white; transform: rotate(45deg);}
     25%  {color: red}
@@ -196,13 +192,12 @@ Footer{
     100% {color: green}
 }
 
-/* Safari 4.0 - 8.0 */
 @-webkit-keyframes example2 {
     0%   {color: white; transform: rotate(45deg);}
     25%  {color: red}
     50%  {color: yellow}
     100% {color: green}
-}
+} */
 
 /*123 Pang*/
 .list123{
@@ -511,3 +506,17 @@ Footer{
 
 
 /* ******************DHTL__END********************** */
+#searchContent{
+    width: 100%;
+}
+#searchConten .pull-right{
+    padding-top: 10px;
+}
+#nopkemfileminhchungDiv .row .col-sm-12{
+    display: flex!important;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+#nopkemfileminhchungDiv .row .col-sm-12 .col-sm-4 #btnHoanThanhHS{
+    font-size: 15px;
+}
