@@ -31,7 +31,7 @@
                 <div class="col-sm-3 float-right">
                 <form action="<?php echo base_url();?>home/get_hsxt_s" method="post" class="form-inline mr-auto">
                             <div class="form-control">
-                                <input class="form-control search-field" type="text" placeholder="Mã tra cứu .." name="search">
+                                <input required class="form-control search-field" type="text" placeholder="Mã tra cứu .." name="search">
                                 <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
                                     <i class="fa fa-search">
                                     </i>
@@ -45,7 +45,7 @@
                     <div class="Search_tt">
                     
                     <div class="form-group" style="display:flex;"> -->
-                            <!-- <input type="text" class="form-control" placeholder="Mã tra cứu">
+                            <!-- <input required type="text" class="form-control" placeholder="Mã tra cứu">
                             <a href="<?php echo base_url();?>home/hosoxettuyen/1">
                             <button type="submit" class="btn">
                                 <i class="fas fa-search"></i>
@@ -53,7 +53,7 @@
                             </a>
                         </div> -->
                         <!-- <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Số CMND">
+                            <input required type="text" class="form-control" placeholder="Số CMND">
                         </div> -->
                         
 
@@ -74,14 +74,14 @@
                     <div class="col-md-9">
                         <div class="form-group">
                             <label for="" class="title__ip">Họ, chữ đệm và tên của thí sinh:</label>
-                            <input type="text" name="ht" class="form-control"
+                            <input required required type="text" name="ht" class="form-control"
                                 placeholder="Họ, chữ đệm và tên của thí sinh">
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="" class="title__ip">Giới tính:</label>
-                            <select name="gt" id="input" class="form-control">
+                            <select required  name="gt" id="input" class="form-control">
                                 <option value="">Giới tính</option>
                                 <option value="Nam">Nam</option>
                                 <option value="Nữ">Nữ</option>
@@ -93,14 +93,14 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Ngày/tháng/năm sinh:</label>
-                            <input type="date" name="ngaythangnamsinh" id="ngaythangnamsinh" class="form-control"
+                            <input required type="date" name="ngaythangnamsinh" id="ngaythangnamsinh" class="form-control"
                                 placeholder="">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Nơi sinh:</label>
-                            <select id="selNoiSinhAddHsxt" name="noisinh" class="form-control">
+                            <select required  id="selNoiSinhAddHsxt" name="noisinh" class="form-control">
                                 <option value=""></option>
                                 <option value="">Thành phố Hà Nội</option>
                                 <option value="">Thành phố Hồ Chí Minh</option>
@@ -110,7 +110,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Dân tộc:</label>
-                            <select id="selDanTocAddHsxt" name="dantoc" class="form-control">
+                            <select required  id="selDanTocAddHsxt" name="dantoc" class="form-control">
                                 <option value="">Chọn dân tộc</option>
                             </select>
                         </div>
@@ -120,20 +120,20 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Chứng minh thư nhân dân:</label>
-                            <input type="number" class="form-control" name="socmnd" id="cmt"
+                            <input required type="number" class="form-control" name="socmnd" id="cmt"
                                 placeholder="Số chứng minh thư nhân dân hoặc căn cước công dân">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Ngày cấp:</small> </label>
-                            <input type="date" name="ngaycap" class="form-control">
+                            <input required type="date" name="ngaycap" class="form-control">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Nơi cấp:<small>(ghi theo cmnd/cccd)</small> </label>
-                            <input type="text" class="form-control" name="noicap">
+                            <input required type="text" class="form-control" name="noicap">
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Tỉnh/TP:</label>
-                            <select id="selTinhThanhPhoAddHsxt" name="tinhthanhpho" class="form-control">
+                            <select required  id="selTinhThanhPhoAddHsxt" name="tinhthanhpho" class="form-control">
                                 <option value="">Chọn tỉnh thành phố</option>
 
                             </select>
@@ -158,7 +158,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Quận/huyện:</label>
-                            <select id="selQuanHuyenAddHsxt" name="quanhuyen" class="form-control">
+                            <select required  id="selQuanHuyenAddHsxt" name="quanhuyen" class="form-control">
                                 <option value="">Chọn quận huyện</option>
                             </select>
                         </div>
@@ -166,7 +166,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Xã/phường:</label>
-                            <input type="text" class="form-control" name="phuongthixa">
+                            <input required type="text" class="form-control" name="phuongthixa">
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="" class="title__ip">Thôn/bản/đường phố:</label>
-                            <input type="text" class="form-control" name="thonbanduongpho">
+                            <input required type="text" class="form-control" name="thonbanduongpho">
                         </div>
                     </div>
                 </div>
@@ -192,7 +192,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Tỉnh/TP:</label>
-                            <select id="selTinhThanhPhoLop10AddHsxt" name="tinhthanhpholop10" class="form-control">
+                            <select required  id="selTinhThanhPhoLop10AddHsxt" name="tinhthanhpholop10" class="form-control">
                                 <option value="">Chọn tỉnh thành phố</option>
 
                             </select>
@@ -201,7 +201,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Quận/huyện:</label>
-                            <select id="selQuanHuyenLop10AddHsxt" name="quanhuyenlop10" class="form-control">
+                            <select required  id="selQuanHuyenLop10AddHsxt" name="quanhuyenlop10" class="form-control">
                                 <option value="">Chọn quận huyện</option>
                             </select>
                         </div>
@@ -209,7 +209,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Trường THPT:</label>
-                            <select id="selTruongThptLop10AddHsxt" name="truongthptlop10" class="form-control">
+                            <select required  id="selTruongThptLop10AddHsxt" name="truongthptlop10" class="form-control">
                                 <option value="">Chọn trường:</option>
                             </select>
                         </div>
@@ -231,7 +231,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Tỉnh/TP:</label>
-                            <select id="selTinhThanhPhoLop11AddHsxt" name="tinhthanhpholop11" class="form-control">
+                            <select required  id="selTinhThanhPhoLop11AddHsxt" name="tinhthanhpholop11" class="form-control">
                                 <option value="">Chọn tỉnh thành phố</option>
 
                             </select>
@@ -240,7 +240,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Quận/huyện:</label>
-                            <select id="selQuanHuyenLop11AddHsxt" name="quanhuyenlop11" class="form-control">
+                            <select required  id="selQuanHuyenLop11AddHsxt" name="quanhuyenlop11" class="form-control">
                                 <option value="">Chọn quận huyện</option>
                             </select>
                         </div>
@@ -248,7 +248,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Trường THPT:</label>
-                            <select id="selTruongThptLop11AddHsxt" name="truongthptlop11" class="form-control">
+                            <select required  id="selTruongThptLop11AddHsxt" name="truongthptlop11" class="form-control">
                                 <option value="">Chọn trường:</option>
                             </select>
                         </div>
@@ -270,7 +270,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Tỉnh/TP:</label>
-                            <select id="selTinhThanhPhoLop12AddHsxt" name="tinhthanhpholop12" class="form-control">
+                            <select required  id="selTinhThanhPhoLop12AddHsxt" name="tinhthanhpholop12" class="form-control">
                                 <option value="">Chọn tỉnh thành phố</option>
 
                             </select>
@@ -279,7 +279,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Quận/huyện:</label>
-                            <select id="selQuanHuyenLop12AddHsxt" name="quanhuyenlop12" class="form-control">
+                            <select required  id="selQuanHuyenLop12AddHsxt" name="quanhuyenlop12" class="form-control">
                                 <option value="">Chọn quận huyện</option>
                             </select>
                         </div>
@@ -287,7 +287,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Trường THPT:</label>
-                            <select id="selTruongThptLop12AddHsxt" name="truongthptlop12" class="form-control">
+                            <select required  id="selTruongThptLop12AddHsxt" name="truongthptlop12" class="form-control">
                                 <option value="">Chọn trường:</option>
                             </select>
                         </div>
@@ -298,13 +298,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="title__ip">Điện thoại liên lạc:</label>
-                            <input type="text" class="form-control" name="sdt" placeholder="Điện thoại liên lạc">
+                            <input required type="text" class="form-control" name="sdt" placeholder="Điện thoại liên lạc">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="" class="title__ip">Email:</label>
-                            <input type="text" class="form-control" name="email" placeholder="Email">
+                            <input required type="text" class="form-control" name="email" placeholder="Email">
                         </div>
                         <span id="ShowError"></span>
                     </div>
@@ -313,13 +313,13 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Năm tốt nghiệp:</label>
-                            <input type="text" name="namtotnghiep" class="form-control" placeholder="Năm tốt nghiệp">
+                            <input required type="text" name="namtotnghiep" class="form-control" placeholder="Năm tốt nghiệp">
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Khu vực ưu tiên:</label>
-                            <select id="input" name="khuvucuutien" class="form-control">
+                            <select required  id="input" name="khuvucuutien" class="form-control">
                                 <option value="">Chọn khu vực</option>
                                 <option value="KV1">KV1</option>
                                 <option value="KV2">KV2</option>
@@ -331,7 +331,7 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="" class="title__ip">Đối tượng ưu tiên (nếu có):</label>
-                            <select id="input" name="doituonguutien" class="form-control">
+                            <select required  id="input" name="doituonguutien" class="form-control">
                                 <option value="">Đối tượng ưu tiên </option>
                                 <option value="01">01</option>
                                 <option value="02">02</option>
@@ -350,7 +350,7 @@
                             tin trước khi đăng ký. </p>
 
                         <div class="col-md-3 form-group pull-right">
-                            <input type="submit" name="ok" value="Lưu" class="btn btn-primary btn-block">
+                            <input required type="submit" name="ok" value="Lưu" class="btn btn-primary btn-block">
                         </div>
 
 
@@ -365,7 +365,7 @@
                             <div class="col-md-3 form-group pull-right">
                             
                         </div>
-                        <input type="submit" name="ok" value="Lưu thông tin" class="btn btn-primary btn-block"> 
+                        <input required type="submit" name="ok" value="Lưu thông tin" class="btn btn-primary btn-block"> 
                 </div>
                 
             </div>
