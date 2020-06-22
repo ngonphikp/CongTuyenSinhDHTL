@@ -2,6 +2,10 @@
 .border{border: 1px solid #fff;padding: 15px 0;}
 a{text-decoration: none!important;}
 /* *************NAV*********** */
+input:focus , button:focus{
+    border: none;
+    outline: none;
+}
 #nav{
     background: rgb(24, 158, 255);
 }
@@ -10,6 +14,7 @@ a{text-decoration: none!important;}
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 #nav .nav__left,#nav .nav__right{
     height: 100%;
@@ -25,6 +30,10 @@ a{text-decoration: none!important;}
 }
 #nav .nav__mid{
     width: 40%;
+}
+#nav .nav__wrapp .redect_admin{
+    position: absolute;
+    right: 80px;
 }
 #nav .nav__mid .search{
     width: 100%;

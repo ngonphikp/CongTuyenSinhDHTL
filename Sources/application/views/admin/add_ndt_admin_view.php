@@ -1,10 +1,10 @@
 <div class="content">
-    <div class="col-md-6 add-dm">
-        <h4 class="text-center"><b>Thêm Ngành đào tạo</b></h4>
+    <div class="col-md-12">
+        <h1 class="title_form">Thêm ngành đào tạo</h1>
     </div>
     <?php echo form_open_multipart('/admin/pro_add_ndt'); ?>
         <div class="form">
-            <table class="table">
+            <table class="table tb_ch">
             <tr>
                     <td><P>Mã ngành</p></td>
                     <td><textarea name="manganh" class="form-control" id="" cols="30" rows="1"></textarea></td>
@@ -16,11 +16,11 @@
                
                 <tr>
                     <td><P>Chương trình đào tạo</p></td>
-                    <td><textarea name="chuongtrinhdaotao" class="form-control" id="" cols="30" rows="10"></textarea></td>
+                    <td><textarea name="chuongtrinhdaotao" class="form-control" id="" cols="30" rows="2"></textarea></td>
                 </tr>
                 <tr>
                     <td><P>Ghi chú</p></td>
-                    <td><textarea name="ghichu" class="form-control" id="" cols="30" rows="10"></textarea></td>
+                    <td><textarea name="ghichu" class="form-control" id="" cols="30" rows="2"></textarea></td>
                 </tr>
                 <!-- <tr>
                     <td><P>Hình ảnh</p></td>
@@ -28,7 +28,7 @@
                 </tr> -->
                 <tr>
                     <td><P>Giới thiệu</p></td>
-                    <td><textarea name="gioithieu" class="form-control" id="" cols="30" rows="1"></textarea></td>
+                    <td><textarea name="gioithieu" class="form-control" id="" cols="30" rows="3"></textarea></td>
                 </tr>
                 
 
@@ -43,11 +43,10 @@
                         </select>
                     </td>
                 </tr>
-                
             </table>
         </div>
-        <div class="col-md-3 form-group pull-right">
-            <input type="submit" name="ok" value="Thêm" class="btn btn-primary btn-block">
+        <div class="col-md-3 form-group pull-right" style="margin-left:370px;">
+            <input type="submit" name="ok" value="Thêm" class="btn btn-primary">
         </div>
     </form>
     <?php echo validation_errors();?>

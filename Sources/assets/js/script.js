@@ -464,6 +464,24 @@ $(document).ready(function () {
         });
     });
 
+    var i = 0;
+    $(".btn_plus").click(function(){
+        if (i == 0) {
+            i = 1;
+            var elem = document.getElementsByClassName("num_1");
+            var width = 1;
+            var id = setInterval(frame, 10);
+            function frame() {
+              if (width >= 25) {
+                clearInterval(id);
+                i = 0;
+              } else {
+                width++;
+                elem.style.width = width + "%";
+              }
+            }
+          }
+    });
 
 
 });

@@ -3,13 +3,14 @@
         <div class="panel panel-default panel-table">
             <div class="panel-heading">
                 <div class="row">
-                    <div class="col col-xs-6">
-                        <h3 class="panel-title">Bảng thông tin ngành đào tạo</h3>
-                        <form action="<?php echo base_url();?>index.php/admin/get_list_ndt_s" method="post" class="form-inline mr-auto">
-                            <div class="form-control">
-                                <label for="search-field"></label>
+                    <div class="col col-xs-6 title_form-wrap">
+                        <h1 class="title_form">Bảng thông tin ngành đào tạo</h1>
+                        <form action="<?php echo base_url();?>index.php/admin/get_list_ndt_s" method="post" class="form-inline">
+                            <div class="form-control form_ip">
                                 <input class="form-control search-field" type="text" placeholder="Tìm kiếm.." name="search">
-                                <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                                <div class="btn_tk">
+                                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                                </div>
                             </div>
                         </form>
                     </div>

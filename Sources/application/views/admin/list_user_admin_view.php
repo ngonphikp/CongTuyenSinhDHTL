@@ -4,15 +4,14 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col col-xs-6 title_form-wrap">
-                        <h3 class="panel-title">Bảng User - Thông tin User</h3>
-                        <form action="<?php echo base_url();?>index.php/admin/get_list_user_s" method="post" class="form-inline mr-auto">
+                        <h1 class="title_form">Bảng User - Thông tin User</h1>
+                        <form action="<?php echo base_url();?>index.php/admin/get_list_user_s" method="post" class="form-inline">
                             <div class="form-control form_ip">
-                                <input class="form-control search-field" type="text" placeholder="Search.." name="search">
-                                <div>
+                                <input class="form-control search-field" type="text" placeholder="Tìm kiếm.." name="search">
+                                <div class="btn_tk">
                                     <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                                 </div>
                             </div>
-                            
                         </form>
                     </div>
                 </div>

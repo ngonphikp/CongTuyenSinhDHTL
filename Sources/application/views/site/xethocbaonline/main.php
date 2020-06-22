@@ -11,17 +11,20 @@
                 <li class="num active">
                     <p> Khai báo thông tin thí sinh</p>
                 </li>
-                <li class="num">
+                <li class="num num_1">
                     <p>Đăng ký nguyện vọng</p>
                 </li>
-                <li class="num">
+                <li class="num num_2">
                     <p>Nộp tài liệu minh chứng</p>
                 </li>
-                <li class="num">
+                <li class="num num_3">
                     <p>Hoàn thành hồ sơ</p>
                 </li>
             </ul>
         </div>
+        
+        <button type="button" class="btn btn-default btn_plus">button</button>
+        
         <div class="row">
             <div class="col-sm-12">
                 <div class="col-sm-6"></div>
@@ -342,14 +345,14 @@
 
                 </div> -->
             </div>
-            <div class="col-md-3 form-group pull-right">
+            <div class="col-md-12 form-group pull-right">
                 <div class="col-md-12">
-                        <p style="color:#dd4b39;">Lưu ý: Mỗi CMTND chỉ được lưu 1 lần, vui lòng kiểm tra kỹ các thông
-                            tin trước khi đăng ký. </p>
-                            <div class="col-md-3 form-group pull-right">
-                            
-                        </div>
+                    <p style="color:#dd4b39;">Lưu ý: Mỗi CMTND chỉ được lưu 1 lần, vui lòng kiểm tra kỹ các thông
+                        tin trước khi đăng ký. </p>
+                        <div class="col-md-3 form-group pull-right">
                         <input type="submit" name="ok" value="Lưu thông tin" class="btn btn-primary btn-block"> 
+                    </div>
+                        
                 </div>
                 
             </div>

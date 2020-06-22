@@ -31,13 +31,7 @@
                                 Trang chủ
                             </a>
                         </li>
-                        <?php
-                        //Nếu đăng nhập là Admin (hoặc NV)
-                        if ($this->session->userdata("CheckLogin")){?>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" href="<?php echo base_url();?>index.php/admin">Home Admin</a>
-                            </li>
-                        <?php } ?>
+                       
                         <li class="nav__left--item">
                             <a href="<?php echo base_url();?>home/lienhe">
                                 <i class="fas fa-phone-alt"></i>
@@ -68,6 +62,18 @@
                             </div>
                         </form>
                     </div>
+                </div>
+                <div class="redect_admin">
+                    <?php
+                    //Nếu đăng nhập là Admin (hoặc NV)
+                    if ($this->session->userdata("CheckLogin")){?>
+                        <div class="nav-item" role="presentation">
+                            <a class="nav-link" href="<?php echo base_url();?>index.php/admin">
+                                <i class="fas fa-igloo"></i>
+                                Home Admin
+                            </a>
+                        </div>
+                    <?php } ?>
                 </div>
                 <p class="ml-auto navbar-text actions">
                     <?php

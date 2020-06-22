@@ -85,13 +85,13 @@
         <!-- Main row -->
         <div class="row">
           <!-- Left col -->
-          <section class="col-lg-7 connectedSortable">
+          <section class="col-lg-6 connectedSortable">
             <!-- Custom tabs (Charts with tabs)-->
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">
                   <i class="fas fa-chart-pie mr-1"></i>
-                  Sales
+                  Số lượng các ngành cần tuyển sinh
                 </h3>
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
@@ -109,9 +109,9 @@
                   <!-- Morris chart - Sales -->
                   <div class="chart tab-pane active" id="revenue-chart"
                        style="position: relative; height: 300px;">
-                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
+                      <canvas id="revenue-chart-canvas" height="300" style="height: 500px;"></canvas>
                    </div>
-                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
+                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: auto;">
                     <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
                   </div>
                 </div>
@@ -119,7 +119,26 @@
             </div>
             <!-- /.card -->
           </section>
-          <section class="col-lg-5 connectedSortable">
+          <section class="col-lg-6 connectedSortable">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">
+                  <i class="fas fa-chart-pie mr-1"></i>
+                  Số lượng hồ sơ xét tuyển
+                </h3>
+              </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content p-0">
+                  <!-- Morris chart - Sales -->
+                  <div class="chart tab-pane active" id="revenue-chart"
+                       style="position: relative; height: 300px;">
+                      <canvas id="bar-chart-horizontal" height="300" style="height: 500px;"></canvas>
+                   </div>
+                </div>
+              </div><!-- /.card-body -->
+            </div>
+          </section>
+          <section class="col-lg-7 connectedSortable">
             <div class="card bg-gradient-primary">
               <div class="card-header border-0">
                 <h3 class="card-title">
@@ -169,6 +188,8 @@
                 <!-- /.row -->
               </div>
             </div>
+          </section>
+          <section class="col-lg-5 connectedSortable">
             <div class="card bg-gradient-info">
               <div class="card-header border-0">
                 <h3 class="card-title">

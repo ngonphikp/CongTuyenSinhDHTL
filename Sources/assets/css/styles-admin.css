@@ -41,8 +41,9 @@ body{
     font-size: 30px;
     padding: 15px 0px;
 }
-.me-admin-content table{
-    font-size: 13px;
+.me-admin-content table.tb_ch{
+    font-size: 15px;
+    font-weight: 600;
 }
 .me-admin-content table .edit{
     color: #d70018;
@@ -103,5 +104,15 @@ body{
     justify-content: space-around;
 }
 .form_ip{
+    display: flex!important;
     border: none;
+}
+.form_ip .search-field{
+    border-radius: 4px 0 0 4px;
+}
+.form_ip .btn_tk button{
+    border-radius: 0 4px 4px 0;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }

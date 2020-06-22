@@ -4,24 +4,14 @@
             <div class="panel-heading">
                 <div class="row">
                     <div class="col col-xs-6 title_form-wrap">
+                        <div class="col col-xs-6 title_form-wrap">
                         <h1 class="title_form">Bảng bài viết</h1>
-                        <!-- <form action="<?php echo base_url();?>index.php/admin/get_list_bv_s" method="post" class="form-inline ml-3">
-                            <div class="input-group input-group-sm">
-                                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                                <div class="input-group-append">
-                                    <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
-                                        <i class="fas fa-search"></i>
-                                    </button>
+                        <form action="<?php echo base_url();?>index.php/admin/get_list_bv_s" method="post" class="form-inline">
+                            <div class="form-control form_ip">
+                                <input class="form-control search-field" type="text" placeholder="Tìm kiếm.." name="search">
+                                <div class="btn_tk">
+                                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                                 </div>
-                            </div>
-                        </form> -->
-                        <form action="<?php echo base_url();?>index.php/admin/get_list_bv_s" method="post" class="form-inline mr-auto">
-                            <div class="form-control">
-                                <input class="form-control search-field" type="text" placeholder="Search.." name="search">
-                                <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
-                                    <i class="fa fa-search">
-                                    </i>
-                                </button>
                             </div>
                         </form>
                     </div>

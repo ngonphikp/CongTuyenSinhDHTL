@@ -113,9 +113,67 @@ $(function () {
 
   /* Chart.js Charts */
   // Sales chart
-  var salesChartCanvas = document.getElementById('revenue-chart-canvas').getContext('2d')
+  // var salesChartCanvas = document.getElementById('revenue-chart-canvas').getContext('2d')
   // $('#revenue-chart').get(0).getContext('2d');
+  new Chart(document.getElementById("revenue-chart-canvas"), {
+    type: 'pie',
+    data: {
+      labels: ["Công nghệ thông tin", "Kế toán", "Tự động hóa", "Thủy văn học", "Công nghệ sinh học","Quản trị kinh doanh","Kỹ thuật hóa học"],
+      datasets: [{
+        label: "Population (millions)",
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#FFFD00","#c45850"],
+        data: [600,500,400,700,800,770,1333]
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Các ngành tuyển sinh 2020'
+      }
+    }
+  });
 
+  new Chart(document.getElementById("sales-chart-canvas"), {
+    type: 'bar',
+    data: {
+      labels: ["Công nghệ thông tin", "Kế toán", "Tự động hóa", "Thủy văn học", "Công nghệ sinh học","Quản trị kinh doanh","Kỹ thuật hóa học"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#FFFD00","#c45850"],
+          data: [600,500,400,700,800,770,1333,0]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Các ngành tuyển sinh 2020'
+      }
+    }
+  });
+
+  new Chart(document.getElementById("bar-chart-horizontal"), {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Công nghệ thông tin", "Kế toán", "Tự động hóa", "Thủy văn học", "Công nghệ sinh học","Quản trị kinh doanh","Kỹ thuật hóa học"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#FFFD00","#c45850"],
+          data: [600,500,400,700,800,770,1333,0]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Số lượng hồ sơ xét tuyển  2020'
+      }
+    }
+});
   var salesChartData = {
     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
@@ -204,7 +262,7 @@ $(function () {
   })
 
   // Sales graph chart
-  var salesGraphChartCanvas = $('#line-chart').get(0).getContext('2d')
+  // var salesGraphChartCanvas = $('#line-chart').get(0).getContext('2d')
   // $('#revenue-chart').get(0).getContext('2d');
 
   var salesGraphChartData = {
