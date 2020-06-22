@@ -108,7 +108,7 @@
                 <div class="tab-content p-0">
                   <!-- Morris chart - Sales -->
                   <div class="chart tab-pane active" id="revenue-chart"
-                       style="position: relative; height: 300px;">
+                       style="position: relative; height: auto;">
                       <canvas id="revenue-chart-canvas" height="300" style="height: 500px;"></canvas>
                    </div>
                   <div class="chart tab-pane" id="sales-chart" style="position: relative; height: auto;">
