@@ -361,4 +361,26 @@ class Home extends CI_Controller{
         $data['listFmc']=$this->Mfmc->getByMaHsxt($ma_ts);
         $this->load->view("home/hosoxettuyen", $data);
     }
+
+    public function get_hsxt_s(){
+        if (isset($_POST['search'])){
+            $s = $_POST['search'];
+            $this->session->set_userdata('search', $s);
+        }else{
+            $s=$this->session->userdata('search');
+        }
+        $s = trim(htmlspecialchars(addslashes($s)));
+        //$data['ma_hsxt']=$s;
+        //echo '$s'
+        $this->hosoxettuyen($s);
+        // $this->load->model("Mbv");
+        // $config['total_rows'] = $this->Mbv->countAllS($s);
+        // $config['base_url'] = base_url()."index.php/admin/get_list_bv_s";
+        // $config['per_page'] = 5;
+
+        // $start=$this->uri->segment(3);
+        // $this->load->library('pagination', $config);
+        // $data['listBV']= $this->Mbv->getListS($start, $config['per_page'], $s);
+        // $this->load->view("admin/get_list_bv_admin_view", $data);
+    }
 }
