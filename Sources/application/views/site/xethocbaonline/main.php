@@ -6,26 +6,26 @@
             </h1>
             <small>(Dành cho thí sinh xét tuyển bằng học bạ)</small>
         </div>
-        <div class="process">
-            <ul class="list_process">
-                <li class="num active">
-                    <p> Khai báo thông tin thí sinh</p>
-                </li>
-                <li class="num num_1">
-                    <p>Đăng ký nguyện vọng</p>
-                </li>
-                <li class="num num_2">
-                    <p>Nộp tài liệu minh chứng</p>
-                </li>
-                <li class="num num_3">
-                    <p>Hoàn thành hồ sơ</p>
-                </li>
-            </ul>
+        <div class="process-wrap">
+            <div class="process">
+                <ul class="list_process">
+                    <li class="num active">
+                        <p> Khai báo thông tin thí sinh</p>
+                    </li>
+                    <li class="num num_1">
+                        <p>Đăng ký nguyện vọng</p>
+                    </li>
+                    <li class="num num_2">
+                        <p>Nộp tài liệu minh chứng</p>
+                    </li>
+                    <li class="num num_3">
+                        <p>Hoàn thành hồ sơ</p>
+                    </li>
+                </ul>
+            </div>
         </div>
-        
-        <button type="button" class="btn btn-default btn_plus">button</button>
-        
-        <div class="row">
+
+        <div class="row" style="padding-top:20px;">
             <div class="col-sm-12">
                 <div class="col-sm-6"></div>
                 <div class="col-sm-6 float-right">
@@ -350,7 +350,7 @@
                     <p style="color:#dd4b39;">Lưu ý: Mỗi CMTND chỉ được lưu 1 lần, vui lòng kiểm tra kỹ các thông
                         tin trước khi đăng ký. </p>
                         <div class="col-md-3 form-group pull-right">
-                        <input type="submit" name="ok" value="Lưu thông tin" class="btn btn-primary btn-block"> 
+                        <input type="submit" name="ok" id ="btn_save-tt" value="Lưu thông tin" class="btn btn-primary btn-block"> 
                     </div>
                         
                 </div>

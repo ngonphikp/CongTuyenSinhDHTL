@@ -5,14 +5,14 @@
                 <div class="row">
                     <div class="col col-xs-6 title_form-wrap">
                         <h1 class="title_form">Bảng hồ sơ xét tuyển</h1>
-                        <form action="<?php echo base_url();?>index.php/admin/get_list_hsxt_s" method="post" class="form-inline">
+                        <!-- <form action="<?php echo base_url();?>index.php/admin/get_list_hsxt_s" method="post" class="form-inline">
                             <div class="form-control form_ip">
                                 <input class="form-control search-field" type="text" placeholder="Tìm kiếm.." name="search">
                                 <div class="btn_tk">
                                     <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                                 </div>
                             </div>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </div>

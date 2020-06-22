@@ -463,32 +463,9 @@ $(document).ready(function () {
             }
         });
     });
+    $(".btn_save-tt").click(function(){
+        var elem = document.getElementsByClassName("num");
+        $(elem).css({"width":"25%","color": "#4CAF50","font-weight":"700"});
 
-    var i = 0;
-    $(".btn_plus").click(function(){
-        if (i == 0) {
-            i = 1;
-            var elem = document.getElementsByClassName("num_1");
-            var width = 1;
-            var id = setInterval(frame, 10);
-            function frame() {
-              if (width >= 25) {
-                clearInterval(id);
-                i = 0;
-              } else {
-                width++;
-                elem.style.width = width + "%";
-              }
-            }
-          }
-    });
-
-
+    })
 });
-    // var changeMenu = document.getElementsByClassName('fa-bars');
-    // var changeMenu = document.querySelector('.fa-bars');
-    //     changeMenu.addEventListener("click",function(){
-    //         this.classList.toggle('fa-times');
-    //         $("#menu-mb").toggle();
-    //         $(".D_modal").css("display","block");
-    //     });

@@ -1,3 +1,9 @@
+input:focus,button:focus{
+    border: none;
+    outline: none;
+    box-shadow: none!important;
+    border-radius: 0 4px 4px 0;
+}
 .active{
     color: #3aac5d;
     font-weight: 700;
@@ -41,47 +47,46 @@ form .form-control:focus{
     font-size: 24px;
     font-weight: 600;
 }
+/* #main .process-wrap{
+    padding: 35px 0;
+}
 .process .list_process{
     height: 8px;
     width: 100%;
     position: relative;
     counter-reset: step;
-    background-color: #1ba8ff;
+    background-color: #ddd;
 }
-.process .list_process li{
+.process .list_process li.num{
     position: absolute;
     left: 0;
     top: 0;
-    height: 5px;
-    background: red;
+    height: 8px;
+    background-color: #4CAF50;
     width: 0;
+    transition: width 3s;
 }
 .process .list_process li.num_1{
     position: absolute;
     left: 25%;
     top: 0;
-    height: 5px;
-    background: red;
     width: 0;
 }
 .process .list_process li.num_2{
     position: absolute;
     left: 50%;
     top: 0;
-    height: 5px;
-    background: red;
     width: 0;
 }
 .process .list_process li.num_3{
     position: absolute;
     left: 75%;
     top: 0;
-    height: 5px;
-    background: red;
     width: 0;
 }
 .process .list_process li p{
     padding-top: 20px;
+    width: 201px;
 }
 .process .list_process li.active:before{
     background: #3aac5d;
@@ -98,10 +103,12 @@ form .form-control:focus{
     background: #fff;
     border: 2px solid #bebebe;
     border-radius: 50%;
-    left: -1%;
+    left: -3px;
     counter-increment: step;
     text-align: center;
-}
+} */
+
+
 /* .process .list_process li.active:before{
     background: #3aac5d;
     border-color: #3aac5d;
@@ -142,7 +149,7 @@ form .form-control:focus{
 
 
 
-/* .process .list_process{
+.process .list_process{
     display: flex;
     counter-reset: step;
 }
@@ -188,7 +195,7 @@ form .form-control:focus{
     position: absolute;
     bottom: 0;
     left: 25%;
-} */
+}
 #main .Search_tt{
     display: flex;
     justify-content: space-between;
