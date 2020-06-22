@@ -24,24 +24,40 @@
         </div>
         <div class="row">
             <div class="col-sm-12">
-                <div class="col-sm-6"></div>
-                <div class="col-sm-6 float-right">
-                    <p>
+                <div class="col-sm-6">
+                
+                </div>
+                
+                <div class="col-sm-3 float-right">
+                <form action="<?php echo base_url();?>home/get_hsxt_s" method="post" class="form-inline mr-auto">
+                            <div class="form-control">
+                                <input class="form-control search-field" type="text" placeholder="Mã tra cứu .." name="search">
+                                <button class="btn btn-navbar" type="submit" style="border:1px solid #ccc;">
+                                    <i class="fa fa-search">
+                                    </i>
+                                </button>
+                            </div>
+                        </form>
+                    <!-- <p>
                         <strong>Tìm kiếm</strong>
                     </p>
                     <hr>
                     <div class="Search_tt">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Số CMND">
-                        </div>
-                        <div class="form-group" style="display:flex;">
-                            <input type="text" class="form-control" placeholder="Mã số thí sinh">
+                    
+                    <div class="form-group" style="display:flex;"> -->
+                            <!-- <input type="text" class="form-control" placeholder="Mã tra cứu">
+                            <a href="<?php echo base_url();?>home/hosoxettuyen/1">
                             <button type="submit" class="btn">
                                 <i class="fas fa-search"></i>
                             </button>
-                        </div>
+                            </a>
+                        </div> -->
+                        <!-- <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Số CMND">
+                        </div> -->
+                        
 
-                    </div>
+                    <!-- </div> -->
 
                 </div>
 
