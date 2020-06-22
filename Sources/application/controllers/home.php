@@ -370,9 +370,16 @@ class Home extends CI_Controller{
             $s=$this->session->userdata('search');
         }
         $s = trim(htmlspecialchars(addslashes($s)));
+
+        $decode = base64_decode($s);
+        $key = "DHTL";
+
+        $rs = trim($decode,$key);
+
+
         //$data['ma_hsxt']=$s;
         //echo '$s'
-        $this->hosoxettuyen($s);
+        $this->hosoxettuyen($rs);
         // $this->load->model("Mbv");
         // $config['total_rows'] = $this->Mbv->countAllS($s);
         // $config['base_url'] = base_url()."index.php/admin/get_list_bv_s";
