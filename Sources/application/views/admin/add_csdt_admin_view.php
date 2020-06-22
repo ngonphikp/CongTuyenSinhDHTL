@@ -1,15 +1,10 @@
 <div class="content">
-    <div class="col-md-6 add-dm">
-        <h4 class="text-center"><b>Thêm Cơ sở đào tạo</b></h4>
+    <div class="col-md-12 ">
+        <h1 class="title_form">Thêm cơ sở đào tạo</h1>
     </div>
     <?php echo form_open_multipart('/admin/pro_add_csdt'); ?>
         <div class="form">
-            <table class="table">
-               
-               
-               
-                
-                <table class="table">
+            <table class="table tb_ch">
                 <tr>
                     <td><P>Tên cơ sở đào tạo:</p></td>
                     <td><textarea name="tencsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
@@ -43,11 +38,9 @@
                     <td><textarea name="thonbanduongphocsdt" class="form-control" id="" cols="30" rows="1"></textarea></td>
                 </tr>
             </table>
-                
-            </table>
         </div>
-        <div class="col-md-3 form-group pull-right">
-            <input type="submit" name="ok" value="Thêm" class="btn btn-primary btn-block">
+        <div class="col-md-3 form-group pull-right" style="margin-left:377px;">
+            <input type="submit" name="ok" value="Thêm" class="btn btn-primary">
         </div>
     </form>
     <?php echo validation_errors();?>

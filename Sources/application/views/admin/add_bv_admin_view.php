@@ -4,7 +4,7 @@
     </div>
     <?php echo form_open_multipart('/admin/pro_add_bv'); ?>
         <div class="form">
-            <table class="table" id = "form_add_bv">
+            <table class="table tb_ch" id = "form_add_bv">
                 <tr><td><p>Lựa chọn danh mục</p></td>
                     <td colspan="2"><select name="dm" class="form-control">
                         <?php foreach ($listDanhMuc as $row){?>                            
@@ -36,11 +36,19 @@
                 </tr> -->
             </table>            
         </div>
-        <div class="col-md-3 form-group pull-right">
-            <!-- Thêm chi tiết -->
+        <!-- <div class="col-md-3 form-group pull-right">
             <input type="buton" value="Thêm chi tiết" class="btn btn-primary left" id = "add_ctbv_form_add_bv">                  
             <input type="submit" name="ok" value="Thêm" class="btn btn-primary right" id = "save_form_add_bv">
-        </div>
+        </div> -->
+        <div class="form-row form-group">
+                <div class="col-lg-3 col-md-3 label-column"><label class="col-form-label"></label></div>
+                <div class="col-lg-8 col-md-8 row_add-bv ">
+                    <input value="Thêm chi tiết" class="btn btn-primary" id = "add_ctbv_form_add_bv">                  
+                    <div class="add_bv">
+                        <input type="submit" name="ok" value="Thêm" class="btn btn-primary" id = "save_form_add_bv">
+                    </div>
+                </div>
+            </div>
     </form>
     <?php echo validation_errors();?>
 </div>

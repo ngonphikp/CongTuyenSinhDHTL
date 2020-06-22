@@ -463,14 +463,9 @@ $(document).ready(function () {
             }
         });
     });
+    $(".btn_save-tt").click(function(){
+        var elem = document.getElementsByClassName("num");
+        $(elem).css({"width":"25%","color": "#4CAF50","font-weight":"700"});
 
-
-
+    })
 });
-    // var changeMenu = document.getElementsByClassName('fa-bars');
-    // var changeMenu = document.querySelector('.fa-bars');
-    //     changeMenu.addEventListener("click",function(){
-    //         this.classList.toggle('fa-times');
-    //         $("#menu-mb").toggle();
-    //         $(".D_modal").css("display","block");
-    //     });

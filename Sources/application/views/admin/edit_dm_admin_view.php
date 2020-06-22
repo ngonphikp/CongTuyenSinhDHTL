@@ -59,7 +59,7 @@
                 <input id = "count_dmc_form_edit_dm" type="text" style = "display: none;" value = "0" name = "count">             
             </table>            
         </div>        
-        <div class="col-md-3 form-group pull-right">  
+        <div class="col-md-6 form-group pull-right">  
             <a class="btn btn-danger left" onclick="return confirm('Bạn có muốn xóa không');" href="<?php echo base_url() . "index.php/admin/delete_dm/" . $dm['ma_dm'];?>">Xóa Danh Mục</a>
             <input type="submit" name="ok" value="Lưu Danh Mục" class="btn btn-primary right" id = "save_form_edit_dm">
         </div>
