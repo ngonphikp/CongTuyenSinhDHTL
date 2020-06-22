@@ -39,7 +39,7 @@
                 </tr>
             </table>
         </div>
-        <div class="col-md-3 form-group pull-right" style="margin-left:377px;">
+        <div class="col-md-3 form-group pull-right" style="margin-left:423px;">
             <input type="submit" name="ok" value="Thêm" class="btn btn-primary">
         </div>
     </form>
