@@ -903,7 +903,14 @@ class Admin extends CI_Controller{
 
             $mes = base_url()."home/hosoxettuyen/$ma_hsxt";
 
-            $this->email->message("Bạn đã hoàn thành hồ sơ");
+            $message = 'Bạn đã hoàn thành hồ sơ <br/>';
+            $message .= 'Mã tra cứu của bạn là :';
+
+            $key = "DHTL";
+
+            $message .= base64_encode($key . $ma_hsxt . "");
+
+            $this->email->message($message);
 
             // Tạo QR Code
             $this->load->library('ciqrcode');
