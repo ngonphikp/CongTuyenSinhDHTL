@@ -890,8 +890,8 @@ class Admin extends CI_Controller{
                 'mailtype' => 'html'
             );
 
-            $mail = base64_decode($mail);
-            //$mail=
+            //$mail = base64_decode($mail);
+            $mail=str_replace("-","@",$mail);
             $this->load->library('email', $config);
             $this->email->set_newline("\r\n");
 
