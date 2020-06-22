@@ -463,9 +463,12 @@ $(document).ready(function () {
             }
         });
     });
-    $(".btn_save-tt").click(function(){
-        var elem = document.getElementsByClassName("num");
-        $(elem).css({"width":"25%","color": "#4CAF50","font-weight":"700"});
+    // $("#btn_save-tt").click(function(){
+    //     var elem = document.getElementsByClassName("num");
+    //     $(elem).css({"width":"25%","color": "#4CAF50","font-weight":"700"});
 
-    })
+    // })
+    // $("#btn_save-tt").addEventListener('click',function(){
+
+    // })
 });
