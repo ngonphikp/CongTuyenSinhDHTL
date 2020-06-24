@@ -357,7 +357,7 @@ $(document).ready(function () {
     var btnNguyenVong = $("#btnNguyenVong");
     $(btnNguyenVong).click(function (e) {
         e.preventDefault();
-        var url = base_url + "/CongTuyenSinhDHTL/Sources/index.php/admin/pro_add_nguyen_vong";
+        var url = base_url + "/CongTuyenSinhDHTL/Sources/index.php/home/pro_add_nguyen_vong";
         //console.log("Nhay vao day: " + url);
         var csdt_edit_ts = $("#csdt_edit_ts").val();
         //console.log(csdt_edit_ts);
@@ -421,7 +421,7 @@ $(document).ready(function () {
 
     $(btn_luu_file_minh_chung).click(function (e) {
         e.preventDefault();
-        var url = base_url + "/CongTuyenSinhDHTL/Sources/index.php/admin/pro_luu_file_minh_chung";
+        var url = base_url + "/CongTuyenSinhDHTL/Sources/index.php/home/pro_luu_file_minh_chung";
         console.log("Nhay vao day: " + url);
 
         var inputFile = $("input[name=file]");

@@ -28,7 +28,7 @@ class Muser extends CI_Model{
     }
 
     public function edit($id, $mk, $ht, $gt, $email_tk, $ns, $dc, $sdt_tk){
-        $this->db->query("update tai_khoan set mat_khau = $mk where id_tk = '$id';");
+        $this->db->query("update tai_khoan set mat_khau = '$mk' where id_tk = '$id';");
         $this->db->query("update thong_tin_tai_khoan set ho_ten_tk = '$ht', email_tk = '$email_tk', ngay_sinh_tk = '$ns', gioi_tinh_tk = '$gt', dia_chi_tk = '$dc', sdt_tk = '$sdt_tk' where id_tk = $id;");
     }
 

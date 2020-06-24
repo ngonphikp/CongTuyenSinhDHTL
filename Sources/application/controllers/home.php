@@ -390,4 +390,120 @@ class Home extends CI_Controller{
         // $data['listBV']= $this->Mbv->getListS($start, $config['per_page'], $s);
         // $this->load->view("admin/get_list_bv_admin_view", $data);
     }
+
+    public function pro_add_nguyen_vong(){
+        // $maTs = $this->Mts->getMaxMaTS()[0]["ma_ts"];
+        //     //$maTs= $this->Mts->getMaxMaTS();
+        //     //echo ''+$maTs;
+        // $this->edit_hsxt($maTs);
+        //echo "Nhay vao day";
+        //var_dump($_POST);
+        //Insert database
+        $ma_hsxt = $this->input->post('ma_hsxt');  
+        $tennguyenvong = $this->input->post('tennguyenvong');  
+        $csdt_edit_ts = $this->input->post('csdt_edit_ts');  
+        $nhomnganhxettuyen = $this->input->post('nhomnganhxettuyen');  
+        $tohopxettuyen = $this->input->post('tohopxettuyen');  
+        $this->load->model("Mnv");
+        $this->Mnv->add($ma_hsxt,  $tennguyenvong, $csdt_edit_ts, $nhomnganhxettuyen, $tohopxettuyen);
+        $result=$this->Mnv->where($ma_hsxt,$tennguyenvong);
+        echo json_encode($result); 
+        //echo  $tennguyenvong;//lấy category_id từ view
+        //$this->db->where('category_id', $category_id);    //đưa vào điều kiện tìm kiếm
+        // $query = $this->db->get('sub_categories');       // lấy ra các subcategory có  category_id như đưa vào
+        // $result = $query->result();
+        // gửi dữ liệu về ajax
+    }
+
+    public function pro_luu_file_minh_chung()
+        {
+            $ma_hsxt = $_POST["ma_hsxt"];
+            $config['upload_path']          = './assets/img/file/';
+            $config['allowed_types']        = 'gif|jpg|jpeg|png';
+            $this->load->library('upload', $config);
+
+            if (!$this->upload->do_upload("file"))
+            {
+                $status = 'error';
+                $msg = $this->upload->display_errors('', '');
+            }
+            else
+            {
+                $data = $this->upload->data();
+                //var_dump($data);
+                //$data['file_name']
+                $status = "success";
+                $msg = "File successfully uploaded";
+
+                $name = $data['file_name'];
+                $size = $data['file_size'];     
+                
+                // var_dump($name);
+                // var_dump($size);
+
+                $this->load->model("Mfmc");
+                $this->Mfmc->add($ma_hsxt, "...", $name, $size);
+            }
+            echo json_encode(array('status' => $status, 'msg' => $msg));
+        }
+
+        public function hoan_thanh_ho_so($ma_hsxt, $mail)
+        {
+            $config = Array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://smtp.googlemail.com',
+                'smtp_port' => 465,
+                'smtp_user' => 'chinhtp62@wru.vn',
+                'smtp_pass' => 'signinoptions',
+                'mailtype' => 'html'
+            );
+
+            //$mail = base64_decode($mail);
+            $mail=str_replace("-","@",$mail);
+            $this->load->library('email', $config);
+            $this->email->set_newline("\r\n");
+
+            $this->email->to("$mail");
+
+            $this->email->from("chinhtp62@wru.vn","Ban tuyển sinh Đại học Thủy Lợi");
+            $this->email->bcc("ngonphikp@gmail.com"); 
+            $this->email->subject("Hồ sơ xét tuyển học bạ của bạn");
+
+            $mes = base_url()."home/hosoxettuyen/$ma_hsxt";
+
+            $message = 'Bạn đã hoàn thành hồ sơ <br/>';
+            $message .= 'Mã tra cứu của bạn là :';
+
+            $key = "DHTL";
+
+            $message .= base64_encode($key . $ma_hsxt . "");
+
+            $this->email->message($message);
+
+            // Tạo QR Code
+            $this->load->library('ciqrcode');
+
+            $params['data'] = $mes;
+            $params['level'] = 'H';
+            $params['size'] = 20;
+            $path = '\assets\img\qrcode\\' . base64_encode($mes) . '.png';
+
+            //var_dump($path);
+            $params['savename'] = FCPATH . $path;
+
+            $this->ciqrcode->generate($params);
+            
+            $linkfile = base_url(). $path;
+
+            //echo '<img src="' . $linkfile . '" />';
+
+            // End - QRCode
+
+            $this->email->attach($linkfile);
+
+            $result = $this->email->send();
+            echo $this->email->print_debugger();            
+
+            redirect(base_url() . "home/hosoxettuyen/$ma_hsxt");
+        }  
 }
